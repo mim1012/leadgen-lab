@@ -1,0 +1,347 @@
+<!DOCTYPE html><html><head>
+<title>애드팟 로그인</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="마케팅의 잭팟~ 애드팟!">        
+<meta property="og:locale" content="ko_KR">
+<meta property="og:type" content="website">    
+<meta property="og:title" content="애드팟 로그인">
+<meta property="og:description" content="마케팅의 잭팟~ 애드팟!">
+<meta property="og:url" content="https://adpot.kr/pc/join/login.html">
+<meta property="og:image" content="http://adpot.kr/images/common/adpot.jpg">    
+<link rel="stylesheet" href="/css/core/bootstrap.min.css">
+<link rel="stylesheet" href="/css/core/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/css/dev/common.css?12">
+<link rel="stylesheet" href="/css/common.css?11">
+<link rel="stylesheet" href="/css/sub.css?11">
+<!--[if lt IE 9]>
+  <script src="/js/core/html5shiv.min.js"></script>
+  <script src="/js/core/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11008812130&amp;cx=c&amp;gtm=4e6690h2"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-RJKH5CF9ZH&amp;cx=c&amp;gtm=4e6690h2"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-999SN9PWQ3&amp;cx=c&amp;gtm=4e6690h2"></script><script src="https://connect.facebook.net/signals/config/3468163843259006?v=2.9.334&amp;r=stable&amp;domain=adpot.kr&amp;hme=d9eb83ce5750216745fae8e2064a8c1ed2255ecaf2468f800b2a146e6168b65e&amp;ex_m=105%2C208%2C156%2C22%2C73%2C74%2C147%2C69%2C68%2C11%2C165%2C91%2C16%2C139%2C128%2C39%2C76%2C79%2C135%2C161%2C167%2C8%2C4%2C5%2C7%2C6%2C3%2C92%2C102%2C168%2C173%2C222%2C30%2C75%2C234%2C233%2C232%2C23%2C33%2C55%2C104%2C61%2C10%2C64%2C98%2C99%2C100%2C106%2C131%2C31%2C29%2C133%2C134%2C130%2C129%2C157%2C77%2C160%2C158%2C159%2C50%2C60%2C124%2C15%2C164%2C45%2C267%2C268%2C266%2C26%2C27%2C28%2C48%2C148%2C78%2C113%2C18%2C20%2C44%2C40%2C42%2C41%2C84%2C93%2C97%2C111%2C146%2C149%2C46%2C112%2C24%2C21%2C120%2C70%2C36%2C151%2C150%2C152%2C143%2C141%2C25%2C35%2C59%2C110%2C163%2C71%2C17%2C154%2C115%2C82%2C67%2C19%2C86%2C87%2C117%2C85%2C137%2C136%2C140%2C162%2C34%2C282%2C298%2C215%2C204%2C62%2C205%2C203%2C301%2C292%2C52%2C216%2C108%2C132%2C81%2C122%2C54%2C47%2C49%2C114%2C121%2C127%2C126%2C58%2C65%2C63%2C153%2C116%2C37%2C32%2C53%2C56%2C101%2C166%2C1%2C125%2C14%2C123%2C12%2C2%2C57%2C94%2C66%2C119%2C90%2C89%2C169%2C170%2C95%2C96%2C9%2C103%2C51%2C144%2C88%2C80%2C72%2C118%2C107%2C43%2C145%2C0%2C83%2C138%2C142%2C155%2C38%2C109%2C13%2C171" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script src="/js/core/jquery.min.js"></script>
+<script src="/js/core/bootstrap.min.js"></script>
+<script src="/js/header/common.js"></script>
+    
+
+
+
+
+
+    <link rel="stylesheet" href="/css/member.css">
+<script>
+  $(document).ready(function() {
+    $('#btnLogin').click(function() {
+      $(this).button('loading');
+      setTimeout(function() {
+        $('#btnLogin').button('reset');
+      },1000)
+    })
+  })
+
+  function onSubmit() {
+    $.ajax({
+      type: 'POST',
+      url: 'login_act.php',
+      data: $('#loginForm').serialize(),
+      success: function(out, status) {
+        var js = $.parseJSON(out);
+        if ( js.code == "000" ) {
+          location.replace("https://adpot.kr");
+        } else if ( js.code == "211" ) {
+          alert(js.msg);
+          location.replace("/pc/join/join_result.html");
+        } else if ( js.code == "222" ) {
+          alert(js.msg);
+          location.replace("/pc/my/name.html");               
+        } else {
+          alert(js.msg);
+        }
+      }
+    });
+    return false;
+  }
+</script>
+<script type="text/javascript" async="" src="https://ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11008812130/?random=1781092247477&amp;cv=11&amp;fst=1781092247477&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be6641za200xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0~115938465~115938468&amp;u_w=3440&amp;u_h=1440&amp;url=https%3A%2F%2Fadpot.kr%2Fpc%2Fjoin%2Flogin.html&amp;rcb=3&amp;frm=0&amp;tiba=%EC%95%A0%EB%93%9C%ED%8C%9F%20%EB%A1%9C%EA%B7%B8%EC%9D%B8&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=2083864359.1781092247&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B149.0.7827.53%7CChromium%3B149.0.7827.53%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script></head>
+<body>
+<div class="wrap">
+
+        <div class="header">
+        <div class="top">
+            <ul class="top_L">
+                <li><a href="/pc/intro/adpot3.html" onclick="blur()">애드팟 소개</a></li>
+                <li><a href="/pc/etc/tool_tip.html" onclick="blur()">마케팅 툴&amp;팁</a></li>
+            </ul>
+            <div class="top_L2"></div>
+            <ul class="top_R">
+                <li><a href="/pc/my/my_camp.html">내캠페인</a></li>
+                <li><a href="/pc/my/point_his.html">수익금내역</a></li>
+                <li><a href="/pc/my/point.html">출금신청</a></li>
+                <li><a href="/pc/center/notice.html">고객센터</a></li>                
+            </ul>
+        </div>
+        <!--h_top-->
+        <div class="middle">
+            <h1><a href="/"><img src="/images/common/logo.jpg" alt="애드팟"><img src="/images/common/season3.jpg" alt="시즌2 오픈플랫폼"></a></h1>
+            <ol>
+                <li><a class="btn_login" href="/pc/join/login.html">로그인</a></li>
+                <li><a class="btn_join" href="/pc/join/join.html">회원가입</a></li>
+                
+            </ol>
+        </div>
+        <!--h_middle-->
+        <!--메뉴 시작-->
+        <div class="gnb_wrap">
+            <div class="sub_gnb_bg">
+            </div>
+            <!--서브메뉴 활성화 시 배경-->
+            <ul class="gnb">
+                <li><a href="/pc/mark_mgr/manager_list.html">마케터 매니저</a>
+                <ul class="sub_gnb">
+                    <li><a href="/pc/mark_mgr/manager_list.html">애드팟 공식 매니저</a></li>
+                    <li><a href="/pc/mark_mgr/my_manager.php">나의 매니저 페이지</a></li>
+                    <li><a href="/pc/mark_mgr/manager_join01.html">마케터 매니저 등록</a></li>
+                    <li><a href="/pc/mark_mgr/mcnt_join.html">광고주 추천 제도</a></li>
+                </ul>
+                </li>
+                <li><a href="/pc/camp/camp_cpa.html"><em>CPA</em>마케팅DB모집 </a>
+                <ul class="sub_gnb">
+                    <li><a href="/pc/camp/camp_cpa.html"><span class="cms-color-A cms-margin-right-5">CPA</span>광고목록</a></li>
+                    <li><a href="/pc/report/db_cpa.html"><span class="cms-color-A cms-margin-right-5">CPA</span>상세실적</a></li>
+                    <li><a href="/pc/report/daily_cpa.html"><span class="cms-color-A cms-margin-right-5">CPA</span>일별통계</a></li>
+                    <li><a href="/pc/report/monthly_cpa.html"><span class="cms-color-A cms-margin-right-5">CPA</span>월별통계</a></li>
+                </ul>
+                </li>
+                <li><a href="/pc/camp/camp_cpj.html"><em>CPJ</em>회원가입광고 </a>
+                <ul class="sub_gnb">
+                    <li><a href="/pc/camp/camp_cpj.html"><span class="cms-color-J cms-margin-right-5">CPJ</span>광고목록</a></li>
+                    <li><a href="/pc/report/db_cpj.html"><span class="cms-color-J cms-margin-right-5">CPJ</span>상세실적</a></li>
+                    <li><a href="/pc/report/daily_cpj.html"><span class="cms-color-J cms-margin-right-5">CPJ</span>일별통계</a></li>
+                    <li><a href="/pc/report/monthly_cpj.html"><span class="cms-color-J cms-margin-right-5">CPJ</span>월별통계</a></li>
+                </ul>
+                </li>
+                <li><a href="/pc/camp/camp_cpc.html"><em>CPC</em>페이지노출광고 </a>
+                <ul class="sub_gnb">
+                    <li><a href="/pc/camp/camp_cpc.html"><span class="cms-color-C cms-margin-right-5">CPC</span>광고목록</a></li>
+                    <li><a href="/pc/report/db_cpc.html"><span class="cms-color-C cms-margin-right-5">CPC</span>상세실적</a></li>
+                    <li><a href="/pc/report/daily_cpc.html"><span class="cms-color-C cms-margin-right-5">CPC</span>일별통계</a></li>
+                    <li><a href="/pc/report/monthly_cpc.html"><span class="cms-color-C cms-margin-right-5">CPC</span>월별통계</a></li>
+                </ul>
+                </li>
+                <li><a href="/pc/camp/camp_blog.html"><span class="_icon1">BLOG</span>블로그포스팅 </a>
+                <ul class="sub_gnb">
+                    <li><a href="/pc/camp/camp_blog.html"><span class="cms-color-S cms-margin-right-5">BLOG</span>광고목록</a></li>
+                    <li><a href="/pc/report/db_blog.html"><span class="cms-color-S cms-margin-right-5">BLOG</span>작업결과</a></li>
+                    <li><a href="/pc/intro/blog.html"><span class="cms-color-S cms-margin-right-5">BLOG</span>광고문의</a></li>
+                    <li></li>
+                </ul>
+                </li>
+                <li><a href="/pc/center/event.html"><span class="_icon2">event</span>이벤트 </a>
+                <ul class="sub_gnb">
+                    <li><a href="/pc/event/lottery.html"><span class="cms-color-I cms-margin-right-5">EVENT</span>즉석복권 이벤트</a></li>
+<!--
+                    <li><a href="/pc/event/competition.html"><span class="cms-color-I cms-margin-right-5">EVENT</span>마케팅 대회</a></li>
+-->
+                    <li><a href="/pc/center/ranking.html"><span class="cms-color-I cms-margin-right-5">EVENT</span>마케터 랭킹</a></li>
+                    <li><a href="/pc/center/honor.html"><span class="cms-color-I cms-margin-right-5">EVENT</span>명예의 전당</a></li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+        <!--gnb-->
+        <!--메뉴끝-->
+    </div>
+
+    <!--quick메뉴-->
+    <aside class="right">
+<!--        
+        <div class="quick04">
+            <a href="https://mknowhow.kr/pc/lect/lect02_view.html?lid=12390" target="_blank"><img src="/images/common/sky_07.jpg" alt="페이스북 제휴마케팅 필수강의"></a>
+        </div>
+        <div class="quick04">
+            <a href="https://mknowhow.kr/pc/lect/lect04_list.html" target="_blank"><img src="/images/common/sky_17.jpg" alt="머니노하우"></a>
+        </div>
+-->
+        <div class="quick04">
+            <a href="/pc/center/notice_view.html?code=154" target="_blank"><img src="/images/common/sky_02.jpg" alt="공지방, 알림 설정"></a>
+        </div>
+        <div class="quick04">
+            <a href="https://open.kakao.com/o/gf0IVTqc" target="_blank"><img src="/images/common/sky_05.jpg?1" alt="애드팟 공식 단톡방"></a>
+            <div style="position: absolute; top: 84px; left: 0; width: 130px; text-align: center; color: orange; font-size: 13px; font-weight: bold;">(비번:로그인후)</div>
+        </div>
+        <div class="quick04">
+            <a href="https://cafe.naver.com/adpotcafe" target="_blank"><img src="/images/common/sky_06.jpg" alt="애드팟 공식 카페"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/inquire.html" target="_blank"><img src="/images/common/sky_03.jpg" alt="1:1 문의 게시판"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/notice_view.html?code=61" target="_blank"><img src="/images/common/sky_04.jpg" alt="카카오톡 1:1 채팅 상담"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/notice_view.html?code=60" target="_blank"><img src="/images/common/sky_01.jpg" alt="텔레그램 1:1 채팅 상담"></a>
+        </div>
+    </aside>
+
+    <aside class="left">
+        <div class="quick04">
+            <a href="/pc/event/lottery.html" target="_blank"><img src="/images/common/banner_R_04.jpg" alt="이벤트"></a>
+        </div> 
+        <div class="quick04">
+            <a href="/pc/center/honor.html" target="_blank"><img src="/images/common/sky_16.jpg" alt="명예의 전당"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/faq_view.html?code=861" target="_blank"><img src="/images/common/sky_11.jpg" alt="타기관 수익인증으로 잭팟등급 등업하기"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/faq_view.html?code=808" target="_blank"><img src="/images/common/sky_12.jpg" alt="랜딩 페이지에 스크립트 삽입 요청"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/faq_view.html?code=870" target="_blank"><img src="/images/common/sky_13.jpg" alt="페북 도메인 차단시 해결 방법"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/notice_view.html?code=154" target="_blank"><img src="/images/common/sky_14.jpg" alt="DB 접수시 알림 받는 방법"></a>
+        </div>
+    </aside>
+
+    <div class="member_bg">
+        <!--회원가입 전용 배경색-->
+        <div class="join_box login_box">
+            <!--로그인 페이지 여백을 위해 class="login_box" 추가-->
+            <h2>로그인</h2>
+            <div class="join">
+                <!--로그인 입력폼 시작-->
+                <form class="form-signin" id="loginForm" name="loginForm" method="post" onsubmit="return onSubmit()">
+                    <div class="login_input">
+                        <input type="text" id="email" name="email" value="" placeholder="이메일 주소" required="" autofocus="" style="">
+                        <input type="password" id="pass" name="pass" placeholder="비밀번호" required="" style="">
+                    </div>
+                    <button type="submit" class="join_btn" id="btnLogin">로그인</button>
+                    <div class="login_option">
+                        <label><input type="checkbox" id="saveid" name="saveid" value="Y" style=""><span class="checkmark"></span>이메일저장</label>
+                        <a class="pw_forgot" href="find_pwd.html">비밀번호 찾기</a>
+                    </div>
+                    <a class="join_btn2" href="join.html">회원가입</a>
+                </form>
+            </div>
+            <!--join-->
+            <!--로그인 입력폼 끝-->
+        </div>
+        <!--join_box login_box-->
+    </div>
+
+        <div class="footer">
+        <div class="footer_content">
+            <ul>
+                <li><a href="/pc/join/policy01_03.html" target="_blank">서비스 이용약관</a></li>
+                <li><a href="/pc/join/policy02_02.html" target="_blank">개인정보 처리방침</a></li>
+                <li><a href="https://drive.google.com/file/d/1SIvIhpe2JqXSTvIuEhr6v1_y_adKpVy9/view?usp=sharing" target="_blank">홍보활동 운영정책</a></li>
+                <li><a href="https://drive.google.com/file/d/1zwYjF0p3CzIWzyNRDDkX249_wbnyvQ05/view?usp=sharing" target="_blank">생성형 AI활용 가이드라인</a></li>
+                <li><a href="http://bit.ly/3tsqCMb" target="_blank">[광고주용] 광고진행 소개서</a></li>
+                <li><a href="/pc/center/ad_inquire.html" target="_blank">광고문의</a></li>
+                <li><a href="/pc/mcnt/" target="_blank">광고주 어드민</a></li>
+            </ul>
+            <div class="address">
+                (주) 디제이랩 | 대표이사 최정원 | 사업자등록번호 : 530-88-01769 | 통신판매업신고번호 : 제 2025-서울송파-3075 호
+                소재지 : 서울특별시 송파구 오금로 111, 901-A18호(방이동, 세기빌딩) | 고객센터 : 02-553-0633 | 이메일 info@adpot.kr
+                <br><br>
+                COPYRIGHTⓒDJLab Corp. All rights reserved.
+            </div>
+            <div class="footer_logo">
+                <img src="/images/common/logo_footer.png" alt="Adpot">
+            </div>
+        </div>
+    </div>
+
+
+<script type="application/ld+json">
+{
+ "@context": "http://schema.org",
+ "@type": "Person",
+ "name": "애드팟",
+ "url": "https://adpot.kr/",
+ "sameAs": [
+   "https://cafe.naver.com/adpotcafe",
+   "https://blog.naver.com/adpot633",
+   "https://band.us/band/89247405",
+   "https://adpot.tistory.com/",
+   "http://pf.kakao.com/_tNxdTT",
+   "https://www.youtube.com/channel/UCCn0vsOH0wUSSQnQQegdZ7A",
+   "https://www.tiktok.com/@adpot633",
+   "https://www.facebook.com/adpot633",
+   "https://www.instagram.com/adpot633/",
+   "https://twitter.com/adpot633",
+   "https://post.naver.com/adpot633"
+ ]
+}
+</script>
+
+<!-- Naver Analytics -->
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "185120e4e7a592";
+wcs_do();
+</script>  
+
+<!-- Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-999SN9PWQ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-999SN9PWQ3');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-147983340-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147983340-1');
+</script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11008812130"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11008812130');
+</script>
+
+  
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3468163843259006');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=3468163843259006&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- 카카오모먼트 -->
+<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+<script type="text/javascript">
+      kakaoPixel('1437088393271329291').pageView();
+</script>
+
+</div>
+<!--wrap-->
+
+</body></html>

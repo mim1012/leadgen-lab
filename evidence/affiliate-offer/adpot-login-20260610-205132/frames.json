@@ -1,0 +1,449 @@
+[
+  {
+    "url": "https://adpot.kr/pc/join/login.html",
+    "name": "",
+    "text": "애드팟 소개\n마케팅 툴&팁\n내캠페인\n수익금내역\n출금신청\n고객센터\n로그인\n회원가입\n마케터 매니저\nCPA\n마케팅DB모집\nCPJ\n회원가입광고\nCPC\n페이지노출광고\nBLOG\n블로그포스팅\nevent\n이벤트\n(비번:로그인후)\n로그인\n \n로그인\n이메일저장\n비밀번호 찾기\n회원가입\n서비스 이용약관\n개인정보 처리방침\n홍보활동 운영정책\n생성형 AI활용 가이드라인\n[광고주용] 광고진행 소개서\n광고문의\n광고주 어드민\n(주) 디제이랩 | 대표이사 최정원 | 사업자등록번호 : 530-88-01769 | 통신판매업신고번호 : 제 2025-서울송파-3075 호 소재지 : 서울특별시 송파구 오금로 111, 901-A18호(방이동, 세기빌딩) | 고객센터 : 02-553-0633 | 이메일 info@adpot.kr\n\nCOPYRIGHTⓒDJLab Corp. All rights reserved.",
+    "text_length": 429,
+    "html": "<!DOCTYPE html><html><head>\n<title>애드팟 로그인</title>\n<meta charset=\"utf-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta name=\"viewport\" content=\"width=device-width\">\n<meta name=\"description\" content=\"마케팅의 잭팟~ 애드팟!\">        \n<meta property=\"og:locale\" content=\"ko_KR\">\n<meta property=\"og:type\" content=\"website\">    \n<meta property=\"og:title\" content=\"애드팟 로그인\">\n<meta property=\"og:description\" content=\"마케팅의 잭팟~ 애드팟!\">\n<meta property=\"og:url\" content=\"https://adpot.kr/pc/join/login.html\">\n<meta property=\"og:image\" content=\"http://adpot.kr/images/common/adpot.jpg\">    \n<link rel=\"stylesheet\" href=\"/css/core/bootstrap.min.css\">\n<link rel=\"stylesheet\" href=\"/css/core/bootstrap-theme.min.css\">\n<link rel=\"stylesheet\" href=\"/css/dev/common.css?12\">\n<link rel=\"stylesheet\" href=\"/css/common.css?11\">\n<link rel=\"stylesheet\" href=\"/css/sub.css?11\">\n<!--[if lt IE 9]>\n  <script src=\"/js/core/html5shiv.min.js\"></script>\n  <script src=\"/js/core/respond.min.js\"></script>\n<![endif]-->\n<script type=\"text/javascript\" async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=AW-11008812130&amp;cx=c&amp;gtm=4e6690h2\"></script><script type=\"text/javascript\" async=\"\" src=\"https://www.google-analytics.com/analytics.js\"></script><script type=\"text/javascript\" async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=G-RJKH5CF9ZH&amp;cx=c&amp;gtm=4e6690h2\"></script><script type=\"text/javascript\" async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=G-999SN9PWQ3&amp;cx=c&amp;gtm=4e6690h2\"></script><script src=\"https://connect.facebook.net/signals/config/3468163843259006?v=2.9.334&amp;r=stable&amp;domain=adpot.kr&amp;hme=d9eb83ce5750216745fae8e2064a8c1ed2255ecaf2468f800b2a146e6168b65e&amp;ex_m=105%2C208%2C156%2C22%2C73%2C74%2C147%2C69%2C68%2C11%2C165%2C91%2C16%2C139%2C128%2C39%2C76%2C79%2C135%2C161%2C167%2C8%2C4%2C5%2C7%2C6%2C3%2C92%2C102%2C168%2C173%2C222%2C30%2C75%2C234%2C233%2C232%2C23%2C33%2C55%2C104%2C61%2C10%2C64%2C98%2C99%2C100%2C106%2C131%2C31%2C29%2C133%2C134%2C130%2C129%2C157%2C77%2C160%2C158%2C159%2C50%2C60%2C124%2C15%2C164%2C45%2C267%2C268%2C266%2C26%2C27%2C28%2C48%2C148%2C78%2C113%2C18%2C20%2C44%2C40%2C42%2C41%2C84%2C93%2C97%2C111%2C146%2C149%2C46%2C112%2C24%2C21%2C120%2C70%2C36%2C151%2C150%2C152%2C143%2C141%2C25%2C35%2C59%2C110%2C163%2C71%2C17%2C154%2C115%2C82%2C67%2C19%2C86%2C87%2C117%2C85%2C137%2C136%2C140%2C162%2C34%2C282%2C298%2C215%2C204%2C62%2C205%2C203%2C301%2C292%2C52%2C216%2C108%2C132%2C81%2C122%2C54%2C47%2C49%2C114%2C121%2C127%2C126%2C58%2C65%2C63%2C153%2C116%2C37%2C32%2C53%2C56%2C101%2C166%2C1%2C125%2C14%2C123%2C12%2C2%2C57%2C94%2C66%2C119%2C90%2C89%2C169%2C170%2C95%2C96%2C9%2C103%2C51%2C144%2C88%2C80%2C72%2C118%2C107%2C43%2C145%2C0%2C83%2C138%2C142%2C155%2C38%2C109%2C13%2C171\" async=\"\"></script><script async=\"\" src=\"https://connect.facebook.net/en_US/fbevents.js\"></script><script src=\"/js/core/jquery.min.js\"></script>\n<script src=\"/js/core/bootstrap.min.js\"></script>\n<script src=\"/js/header/common.js\"></script>\n    \n\n\n\n\n\n    <link rel=\"stylesheet\" href=\"/css/member.css\">\n<script>\n  $(document).ready(function() {\n    $('#btnLogin').click(function() {\n      $(this).button('loading');\n      setTimeout(function() {\n        $('#btnLogin').button('reset');\n      },1000)\n    })\n  })\n\n  function onSubmit() {\n    $.ajax({\n      type: 'POST',\n      url: 'login_act.php',\n      data: $('#loginForm').serialize(),\n      success: function(out, status) {\n        var js = $.parseJSON(out);\n        if ( js.code == \"000\" ) {\n          location.replace(\"https://adpot.kr\");\n        } else if ( js.code == \"211\" ) {\n          alert(js.msg);\n          location.replace(\"/pc/join/join_result.html\");\n        } else if ( js.code == \"222\" ) {\n          alert(js.msg);\n          location.replace(\"/pc/my/name.html\");               \n        } else {\n          alert(js.msg);\n        }\n      }\n    });\n    return false;\n  }\n</script>\n<script type=\"text/javascript\" async=\"\" src=\"https://ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js\"></script><script type=\"text/javascript\" async=\"\" src=\"https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11008812130/?random=1781092247477&amp;cv=11&amp;fst=1781092247477&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be6641za200xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0~115938465~115938468&amp;u_w=3440&amp;u_h=1440&amp;url=https%3A%2F%2Fadpot.kr%2Fpc%2Fjoin%2Flogin.html&amp;rcb=3&amp;frm=0&amp;tiba=%EC%95%A0%EB%93%9C%ED%8C%9F%20%EB%A1%9C%EA%B7%B8%EC%9D%B8&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=2083864359.1781092247&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B149.0.7827.53%7CChromium%3B149.0.7827.53%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4\"></script></head>\n<body>\n<div class=\"wrap\">\n\n        <div class=\"header\">\n        <div class=\"top\">\n            <ul class=\"top_L\">\n                <li><a href=\"/pc/intro/adpot3.html\" onclick=\"blur()\">애드팟 소개</a></li>\n                <li><a href=\"/pc/etc/tool_tip.html\" onclick=\"blur()\">마케팅 툴&amp;팁</a></li>\n            </ul>\n            <div class=\"top_L2\"></div>\n            <ul class=\"top_R\">\n                <li><a href=\"/pc/my/my_camp.html\">내캠페인</a></li>\n                <li><a href=\"/pc/my/point_his.html\">수익금내역</a></li>\n                <li><a href=\"/pc/my/point.html\">출금신청</a></li>\n                <li><a href=\"/pc/center/notice.html\">고객센터</a></li>                \n            </ul>\n        </div>\n        <!--h_top-->\n        <div class=\"middle\">\n            <h1><a href=\"/\"><img src=\"/images/common/logo.jpg\" alt=\"애드팟\"><img src=\"/images/common/season3.jpg\" alt=\"시즌2 오픈플랫폼\"></a></h1>\n            <ol>\n                <li><a class=\"btn_login\" href=\"/pc/join/login.html\">로그인</a></li>\n                <li><a class=\"btn_join\" href=\"/pc/join/join.html\">회원가입</a></li>\n                \n            </ol>\n        </div>\n        <!--h_middle-->\n        <!--메뉴 시작-->\n        <div class=\"gnb_wrap\">\n            <div class=\"sub_gnb_bg\">\n            </div>\n            <!--서브메뉴 활성화 시 배경-->\n            <ul class=\"gnb\">\n                <li><a href=\"/pc/mark_mgr/manager_list.html\">마케터 매니저</a>\n                <ul class=\"sub_gnb\">\n                    <li><a href=\"/pc/mark_mgr/manager_list.html\">애드팟 공식 매니저</a></li>\n                    <li><a href=\"/pc/mark_mgr/my_manager.php\">나의 매니저 페이지</a></li>\n                    <li><a href=\"/pc/mark_mgr/manager_join01.html\">마케터 매니저 등록</a></li>\n                    <li><a href=\"/pc/mark_mgr/mcnt_join.html\">광고주 추천 제도</a></li>\n                </ul>\n                </li>\n                <li><a href=\"/pc/camp/camp_cpa.html\"><em>CPA</em>마케팅DB모집 </a>\n                <ul class=\"sub_gnb\">\n                    <li><a href=\"/pc/camp/camp_cpa.html\"><span class=\"cms-color-A cms-margin-right-5\">CPA</span>광고목록</a></li>\n                    <li><a href=\"/pc/report/db_cpa.html\"><span class=\"cms-color-A cms-margin-right-5\">CPA</span>상세실적</a></li>\n                    <li><a href=\"/pc/report/daily_cpa.html\"><span class=\"cms-color-A cms-margin-right-5\">CPA</span>일별통계</a></li>\n                    <li><a href=\"/pc/report/monthly_cpa.html\"><span class=\"cms-color-A cms-margin-right-5\">CPA</span>월별통계</a></li>\n                </ul>\n                </li>\n                <li><a href=\"/pc/camp/camp_cpj.html\"><em>CPJ</em>회원가입광고 </a>\n                <ul class=\"sub_gnb\">\n                    <li><a href=\"/pc/camp/camp_cpj.html\"><span class=\"cms-color-J cms-margin-right-5\">CPJ</span>광고목록</a></li>\n                    <li><a href=\"/pc/report/db_cpj.html\"><span class=\"cms-color-J cms-margin-right-5\">CPJ</span>상세실적</a></li>\n                    <li><a href=\"/pc/report/daily_cpj.html\"><span class=\"cms-color-J cms-margin-right-5\">CPJ</span>일별통계</a></li>\n                    <li><a href=\"/pc/report/monthly_cpj.html\"><span class=\"cms-color-J cms-margin-right-5\">CPJ</span>월별통계</a></li>\n                </ul>\n                </li>\n                <li><a href=\"/pc/camp/camp_cpc.html\"><em>CPC</em>페이지노출광고 </a>\n                <ul class=\"sub_gnb\">\n                    <li><a href=\"/pc/camp/camp_cpc.html\"><span class=\"cms-color-C cms-margin-right-5\">CPC</span>광고목록</a></li>\n                    <li><a href=\"/pc/report/db_cpc.html\"><span class=\"cms-color-C cms-margin-right-5\">CPC</span>상세실적</a></li>\n                    <li><a href=\"/pc/report/daily_cpc.html\"><span class=\"cms-color-C cms-margin-right-5\">CPC</span>일별통계</a></li>\n                    <li><a href=\"/pc/report/monthly_cpc.html\"><span class=\"cms-color-C cms-margin-right-5\">CPC</span>월별통계</a></li>\n                </ul>\n                </li>\n                <li><a href=\"/pc/camp/camp_blog.html\"><span class=\"_icon1\">BLOG</span>블로그포스팅 </a>\n                <ul class=\"sub_gnb\">\n                    <li><a href=\"/pc/camp/camp_blog.html\"><span class=\"cms-color-S cms-margin-right-5\">BLOG</span>광고목록</a></li>\n                    <li><a href=\"/pc/report/db_blog.html\"><span class=\"cms-color-S cms-margin-right-5\">BLOG</span>작업결과</a></li>\n                    <li><a href=\"/pc/intro/blog.html\"><span class=\"cms-color-S cms-margin-right-5\">BLOG</span>광고문의</a></li>\n                    <li></li>\n                </ul>\n                </li>\n                <li><a href=\"/pc/center/event.html\"><span class=\"_icon2\">event</span>이벤트 </a>\n                <ul class=\"sub_gnb\">\n                    <li><a href=\"/pc/event/lottery.html\"><span class=\"cms-color-I cms-margin-right-5\">EVENT</span>즉석복권 이벤트</a></li>\n<!--\n                    <li><a href=\"/pc/event/competition.html\"><span class=\"cms-color-I cms-margin-right-5\">EVENT</span>마케팅 대회</a></li>\n-->\n                    <li><a href=\"/pc/center/ranking.html\"><span class=\"cms-color-I cms-margin-right-5\">EVENT</span>마케터 랭킹</a></li>\n                    <li><a href=\"/pc/center/honor.html\"><span class=\"cms-color-I cms-margin-right-5\">EVENT</span>명예의 전당</a></li>\n                </ul>\n                </li>\n            </ul>\n        </div>\n        <!--gnb-->\n        <!--메뉴끝-->\n    </div>\n\n    <!--quick메뉴-->\n    <aside class=\"right\">\n<!--        \n        <div class=\"quick04\">\n            <a href=\"https://mknowhow.kr/pc/lect/lect02_view.html?lid=12390\" target=\"_blank\"><img src=\"/images/common/sky_07.jpg\" alt=\"페이스북 제휴마케팅 필수강의\"></a>\n        </div>\n        <div class=\"quick04\">\n            <a href=\"https://mknowhow.kr/pc/lect/lect04_list.html\" target=\"_blank\"><img src=\"/images/common/sky_17.jpg\" alt=\"머니노하우\"></a>\n        </div>\n-->\n        <div class=\"quick04\">\n            <a href=\"/pc/center/notice_view.html?code=154\" target=\"_blank\"><img src=\"/images/common/sky_02.jpg\" alt=\"공지방, 알림 설정\"></a>\n        </div>\n        <div class=\"quick04\">\n            <a href=\"https://open.kakao.com/o/gf0IVTqc\" target=\"_blank\"><img src=\"/images/common/sky_05.jpg?1\" alt=\"애드팟 공식 단톡방\"></a>\n            <div style=\"position: absolute; top: 84px; left: 0; width: 130px; text-align: center; color: orange; font-size: 13px; font-weight: bold;\">(비번:로그인후)</div>\n        </div>\n        <div class=\"quick04\">\n            <a href=\"https://cafe.naver.com/adpotcafe\" target=\"_blank\"><img src=\"/images/common/sky_06.jpg\" alt=\"애드팟 공식 카페\"></a>\n        </div>\n        <div class=\"quick04\">\n            <a href=\"/pc/center/inquire.html\" target=\"_blank\"><img src=\"/images/common/sky_03.jpg\" alt=\"1:1 문의 게시판\"></a>\n        </div>\n        <div class=\"quick04\">\n            <a href=\"/pc/center/notice_view.html?code=61\" target=\"_blank\"><img src=\"/images/common/sky_04.jpg\" alt=\"카카오톡 1:1 채팅 상담\"></a>\n        </div>\n        <div class=\"quick04\">\n            <a href=\"/pc/center/notice_view.html?code=60\" target=\"_blank\"><img src=\"/images/common/sky_01.jpg\" alt=\"텔레그램 1:1 채팅 상담\"></a>\n        </div>\n    </aside>\n\n    <aside class=\"left\">\n        <div class=\"quick04\">\n            <a href=\"/pc/event/lottery.html\" target=\"_blank\"><img src=\"/images/common/banner_R_04.jpg\" alt=\"이벤트\"></a>\n        </div> \n        <div class=\"quick04\">\n            <a href=\"/pc/center/honor.html\" target=\"_blank\"><img src=\"/images/common/sky_16.jpg\" alt=\"명예의 전당\"></a>\n        </div>\n        <div class=\"quick04\">\n            <a href=\"/pc/center/faq_view.html?code=861\" target=\"_blank\"><img src=\"/images/common/sky_11.jpg\" alt=\"타기관 수익인증으로 잭팟등급 등업하기\"></a>\n        </div>\n        <div class=\"quick04\">\n            <a href=\"/pc/center/faq_view.html?code=808\" target=\"_blank\"><img src=\"/images/common/sky_12.jpg\" alt=\"랜딩 페이지에 스크립트 삽입 요청\"></a>\n        </div>\n        <div class=\"quick04\">\n            <a href=\"/pc/center/faq_view.html?code=870\" target=\"_blank\"><img src=\"/images/common/sky_13.jpg\" alt=\"페북 도메인 차단시 해결 방법\"></a>\n        </div>\n        <div class=\"quick04\">\n            <a href=\"/pc/center/notice_view.html?code=154\" target=\"_blank\"><img src=\"/images/common/sky_14.jpg\" alt=\"DB 접수시 알림 받는 방법\"></a>\n        </div>\n    </aside>\n\n    <div class=\"member_bg\">\n        <!--회원가입 전용 배경색-->\n        <div class=\"join_box login_box\">\n            <!--로그인 페이지 여백을 위해 class=\"login_box\" 추가-->\n            <h2>로그인</h2>\n            <div class=\"join\">\n                <!--로그인 입력폼 시작-->\n                <form class=\"form-signin\" id=\"loginForm\" name=\"loginForm\" method=\"post\" onsubmit=\"return onSubmit()\">\n                    <div class=\"login_input\">\n                        <input type=\"text\" id=\"email\" name=\"email\" value=\"\" placeholder=\"이메일 주소\" required=\"\" autofocus=\"\" style=\"\">\n                        <input type=\"password\" id=\"pass\" name=\"pass\" placeholder=\"비밀번호\" required=\"\" style=\"\">\n                    </div>\n                    <button type=\"submit\" class=\"join_btn\" id=\"btnLogin\">로그인</button>\n                    <div class=\"login_option\">\n                        <label><input type=\"checkbox\" id=\"saveid\" name=\"saveid\" value=\"Y\" style=\"\"><span class=\"checkmark\"></span>이메일저장</label>\n                        <a class=\"pw_forgot\" href=\"find_pwd.html\">비밀번호 찾기</a>\n                    </div>\n                    <a class=\"join_btn2\" href=\"join.html\">회원가입</a>\n                </form>\n            </div>\n            <!--join-->\n            <!--로그인 입력폼 끝-->\n        </div>\n        <!--join_box login_box-->\n    </div>\n\n        <div class=\"footer\">\n        <div class=\"footer_content\">\n            <ul>\n                <li><a href=\"/pc/join/policy01_03.html\" target=\"_blank\">서비스 이용약관</a></li>\n                <li><a href=\"/pc/join/policy02_02.html\" target=\"_blank\">개인정보 처리방침</a></li>\n                <li><a href=\"https://drive.google.com/file/d/1SIvIhpe2JqXSTvIuEhr6v1_y_adKpVy9/view?usp=sharing\" target=\"_blank\">홍보활동 운영정책</a></li>\n                <li><a href=\"https://drive.google.com/file/d/1zwYjF0p3CzIWzyNRDDkX249_wbnyvQ05/view?usp=sharing\" target=\"_blank\">생성형 AI활용 가이드라인</a></li>\n                <li><a href=\"http://bit.ly/3tsqCMb\" target=\"_blank\">[광고주용] 광고진행 소개서</a></li>\n                <li><a href=\"/pc/center/ad_inquire.html\" target=\"_blank\">광고문의</a></li>\n                <li><a href=\"/pc/mcnt/\" target=\"_blank\">광고주 어드민</a></li>\n            </ul>\n            <div class=\"address\">\n                (주) 디제이랩 | 대표이사 최정원 | 사업자등록번호 : 530-88-01769 | 통신판매업신고번호 : 제 2025-서울송파-3075 호\n                소재지 : 서울특별시 송파구 오금로 111, 901-A18호(방이동, 세기빌딩) | 고객센터 : 02-553-0633 | 이메일 info@adpot.kr\n                <br><br>\n                COPYRIGHTⓒDJLab Corp. All rights reserved.\n            </div>\n            <div class=\"footer_logo\">\n                <img src=\"/images/common/logo_footer.png\" alt=\"Adpot\">\n            </div>\n        </div>\n    </div>\n\n\n<script type=\"application/ld+json\">\n{\n \"@context\": \"http://schema.org\",\n \"@type\": \"Person\",\n \"name\": \"애드팟\",\n \"url\": \"https://adpot.kr/\",\n \"sameAs\": [\n   \"https://cafe.naver.com/adpotcafe\",\n   \"https://blog.naver.com/adpot633\",\n   \"https://band.us/band/89247405\",\n   \"https://adpot.tistory.com/\",\n   \"http://pf.kakao.com/_tNxdTT\",\n   \"https://www.youtube.com/channel/UCCn0vsOH0wUSSQnQQegdZ7A\",\n   \"https://www.tiktok.com/@adpot633\",\n   \"https://www.facebook.com/adpot633\",\n   \"https://www.instagram.com/adpot633/\",\n   \"https://twitter.com/adpot633\",\n   \"https://post.naver.com/adpot633\"\n ]\n}\n</script>\n\n<!-- Naver Analytics -->\n<script type=\"text/javascript\" src=\"//wcs.naver.net/wcslog.js\"></script>\n<script type=\"text/javascript\">\nif(!wcs_add) var wcs_add = {};\nwcs_add[\"wa\"] = \"185120e4e7a592\";\nwcs_do();\n</script>  \n\n<!-- Google Analytics -->\n<script async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=G-999SN9PWQ3\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-999SN9PWQ3');\n</script>\n\n<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=UA-147983340-1\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-147983340-1');\n</script>\n\n\n<!-- Google tag (gtag.js) -->\n<script async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=AW-11008812130\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'AW-11008812130');\n</script>\n\n  \n\n<!-- Facebook Pixel Code -->\n<script>\n  !function(f,b,e,v,n,t,s)\n  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n  n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n  n.queue=[];t=b.createElement(e);t.async=!0;\n  t.src=v;s=b.getElementsByTagName(e)[0];\n  s.parentNode.insertBefore(t,s)}(window, document,'script',\n  'https://connect.facebook.net/en_US/fbevents.js');\n  fbq('init', '3468163843259006');\n  fbq('track', 'PageView');\n</script>\n<noscript><img height=\"1\" width=\"1\" style=\"display:none\"\n  src=\"https://www.facebook.com/tr?id=3468163843259006&ev=PageView&noscript=1\"\n/></noscript>\n<!-- End Facebook Pixel Code -->\n\n<!-- 카카오모먼트 -->\n<script type=\"text/javascript\" charset=\"UTF-8\" src=\"//t1.daumcdn.net/adfit/static/kp.js\"></script>\n<script type=\"text/javascript\">\n      kakaoPixel('1437088393271329291').pageView();\n</script>\n\n</div>\n<!--wrap-->\n\n</body></html>",
+    "html_length": 18084,
+    "links": [
+      {
+        "text": "애드팟 소개",
+        "href": "https://adpot.kr/pc/intro/adpot3.html",
+        "title": ""
+      },
+      {
+        "text": "마케팅 툴&팁",
+        "href": "https://adpot.kr/pc/etc/tool_tip.html",
+        "title": ""
+      },
+      {
+        "text": "내캠페인",
+        "href": "https://adpot.kr/pc/my/my_camp.html",
+        "title": ""
+      },
+      {
+        "text": "수익금내역",
+        "href": "https://adpot.kr/pc/my/point_his.html",
+        "title": ""
+      },
+      {
+        "text": "출금신청",
+        "href": "https://adpot.kr/pc/my/point.html",
+        "title": ""
+      },
+      {
+        "text": "고객센터",
+        "href": "https://adpot.kr/pc/center/notice.html",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://adpot.kr/",
+        "title": ""
+      },
+      {
+        "text": "로그인",
+        "href": "https://adpot.kr/pc/join/login.html",
+        "title": ""
+      },
+      {
+        "text": "회원가입",
+        "href": "https://adpot.kr/pc/join/join.html",
+        "title": ""
+      },
+      {
+        "text": "마케터 매니저",
+        "href": "https://adpot.kr/pc/mark_mgr/manager_list.html",
+        "title": ""
+      },
+      {
+        "text": "애드팟 공식 매니저",
+        "href": "https://adpot.kr/pc/mark_mgr/manager_list.html",
+        "title": ""
+      },
+      {
+        "text": "나의 매니저 페이지",
+        "href": "https://adpot.kr/pc/mark_mgr/my_manager.php",
+        "title": ""
+      },
+      {
+        "text": "마케터 매니저 등록",
+        "href": "https://adpot.kr/pc/mark_mgr/manager_join01.html",
+        "title": ""
+      },
+      {
+        "text": "광고주 추천 제도",
+        "href": "https://adpot.kr/pc/mark_mgr/mcnt_join.html",
+        "title": ""
+      },
+      {
+        "text": "CPA\n마케팅DB모집",
+        "href": "https://adpot.kr/pc/camp/camp_cpa.html",
+        "title": ""
+      },
+      {
+        "text": "CPA광고목록",
+        "href": "https://adpot.kr/pc/camp/camp_cpa.html",
+        "title": ""
+      },
+      {
+        "text": "CPA상세실적",
+        "href": "https://adpot.kr/pc/report/db_cpa.html",
+        "title": ""
+      },
+      {
+        "text": "CPA일별통계",
+        "href": "https://adpot.kr/pc/report/daily_cpa.html",
+        "title": ""
+      },
+      {
+        "text": "CPA월별통계",
+        "href": "https://adpot.kr/pc/report/monthly_cpa.html",
+        "title": ""
+      },
+      {
+        "text": "CPJ\n회원가입광고",
+        "href": "https://adpot.kr/pc/camp/camp_cpj.html",
+        "title": ""
+      },
+      {
+        "text": "CPJ광고목록",
+        "href": "https://adpot.kr/pc/camp/camp_cpj.html",
+        "title": ""
+      },
+      {
+        "text": "CPJ상세실적",
+        "href": "https://adpot.kr/pc/report/db_cpj.html",
+        "title": ""
+      },
+      {
+        "text": "CPJ일별통계",
+        "href": "https://adpot.kr/pc/report/daily_cpj.html",
+        "title": ""
+      },
+      {
+        "text": "CPJ월별통계",
+        "href": "https://adpot.kr/pc/report/monthly_cpj.html",
+        "title": ""
+      },
+      {
+        "text": "CPC\n페이지노출광고",
+        "href": "https://adpot.kr/pc/camp/camp_cpc.html",
+        "title": ""
+      },
+      {
+        "text": "CPC광고목록",
+        "href": "https://adpot.kr/pc/camp/camp_cpc.html",
+        "title": ""
+      },
+      {
+        "text": "CPC상세실적",
+        "href": "https://adpot.kr/pc/report/db_cpc.html",
+        "title": ""
+      },
+      {
+        "text": "CPC일별통계",
+        "href": "https://adpot.kr/pc/report/daily_cpc.html",
+        "title": ""
+      },
+      {
+        "text": "CPC월별통계",
+        "href": "https://adpot.kr/pc/report/monthly_cpc.html",
+        "title": ""
+      },
+      {
+        "text": "BLOG\n블로그포스팅",
+        "href": "https://adpot.kr/pc/camp/camp_blog.html",
+        "title": ""
+      },
+      {
+        "text": "BLOG광고목록",
+        "href": "https://adpot.kr/pc/camp/camp_blog.html",
+        "title": ""
+      },
+      {
+        "text": "BLOG작업결과",
+        "href": "https://adpot.kr/pc/report/db_blog.html",
+        "title": ""
+      },
+      {
+        "text": "BLOG광고문의",
+        "href": "https://adpot.kr/pc/intro/blog.html",
+        "title": ""
+      },
+      {
+        "text": "event\n이벤트",
+        "href": "https://adpot.kr/pc/center/event.html",
+        "title": ""
+      },
+      {
+        "text": "EVENT즉석복권 이벤트",
+        "href": "https://adpot.kr/pc/event/lottery.html",
+        "title": ""
+      },
+      {
+        "text": "EVENT마케터 랭킹",
+        "href": "https://adpot.kr/pc/center/ranking.html",
+        "title": ""
+      },
+      {
+        "text": "EVENT명예의 전당",
+        "href": "https://adpot.kr/pc/center/honor.html",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://adpot.kr/pc/center/notice_view.html?code=154",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://open.kakao.com/o/gf0IVTqc",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://cafe.naver.com/adpotcafe",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://adpot.kr/pc/center/inquire.html",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://adpot.kr/pc/center/notice_view.html?code=61",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://adpot.kr/pc/center/notice_view.html?code=60",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://adpot.kr/pc/event/lottery.html",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://adpot.kr/pc/center/honor.html",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://adpot.kr/pc/center/faq_view.html?code=861",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://adpot.kr/pc/center/faq_view.html?code=808",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://adpot.kr/pc/center/faq_view.html?code=870",
+        "title": ""
+      },
+      {
+        "text": "",
+        "href": "https://adpot.kr/pc/center/notice_view.html?code=154",
+        "title": ""
+      },
+      {
+        "text": "비밀번호 찾기",
+        "href": "https://adpot.kr/pc/join/find_pwd.html",
+        "title": ""
+      },
+      {
+        "text": "회원가입",
+        "href": "https://adpot.kr/pc/join/join.html",
+        "title": ""
+      },
+      {
+        "text": "서비스 이용약관",
+        "href": "https://adpot.kr/pc/join/policy01_03.html",
+        "title": ""
+      },
+      {
+        "text": "개인정보 처리방침",
+        "href": "https://adpot.kr/pc/join/policy02_02.html",
+        "title": ""
+      },
+      {
+        "text": "홍보활동 운영정책",
+        "href": "https://drive.google.com/file/d/1SIvIhpe2JqXSTvIuEhr6v1_y_adKpVy9/view?usp=sharing",
+        "title": ""
+      },
+      {
+        "text": "생성형 AI활용 가이드라인",
+        "href": "https://drive.google.com/file/d/1zwYjF0p3CzIWzyNRDDkX249_wbnyvQ05/view?usp=sharing",
+        "title": ""
+      },
+      {
+        "text": "[광고주용] 광고진행 소개서",
+        "href": "http://bit.ly/3tsqCMb",
+        "title": ""
+      },
+      {
+        "text": "광고문의",
+        "href": "https://adpot.kr/pc/center/ad_inquire.html",
+        "title": ""
+      },
+      {
+        "text": "광고주 어드민",
+        "href": "https://adpot.kr/pc/mcnt/",
+        "title": ""
+      }
+    ],
+    "images": [
+      {
+        "alt": "애드팟",
+        "src": "https://adpot.kr/images/common/logo.jpg",
+        "width": 128,
+        "height": 31
+      },
+      {
+        "alt": "시즌2 오픈플랫폼",
+        "src": "https://adpot.kr/images/common/season3.jpg",
+        "width": 170,
+        "height": 31
+      },
+      {
+        "alt": "공지방, 알림 설정",
+        "src": "https://adpot.kr/images/common/sky_02.jpg",
+        "width": 130,
+        "height": 130
+      },
+      {
+        "alt": "애드팟 공식 단톡방",
+        "src": "https://adpot.kr/images/common/sky_05.jpg?1",
+        "width": 130,
+        "height": 130
+      },
+      {
+        "alt": "애드팟 공식 카페",
+        "src": "https://adpot.kr/images/common/sky_06.jpg",
+        "width": 130,
+        "height": 130
+      },
+      {
+        "alt": "1:1 문의 게시판",
+        "src": "https://adpot.kr/images/common/sky_03.jpg",
+        "width": 130,
+        "height": 130
+      },
+      {
+        "alt": "카카오톡 1:1 채팅 상담",
+        "src": "https://adpot.kr/images/common/sky_04.jpg",
+        "width": 130,
+        "height": 130
+      },
+      {
+        "alt": "텔레그램 1:1 채팅 상담",
+        "src": "https://adpot.kr/images/common/sky_01.jpg",
+        "width": 130,
+        "height": 130
+      },
+      {
+        "alt": "이벤트",
+        "src": "https://adpot.kr/images/common/banner_R_04.jpg",
+        "width": 130,
+        "height": 166
+      },
+      {
+        "alt": "명예의 전당",
+        "src": "https://adpot.kr/images/common/sky_16.jpg",
+        "width": 130,
+        "height": 130
+      },
+      {
+        "alt": "타기관 수익인증으로 잭팟등급 등업하기",
+        "src": "https://adpot.kr/images/common/sky_11.jpg",
+        "width": 130,
+        "height": 130
+      },
+      {
+        "alt": "랜딩 페이지에 스크립트 삽입 요청",
+        "src": "https://adpot.kr/images/common/sky_12.jpg",
+        "width": 130,
+        "height": 130
+      },
+      {
+        "alt": "페북 도메인 차단시 해결 방법",
+        "src": "https://adpot.kr/images/common/sky_13.jpg",
+        "width": 130,
+        "height": 130
+      },
+      {
+        "alt": "DB 접수시 알림 받는 방법",
+        "src": "https://adpot.kr/images/common/sky_14.jpg",
+        "width": 130,
+        "height": 130
+      },
+      {
+        "alt": "Adpot",
+        "src": "https://adpot.kr/images/common/logo_footer.png",
+        "width": 130,
+        "height": 36
+      }
+    ],
+    "controls": [
+      {
+        "index": 0,
+        "tag": "input",
+        "type": "text",
+        "name": "email",
+        "id": "email",
+        "aria": "",
+        "text": "이메일 주소",
+        "disabled": false
+      },
+      {
+        "index": 1,
+        "tag": "input",
+        "type": "password",
+        "name": "pass",
+        "id": "pass",
+        "aria": "",
+        "text": "비밀번호",
+        "disabled": false
+      },
+      {
+        "index": 2,
+        "tag": "button",
+        "type": "submit",
+        "name": "",
+        "id": "btnLogin",
+        "aria": "",
+        "text": "로그인",
+        "disabled": false
+      },
+      {
+        "index": 3,
+        "tag": "input",
+        "type": "checkbox",
+        "name": "saveid",
+        "id": "saveid",
+        "aria": "",
+        "text": "Y",
+        "disabled": false
+      }
+    ],
+    "meta": {
+      "title": "애드팟 로그인",
+      "canonical": "",
+      "h1": [
+        ""
+      ],
+      "h2": [
+        "로그인"
+      ],
+      "articleText": "",
+      "ogTitle": "애드팟 로그인",
+      "ogDescription": "마케팅의 잭팟~ 애드팟!"
+    }
+  }
+]

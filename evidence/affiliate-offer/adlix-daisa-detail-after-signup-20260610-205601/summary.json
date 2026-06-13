@@ -1,0 +1,43 @@
+{
+  "captured_at": "20260610-205601",
+  "source": "affiliate-offer",
+  "slug": "adlix-daisa-detail-after-signup",
+  "page_url": "https://adlix.co.kr/cpa/appview.asp?idx=6936747",
+  "page_title": "애드릭스-SNS마케팅 > CPA 마케팅 > 다이사 이사 가격비교 > 재택알바 > 블로그 알바 부업 창업 투잡",
+  "frame_count": 1,
+  "best_frame_url": "https://adlix.co.kr/cpa/appview.asp?idx=6936747",
+  "best_frame_name": "",
+  "screenshot": "D:\\Project\\leadgen-lab\\evidence\\affiliate-offer\\adlix-daisa-detail-after-signup-20260610-205601\\screenshot.png",
+  "frames": [
+    {
+      "url": "https://adlix.co.kr/cpa/appview.asp?idx=6936747",
+      "name": "",
+      "text_length": 2222,
+      "html_length": 43786,
+      "link_count": 60,
+      "image_count": 27,
+      "control_count": 2,
+      "meta": {
+        "title": "애드릭스-SNS마케팅 > CPA 마케팅 > 다이사 이사 가격비교 > 재택알바 > 블로그 알바 부업 창업 투잡",
+        "canonical": "https://www.adlix.co.kr/",
+        "h1": [
+          "",
+          ""
+        ],
+        "h2": [
+          "스크린샷",
+          "상세 정보",
+          "전환 정보",
+          "접수 항목",
+          "대가성 문구 표시",
+          "프로모션 진행 안내",
+          "상담접수 양식(입력폼) 스크립트",
+          "전체 CPA 스크립트 광고"
+        ],
+        "articleText": "",
+        "ogTitle": "다이사 이사 가격비교",
+        "ogDescription": "[다이사 이사 가격비교] CPA 캠페인 입니다.\n캠페인 많은 홍보 부탁드립니다.\n\n* 소개\n다이사는 이사업체를 최대 3곳까지 한 번에"
+      }
+    }
+  ]
+}

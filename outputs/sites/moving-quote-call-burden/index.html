@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이사 견적 신청 직전 불안 진단</title>
+  <meta name="description" content="이사 견적 신청 버튼을 누르기 전, 전화 부담·추가요금·상담 가능 시간을 30초로 점검하고 준비된 경우에만 비교 견적으로 이동합니다.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e3a8a'/%3E%3Cpath d='M18 18h28v28H18z' fill='%23fff'/%3E%3Cpath d='M23 28h18M23 36h12' stroke='%2393c5fd' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary:      #1e3a8a;
+      --primary-mid:  #2563eb;
+      --primary-dark: #172554;
+      --primary-soft: #eff6ff;
+      --accent:       #f97316;
+      --accent-dark:  #c2410c;
+      --accent-soft:  #fff7ed;
+      --success:      #10b981;
+      --success-soft: #ecfdf5;
+      --warn:         #f59e0b;
+      --warn-soft:    #fffbeb;
+      --bg:           #ffffff;
+      --bg-alt:       #f8fafc;
+      --ink:          #0f172a;
+      --soft:         #475569;
+      --muted:        #94a3b8;
+      --line:         #e2e8f0;
+      --line-strong:  #cbd5e1;
+      --radius:       10px;
+      --radius-lg:    16px;
+      --max:          1120px;
+      --shadow-sm:    0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+      --shadow:       0 4px 20px rgba(0,0,0,.08), 0 2px 8px rgba(0,0,0,.06);
+      --shadow-lg:    0 10px 40px rgba(0,0,0,.12), 0 4px 16px rgba(0,0,0,.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* ── NAV ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255,255,255,.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      display: flex;
+      min-height: 62px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--primary-dark);
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--primary-mid), var(--primary-dark));
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .nav-badge {
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--soft);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 55%, #1d4ed8 100%);
+      padding: 64px 0 56px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr minmax(0, 480px);
+      gap: 40px;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-copy { color: #fff; }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      color: #93c5fd;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      margin-bottom: 20px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #34d399;
+      display: inline-block;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 4.8vw, 62px);
+      font-weight: 950;
+      line-height: 1.05;
+      letter-spacing: -.01em;
+      word-break: keep-all;
+      color: #fff;
+    }
+
+    .hero-accent { color: #93c5fd; }
+
+    .hero-sub {
+      margin: 18px 0 0;
+      font-size: clamp(16px, 1.5vw, 19px);
+      color: rgba(255,255,255,.75);
+      font-weight: 650;
+      line-height: 1.5;
+      word-break: keep-all;
+      max-width: 520px;
+    }
+
+    .hero-sub strong { color: #fff; }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .stat-chip {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .chip-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #34d399;
+      flex-shrink: 0;
+    }
+
+    /* ── DIAGNOSTIC CARD ── */
+    .diagnostic {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .diagnostic-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 22px;
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .diagnostic-head h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--primary-dark);
+    }
+
+    .step-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary-mid);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .questions {
+      display: grid;
+      gap: 16px;
+      padding: 18px 22px;
+    }
+
+    .question h3 {
+      margin: 0 0 8px;
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--soft);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .chip {
+      min-height: 42px;
+      border: 1.5px solid var(--line);
+      border-radius: var(--radius);
+      padding: 8px 6px;
+      background: var(--bg);
+      color: var(--soft);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 140ms ease;
+      line-height: 1.3;
+    }
+
+    .chip:hover {
+      border-color: var(--primary-mid);
+      color: var(--primary-mid);
+      background: var(--primary-soft);
+    }
+
+    .chip[aria-pressed="true"] {
+      border-color: var(--primary-mid);
+      background: var(--primary-mid);
+      color: #fff;
+    }
+
+    .chip:focus-visible,
+    .button:focus-visible {
+      outline: 3px solid rgba(37,99,235,.3);
+      outline-offset: 2px;
+    }
+
+    .result {
+      margin: 0 18px 18px;
+      border-radius: var(--radius);
+      padding: 16px;
+      background: var(--bg-alt);
+      border: 1.5px solid var(--line);
+    }
+
+    .result strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 16px;
+      color: var(--ink);
+    }
+
+    .result p {
+      margin: 0;
+      color: var(--soft);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .result.ready   { background: var(--success-soft); border-color: #6ee7b7; }
+    .result.prepare { background: var(--warn-soft);    border-color: #fcd34d; }
+
+    /* ── BUTTONS ── */
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border: none;
+      border-radius: var(--radius);
+      padding: 12px 20px;
+      background: var(--primary-mid);
+      color: #fff;
+      font: inherit;
+      font-size: 15px;
+      font-weight: 900;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 160ms ease;
+      letter-spacing: -.01em;
+    }
+
+    .button:hover { filter: brightness(0.9); transform: translateY(-1px); box-shadow: var(--shadow); }
+    .button:active { transform: translateY(0); filter: brightness(0.85); }
+
+    .button.accent { background: var(--accent); }
+    .button.full { width: 100%; margin-top: 12px; }
+
+    .button.ghost {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,.35);
+      color: rgba(255,255,255,.75);
+    }
+    .button.ghost:hover { filter: none; background: rgba(255,255,255,.1); transform: none; box-shadow: none; }
+
+    .button.white { background: #fff; color: var(--primary-dark); }
+    .button.white:hover { filter: none; background: #f1f5f9; }
+
+    /* ── STATS BAND ── */
+    .stats-band {
+      padding: 36px 0;
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .stat {
+      padding: 24px 28px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 950;
+      color: var(--primary-mid);
+      line-height: 1;
+    }
+
+    .stat-label {
+      margin-top: 6px;
+      color: var(--soft);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* ── SECTIONS ── */
+    .section { padding: 52px 0; }
+
+    .section-label {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary-mid);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      margin-bottom: 14px;
+    }
+
+    .section-head { margin-bottom: 32px; }
+
+    .section-head h2 {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 2.8vw, 36px);
+      font-weight: 950;
+      line-height: 1.18;
+      word-break: keep-all;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--soft);
+      font-weight: 650;
+      max-width: 520px;
+    }
+
+    /* ── STEPS ── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      position: relative;
+    }
+
+    .steps::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: calc(16.6% + 16px);
+      right: calc(16.6% + 16px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary-soft), var(--primary-mid), var(--primary-soft));
+    }
+
+    .step-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: #fff;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .step-num {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--primary-mid);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .step-card h3 { margin: 0 0 8px; font-size: 17px; font-weight: 900; }
+
+    .step-card p {
+      margin: 0;
+      color: var(--soft);
+      font-size: 14px;
+      font-weight: 650;
+      line-height: 1.55;
+    }
+
+    /* ── CHECKLIST ── */
+    .checklist-section {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .checklist-intro {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, var(--primary), var(--primary-dark));
+      color: #fff;
+    }
+
+    .checklist-intro h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.25;
+    }
+
+    .checklist-intro p {
+      margin: 0;
+      color: rgba(255,255,255,.76);
+      font-weight: 650;
+      font-size: 14px;
+    }
+
+    .checklist { display: grid; gap: 8px; }
+
+    .check {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 14px 16px;
+      border: 1.5px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: border-color 140ms;
+    }
+
+    .check:has(input:checked) {
+      border-color: var(--primary-mid);
+      background: var(--primary-soft);
+    }
+
+    .check input {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      accent-color: var(--primary-mid);
+      cursor: pointer;
+    }
+
+    .check input:focus-visible { outline: 3px solid rgba(37,99,235,.3); }
+
+    /* ── RISK ── */
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .risk {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 20px;
+      border: 1px solid #fde68a;
+      border-radius: var(--radius-lg);
+      background: var(--warn-soft);
+    }
+
+    .risk-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .risk-body { min-width: 0; }
+
+    .risk h3 {
+      margin: 0 0 4px;
+      font-size: 15px;
+      font-weight: 900;
+      color: #92400e;
+    }
+
+    .risk p {
+      margin: 0;
+      color: #a16207;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    /* ── FINAL CTA ── */
+    .cta-section {
+      background: linear-gradient(145deg, var(--primary-dark), var(--primary));
+      padding: 56px 0;
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .cta-inner h2 {
+      margin: 0 0 10px;
+      font-size: clamp(22px, 2.6vw, 34px);
+      font-weight: 950;
+      line-height: 1.18;
+      color: #fff;
+      word-break: keep-all;
+    }
+
+    .cta-inner p {
+      margin: 0;
+      color: rgba(255,255,255,.72);
+      font-weight: 650;
+      font-size: 15px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 220px;
+    }
+
+    .disclosure {
+      margin-top: 18px;
+      color: rgba(255,255,255,.45);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      padding: 20px 0;
+    }
+
+    .footer-inner {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .hero-grid          { grid-template-columns: 1fr; gap: 32px; }
+      .steps              { grid-template-columns: 1fr; }
+      .steps::before      { display: none; }
+      .checklist-grid     { grid-template-columns: 1fr; }
+      .risk-grid          { grid-template-columns: 1fr; }
+      .cta-inner          { grid-template-columns: 1fr; }
+      .cta-buttons        { flex-direction: row; }
+      .stats-row          { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .wrap        { width: min(100% - 28px, var(--max)); }
+      .nav         { min-height: 54px; }
+      .nav-badge   { display: none; }
+      .hero        { padding: 40px 0 36px; }
+      .choices     { grid-template-columns: 1fr; }
+      .cta-buttons { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="brand-mark">이사</div>
+        견적 직전 불안 진단
+      </div>
+      <div class="nav-badge">제휴 광고 포함</div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            견적 신청 직전 30초 점검
+          </div>
+          <h1>신청 버튼 누르기 전<br><span class="hero-accent">불안한 3가지</span>부터 확인하세요</h1>
+          <p class="hero-sub">
+            전화가 얼마나 올지, 추가요금이 붙을지, 지금 신청해도 되는지 <strong>헷갈릴 때</strong><br>
+            이사일·연락 가능 시간·짐 정보를 먼저 확인하고 비교 견적으로 이동하세요.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-chip"><span class="chip-dot"></span>55일 이내 이사일 필요</div>
+            <div class="stat-chip"><span class="chip-dot"></span>상담 전화 받을 시간 확정</div>
+            <div class="stat-chip"><span class="chip-dot"></span>개인정보 미수집 v1</div>
+          </div>
+        </div>
+
+        <section class="diagnostic" id="diagnostic" aria-label="30초 신청 가능 진단">
+          <div class="diagnostic-head">
+            <h2>견적 신청 직전 30초 점검</h2>
+            <div class="step-pill" id="stepCount">0/4 선택</div>
+          </div>
+
+          <div class="questions">
+            <div class="question" data-group="date">
+              <h3>이사 예정일</h3>
+              <div class="choices">
+                <button class="chip" type="button" data-value="55일 이내">55일 이내</button>
+                <button class="chip" type="button" data-value="55일 이후">55일 이후</button>
+                <button class="chip" type="button" data-value="아직 미정">아직 미정</button>
+              </div>
+            </div>
+
+            <div class="question" data-group="contact">
+              <h3>상담 전화 수신</h3>
+              <div class="choices">
+                <button class="chip" type="button" data-value="상담 가능">상담 가능</button>
+                <button class="chip" type="button" data-value="시간 제한">시간 제한</button>
+                <button class="chip" type="button" data-value="전화 불가">전화 불가</button>
+              </div>
+            </div>
+
+            <div class="question" data-group="address">
+              <h3>출발지 / 도착지</h3>
+              <div class="choices">
+                <button class="chip" type="button" data-value="둘 다 확정">둘 다 확정</button>
+                <button class="chip" type="button" data-value="한쪽만 확정">한쪽만 확정</button>
+                <button class="chip" type="button" data-value="미정">미정</button>
+              </div>
+            </div>
+
+            <div class="question" data-group="inventory">
+              <h3>큰 짐 / 특이사항</h3>
+              <div class="choices">
+                <button class="chip" type="button" data-value="정리됨">정리됨</button>
+                <button class="chip" type="button" data-value="대략만">대략만</button>
+                <button class="chip" type="button" data-value="미정">미정</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="result" id="result">
+            <strong>아직 진단 전입니다</strong>
+            <p>4가지 질문을 선택하면 지금 준비된 상태인지 확인해 드립니다.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-band">
+      <div class="wrap">
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-num">55일</div>
+            <div class="stat-label">이내 이사일일 때만 신청 가능</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">30초</div>
+            <div class="stat-label">신청 가능 상태 진단 시간</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">0건</div>
+            <div class="stat-label">이 페이지에서 수집하는 개인정보</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-label">이용 방법</div>
+          <h2>3단계로 견적 상담을 준비하세요</h2>
+          <p>미리 정리해두면 업체마다 같은 설명을 반복하는 수고를 줄이고, 추가요금 리스크에 대비할 수 있습니다.</p>
+        </div>
+        <div class="steps">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <h3>전화·추가요금 불안 진단</h3>
+            <p>이사일, 연락 시간, 주소, 짐 규모 — 4가지를 선택하면 지금 준비된 상태인지 바로 확인합니다.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <h3>불안 포인트 정리</h3>
+            <p>아직 신청이 망설여진다면 전화 받을 시간, 상담받을 업체 수, 추가요금 질문부터 정리하세요.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <h3>신청해도 될 때만 이동</h3>
+            <p>준비가 됐다면 다이사 제휴 견적으로 이동합니다. 이사 예정일 55일 이내 + 상담 연락 가능 시 적합합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section class="section checklist-section" id="checklist">
+      <div class="wrap">
+        <div class="checklist-grid">
+          <div class="checklist-intro">
+            <h2>신청 직전 막히는<br>불안을 먼저 줄이세요</h2>
+            <p>아래 항목을 먼저 정하면 “전화 많이 오면 어떡하지”, “나중에 추가금 붙으면 어떡하지” 같은 불안을 줄인 뒤 신청할 수 있습니다.</p>
+          </div>
+          <div class="checklist" aria-label="이사 견적 체크리스트">
+            <label class="check"><input type="checkbox" data-check="address">출발지/도착지 주소, 층수, 엘리베이터 여부를 정리했다.</label>
+            <label class="check"><input type="checkbox" data-check="date">이사 가능 날짜와 피해야 할 날짜를 정했다.</label>
+            <label class="check"><input type="checkbox" data-check="items">침대, 냉장고, 세탁기, 에어컨 등 큰 품목을 적었다.</label>
+            <label class="check"><input type="checkbox" data-check="extra">사다리차, 주말, 손 없는 날, 분해/설치 추가비용 질문을 준비했다.</label>
+            <label class="check"><input type="checkbox" data-check="contact">연락 가능한 시간과 상담받을 업체 수를 정했다.</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RISK -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-label">주의사항</div>
+          <h2>신청 직전 가장 많이 불안한 3가지</h2>
+          <p>견적 신청 버튼을 누르기 전에 이 3가지만 확인해도 상담 거절·추가비용·개인정보 불안을 줄일 수 있습니다.</p>
+        </div>
+        <div class="risk-grid">
+          <article class="risk">
+            <div class="risk-icon">⚠️</div>
+            <div class="risk-body">
+              <h3>첫 가격 ≠ 최종 금액</h3>
+              <p>사다리차·주말·분해설치 포함 여부를 반드시 확인하세요.</p>
+            </div>
+          </article>
+          <article class="risk">
+            <div class="risk-icon">📦</div>
+            <div class="risk-body">
+              <h3>대형 짐은 방문 견적 필요</h3>
+              <p>큰 가전이 있으면 사진 견적만으로는 오차가 커질 수 있습니다.</p>
+            </div>
+          </article>
+          <article class="risk">
+            <div class="risk-icon">🔒</div>
+            <div class="risk-body">
+              <h3>개인정보 전달 업체 확인</h3>
+              <p>마케팅 수신 동의가 견적 신청과 분리돼 있는지 확인하세요.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-section">
+      <div class="wrap">
+        <div class="cta-inner">
+          <div>
+            <h2>불안 포인트를 정리했다면<br>비교 견적으로 넘어가세요</h2>
+            <p>이사일, 주소, 연락 가능 시간, 추가요금 질문이 준비된 상태에서 신청하세요. 이사 예정일 55일 이내 + 상담 연락 가능 시 적합합니다.</p>
+          </div>
+          <div class="cta-buttons">
+            <a class="button accent"
+               id="outboundCta"
+               href="https://appu.kr/?i=12518178&utm_source=landing&utm_medium=outbound&utm_campaign=moving_quote_call_burden&utm_content=primary_cta"
+               rel="nofollow sponsored noopener"
+               target="_blank"
+               data-event="outbound_cta_clicked">불안 정리하고 비교 견적 확인하기 →</a>
+            <a class="button ghost" href="#diagnostic">진단 다시 하기</a>
+          </div>
+        </div>
+        <p class="disclosure">[광고] 이 페이지는 이사 견적 비교 전 확인할 정보를 정리한 안내 페이지이며, 제휴 링크를 통한 신청 또는 클릭에 따라 운영자는 제휴 수익을 지급받습니다.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">Leadgen Lab MVP — static pre-lander. No local personal data collection.</div>
+  </footer>
+
+  <script>
+    const state = {
+      date: "",
+      contact: "",
+      address: "",
+      inventory: "",
+      events: []
+    };
+
+    const resultEl    = document.querySelector("#result");
+    const stepCount   = document.querySelector("#stepCount");
+    const outboundUrl = "https://appu.kr/?i=12518178&utm_source=landing&utm_medium=outbound&utm_campaign=moving_quote_call_burden";
+
+    function track(eventName, payload = {}) {
+      const event = {
+        event: eventName,
+        campaign: "moving_quote_call_burden",
+        payload,
+        ts: new Date().toISOString()
+      };
+      state.events.push(event);
+      localStorage.setItem("moving_quote_call_burden_events", JSON.stringify(state.events));
+      window.dispatchEvent(new CustomEvent("leadgen:event", { detail: event }));
+    }
+
+    function selectedCount() {
+      return [state.date, state.contact, state.address, state.inventory].filter(Boolean).length;
+    }
+
+    function updateResult() {
+      const selected = selectedCount();
+      stepCount.textContent = `${selected}/4 선택`;
+      if (!selected) return;
+
+      const isEligibleDate   = state.date     === "55일 이내";
+      const isIneligibleDate = state.date     === "55일 이후" || state.date === "아직 미정";
+      const canTakeCalls     = state.contact  === "상담 가능" || state.contact === "시간 제한";
+      const cannotTakeCalls  = state.contact  === "전화 불가";
+      const hasAddress       = state.address  === "둘 다 확정" || state.address === "한쪽만 확정";
+      const hasInventory     = state.inventory === "정리됨" || state.inventory === "대략만";
+
+      const ready    = selected >= 4 && isEligibleDate && canTakeCalls && hasAddress && hasInventory;
+      const notReady = selected >= 4 && (isIneligibleDate || cannotTakeCalls || !hasAddress || !hasInventory);
+
+      if (ready) {
+        resultEl.className = "result ready";
+        resultEl.innerHTML = `
+          <strong>✅ 불안 포인트 정리 완료 — 지금 신청할 수 있습니다</strong>
+          <p>이사일, 연락 시간, 주소, 짐 정보가 준비됐고 상담 연락도 받을 수 있는 상태입니다. 아래에서 비교 견적을 확인하세요.</p>
+          <a class="button accent full"
+             href="${outboundUrl}&utm_content=diagnosis_ready_cta"
+             rel="nofollow sponsored noopener" target="_blank"
+             data-event="diagnosis_ready_cta_clicked">불안 정리 완료 — 비교 견적 확인하기 →</a>
+        `;
+        track("diagnosis_completed", { result: "ready", date: state.date, contact: state.contact, address: state.address, inventory: state.inventory });
+      } else if (notReady) {
+        resultEl.className = "result prepare";
+        resultEl.innerHTML = `
+          <strong>📋 아직 신청 전 불안이 남아 있습니다</strong>
+          <p>이사일, 연락 가능 시간, 주소와 짐 정보를 먼저 정리하세요. 특히 전화 받을 시간과 추가요금 질문이 없으면 신청 후 상담이 더 부담스러울 수 있습니다.</p>
+          <a class="button full" href="#checklist" data-event="diagnosis_prepare_cta_clicked">불안 포인트 먼저 정리하기</a>
+        `;
+        track("diagnosis_completed", { result: "prepare_first", date: state.date, contact: state.contact, address: state.address, inventory: state.inventory });
+      } else {
+        resultEl.className = "result";
+        resultEl.innerHTML = `
+          <strong>준비 확인 중 — ${selected}/4개 선택 완료</strong>
+          <p>남은 질문을 선택하면 지금 준비된 상태인지 확인해 드립니다.</p>
+        `;
+      }
+    }
+
+    document.querySelectorAll(".question").forEach((group) => {
+      const groupName = group.dataset.group;
+      group.querySelectorAll(".chip").forEach((button) => {
+        button.setAttribute("aria-pressed", "false");
+        button.addEventListener("click", () => {
+          group.querySelectorAll(".chip").forEach((other) => other.setAttribute("aria-pressed", "false"));
+          button.setAttribute("aria-pressed", "true");
+          state[groupName] = button.dataset.value;
+          track("selector_choice", { group: groupName, value: button.dataset.value });
+          updateResult();
+        });
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      const node = event.target.closest("[data-event]");
+      if (!node) return;
+      track(node.dataset.event, { href: node.getAttribute("href") || "" });
+    });
+
+    document.querySelectorAll("[data-check]").forEach((checkbox) => {
+      checkbox.addEventListener("change", () => {
+        track("checklist_toggled", { item: checkbox.dataset.check, checked: checkbox.checked });
+      });
+    });
+
+    track("page_view", { path: location.pathname, referrer: document.referrer || "" });
+  </script>
+</body>
+</html>

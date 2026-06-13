@@ -1,0 +1,2331 @@
+{
+  "appliance-rental": {
+    "record_count": 100,
+    "unique_url_count": 96,
+    "source_counts": {
+      "blog": 50,
+      "cafearticle": 50
+    },
+    "top_domains": {
+      "blog.naver.com": 50,
+      "cafe.naver.com": 50
+    },
+    "pain_hits": {
+      "전화": 69,
+      "개인정보": 26,
+      "후회": 6,
+      "사기": 1,
+      "걱정": 1,
+      "실패": 1,
+      "귀찮": 2
+    },
+    "intent_hits": {
+      "견적": 3,
+      "비교": 98,
+      "상담": 104,
+      "신청": 11,
+      "고르는": 46,
+      "선택": 35,
+      "비용": 9,
+      "가격": 43,
+      "후기": 174,
+      "계약": 3
+    },
+    "promo_hits": {
+      "추천드": 4,
+      "추천드려요": 1,
+      "무료 상담": 1,
+      "최대": 9,
+      "혜택": 67,
+      "프로모션": 4,
+      "바로가기": 1,
+      "문의": 5,
+      "업체": 11,
+      "브랜드": 8
+    },
+    "high_signal_count": 61,
+    "avg_top_score": 18.3,
+    "topic_score": 49.89,
+    "top_records": [
+      {
+        "score": 22,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 개인정보 후기",
+        "source_type": "cafearticle",
+        "title": "코웨이얼음정수기렌탈 후기 가격이 궁금하다면",
+        "snippet": "코웨이얼음정수기렌탈 후기 사용을 위해서 알아보실때, 개인의 용도에 맞게 그리고 가정의 라이프 스타일에... 알려드렸던 정보들을 참고하셔서 후회없게 잘 선택하셔서 이용하시길 바랄께요. (ㅠㅠ) 이번... ",
+        "url": "http://cafe.naver.com/ourman/489738",
+        "postdate": ""
+      },
+      {
+        "score": 21,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=6",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "가전 렌탈 상담 전화 많이 와요",
+        "source_type": "cafearticle",
+        "title": "삼성가전제품 렌탈 비용 견적 사은품 혜택 후기",
+        "snippet": "아정당 가전렌탈 신청 절차와 제품 선택 방법 아정당은 전화나 카톡으로 가전렌탈 상담을 쉽게 받을 수 있어... 또 여러 곳에서 견적을 받아보니 아정당이 사은품을 가장 많이 제공해서, 렌탈료가 비슷해도 총비용으로... ",
+        "url": "http://cafe.naver.com/1sejongcity/1946872",
+        "postdate": ""
+      },
+      {
+        "score": 20,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=7",
+          "community_terms=1",
+          "promo_terms=2",
+          "cafearticle",
+          "rank=4",
+          "naver_cafe"
+        ],
+        "query": "가전 렌탈 상담 전화 많이 와요",
+        "source_type": "cafearticle",
+        "title": "대구 코웨이 렌탈 가격 비교 혜택 가정용 가전제품렌탈 비용 견적 설치 사은품 후기",
+        "snippet": "하나하나 상담하면서 모델도 고르고 선택이 쉬웠어요 ▼ 정수기, 공기청정기 제휴 할인 신용카드 & 요금할인 프로모션 등 꿀팁 ▼ :요즘 가전제품 렌탈 많이들하시는데 제휴할인카드가 항상 있더라고요~ 카드발급해서 실적... ",
+        "url": "http://cafe.naver.com/ma9guide/1282015",
+        "postdate": ""
+      },
+      {
+        "score": 19,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=2",
+          "community_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 개인정보 후기",
+        "source_type": "cafearticle",
+        "title": "정수기렌탈 후기 이제 여기서만 합니다",
+        "snippet": "후기 사용을 위해서 알아보실때, 각 가정의 용도에 맞게 그리고 손님의 라이프 스타일에 맞는 개인 환경에... 알려드렸던 정보들을 참고하셔서 후회없게 잘 선택하셔서 이용하실 바랄께요. (ㅠㅠ) 이번 정수기렌탈 후기... ",
+        "url": "http://cafe.naver.com/thenewcclass/134293",
+        "postdate": ""
+      },
+      {
+        "score": 18,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=2",
+          "community_terms=1",
+          "cafearticle",
+          "rank=5",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 개인정보 후기",
+        "source_type": "cafearticle",
+        "title": "코웨이직수정수기렌탈 후기 장거리이사 알아보실때",
+        "snippet": "코웨이직수정수기렌탈 후기 사용을 위하여 알아보실때, 각 개인의 용도에 맞게 그리고 이용자의 라이프... 알려드렸던 정보들을 참고하셔서 후회없도록 잘 선택하셔서 이용하길 바라겠습니다. (ㅠㅠ) 이번... ",
+        "url": "http://cafe.naver.com/thenewcclass/134900",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "intent_terms=4",
+          "community_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 비교 후기",
+        "source_type": "cafearticle",
+        "title": "코웨이 정수기 렌탈 비교 후기",
+        "snippet": "코웨이 정수기 렌탈 비교 후기 ▼ 정수기 설치 신청절차, 냉정 냉온 얼음정수기 고르는 꿀팁 ▼ 저희 집은 얼음 소비가 거의 없어서 냉·온·정수 기능을 갖춘 제품으로 알아봤습니다. 시장에 모델이 워낙 많아 고르느라... ",
+        "url": "http://cafe.naver.com/yuasam/956661",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=5",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=9",
+          "naver_cafe"
+        ],
+        "query": "가전 렌탈 상담 전화 많이 와요",
+        "source_type": "cafearticle",
+        "title": "세종 SK매직 25년형 초소형 플러스 직수 냉온정수기 렌탈 가격비교 사은품 혜택 가정용 가전제품렌탈 비용 ...",
+        "snippet": "얼음정수기랑 고민하다가 얼음은 생각보다 많이 소비 안할 듯 하여 이 냉온정수기로 선택하였습니다.... 궁금하거나 의심되는 부분이 있으면 24시간 상담도 가능하다고 하니 더욱 믿음이 가더라구요. 가전렌탈은 혜택으로... ",
+        "url": "http://cafe.naver.com/ma9guide/1281833",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "intent_terms=5",
+          "community_terms=2",
+          "cafearticle",
+          "rank=6",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 고르는 기준",
+        "source_type": "cafearticle",
+        "title": "코웨이얼음정수기렌탈 찐솔직후기",
+        "snippet": "코웨이정수기 렌탈 과정 처음 정수기를 알아볼 때 가격과 관리 부분이 가장 고민되는 요소였습니다. 상담부터... 제품 고르는 꿀팁 ▼ 정수기는 기능과 사용 환경에 따라 코웨이정수기 선택 기준이 달라집니다.... ",
+        "url": "http://cafe.naver.com/yuasam/961403",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=2",
+          "community_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 전화 상담 후기",
+        "source_type": "cafearticle",
+        "title": "sk매직얼음정수기렌탈 후기",
+        "snippet": "sk매직얼음정수기렌탈 후기 사은품 관련해서 도움 받은 영상 공유 드려요! 운동하고 와서 마시는 얼음물 한... 전화 통화가 힘들어서 카카오톡으로 대화했는데 답변이 아주 깔끔했어요. 제가 염두에 두고 있던... ",
+        "url": "http://cafe.naver.com/happyeverycvs/286493",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=4",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=8",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 전화 상담 후기",
+        "source_type": "cafearticle",
+        "title": "코웨이 정수기 렌탈 혜택 좋아요",
+        "snippet": "▼ 아정당 코웨이 정수기 렌탈 설치 상담 후기 ▼ 상담신청서를 넣자마자 전화가 와서 설치가 빨리 진행됐습니다. 원래 염두에 둔 모델이 있었는데 상담사님 설명을 듣고 코웨이 아이콘 얼음정수기 스탠다드를 선택하게... ",
+        "url": "http://cafe.naver.com/yuasam/966323",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=2",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=9",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 전화 상담 후기",
+        "source_type": "cafearticle",
+        "title": "코웨이얼음정수기렌탈 혜택 장점",
+        "snippet": "써보고 후기 적을게요. 마지막으로 지원혜택도 너무 잘해주시고 전화상담 귀찮게 많이 드렸는데 상담부터 설치까지 너무 신경써주셔서 기분좋게 코웨이얼음정수기렌탈을 했습니다. 코웨이 얼음정수기 렌탈 완전... ",
+        "url": "http://cafe.naver.com/gimhaezumma/2775327",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=2",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=10",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 전화 상담 후기",
+        "source_type": "cafearticle",
+        "title": "쿠쿠 정수기 렌탈 모르면 손해네요ㅠ",
+        "snippet": "뒤져가며 후기도 꼼꼼히 보며 공부했네요! 1번으로 쿠쿠 정수기 렌탈료 사기 없는 안심정찰제 등록 업체 위주로 알아봤는데 제가 상담받은 곳이 진짜 양심적이더라고요. 이곳에 전화해서 물어봤더니 좋았던게 제가 쿠쿠... ",
+        "url": "http://cafe.naver.com/gimhaezumma/2769498",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=4",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=10",
+          "naver_cafe"
+        ],
+        "query": "가전 렌탈 상담 전화 많이 와요",
+        "source_type": "cafearticle",
+        "title": "직수정수기렌탈 냉온정수기 추천 사은품 혜택 정리",
+        "snippet": "▼ 가전제품 렌탈 해당 모델 선택 이유와 후기▼ 집안 어르신들이 자주 쓰는지라 렌탈로 화면 달린 모델을... ▼ 아정당 렌탈 사은품 혜택 받아본 후기 ▼ 전화상담 신청하니 남긴 번호로 바로 연락이 왔습니다. 상담원분이... ",
+        "url": "http://cafe.naver.com/directwedding/8949319",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=2",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=10",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 개인정보 후기",
+        "source_type": "cafearticle",
+        "title": "전국 코웨이 정수기 렌탈 업체후기 올려봐요",
+        "snippet": "코웨이 정수기 렌탈 사용을 위해서 알아보실때, 각 개인의 용도에 맞게 그리고 이용자의 라이프 스타일에... 알려드렸던 정보들을 참고하셔서 후회없게 잘 선택하셔서 이용하실 바랄께요. (ㅠㅠ) 이번 전국 코웨이 정수기... ",
+        "url": "http://cafe.naver.com/ourman/487720",
+        "postdate": ""
+      },
+      {
+        "score": 15,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=2",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 전화 상담 후기",
+        "source_type": "cafearticle",
+        "title": "sk매직 얼음정수기 렌탈 후기 역대급 혜택",
+        "snippet": "▼ 아정당 SK매직 얼음정수기 렌탈 사은품 혜택 받아본 후기 ▼ 전화 상담에서 설치까지 과정이 매끄럽게 진행되었습니다. 상담사님이 제게 맞춘 약정과 요금제를 제안해 주셨고 설치 기사님도 약속 시간에 맞춰... ",
+        "url": "http://cafe.naver.com/happyeverycvs/283606",
+        "postdate": ""
+      },
+      {
+        "score": 15,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 전화 상담 후기",
+        "source_type": "cafearticle",
+        "title": "쿠쿠정수기렌탈 혜택 비교 후기",
+        "snippet": "▼ 아정당 쿠쿠정수기 렌탈 설치 상담 설치 후기 ▼ 쿠쿠정수기 설치 상담은 전화 한 통으로 빠르게 진행됐습니다. 쿠쿠정수기 상담 시 설치 위치와 배수, 전원, 사용법까지 하나하나 친절히 안내해주셨고 기사님도... ",
+        "url": "http://cafe.naver.com/yuasam/966518",
+        "postdate": ""
+      },
+      {
+        "score": 15,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=2",
+          "community_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 비교 후기",
+        "source_type": "cafearticle",
+        "title": "코웨이얼음정수기렌탈 비교해 본 후기",
+        "snippet": "그래서 여러 제품을 비교하다가 코웨이얼음정수기렌탈을 진행하게 됐습니다. 처음에는 크기가 클까 봐 걱정했는데 실제로 보니 생각보다 슬림했습니다. 코웨이얼음정수기렌탈 제품은 주방 공간을 많이 차지하지 않아 설치... ",
+        "url": "http://cafe.naver.com/directwedding/9039343",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=5",
+          "naver_cafe"
+        ],
+        "query": "정수기 렌탈 전화 상담 후기",
+        "source_type": "cafearticle",
+        "title": "웅진코웨이 정수기 렌탈 최고혜택",
+        "snippet": "정도는 전화해서 상담비교해보기!! ㅎㅎ 꿀팁ㅎ 저처럼 아이 있는 집이나 깔끔한 디자인 좋아하시는 분들은 웅진코웨이 정수기 렌탈 한 번 비교해보셔도 만족도 높으실 것 같아요 디자인, 사용 편리함, 위생관리까지 전체... ",
+        "url": "http://cafe.naver.com/shopjirmsin/11269892",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=1",
+          "promo_terms=2",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "가전 렌탈 상담 전화 많이 와요",
+        "source_type": "cafearticle",
+        "title": "코웨이얼음정수기렌탈 혜택 장점",
+        "snippet": "위생 상 안 좋은 거 같아 아예 코웨이얼음정수기렌탈 하기로 맘 먹었네요. 집에서 쓰고 있는 가전 브랜드에서... 전화상담 귀찮게 많이 드렸는데 상담부터 설치까지 너무 신경써주셔서 기분좋게 코웨이얼음정수기렌탈을... ",
+        "url": "http://cafe.naver.com/gimhaezumma/2775327",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=5",
+          "naver_cafe"
+        ],
+        "query": "가전 렌탈 상담 전화 많이 와요",
+        "source_type": "cafearticle",
+        "title": "쿠쿠 얼음정수기 렌탈 역대급 혜택 사은품 지원 후기",
+        "snippet": "비용이 많이 나와서 정수기 렌탈을 알아보게 되었습니다 얼음 기능과 온수 기능이 필수라서 조건에 맞는 제품을 찾다가 아정당을 통해 진행했고 인터넷으로 상품 확인 후 전화 한 통으로 친절하게 상담을 받아 간편하게... ",
+        "url": "http://cafe.naver.com/directwedding/8817972",
+        "postdate": ""
+      }
+    ]
+  },
+  "interior-estimate": {
+    "record_count": 120,
+    "unique_url_count": 116,
+    "source_counts": {
+      "blog": 60,
+      "cafearticle": 60
+    },
+    "top_domains": {
+      "blog.naver.com": 60,
+      "cafe.naver.com": 60
+    },
+    "pain_hits": {
+      "전화": 2,
+      "스트레스": 1,
+      "후회": 47,
+      "호구": 1,
+      "추가비용": 20,
+      "불안": 1,
+      "걱정": 7,
+      "실패": 2
+    },
+    "intent_hits": {
+      "견적": 209,
+      "비교": 82,
+      "상담": 121,
+      "신청": 9,
+      "체크리스트": 74,
+      "고르는": 53,
+      "선택": 33,
+      "비용": 73,
+      "가격": 11,
+      "후기": 174,
+      "질문": 36,
+      "계약": 10
+    },
+    "promo_hits": {
+      "추천드": 2,
+      "추천드려요": 1,
+      "무료견적": 1,
+      "무료 상담": 1,
+      "최대": 1,
+      "혜택": 4,
+      "바로가기": 1,
+      "문의": 4,
+      "업체": 198,
+      "브랜드": 2,
+      "광고": 1
+    },
+    "high_signal_count": 86,
+    "avg_top_score": 19.8,
+    "topic_score": 61.64,
+    "top_records": [
+      {
+        "score": 24,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=5",
+          "community_terms=1",
+          "cafearticle",
+          "rank=10",
+          "naver_cafe"
+        ],
+        "query": "인테리어 견적 추가비용 후기",
+        "source_type": "cafearticle",
+        "title": "25평인테리어 스페이스 201 이용한 후기",
+        "snippet": "이것저것 알아보다가 스페이스 201을 만났고, 결론적으로 진짜 잘 선택했다 싶어서 후기 남겨요.... 처음 25평인테리어라 막막하신 분, 견적 받을수록 더 헷갈리시는 분, 추가 비용 걱정되시는 분 모두 스페이스 201 상담... ",
+        "url": "http://cafe.naver.com/culturebloom/3230768",
+        "postdate": ""
+      },
+      {
+        "score": 22,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=4",
+          "community_terms=1",
+          "cafearticle",
+          "rank=5",
+          "naver_cafe"
+        ],
+        "query": "인테리어 견적 추가비용 후기",
+        "source_type": "cafearticle",
+        "title": "24평인테리어 견적 스페이스 201을 이용한 이유",
+        "snippet": "24평인테리어 견적만 다섯 군데 받아본 제가 결국 선택한 곳 후기 해당 게시글은 수수료를 받고 작성하는... 처음 24평인테리어라 막막하신 분, 견적 받을수록 더 헷갈리시는 분, 추가 비용 걱정되시는 분 모두 스페이스... ",
+        "url": "http://cafe.naver.com/culturebloom/3230772",
+        "postdate": ""
+      },
+      {
+        "score": 21,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "인테리어 견적 추가비용 후기",
+        "source_type": "cafearticle",
+        "title": "33평 아파트 인테리어 비용 견적 시공 후기",
+        "snippet": "33평 아파트 인테리어 비용 견적 시공 후기 15년 차 인테리어 전문가가 밝히는 실패 없는 아파트 리모델링... 시 추가 50평대 1억~1억 4,750만 원 대형 평수는 단가 절감 가능 지역, 브랜드, 자재 등급에 따라 ±20% 변동 가능... ",
+        "url": "http://cafe.naver.com/1sejongcity/1951113",
+        "postdate": ""
+      },
+      {
+        "score": 21,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "인테리어 상담 후회 후기",
+        "source_type": "cafearticle",
+        "title": "두달 지나 쓰는 인테리어 후기: 잘한 점과 후회되는 점(34평, 12년차)",
+        "snippet": "안녕하세요:) 서울 서대문구 12년차 34평 아파트를 지난 2월 중순부터 5주간 턴키 인테리어한 후기를 올립니다... 후회하는 점 ㅡ 주방 상판, 세라믹으로 할 걸 8. 마치며 1. 잘한 점 ㅡ 턴키업체 선택 대면 상담 4곳, 전화... ",
+        "url": "http://cafe.naver.com/overseer/1651172",
+        "postdate": ""
+      },
+      {
+        "score": 21,
+        "reasons": [
+          "intent_terms=8",
+          "cafearticle",
+          "rank=5",
+          "naver_cafe"
+        ],
+        "query": "아파트 인테리어 견적 질문 리스트",
+        "source_type": "cafearticle",
+        "title": "부산 해운대 아파트 인테리어 비용 총정리! 평당 견적 및 리모델링 가격 비교 꿀팁",
+        "snippet": "- **아파트 리모델링 비용:** 거실 확장부터 전체 올수리까지 상세 견적 확인 가능 - **아파트 인테리어 비용... 체크리스트] 1. **상담 신청 전 예산 확인:** 집닥은 시공 금액 1,000만 원 이상의 프로젝트에서 최적의 효과를... ",
+        "url": "http://cafe.naver.com/greenvq0oa/27171",
+        "postdate": ""
+      },
+      {
+        "score": 19,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=5",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "인테리어 견적 추가비용 후기",
+        "source_type": "cafearticle",
+        "title": "한샘 인테리어 리모델링 비용 후기 보다가 결국 견적 상담까지 받았어요",
+        "snippet": "쌤페스타 혜택이 진행되는 동안 키친, 바스, 수납 패키지와 추가 증정 혜택까지 함께 비교해보면서 보다 합리적으로 인테리어 계획을 세워보세요. #한샘인테리어리모델링비용 #한샘리모델링후기 #한샘견적상담... ",
+        "url": "http://cafe.naver.com/kmhking/2061394",
+        "postdate": ""
+      },
+      {
+        "score": 18,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=4",
+          "community_terms=1",
+          "cafearticle",
+          "rank=7",
+          "naver_cafe"
+        ],
+        "query": "인테리어 견적 추가비용 후기",
+        "source_type": "cafearticle",
+        "title": "30평대(33평,34평, 전용84) 10년차 아파트 전체 인테리어 비용및 견적",
+        "snippet": "전체 인테리어 계약 자랑 혹은 평가 부탁드리려고 글을 작성합니다. 이번에 부산에서 10년된 34평형 아파트... 세부견적은 최종후기에 남기려합니다. 1.전체도배: 전체 베스트시공 2.전체바닥: kcc포레스톤 5t 장판 시공... ",
+        "url": "http://cafe.naver.com/overseer/1645207",
+        "postdate": ""
+      },
+      {
+        "score": 18,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "인테리어 상담 후회 후기",
+        "source_type": "cafearticle",
+        "title": "인천 턴키 32평 구축 인테리어 후기",
+        "snippet": "저도 후기 남겨봅니다. 2달 동안 진짜 인테리어 공부하며 살았네요ㅎ 올철거 올수리라서 반셀, 셀프... 선택했는데 후회없어요~~확실히 고급집니다~~!! -샷시: lx뷰프레임 LX샷시가 확실히 깔끔한것 같아요~ 턴키... ",
+        "url": "http://cafe.naver.com/overseer/1669687",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=2",
+          "cafearticle",
+          "rank=8",
+          "naver_cafe"
+        ],
+        "query": "인테리어 견적 추가비용 후기",
+        "source_type": "cafearticle",
+        "title": "대구 30평대 구축 반셀프 인테리어 도전기-1.턴키 견적후기",
+        "snippet": "당황스러웠던ㅠㅠ 인테리어는 소비라 큰돈쓰지말라고하던데⸒⸒보태보태병도 오고 추가금 파티도... 견적도 나쁘지 않았다 7번 에*티 컴퍼니(?) 인테리어로 등록된 오프라인매장은 없었지만 셀인카페에서 후기가 좋은데... ",
+        "url": "http://cafe.naver.com/overseer/1659809",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=4",
+          "community_terms=2",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=5",
+          "naver_cafe"
+        ],
+        "query": "인테리어 상담 후회 후기",
+        "source_type": "cafearticle",
+        "title": "분당 20년 넘은 구축 올수리 후기 (인테리어 업체 고민하시는 분들께",
+        "snippet": "인테리어를 알아보면서 분당의 유명한 구축 전문 업체들도 여러 군데 상담을 다녔는데, 솔직히 견적이 너무... 인테리어 후기들을 보면 계약 후 계속 추가금이 붙어서 힘들었다는 이야기가 많은데, 저희는 그런 경험이 거의... ",
+        "url": "http://cafe.naver.com/overseer/1671419",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=2",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "아파트 인테리어 견적 질문 리스트",
+        "source_type": "cafearticle",
+        "title": "서구 검암경서동 40평아파트인테리어, 저만 이렇게 불안한가요? 매일 밤 카페 눈팅만 했어니다...",
+        "snippet": "그렇게 허탈한 마음으로 대형 플랫폼 견적 요청을 눌렀습니다. 플랫폼 매칭된 업체는 달랐어요. 첫 미팅 때부터 제가 준비한 자재 리스트와 질문 목록을 차분히 듣더니, 하나 하나 답변을 해주었죠. 아토피 걱정에 대한 제... ",
+        "url": "http://cafe.naver.com/ysmom/122510",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "인테리어 견적 추가비용 후기",
+        "source_type": "cafearticle",
+        "title": "단독주택 인테리어 비용 견적 깔끔한 디자인 시공 후기",
+        "snippet": "정도를 추가 비용 버퍼로 잡아두면 갑작스러운 변수에도 불편함이 줄어들어요. 이렇게 주택 리모델링 후기를 공유해봤어요. 직접 시도해보면 궁금한 점이 자연스럽게 풀릴 거예요. ▼ 아정당 인테리어 맞춤 견적 바로가기... ",
+        "url": "http://cafe.naver.com/1sejongcity/1952630",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=4",
+          "naver_cafe"
+        ],
+        "query": "인테리어 견적 추가비용 후기",
+        "source_type": "cafearticle",
+        "title": "10평 미용실 인테리어 컨셉별 견적 비용 시공 후기 완벽 분석",
+        "snippet": "10평 미용실 인테리어 컨셉별 견적 비용 시공 후기 완벽 분석 1. 공간별 핵심 컨셉과 예상 견적 정리 지난 달... 18평 A미용실은 전체 마감과 샴푸실 설비를 포함해 4천만 원대였고, 25평 C미용실은 특수 아트월 공사를 추가... ",
+        "url": "http://cafe.naver.com/1sejongcity/1930682",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=4",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=9",
+          "naver_cafe"
+        ],
+        "query": "인테리어 견적 추가비용 후기",
+        "source_type": "cafearticle",
+        "title": "구리 인테리어 비용 시공 업체 추천 견적 정리",
+        "snippet": "평형대 예상 비용 범위 20평대 4,000만 원 ~ 7,250만 원 30평대 6,000만 원 ~ 9,750만 원 40평대 8,000만 원 ~ 1억 2,250만 원 실제로 현장에서는 낮은 견적으로 계약 후 추가 비용이 붙는 경우가 정말 많습니다. 특히 구리 인테리어... ",
+        "url": "http://cafe.naver.com/kig/19519035",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "intent_terms=5",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "인테리어 업체 상담 전 체크리스트",
+        "source_type": "cafearticle",
+        "title": "계양구 철거 방문견적 전 체크리스트",
+        "snippet": "계양구철거 현장 추가 비용 없는 견적서를 위한 세부 항목 체크리스트 방문 견적을 받으실 때는 구두... 성공적인 마무리를 위한 계양구 철거 업체 비교 노하우 단순히 저렴하게 보이는 업체보다는 상담 기준이 흔들리지... ",
+        "url": "http://cafe.naver.com/0404ab/4146493",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "intent_terms=5",
+          "community_terms=1",
+          "cafearticle",
+          "rank=10",
+          "naver_cafe"
+        ],
+        "query": "인테리어 견적 비교 후기",
+        "source_type": "cafearticle",
+        "title": "신축아파트 인테리어후기 + 추천",
+        "snippet": "주변지인들 인테리어 한다고하면 전 여기 추천해줄껍니다~ 저도 이사가면 다시여기~ 4월말 입주. 2월 3월 두달간 알아보고 견적.상담.비교후 직접 발품팔아 골랐구요 가격은 싸지도 비싸지도않았습니다. 비싼항목은 해보니... ",
+        "url": "http://cafe.naver.com/dongtantwomom/2521252",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=9",
+          "naver_cafe"
+        ],
+        "query": "인테리어 상담 후회 후기",
+        "source_type": "cafearticle",
+        "title": "신혼집 구축 아파트 인테리어 전/후, with 하우스디자인",
+        "snippet": "예산 3,000만원 생각했지만 견적상담시 2,000만원 가성비로 하고싶다고 말씀을 드리고 4-5곳의 인테리어... 올철거 인테리어 후기를 끄적여 봤는데요, 궁금한 점 있다면 댓글 남겨주세요. 이상 저의 인테리어 후기였습니다.... ",
+        "url": "http://cafe.naver.com/directwedding/9033598",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=10",
+          "naver_cafe"
+        ],
+        "query": "인테리어 상담 후회 후기",
+        "source_type": "cafearticle",
+        "title": "분당 구축 32평 부모님댁 3천만원대 반셀프 인테리어 후기",
+        "snippet": "왜 다들 인테리어 후기에서 “방에 실링팬 안 단 걸 후회한다”는지 이제 알 것 같아요. 디자인적으로도... 상담을 받아보니 신뢰가 가서 다른 곳은 따로 견적도 보지 않고 바로 진행했습니다. 연락도 정말 잘 되는... ",
+        "url": "http://cafe.naver.com/overseer/1668720",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "intent_terms=5",
+          "community_terms=1",
+          "cafearticle",
+          "rank=9",
+          "naver_cafe"
+        ],
+        "query": "아파트 인테리어 견적 질문 리스트",
+        "source_type": "cafearticle",
+        "title": "[1011번 고객 대신 의뢰] 경기도 수원시 영통구 호수마을 참누리레이크 아파트 인테리어 공사 견적 의뢰",
+        "snippet": "체크리스트를 다운로드해서 읽어 보시길 바랍니다.☞ 상담 후 달라지는 모든 실 견적서도 저희 카페에... 선반 질문: 화장실 덧방 방식 차이? 타일 교체 하는데, 기존 \"변기, 세면대, 욕조\"를 활용할 수 있는지?(소요비용... ",
+        "url": "http://cafe.naver.com/pcarpenter/509714",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "intent_terms=5",
+          "community_terms=1",
+          "cafearticle",
+          "rank=10",
+          "naver_cafe"
+        ],
+        "query": "아파트 인테리어 견적 질문 리스트",
+        "source_type": "cafearticle",
+        "title": "아파트 인테리어 상담 다녀온 후기 공유요!!!",
+        "snippet": "온거라 견적은 따로 보내주시기로 했는데 저는 질문 리스트 쫙 뽑아가지고 갔던거라 원하는 대답은 다 듣고왔어요ㅋㅋㅋ 이제 내일 가는 곳 한곳하고만 비교해서 결정하면 될거같아요 상담도 친절하고 궁금한거 다... ",
+        "url": "http://cafe.naver.com/baby8/2448693",
+        "postdate": ""
+      }
+    ]
+  },
+  "moving-quote": {
+    "record_count": 120,
+    "unique_url_count": 114,
+    "source_counts": {
+      "blog": 60,
+      "cafearticle": 60
+    },
+    "top_domains": {
+      "blog.naver.com": 60,
+      "cafe.naver.com": 60
+    },
+    "pain_hits": {
+      "전화": 83,
+      "전화폭탄": 2,
+      "스트레스": 55,
+      "바가지": 2,
+      "걱정": 6,
+      "지치": 1
+    },
+    "intent_hits": {
+      "견적": 353,
+      "비교": 150,
+      "상담": 58,
+      "신청": 6,
+      "체크리스트": 60,
+      "선택": 76,
+      "비용": 114,
+      "가격": 20,
+      "후기": 139,
+      "계약": 12
+    },
+    "promo_hits": {
+      "추천드": 1,
+      "추천드려요": 1,
+      "무료견적": 2,
+      "문의": 6,
+      "업체": 161,
+      "광고": 3
+    },
+    "high_signal_count": 89,
+    "avg_top_score": 19.8,
+    "topic_score": 64.36,
+    "top_records": [
+      {
+        "score": 24,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=4",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 전화 스트레스",
+        "source_type": "cafearticle",
+        "title": "포장이사 반포장이사 비용 차이 견적비교 선택",
+        "snippet": "이사 견적 관련해서 도움 받은 영상 공유드려요! 얼마 전 아정당에 반포장이사와 보관 이사를 맡겼는데... 이사 끝나고 따로 기사 찾는 스트레스가 없어서 반포장이사 진행이 훨씬 편했어요. 3. 보상 정책이 확실함 보관... ",
+        "url": "http://cafe.naver.com/directwedding/8998771",
+        "postdate": ""
+      },
+      {
+        "score": 21,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=4",
+          "community_terms=2",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=9",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 전화 스트레스",
+        "source_type": "cafearticle",
+        "title": "월영동 이삿짐센터 업체 이사 스트레스 줄이는 1분 요령",
+        "snippet": "▼ 월영동 이삿짐센터 업체 이사 스트레스 줄이는 1분 요령 1. 월영동 이삿짐센터 업체 선택 잘하고 있나요?... 다양한 블로그와 커뮤니티의 후기를 통해 정보도 모으고, 직접 전화를 통해 상담해보니 각 업체마다 서비스의... ",
+        "url": "http://cafe.naver.com/thenewcclass/158845",
+        "postdate": ""
+      },
+      {
+        "score": 20,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=4",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=6",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 전화 스트레스",
+        "source_type": "cafearticle",
+        "title": "전국 포장이사견적비교 이사짐센터 비용 비교 다이사!",
+        "snippet": "저도 이번에 이사 준비하면서 제일 스트레스였던 부분이 그거였어요. 견적은 업체마다 다 다르고, 후기 보면... 견적비교 결론부터 말하면 왜 다들 플랫폼 이용하는지 바로 이해됐습니다ㅋㅋ 예전처럼 업체 하나하나 전화... ",
+        "url": "http://cafe.naver.com/llchyll/2478974",
+        "postdate": ""
+      },
+      {
+        "score": 20,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=4",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=8",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 전화 스트레스",
+        "source_type": "cafearticle",
+        "title": "원룸 포장이사 비용 업체 견적 후기 꼼꼼하게!",
+        "snippet": "원룸 이사 견적, 전화 없이 3곳 비교해 본 후기 최근에 원룸 이사를 마쳤습니다. 짐이 많지 않다고 생각했는데... 분 이사는 하루 만에 끝나지만, 준비 과정에서 오는 스트레스가 꽤 큽니다. 정보를 얼마나 잘 확인하느냐에... ",
+        "url": "http://cafe.naver.com/llchyll/2376990",
+        "postdate": ""
+      },
+      {
+        "score": 20,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=5",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 상담 전화 많이 와요",
+        "source_type": "cafearticle",
+        "title": "포장이사 반포장이사 비용 차이 견적비교 선택",
+        "snippet": "반포장이사 견적은 총 세 군데에서 비교해봤어요. 결국 마지막으로 상담했던 아정당 반포장이사를 선택하게... 아정당은 반포장이사 보상 정책도 체계적으로 안내해줘서 안심이 많이 되더라고요. 광고 이미지도 신뢰감... ",
+        "url": "http://cafe.naver.com/directwedding/8998771",
+        "postdate": ""
+      },
+      {
+        "score": 20,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=5",
+          "community_terms=1",
+          "cafearticle",
+          "rank=8",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 상담 전화 많이 와요",
+        "source_type": "cafearticle",
+        "title": "포장이사견적사이트 비용 선택 전 참고글",
+        "snippet": "포장이사견적사이트 후기들을 체크해보니 평수가 비슷해도 집 구조와 짐 양에 따라 작업 방식이 많이 달라질... 포장이사견적사이트 상담을 진행할 때 큰 짐 리스트를 미리 적어두니까 설명도 간단해지고 견적도 이해하기... ",
+        "url": "http://cafe.naver.com/thenewcclass/144778",
+        "postdate": ""
+      },
+      {
+        "score": 19,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=3",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 전화 스트레스",
+        "source_type": "cafearticle",
+        "title": "청라이사업체 포장이사 비용견적",
+        "snippet": "전화 견적만으로 계약하면 이사 당일 추가 비용이 발생할 가능성이 있습니다. 둘째, 작업 인원 구성과 차량... 전문적인 청라포장이사를 이용하면 이사 스트레스를 줄이고 시간 관리까지 효율적으로 할 수 있습니다. 충분한... ",
+        "url": "http://cafe.naver.com/0404ab/4146551",
+        "postdate": ""
+      },
+      {
+        "score": 18,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=5",
+          "blog",
+          "rank=2",
+          "naver_blog"
+        ],
+        "query": "이사 견적 전화 스트레스",
+        "source_type": "blog",
+        "title": "이사 견적 스트레스 끝! 우수지점 2곳만 연결해 주는 서경석... ",
+        "snippet": "전화 폭탄 없는 비교, 생각보다 편합니다 실제로 많은 분들이 이사 견적 신청 후 스트레스를 겪습니다. 연락이 너무 많이 오면 결국 비교도 제대로 못 하고 대충 선택하게 되기도 하죠. 하지만 2곳만 상담을... ",
+        "url": "https://blog.naver.com/ccf1004/224204748635",
+        "postdate": "20260305"
+      },
+      {
+        "score": 18,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=10",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 전화 스트레스",
+        "source_type": "cafearticle",
+        "title": "포장이사견적후기 개인 후기 위주",
+        "snippet": "필요한지 전화견적이 되는지부터 달랐고 포장이사견적후기 비용은 작은 조건 하나에도 차이가 생기더라구요.... 포장이사견적후기 개인 후기 위주 날짜 잡는 게 의외로 스트레스였어요. 손없는날이나 주말은 문의량이... ",
+        "url": "http://cafe.naver.com/ourman/475439",
+        "postdate": ""
+      },
+      {
+        "score": 18,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=5",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=7",
+          "naver_cafe"
+        ],
+        "query": "이사 업체 견적 추가요금 후기",
+        "source_type": "cafearticle",
+        "title": "원미구 이사 업체 99%가 놓치는 추가 요금 방지법",
+        "snippet": "이사 업체를 잘못 선택하면 추가 요금이나 서비스 문제로 스트레스를 많이 받을 것 같더라고요. 그래서 원미구 이사 업체를 몇 군데 비교해보았습니다. 가격은 물론이고 서비스 품질과 후기까지 체크한 뒤 믿을 만한... ",
+        "url": "http://cafe.naver.com/ourman/287781",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=3",
+          "intent_terms=2",
+          "promo_terms=2",
+          "cafearticle",
+          "rank=7",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 전화 스트레스",
+        "source_type": "cafearticle",
+        "title": "남촌동 포장이사 견적 3가지 내용으로 스트레스 최소화",
+        "snippet": "남촌동 포장이사 견적 3가지 내용으로 스트레스 최소화 1. 남촌동 포장이사 무엇이 가장 걱정되시나요?... 그래서 저는 직접 전화로 문의를 하면서 견적을 받아보기 시작했어요. 3. 남촌동 포장이사 업체 비교 과정 여러... ",
+        "url": "http://cafe.naver.com/ourman/145458",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "intent_terms=5",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "포장이사 견적 비교 후기",
+        "source_type": "cafearticle",
+        "title": "원룸포장이사 비용 전문업체 견적 비교 선택한 후기",
+        "snippet": "원룸포장이사 비용 전문업체 견적 비교 선택한 후기 원룸포장이사 견적 관련해서 도움 받은 영상 공유드려요! 원룸포장이사 견적 비교 어떠셨나요? 제가 연락해 본 곳이 다섯군데가 넘었어요 아정당은 요금이 가장 낮았고... ",
+        "url": "http://cafe.naver.com/directwedding/8989654",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "intent_terms=6",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "포장이사 견적 비교 후기",
+        "source_type": "cafearticle",
+        "title": "오피스텔 포장이사 비용 가격비교 저렴한 견적 받는 팁",
+        "snippet": "오피스텔 포장이사 비용 시세와 이용자들의 가감 없는 찐 후기들을 적극 참고했습니다. 검증된 업체들의... 오피스텔 포장이사 견적비교 Click 평판이 좋은 곳들을 위주로 상담을 진행해 보니 오피스텔 포장이사 비용 안에는... ",
+        "url": "http://cafe.naver.com/culturebloom/3213030",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "intent_terms=5",
+          "community_terms=2",
+          "cafearticle",
+          "rank=8",
+          "naver_cafe"
+        ],
+        "query": "포장이사 견적 비교 후기",
+        "source_type": "cafearticle",
+        "title": "이삿짐센터 비용 포장이사 견적비교 가격비교 사이트 추천",
+        "snippet": "그래서 저는 불필요하게 손발이 고생하며 에너지를 낭비하는 동선을 과감히 줄이고, 실제 동네 주민들의 솔직한 후기가 쌓인 포장이사 견적비교 데이터 인프라를 백분 활용해 보았습니다. 공신력 있는 공유 지표들을... ",
+        "url": "http://cafe.naver.com/culturebloom/3231308",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=4",
+          "cafearticle",
+          "rank=7",
+          "naver_cafe"
+        ],
+        "query": "반포장이사 포장이사 선택 기준",
+        "source_type": "cafearticle",
+        "title": "포장이사 반포장이사 비용 차이 견적비교 선택",
+        "snippet": "없는 선택이었습니다. 이사 과정에서의 서비스 1. 일정 안내가 꼼꼼했음 반포장이사 일주일 전에 먼저 연락이 왔고 전날에도 다시 확인 전화를 주셔서 준비하기 편했습니다. 2. 작업 속도와 포장이 꼼꼼했음 이사 당일 아침... ",
+        "url": "http://cafe.naver.com/directwedding/8998771",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=5",
+          "promo_terms=1",
+          "blog",
+          "rank=1",
+          "naver_blog"
+        ],
+        "query": "이사 견적 상담 전화 많이 와요",
+        "source_type": "blog",
+        "title": "포장이사 견적 전화폭탄 없이 끝내는 스마트한 방법 추천... ",
+        "snippet": "포장이사가격비교  목차  견적 넣고 전화폭탄 맞은 썰 (그리고 해결책)  등급제로 검증된 업체 골라주는... 신청 한 번으로 검증된 우수 지점 딱 2곳에서만 연락이 와요. 2곳이 적어 보일 수 있는데, 사실 수십... ",
+        "url": "https://blog.naver.com/gudrkq89/224292244978",
+        "postdate": "20260521"
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 상담 전화 많이 와요",
+        "source_type": "cafearticle",
+        "title": "사무실포장이사견적 견적 정리된 기준 공유",
+        "snippet": "사무실포장이사견적 상담을 받는 순간 가구와 가전 개수를 미리 적어두니 설명이 빨리 끝나고 견적도 명확해졌어요. 방문견적이 필요하냐부터 전화로 견적이 가능한지부터 차이가 났습니다. 사무실포장이사견적 비용은... ",
+        "url": "http://cafe.naver.com/ourman/474778",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=4",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 상담 전화 많이 와요",
+        "source_type": "cafearticle",
+        "title": "노원구포장이사업체 만족스러운 상담",
+        "snippet": "전화 상담 반복하다 보니 시간이 많이 소요됐어요. 그래서 플랫폼 활용해서 노원구포장이사 견적 한 번에 받아봤어요. 노원구이사업체 리스트 평점 + 실제 후기 정리돼 있어서 선택이 훨씬 수월했어요. 노원구포장이사... ",
+        "url": "http://cafe.naver.com/1sejongcity/1938835",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=5",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=4",
+          "naver_cafe"
+        ],
+        "query": "이사 견적 상담 전화 많이 와요",
+        "source_type": "cafearticle",
+        "title": "대구용달이사 비용견적",
+        "snippet": "업체에서 견적을 받아 비교하는 것이 좋으며 전화 상담뿐만 아니라 문자나 메신저 상담을 통해 상세한 조건을 남겨두면 분쟁을 예방할 수 있다 마지막으로 대구용달이사를 진행할 때는 계약 내용과 비용을 명확히 확인하고... ",
+        "url": "http://cafe.naver.com/0404ab/4118145",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "intent_terms=5",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "포장이사 견적 비교 후기",
+        "source_type": "cafearticle",
+        "title": "세종포장이사업체 가격 비교 후기",
+        "snippet": "후기랑 견적 비교를 계속하다가 아정당 포장이사 서비스가 눈에 들어왔고 직접 상담까지 받아봤습니다. 여러 업체 설명을 들었는데 세종 포장이사 상담 중에서는 아정당이 가장 꼼꼼하게 느껴졌어요. 견적 설명도 자세했고... ",
+        "url": "http://cafe.naver.com/directwedding/8993975",
+        "postdate": ""
+      }
+    ]
+  },
+  "telecom-install": {
+    "record_count": 100,
+    "unique_url_count": 99,
+    "source_counts": {
+      "blog": 50,
+      "cafearticle": 50
+    },
+    "top_domains": {
+      "blog.naver.com": 50,
+      "cafe.naver.com": 50
+    },
+    "pain_hits": {
+      "전화": 46,
+      "후회": 1,
+      "사기": 33,
+      "피해": 3,
+      "걱정": 2,
+      "주의": 1,
+      "귀찮": 3
+    },
+    "intent_hits": {
+      "견적": 1,
+      "비교": 98,
+      "상담": 70,
+      "신청": 8,
+      "체크리스트": 62,
+      "고르는": 2,
+      "선택": 13,
+      "비용": 5,
+      "가격": 2,
+      "후기": 172,
+      "질문": 2,
+      "계약": 1
+    },
+    "promo_hits": {
+      "추천드": 1,
+      "최대": 14,
+      "혜택": 43,
+      "바로가기": 1,
+      "문의": 9,
+      "업체": 6,
+      "광고": 3
+    },
+    "high_signal_count": 45,
+    "avg_top_score": 16.5,
+    "topic_score": 41.17,
+    "top_records": [
+      {
+        "score": 18,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "인터넷 가입 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "아정당 인터넷 상담가입 후기 설치당일 사은품 받았어요",
+        "snippet": "아정당 인터넷 상담가입 후기 설치당일 사은품 받았어요 사은품 관련해서 도움 받은 영상 공유드려요! SK KT LG 인터넷 TV 가입 선택한 이유는? 아정당 홈페이지에서 보고는 알게 됐는데 KT 인터넷은 서비스 범위가 넓고... ",
+        "url": "http://cafe.naver.com/yuasam/967526",
+        "postdate": ""
+      },
+      {
+        "score": 18,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "인터넷 설치 사은품 사기 후기",
+        "source_type": "cafearticle",
+        "title": "아정당 인터넷 상담가입 후기 설치당일 사은품 받았어요",
+        "snippet": "아정당 인터넷 상담가입 후기 설치당일 사은품 받았어요 사은품 관련해서 도움 받은 영상 공유드려요! SK KT LG 인터넷 TV 가입 선택한 이유는? 아정당 홈페이지에서 보고는 알게 됐는데 KT 인터넷은 서비스 범위가 넓고... ",
+        "url": "http://cafe.naver.com/yuasam/967526",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=2",
+          "community_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "인터넷 가입 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "인터넷가입 사은품많이주는곳 상담후기",
+        "snippet": "상담 내용이 공유되어 여러 번 전화해도 불편 없었고 빠른 개통도 마음에 들었습니다. 인터넷가입 절차가 매끄러웠어요. ▼ 인터넷가입사은품많이주는곳 아정당 상담 후기 ▼ 밤에만 시간 나는 제게 24시간 상담이 큰... ",
+        "url": "http://cafe.naver.com/malltail/7472212",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=2",
+          "cafearticle",
+          "rank=4",
+          "naver_cafe"
+        ],
+        "query": "인터넷 가입 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "인터넷가입 전 상담 5곳 비교해본 솔직한 후기",
+        "snippet": "인터넷가입 전 상담 5곳 비교해본 솔직한 후기 안녕하세요! 오백메가입니다:) 인터넷 약정 만료일이... 가입 전, '이것' 안 하면 무조건 손해! 가장 먼저 해야 할 일은 통신사 직원에 전화를 거는 게 아닙니다. 우리 집... ",
+        "url": "http://cafe.naver.com/lgtabbook/749560",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=2",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "인터넷 설치 사은품 사기 후기",
+        "source_type": "cafearticle",
+        "title": "KT인터넷 설치 사은품 혜택 비교 후기!",
+        "snippet": "KT인터넷 설치 사은품 혜택 비교 후기! 애들 키우면서 생활비 아끼는 게 보통 일이 아니더라구요ㅠㅠ 매달 나가는 돈 중에서 통신비가 비중이 커서 이번에 KT 인터넷 설치 알아봤거든요. 전에는 귀찮아서 외출한 김에 동네... ",
+        "url": "http://cafe.naver.com/parisienlook/5818896",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=4",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=7",
+          "naver_cafe"
+        ],
+        "query": "인터넷 가입 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "아정당 인터넷 가입 설치 요금제 비교 후기",
+        "snippet": "인터넷가입 상담을 신청했어요. 새벽 3시쯤 문의 남겼는데 다음 날 오전에 아정당 상담사님이 바로 전화... ▼ 느낀 점 혹은 인터넷 티비 가입 설치 후기 ▼ 요즘 집안 가전들이 전부 인터넷과 연결되다 보니 이번 설치로... ",
+        "url": "http://cafe.naver.com/culturebloom/3215389",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=9",
+          "naver_cafe"
+        ],
+        "query": "인터넷 가입 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "인터넷가입 속도 선택부터 설치까지, 직접 겪은 후기",
+        "snippet": "기술지원에 전화할 필요도 없었습니다. ▼ 최종 평가 인터넷가입 과정 전체가 생각보다 체계적이고 만족스러웠어요. 특히 상담 과정에서 속도 선택부터 최적 요금제까지 꼼꼼히 가이드해주니까 초보자도 어렵지 않게... ",
+        "url": "http://cafe.naver.com/cantsb/3324424",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=2",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=5",
+          "naver_cafe"
+        ],
+        "query": "인터넷 설치 사은품 사기 후기",
+        "source_type": "cafearticle",
+        "title": "인천 kt 인터넷 가입 설치 요금제 비교 사은품 혜택 현금 지급 후기",
+        "snippet": "ㅋㅋ 사기일까봐 걱정했는데 인터넷 설치하자마자 사은품 바~로 보내주심 ▼ 느낀 점 혹은 인터넷 티비 가입 설치 후기 ▼ 인터넷 가입이 처음인데 아정당에서 간편하게 해서 너무 좋았어요 주변에 소개 많이... ",
+        "url": "http://cafe.naver.com/suddenhaja/125429",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=5",
+          "community_terms=1",
+          "promo_terms=2",
+          "cafearticle",
+          "rank=6",
+          "naver_cafe"
+        ],
+        "query": "인터넷 설치 사은품 사기 후기",
+        "source_type": "cafearticle",
+        "title": "KT인터넷 설치 사은품 혜택 비교 경험",
+        "snippet": "▼ KT인터넷 설치사은품많이주는곳 선택 이유 ▼ 비용과 조건을 여러 곳에 문의하던 중 아정당과 상담하게... 듣고 인터넷가입을 결정했습니다. ▼ KT인터넷 설치 느낀 점 혹은 인터넷 티비 가입 설치 후기 ▼ 셋톱박스와... ",
+        "url": "http://cafe.naver.com/happyeverycvs/283798",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=8",
+          "naver_cafe"
+        ],
+        "query": "인터넷 설치 현금지원 후기",
+        "source_type": "cafearticle",
+        "title": "LG 인터넷설치현금지원 사은품 TV 후회없는 선택",
+        "snippet": "LG 인터넷설치현금지원 후기를 보다 보니 설치가 빨리 잡히는지 기사님 방문 시간이 늦지 않았는지도 반복해서 보였습니다. LG 인터넷설치현금지원처럼 여러 항목을 한 번에 비교할 수 있으면 곳곳에 따로 문의하는 것보다... ",
+        "url": "http://cafe.naver.com/ourman/423700",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=6",
+          "naver_cafe"
+        ],
+        "query": "인터넷 가입 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "인터넷가입 비교 SK KT LG 통신사별 현금 사은품 혜택 알아본 후기",
+        "snippet": "▼인터넷가입티비현금많이주는곳 아정당 상담 후기 ▼ 처음 전화를 걸었을 때부터 요금제 차이와 결합 할인까지 군더더기 없이 시원하게 설명해 주셔서 좋았습니다. 여러 곳을 비교해 봐도 아정당만큼 친절하고 반응이... ",
+        "url": "http://cafe.naver.com/yuasam/963663",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=8",
+          "naver_cafe"
+        ],
+        "query": "인터넷 가입 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "아정당 인터넷 친절상담 빠른가입 고객센터 후기 (SK LG KT 요금제 비교)",
+        "snippet": "▼ 인터넷티비현금많이주는곳 아정당 상담 후기 ▼ 인터넷과 TV 가입 혜택을 알아보던 중 상담을 받아보게 되었는데 설명이 체계적이라 이해하기 쉬웠습니다. 요금과 사은품, 결합 할인 조건까지 하나씩 안내받을 수... ",
+        "url": "http://cafe.naver.com/yuasam/967767",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=2",
+          "community_terms=1",
+          "cafearticle",
+          "rank=10",
+          "naver_cafe"
+        ],
+        "query": "인터넷 가입 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "KT 인터넷가입상담",
+        "snippet": "예전에는 통신사에서 문자나 전화가 오면 별생각 없이 연장했는데 이번에는 KT 인터넷가입상담를 기준점으로... KT 인터넷가입상담 후기들을 보니 설치 진행이 빠른지 기사님 방문 일정이 잘 맞았는지도 많이... ",
+        "url": "http://cafe.naver.com/ourman/424482",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "intent_terms=2",
+          "community_terms=2",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "인터넷 통신사 변경 비교 커뮤니티",
+        "source_type": "cafearticle",
+        "title": "SK 인터넷통신사변경 비교 바로바로 확인",
+        "snippet": "SK 인터넷통신사변경 비교 바로바로 확인 솔직히 이번 인터넷 가입 과정은 처음부터 편하게 생각이 안 됐어요. 이사 준비만으로도 이미 바쁜데 통신사까지 다시 선택하려니 괜히 부담이 크게 느껴지더라구요 그때 SK... ",
+        "url": "http://cafe.naver.com/thenewcclass/149964",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "인터넷 통신사 변경 비교 커뮤니티",
+        "source_type": "cafearticle",
+        "title": "인터넷 통신사 변경 결합할인 많이받은 비결",
+        "snippet": "직접 비교해보니 정말 손해를 막을 수 있었습니다. 인터넷 통신사 변경할 때 과도하게 비싼 요금제로 유도하는 곳들이 있어서 걱정했지만 여기는 제 사용 패턴에 맞는 요금제를 깔끔하게 골라주셨어요. 경품고시제... ",
+        "url": "http://cafe.naver.com/directwedding/8987240",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=4",
+          "naver_cafe"
+        ],
+        "query": "인터넷 설치 사은품 사기 후기",
+        "source_type": "cafearticle",
+        "title": "인터넷가입사은품 LG SK KT 혜택 비교 설치 후기",
+        "snippet": "SK KT LG 인터넷가입사은품많이주는곳 아정당 내돈내산 후기 전반적인 상담과 절차가 매우 만족스러웠습니다.... 인터넷가입사은품 지급도 깔끔했고 설치 이후 안내까지 친절해서 전체 만족도가 높았습니다. 주변에서... ",
+        "url": "http://cafe.naver.com/directwedding/8953630",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=9",
+          "naver_cafe"
+        ],
+        "query": "인터넷 설치 사은품 사기 후기",
+        "source_type": "cafearticle",
+        "title": "SK 인터넷TV 가입 후기 사은품 비교 설치순서 정리",
+        "snippet": "+@ 비밀 혜택 문자로 받기 [여기 클릭하세요!] SK 인터넷TV 가입 후기 사은품 비교 설치순서 정리 사은품 관련해서 도움 받은 영상 공유 드려요! 1. SK KT LG 인터넷 TV 가입 선택한 이유는? 따로 살게 되면서 KT 인터넷을... ",
+        "url": "http://cafe.naver.com/yuasam/961399",
+        "postdate": ""
+      },
+      {
+        "score": 14,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=2",
+          "community_terms=1",
+          "cafearticle",
+          "rank=10",
+          "naver_cafe"
+        ],
+        "query": "인터넷 설치 사은품 사기 후기",
+        "source_type": "cafearticle",
+        "title": "SKT 인터넷 티비 설치 시 할인 및 사은품 지급 리뷰",
+        "snippet": "추천해주셔서 사은품과 요금 모두 괜찮은 곳으로 선택하게 되었습니다. ▼ 느낀 점 혹은 SKT 인터넷 설치 가입 설치 후기 ▼ 아정당 덕에 이사 후 인터넷 설치가 깔끔하게 진행되어 마음이 한결 가벼웠어요 설치 일정과... ",
+        "url": "http://cafe.naver.com/yuasam/964552",
+        "postdate": ""
+      },
+      {
+        "score": 13,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=2",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "인터넷 가입 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "인터넷 전화 함께 가입했어요 (결합 후기)",
+        "snippet": "인터넷팡팡은 방송통신위원회 정식 허가받은 공식업체라서, 인터넷이랑 전화 함께 가입 상담해드려요! 인터넷 전화가 뭐예요? 제일 궁금했던 게 \"인터넷 전화가 일반 전화랑 뭐가 달라?\" 였어요. 인터넷 전화는 인터넷... ",
+        "url": "http://cafe.naver.com/kig/19497759",
+        "postdate": ""
+      },
+      {
+        "score": 13,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=1",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "인터넷 설치 사은품 사기 후기",
+        "source_type": "cafearticle",
+        "title": "KT 인터넷 설치 완료 후기 (혜택 사은품)",
+        "snippet": "KT 인터넷 설치 완료 후기 (혜택 사은품) 인터넷설치 사은품 관련해서 도움 받은 영상 공유 드려요! ▼ 인터넷설치 이동 & 요금 초보자에게 알려주고싶은 꿀팁 ▼ 집에서 고화질 동영상과 큰 용량 파일을 자주... ",
+        "url": "http://cafe.naver.com/happyeverycvs/284511",
+        "postdate": ""
+      }
+    ]
+  },
+  "vibecoding-gtm": {
+    "record_count": 100,
+    "unique_url_count": 93,
+    "source_counts": {
+      "blog": 50,
+      "cafearticle": 50
+    },
+    "top_domains": {
+      "cafe.naver.com": 50,
+      "blog.naver.com": 49,
+      "dobiho.com": 1
+    },
+    "pain_hits": {
+      "주의": 1,
+      "실패": 1
+    },
+    "intent_hits": {
+      "상담": 2,
+      "선택": 3,
+      "비용": 1,
+      "후기": 89
+    },
+    "promo_hits": {
+      "추천드": 1,
+      "최대": 1,
+      "문의": 1,
+      "브랜드": 2,
+      "광고": 1,
+      "파트너스": 2
+    },
+    "high_signal_count": 25,
+    "avg_top_score": 10.3,
+    "topic_score": 26.92,
+    "top_records": [
+      {
+        "score": 11,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 수익화 후기",
+        "source_type": "cafearticle",
+        "title": "코딩 문외한 첫 수익화 후기 남겨봄",
+        "snippet": "코딩 문외한 첫 수익화 후기 남겨봄#바이브코딩 #오픈클로 #클로드코드 #자동매매봇 #AI코딩 #AI수익화 #바이브코딩수익화 #스레드 #유튜브 #인스타 #자동수익화 #챗GPT #제미나이 #클로드 #그록",
+        "url": "http://cafe.naver.com/coodos14/17178",
+        "postdate": ""
+      },
+      {
+        "score": 11,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 랜딩페이지 수익화",
+        "source_type": "cafearticle",
+        "title": "[오썜의 AI 바이브 코딩 웹앱과 랜딩페이지 제작 특강 후기]",
+        "snippet": "오늘 오쌤의 바이브코딩 무료 특강은 단순히 AI로 웹페이지를 만드는 기술을 넘어, 누구나 자신의... 특히 50대 이상 시니어를 대상으로 한 스마트폰 사진 정리 클래스 랜딩페이지를 기획해 달라는 프롬프트 실습은... ",
+        "url": "http://cafe.naver.com/creatup/228",
+        "postdate": ""
+      },
+      {
+        "score": 11,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "AI 코딩 서비스 출시 후기 수익화",
+        "source_type": "cafearticle",
+        "title": "바이브 코딩 서비스 출시 챌린지 시작합니다",
+        "snippet": "------------------------------------------------- 안녕하세요 바이브 코딩으로 서비스 출시하기 챌린지를 진행하고... 바이브코딩,오픈클로,클로드코드,자동매매봇 #바이브코딩 #오픈클로 #클로드코드 #자동매매봇 #AI코딩 #AI수익화... ",
+        "url": "http://cafe.naver.com/coodos14/17265",
+        "postdate": ""
+      },
+      {
+        "score": 11,
+        "reasons": [
+          "intent_terms=2",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "사이드프로젝트 마케팅 첫 유저",
+        "source_type": "cafearticle",
+        "title": "이름만 듣고 제일 먼저 떠오른 헌팅 그라운드의 모습",
+        "snippet": "차: 첫 만남 각자의 본 캐릭터 공개 및 소개 아쏠촌 입소 및 오프라인 첫인상 선택 \"내 파티원이 되어줄래?... 신규 유저의 폭발적인 유입을 이끌어냅니다. 기획자 덧붙임 (제안의 핵심) 본 프로젝트는 단순한 마케팅 비용... ",
+        "url": "http://cafe.naver.com/iphoneimo/344275",
+        "postdate": ""
+      },
+      {
+        "score": 10,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 수익화 후기",
+        "source_type": "cafearticle",
+        "title": "[ 카라반 사알못 무료특강 후기 ] 바이브코딩 먹고 사주 수익화 먹고.",
+        "snippet": "[ 카라반 사알못 무료특강 후기 ] 바이브코딩 먹고 사주 수익화 먹고. 그동안 디하클의 강의가 일요일 저녁부터 새벽까지 진행되는 경우가 많아서, 항상 다음날 출근의 압박으로 끝까지 못듣거나 듣다가 잠드는 경우가... ",
+        "url": "http://cafe.naver.com/dinohighclass/270899",
+        "postdate": ""
+      },
+      {
+        "score": 10,
+        "reasons": [
+          "intent_terms=2",
+          "community_terms=1",
+          "cafearticle",
+          "rank=7",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 수익화 후기",
+        "source_type": "cafearticle",
+        "title": "“바이브 코딩으로 월세 벌기 ”무료특강 후기: 추천합니다. 열정적인 강의!",
+        "snippet": "수익화를 시킬수 있는 다양한 방법을제시한것과 마케팅 방법, 상담 방법등은 어디에서도 들을수 없는 것들이고... 바이브 코딩으로 개발하는 전반적인것들은 또 해본 영역이고.... 여튼 8시간 이상 장시간 강의를 해주신... ",
+        "url": "http://cafe.naver.com/dinohighclass/221660",
+        "postdate": ""
+      },
+      {
+        "score": 10,
+        "reasons": [
+          "intent_terms=2",
+          "community_terms=1",
+          "cafearticle",
+          "rank=10",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 수익화 후기",
+        "source_type": "cafearticle",
+        "title": "[카라반 사주자동화 무료특강 후기: 사주에 바이브 코딩은 거들뿐!]",
+        "snippet": "사주를 몰라도, 유튜브도 안했어도 시의적절한 분석으로 사주 시장을 접수하시고 상담, 홍보, 운영에 바이브 코딩까지 섭렵해서 서비스와 수익성 두 마리 토끼를 다 잡을 수 있는 인사이트를 실현하고 당장 수익화할 수... ",
+        "url": "http://cafe.naver.com/dinohighclass/270219",
+        "postdate": ""
+      },
+      {
+        "score": 10,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 랜딩페이지 수익화",
+        "source_type": "cafearticle",
+        "title": "카라반 사알못사주자동화 무료특강 후기: 유튜브 수익화 구조를 배우다",
+        "snippet": "모르는데 수익화가 가능할까?'라는 두려움을 단 10분 만에 확신으로 바꿔놓은 강의였습니다. ✔ 바이브코딩과... 활용한 랜딩페이지와 상세페이지 만들기, 그리고 결제 구조까지 이어지는 단계를 하나하나 자세하게... ",
+        "url": "http://cafe.naver.com/dinohighclass/270918",
+        "postdate": ""
+      },
+      {
+        "score": 10,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "AI 코딩 서비스 출시 후기 수익화",
+        "source_type": "cafearticle",
+        "title": "코딩 문외한 첫 수익화 후기 남겨봄",
+        "snippet": "웹서비스랑 자동화 툴 만드는 쪽으로 갔고요 해보면서 느낀 건 문법보다 중요한 건 결국 사용자가 뭘... 첫 수익화 후기 남겨봄#바이브코딩 #오픈클로 #클로드코드 #자동매매봇 #AI코딩 #AI수익화 #바이브코딩수익화 #스레드... ",
+        "url": "http://cafe.naver.com/coodos14/17178",
+        "postdate": ""
+      },
+      {
+        "score": 9,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 수익화 후기",
+        "source_type": "cafearticle",
+        "title": "엘라 앱인토스 후기 : 바이브코딩 수익화 파이프 만들기",
+        "snippet": "엘라님 의 앱인토스 강의는 바이브 코딩으로 내가 생각한 앱 서비스를 AI 코딩으로 구현 후 외부 수익화를 실현할 수 있다는 점이 좋았습니다. 토스는 간편 결제와 주식 정도만 알고 있었는데 앱 서비스라는 신경험을... ",
+        "url": "http://cafe.naver.com/dinohighclass/210638",
+        "postdate": ""
+      },
+      {
+        "score": 9,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=2",
+          "cafearticle",
+          "rank=6",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 수익화 후기",
+        "source_type": "cafearticle",
+        "title": "[볼펜 - 영진닷컴] 바이브코딩 with 구글 안티그래비티 서평단 모집",
+        "snippet": "AI , 바이브코딩수익화, 비개발자코딩 안녕하세요. 5월 15일 금요일 리뷰어스 클럽 스탭 낭만몽상가... 포인트입니다) □ 후기작성하는곳 : 블로그, 카페 1건이상, 온라인서점 2건이상(서점별 세트:서점리뷰+한줄평)... ",
+        "url": "http://cafe.naver.com/jhcomm/397584",
+        "postdate": ""
+      },
+      {
+        "score": 9,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "AI 코딩 서비스 출시 후기 수익화",
+        "source_type": "cafearticle",
+        "title": "Pi Network 코어팀 공식공지(원문번역) 5.29",
+        "snippet": "CiDi Games 베타 출시, Pi 위에서 구축하는 힘을 증명하다 5월 14일, CiDi Games는 Pi 생태계 내에서 베타 앱을... 통한 수익화 ● 실제 사용자 피드백 기반 서비스 개선 등의 기회를 얻을 수 있습니다. AI 개발 도구와... ",
+        "url": "http://cafe.naver.com/gcvarchive/13193",
+        "postdate": ""
+      },
+      {
+        "score": 8,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=4",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 수익화 후기",
+        "source_type": "cafearticle",
+        "title": "바이브 코딩 수익화 하려고 왔어요",
+        "snippet": "말 : 바이브 코딩을 어떻게 수익화하죠? 중요 안내 가입인사 작성 후 [AI 수익화 후기] 또는 [본인 서비스 홍보] 또는 [본인 SNS 채널 홍보] 게시판에 글 작성하시면 됩니다. ⚠️ 내용 없는 글·무성의한 글·제목 없는... ",
+        "url": "http://cafe.naver.com/vibemoney/5553",
+        "postdate": ""
+      },
+      {
+        "score": 8,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=5",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 수익화 후기",
+        "source_type": "cafearticle",
+        "title": "바이브코딩 수익화 후기!",
+        "snippet": "절 믿고 귀한 기회를 나누어주셔서 다시 한번 감사하다는 말씀드리고 싶어요 이번 작업이 저한테 특히 의미 있었던 건, 제가 요즘 푹 빠져있는 바이브코딩을 실무 외주에 제대로 적용해볼 수 있었기 때문이에요. 시바님이... ",
+        "url": "http://cafe.naver.com/vibemoney/1405",
+        "postdate": ""
+      },
+      {
+        "score": 8,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=8",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 수익화 후기",
+        "source_type": "cafearticle",
+        "title": "오쌤 바이브 코딩 특강 후기",
+        "snippet": "웹 제작을 바이브코딩으로 하는 방법을 잘 배웠어요. 오쌤이 실습 하면서 알려 주셔서 열심히 들었습니다. 웹앱 만들기부터 컨텐츠 자동화, 영상제작, 브랜딩, 수익화 까지 너무 실속있는 내용 잘 들었습니다. 부족한... ",
+        "url": "http://cafe.naver.com/creatup/240",
+        "postdate": ""
+      },
+      {
+        "score": 8,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=9",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 수익화 후기",
+        "source_type": "cafearticle",
+        "title": "엘라쌤 무료강의 찐후기-코딩 몰라도 엘라쌤 덕분에 나도 바이브코딩으로 돈벌수 있다.",
+        "snippet": "바이브 코딩을 활용해서 앱을 만들고, 그 앱에 인토스 수익화까지 연결하는 실제 과정이었는데요. 단순히 이론만 설명하는 강의가 아니라, 실제로 어떻게 만들고 어떻게 수익 구조를 붙이는지를 단계별로 보여주셔서... ",
+        "url": "http://cafe.naver.com/dinohighclass/221583",
+        "postdate": ""
+      },
+      {
+        "score": 8,
+        "reasons": [
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 마케팅 어려움",
+        "source_type": "cafearticle",
+        "title": "바이브코딩으로 수익 내는 법 요약",
+        "snippet": "------------------------------------------------- 바이브코딩으로 수익 내는 법 요약 잘 나가는 서비스 찾는다 바이브코딩으로 빠르게 만들어본다 안 되면 버리고 되면 계속 키운다 SNS 자동화 돌려서 마케팅한다 유입 만들고 수익... ",
+        "url": "http://cafe.naver.com/coodos14/17262",
+        "postdate": ""
+      },
+      {
+        "score": 8,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=5",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 마케팅 어려움",
+        "source_type": "cafearticle",
+        "title": "[사알못 사주자동화] 무료특강 후기 : 새로운 파이프라인 감사합니다",
+        "snippet": "싶을 정도로요예전에 바이브코딩 특강을 들었기에 이번 강의에서 시너지 효과가 엄청났어요. 전 사실 요즘... 저 홀로 리틀리를 이용하다 좀 어려움을 겪고 있어서 막막한 기분이었는데 가려운 곳을 긁어주셔서 너무... ",
+        "url": "http://cafe.naver.com/dinohighclass/271370",
+        "postdate": ""
+      },
+      {
+        "score": 8,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=7",
+          "naver_cafe"
+        ],
+        "query": "바이브코딩 마케팅 어려움",
+        "source_type": "cafearticle",
+        "title": "카라반님의 사주 무료특강후기 : 사주 보기만 하다가 사주 강의를 듣다.",
+        "snippet": "바이브코딩이라는 것도 배우고 코딩 짜는것도 배우고, 이건 뭐... 사주를 못해도 다른것으로라도 써먹을것이 많더라구요. 일요일 무료강의 시간에는 그 기나긴 시간을 시간 가는줄고 모르고 들었다가 아~ 사주마케팅이... ",
+        "url": "http://cafe.naver.com/dinohighclass/271078",
+        "postdate": ""
+      },
+      {
+        "score": 8,
+        "reasons": [
+          "intent_terms=1",
+          "community_terms=1",
+          "cafearticle",
+          "rank=4",
+          "naver_cafe"
+        ],
+        "query": "AI 코딩 서비스 출시 후기 수익화",
+        "source_type": "cafearticle",
+        "title": "(후기) 바이브코딩으로 앱을 개발했습니다 ㅎㅎ",
+        "snippet": "퇴근 후 시간을 쪼개어 바이브코딩으로 앱 개발해서 드디어 출시까지 하게 되었습니다 ㅎㅎ 예전에는 머릿속으로 생각만 하던 아이디어를 이제 AI를 통해 구현할 수 있게되어서 게임한다는 느낌으로 한번 해보자고 마음... ",
+        "url": "http://cafe.naver.com/dieselmania/47041281",
+        "postdate": ""
+      }
+    ]
+  },
+  "wedding-fair-privacy": {
+    "record_count": 160,
+    "unique_url_count": 152,
+    "source_counts": {
+      "blog": 80,
+      "cafearticle": 80
+    },
+    "top_domains": {
+      "blog.naver.com": 80,
+      "cafe.naver.com": 80
+    },
+    "pain_hits": {
+      "전화": 104,
+      "스팸": 41,
+      "개인정보": 25,
+      "스트레스": 1,
+      "호구": 50,
+      "바가지": 1,
+      "사기": 2,
+      "불안": 2,
+      "걱정": 4,
+      "주의": 13,
+      "실패": 2,
+      "지치": 1
+    },
+    "intent_hits": {
+      "견적": 11,
+      "비교": 29,
+      "상담": 156,
+      "신청": 56,
+      "체크리스트": 62,
+      "고르는": 1,
+      "선택": 5,
+      "비용": 10,
+      "가격": 10,
+      "후기": 257,
+      "질문": 1,
+      "계약": 61
+    },
+    "promo_hits": {
+      "추천드": 1,
+      "추천드려요": 1,
+      "혜택": 24,
+      "프로모션": 2,
+      "사전신청": 9,
+      "바로가기": 1,
+      "문의": 2,
+      "업체": 30,
+      "브랜드": 1,
+      "협찬": 1,
+      "광고": 32,
+      "제공받": 1,
+      "파트너스": 2
+    },
+    "high_signal_count": 99,
+    "avg_top_score": 22.2,
+    "topic_score": 75.53,
+    "top_records": [
+      {
+        "score": 29,
+        "reasons": [
+          "pain_terms=5",
+          "intent_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 스팸 전화",
+        "source_type": "cafearticle",
+        "title": "웨딩박람회 무료 쿠폰 신청 똑똑한 예랑예신들은 이렇게 아껴요!",
+        "snippet": "H2: 웨딩박람회 무료 쿠폰, 이것만은 꼭 주의하세요! \"혹시 신청하면 스팸 전화 오는 거 아니에요?\" \"무료라고 했는데 결국 바가지 쓰는 거 아니야?\" 이런 걱정 충분히 이해해요. 그래서 몇 가지 주의사항을 알려드릴게요.... ",
+        "url": "http://cafe.naver.com/mkrlfd/555842",
+        "postdate": ""
+      },
+      {
+        "score": 25,
+        "reasons": [
+          "pain_terms=3",
+          "intent_terms=3",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 호구 안되는법",
+        "source_type": "cafearticle",
+        "title": "호구 계약 주의 코엑스 웨딩박람회 4월 킨텍스웨딩박람회 5월 4월 견적 비교 5분 요약",
+        "snippet": "제가 직접 발품을 팔아보니 실패 원인은 플래너의 말에 휘둘려 호구 계약을 맺는 것이었습니다. 핵심 문제는... Q: 코엑스 웨딩박람회 4월 현장에서 계약 안 하고 견적만 받아도 되나요? A: 방문객 누구나 무료로 비교가... ",
+        "url": "http://cafe.naver.com/1sejongcity/1933696",
+        "postdate": ""
+      },
+      {
+        "score": 23,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 개인정보 후기",
+        "source_type": "cafearticle",
+        "title": "비용 아끼는 수원 평택 포항 웨딩박람회 후기 비밀",
+        "snippet": "일정을 잡기 전 평택 웨딩박람회 후기 정보와 포항 웨딩박람회 후기 글을 꼼꼼히 비교해 보십시오. 무작정 따라가기보다 수원 웨딩박람회 후기 꿀팁을 적용해야 예산을 아낍니다. 실패 없는 사전 준비법 예식을 올릴 지역의... ",
+        "url": "http://cafe.naver.com/1sejongcity/1943750",
+        "postdate": ""
+      },
+      {
+        "score": 23,
+        "reasons": [
+          "pain_terms=4",
+          "intent_terms=1",
+          "cafearticle",
+          "rank=6",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 스팸 전화",
+        "source_type": "cafearticle",
+        "title": "박람회방문포인트적립해주세요.",
+        "snippet": "★ 주의 : 스팸 전화, 문자 등을 방지하기 위해 글 내용에는 연락처 등의 개인정보를 남기지 마세요. 모든 포인트는 웨딩패키지 계약 이후에 적립이 가능합니다. 쪽지포인트는 서포터즈 회원만 적립이 가능합니다. 서포터즈... ",
+        "url": "http://cafe.naver.com/directwedding/336620",
+        "postdate": ""
+      },
+      {
+        "score": 23,
+        "reasons": [
+          "pain_terms=4",
+          "intent_terms=1",
+          "cafearticle",
+          "rank=9",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 스팸 전화",
+        "source_type": "cafearticle",
+        "title": "포인트 적립해 주세용~",
+        "snippet": "★ 주의 : 스팸 전화, 문자 등을 방지하기 위해 글 내용에는 연락처 등의 개인정보를 남기지 마세요. 모든 포인트는 웨딩패키지 계약 이후에 적립이 가능합니다. 쪽지포인트는 서포터즈 회원만 적립이 가능합니다. 서포터즈... ",
+        "url": "http://cafe.naver.com/directwedding/193556",
+        "postdate": ""
+      },
+      {
+        "score": 22,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=4",
+          "community_terms=1",
+          "cafearticle",
+          "rank=4",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "서울 다이렉트 웨딩박람회 상담 후기(계약O)",
+        "snippet": "박람회 가실 분들은 꼭 들어가시기 전에 식사 든든하게 하시고, 상담 시간도 넉넉하게 스케줄 잡고 가셔야 지치지 않고 꼼꼼하게 비교해보실 수 있을 거예요~ 다들 현명하고 합리적인 웨딩 준비 하세요!",
+        "url": "http://cafe.naver.com/directwedding/9008199",
+        "postdate": ""
+      },
+      {
+        "score": 20,
+        "reasons": [
+          "pain_terms=4",
+          "intent_terms=2",
+          "community_terms=1",
+          "blog",
+          "rank=3",
+          "naver_blog"
+        ],
+        "query": "웨딩박람회 스팸 전화",
+        "source_type": "blog",
+        "title": "창원 웨딩박람회 후기,  2026 창원웨딩의전당 웨딩 기대되는!",
+        "snippet": "창원 웨딩박람회 후기, 2026 월 창원웨딩의전당 웨딩 기대되는! 안녕하세요! 2026년 결혼을 앞둔 예비... [박람회장 내부 전경이나 상담받는 이미지 삽입] 6. 개인정보 보호 스팸 전화가 걱정된다면 안심번호나... ",
+        "url": "https://blog.naver.com/audi77vip/224113860739",
+        "postdate": "20251218"
+      },
+      {
+        "score": 20,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=5",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 스팸 전화",
+        "source_type": "cafearticle",
+        "title": "웨딩밴드 아크레도 청담점 상담 및 계약후기",
+        "snippet": "웨딩밴드를 계약했습니다. 박람회갔을때 쥬드랑 아크레도가 있었는데 예랑이가 아크레도반지 착용하는 순간 ! 선계약금을 걸고 계약을 했습니다.! 계약하고 2주도? 안되서 서울번호로 계속 전화가 오길래 스팸전화인줄알... ",
+        "url": "http://cafe.naver.com/directwedding/5483106",
+        "postdate": ""
+      },
+      {
+        "score": 19,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "서울 다이렉트 웨딩박람회 상담 후기 (예복 : 포튼가먼트, 계약O)",
+        "snippet": "계약 후 3일 정도 지나서 방문 예약 관련 안내 전화를 받았고, 저희는 9월에 강남점 방문 예약을 완료했어요. 본격적인 예복 상담과 가봉이 진행되면 그 후기도 다시 자세하게 남겨보겠습니다.",
+        "url": "http://cafe.naver.com/directwedding/9030543",
+        "postdate": ""
+      },
+      {
+        "score": 18,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=4",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "서울 다이렉트 웨딩박람회 상담 후기 (계약O)",
+        "snippet": "지난 주말 서울 다이렉트 웨딩박람회 상담 다녀왔어요 사실 저희는 다른 업체에서 상담을 받아본 상태라 비교하는 마음으로 갔는데, 생각보다 만족도가 높아서 후기 남겨봅니다! 일요일 오전 좀 지나 방문했는데, 예약이... ",
+        "url": "http://cafe.naver.com/directwedding/8998510",
+        "postdate": ""
+      },
+      {
+        "score": 18,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 스팸 전화",
+        "source_type": "cafearticle",
+        "title": "웨딩박람회를 잘 활용하는 방법",
+        "snippet": "상담 사은품(스타벅스 쿠폰, 웨딩 다이어리 등)만 알뜰하게 챙기는 것도 방법입니다. 별도 연락처 준비: 박람회 이후 쏟아지는 스팸 전화가 부담스럽다면, 웨딩 전용 이메일이나 세컨드 번호를 활용하는 것도 센스입니다.",
+        "url": "http://cafe.naver.com/llchyll/2477061",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "지금 안 보면 손해인 다이렉트웨딩 아이니웨딩 팜투어 박람회 후기",
+        "snippet": "또한 아이니웨딩 박람회 후기 속 경험담처럼 사전 전화 상담으로 궁금한 점을 메모해 두시길 권장합니다. 그래야 화려한 분위기에 휩쓸리지 않고 차분한 선택이 가능합니다. 여행지 결정에서도 팜투어 박람회 후기... ",
+        "url": "http://cafe.naver.com/1sejongcity/1943747",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=3",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=4",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 스팸 전화",
+        "source_type": "cafearticle",
+        "title": "예식 완료 후 총 평가 - 렌느브라이덜 / 까사비토 / 보이드바이박철 / 뮤토테일러 / 베스트뮤직 / 화니플로...",
+        "snippet": "웨딩박람회 처음 갔던 날, 송서정 플래너님을 만나 상담을 진행했고 드메 계약을 했었는데, 플래너님이 너무... 제가 청첩장 업체를 고르는 기준은 일단 가장 중요한 건 스팸전화가 없어야 하는 곳이에요. 어떤 업체들은..... ",
+        "url": "http://cafe.naver.com/directwedding/8770897",
+        "postdate": ""
+      },
+      {
+        "score": 17,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=2",
+          "community_terms=1",
+          "cafearticle",
+          "rank=1",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 플래너 상담 후기",
+        "source_type": "cafearticle",
+        "title": "인천 웨딩박람회 플래너 상담후기",
+        "snippet": "인천 웨딩박람회 플래너 상담후기 보면 상담 한 번으로 결혼 준비 방향 잡았다는 얘기 진짜 많더라구요! 반대로 플래너 스타일 안 맞아서 스트레스 받았다는 후기들도 있어서 상담 전에 체크할 부분이 꽤 중요해보였어요.... ",
+        "url": "http://cafe.naver.com/cafemakecafebest/29326",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=2",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 개인정보 후기",
+        "source_type": "cafearticle",
+        "title": "수백만 원 아끼는 세텍 하우투웨딩 제이웨딩 박람회 후기",
+        "snippet": "유익한 세텍 웨딩박람회 후기 내용과 하우투웨딩 박람회 후기 정보를 바탕으로 현장을 시뮬레이션해 보세요. 다음으로 실천 행동 지침을 알려드립니다. 똑똑한 현장 상담 비법 도착하셨다면 관심 업체의 가계약 조건과... ",
+        "url": "http://cafe.naver.com/1sejongcity/1943748",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=9",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 개인정보 후기",
+        "source_type": "cafearticle",
+        "title": "필독 대전웨딩박람회 일정과 웨딩박람회 후기",
+        "snippet": "대전 웨딩박람회 정보가 너무 방대했거든요. 인터넷만 보다가 무턱대고 대전웨딩박람회 가계약을 덜컥... 나중에 대전 웨딩박람회 후기 글을 찾아보고 비싸게 한 걸 알아서 속상했어요. 제대로 비교하지 않은 탓이죠.... ",
+        "url": "http://cafe.naver.com/1sejongcity/1940146",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=2",
+          "intent_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 호구 안되는법",
+        "source_type": "cafearticle",
+        "title": "부산웨딩박람회일정 확인하고 호구 피하는 부산 웨딩박람회 일정 꿀팁",
+        "snippet": "여기저기 알아보다 아까운 시간만 낭비하고 호구 잡히는 건 아닐까 걱정되실 텐데요. 하지만 정확한 기준만... 웨딩홀 상담 시 절대 놓치면 안 되는 꿀팁 성공적인 부산웨딩박람회일정 계획을 완성하기 위해 웨딩홀 대관... ",
+        "url": "http://cafe.naver.com/1sejongcity/1938373",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=5",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "서울 다이렉트 웨딩박람회 상담 후기입니다!(계약 O)",
+        "snippet": "웨딩밴드를 상담받았어요! 원래는 종로에서 맞출 계획이었지만 아주 예쁜 웨딩 밴드가 많더라구요..... 다른 곳 볼 필요 없이 여기다! 해서 바로 계약을 해버렸답니다...! 저희가 박람회에 16시에 가서 시간이 부족해 여러... ",
+        "url": "http://cafe.naver.com/directwedding/9032130",
+        "postdate": ""
+      },
+      {
+        "score": 16,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "cafearticle",
+          "rank=7",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 상담 전화 후기",
+        "source_type": "cafearticle",
+        "title": "백작피렌체 웨딩박람회 상담 후기",
+        "snippet": "다이렉트 웨딩박람회에서 우연히 만난 백작에서 예물 계약까지 한 후기입니다 ㅎㅎ 저희는 예물을 이날 결정할 생각은 없었어요. 한복 상담 받기전 가볍게 보려고 했는데 반지도 너무 예쁠 뿐더러 상담사님께서 너무... ",
+        "url": "http://cafe.naver.com/directwedding/8972818",
+        "postdate": ""
+      },
+      {
+        "score": 15,
+        "reasons": [
+          "pain_terms=1",
+          "intent_terms=3",
+          "community_terms=1",
+          "promo_terms=1",
+          "cafearticle",
+          "rank=3",
+          "naver_cafe"
+        ],
+        "query": "웨딩박람회 개인정보 후기",
+        "source_type": "cafearticle",
+        "title": "서울 다이렉트 본사 방문 웨딩 박람회 후기 (드메, 예복, 예물 계약 O)",
+        "snippet": "어플도 그렇고 후기도 그렇고 웨딩 플랫폼도 굉장히 많아서 정보를 얻을 수 있는 루트가 엄청 많다보니 그런 곳들에서 정보를 얻고 박람회에서 바로 비교해보고 조건과 혜택이 좋다면 후루룩! 진행할 수 있답니다... ",
+        "url": "http://cafe.naver.com/directwedding/9010082",
+        "postdate": ""
+      }
+    ]
+  }
+}

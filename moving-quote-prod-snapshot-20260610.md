@@ -1,0 +1,24 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: 이사 준비표
+      - generic [ref=e5]: 개인정보 입력 전 확인용
+  - main [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]
+      - complementary "견적 신청 전 준비 효과" [ref=e18]
+    - generic [ref=e37]:
+      - generic [ref=e38]
+      - generic [ref=e41]
+    - generic [ref=e72]:
+      - generic [ref=e73]
+      - generic [ref=e76]
+      - generic "이사 견적 체크리스트" [ref=e86]
+    - generic [ref=e97]:
+      - heading "견적서에서 꼭 확인할 위험 신호" [level=2] [ref=e99]
+      - generic [ref=e100]
+    - generic [ref=e110]:
+      - generic [ref=e111]
+      - paragraph [ref=e116]: "[광고] 이 페이지는 이사 견적 비교 전 확인할 정보를 정리한 안내 페이지이며, 제휴 링크를 통한 신청 또는 클릭에 따라 운영자는 제휴 수익을 지급받습니다."
+  - contentinfo [ref=e117]:
+    - generic [ref=e118]: Leadgen Lab MVP - outbound-only static pre-lander. No local personal data collection.

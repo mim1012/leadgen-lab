@@ -1,0 +1,115 @@
+id: moving-quote-call-burden
+name: "이사 견적 신청 직전 불안 30초 진단"
+status: ready_for_traffic
+category: moving_quote
+market: korea
+launch_angle: "견적 신청 버튼을 누르기 직전의 전화 부담·추가요금·상담 거절 불안을 점검하고, 조건이 맞는 사용자만 제휴 견적으로 보내는 diagnosis pre-lander"
+primary_user: "이사를 앞두고 견적 비교는 해야 하지만 여러 업체 전화와 추가요금이 걱정되는 사용자"
+monetization_model:
+  primary: outbound_affiliate_or_partner_cta
+  v1_form_capture: false
+  expected_actions:
+    - outbound_click
+    - quote_request_on_partner_site
+    - consultation_request_on_partner_site
+offer_candidates:
+  - network: Adpot
+    campaigns:
+      - "서경석의 이사방"
+      - "[기타] 서경석의 이사방"
+      - "서경석의 이사방-원룸/용달 전용"
+    source_url: "https://adpot.kr/pc/center/notice_view.html?code=4693"
+    status: publicly_verified_needs_login_rules
+  - network: DBSense
+    campaigns:
+      - "[기타] 서경석의 이사방"
+      - "24번가, 합리적인 이사"
+      - "서경석의 이사방-원룸/용달 전용"
+    source_url: "https://dbsense.kr/pc/camp/camp_cpa.html"
+    status: publicly_verified_needs_login_rules
+  - network: Adlix
+    campaigns:
+      - "다이사 이사 가격비교"
+    source_url: "https://adlix.co.kr/cpa/appview.asp?idx=6936747"
+    status: login_verified_needs_promotion_url
+    details:
+      campaign_id: "6936747"
+      payout: "상담신청 DB당 수익 20,000p"
+      approval_rate: "78%"
+      promotion: "+4,000p 진행중"
+      promotion_period: "2024-07-17 ~ 종료 시까지"
+      rejected_if:
+        - 오류
+        - 결번
+        - 중복
+        - 미성년자
+        - 장기부재
+        - 상담거절
+        - 본인아님
+      required_fields:
+        - 이름
+        - 핸드폰번호
+        - 이사 날짜
+        - 출발지
+        - 출발지 상세주소
+        - 도착지
+        - 도착지 상세주소
+      date_rule: "55일 이내 이사날짜만 견적 신청 가능"
+      required_disclosure: "게시물 첫 부분 또는 제목 [광고] 표시. '받을 수 있음' 대신 '수익이 발생합니다/지급받습니다'처럼 확정형 문구 사용."
+      promotion_url: "https://appu.kr/?i=12518178"
+  - network: Tenping
+    campaigns:
+      - moving_or_living_service_campaign
+    source_url: "https://biz.tenping.net/"
+    status: needs_login_verification
+  - network: Direct partner
+    campaigns:
+      - Daisa
+      - Miso
+      - AJD moving
+      - 24Story
+    status: outreach_candidate
+landing:
+  route_slug: moving-quote-call-burden
+  production_url: "https://moving-quote-call-burden.vercel.app"
+  headline: "이사 견적 신청 버튼 누르기 전, 불안한 3가지는 정리됐나요?"
+  primary_cta: "불안 포인트 정리하고 비교 견적 확인하기"
+  primary_cta_url: "https://appu.kr/?i=12518178"
+  secondary_cta: "아직 불안하면 전화·추가요금 질문부터 정리하기"
+  disclosure: "[광고] 이 페이지는 이사 견적 비교 전 확인할 정보를 정리한 안내 페이지이며, 제휴 링크를 통한 신청 또는 클릭에 따라 운영자는 제휴 수익을 지급받습니다."
+tracking:
+  campaign: moving_quote_call_burden
+  events:
+    - page_view
+    - selector_completed
+    - checklist_viewed
+    - outbound_cta_clicked
+success_criteria:
+  outbound_click_rate_min: 0.08
+  checklist_completion_rate_min: 0.3
+  minimum_outbound_clicks_before_judgement: 20
+  restrictions:
+  - "Do not promise that users will receive no calls."
+  - "Do not claim lowest price unless the partner offer explicitly supports it."
+  - "Do not collect personal data locally in v1."
+  - "Do not automate community posting, comments, likes, DMs, or cafe activity."
+  - "Confirm campaign-specific traffic rules before publishing affiliate links."
+  - "For Adlix Daisa, disclose paid relationship at the beginning of content or in the title with [광고]."
+  - "For Adlix Daisa, avoid weak disclosure wording like '받을 수 있음'; use definite disclosure wording."
+  - "For Adlix Daisa, strongly route only users with moving dates within 55 days to the outbound CTA."
+external_account_state:
+  adlix:
+    channel_registered: true
+    channel_type: 기타
+    channel_url: "https://moving-quote-call-burden.vercel.app"
+    phone_verified: true
+    promotion_url_status: generated
+    promotion_url: "https://appu.kr/?i=12518178"
+evidence:
+  research_docs:
+    - "docs/research/captured-evidence-20260610.md"
+    - "docs/research/community-topic-ranking-20260610.md"
+    - "docs/research/moving-offer-shortlist-20260610.md"
+    - "docs/research/moving-offer-verification-20260610.md"
+    - "docs/research/adlix-daisa-campaign-detail-20260610.md"
+    - "docs/launch-moving-quote-mvp.md"

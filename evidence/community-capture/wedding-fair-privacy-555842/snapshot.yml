@@ -1,0 +1,727 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - banner [ref=e6]:
+      - button "카페홈" [ref=e7] [cursor=pointer]:
+        - generic [ref=e8]: 카페홈
+        - img
+      - heading "꾸미고놀자♥여행가자" [level=1] [ref=e9]:
+        - link "꾸미고놀자♥여행가자" [ref=e11] [cursor=pointer]:
+          - /url: /ca-fe/mkrlfd
+      - generic [ref=e12]:
+        - link "가입" [ref=e13] [cursor=pointer]:
+          - /url: "#"
+        - button "검색" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: 검색
+          - img
+        - button "메뉴" [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]: 메뉴
+          - img
+  - generic [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - link "자유게시판" [ref=e24] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e25]: 자유게시판
+          - link "앱 열기" [ref=e26] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=e27]:
+          - heading "웨딩박람회 무료 쿠폰 신청 똑똑한 예랑예신들은 이렇게 아껴요!" [level=2] [ref=e28]
+          - button "본문 기타 기능" [ref=e30] [cursor=pointer]:
+            - generic [ref=e31]: 본문 기타 기능
+        - generic [ref=e32]:
+          - link "프로필사진" [ref=e33] [cursor=pointer]:
+            - /url: "#"
+            - img "프로필사진" [ref=e35]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - link "밀린숙젠먀" [ref=e38] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e40]: 밀린숙젠먀
+              - emphasis [ref=e43]: 활동좀
+              - link "채팅" [ref=e44] [cursor=pointer]:
+                - /url: "#"
+            - generic [ref=e45]:
+              - generic [ref=e46]:
+                - generic [ref=e47]: 작성일
+                - text: 2026.04.02. 10:39
+              - generic [ref=e48]: 조회 6
+      - generic [ref=e50]:
+        - generic [ref=e54]:
+          - paragraph [ref=e59]: 웨딩박람회 파트너스 활동으로 커미션을 받을 수 있음
+          - paragraph [ref=e64]: 웨딩박람회 무료 쿠폰 신청 90% 예비 부부들은 모르는 비용 아끼는 법
+          - paragraph [ref=e74]: 웨딩박람회 무료 쿠폰 신청 찾아보고 계시죠? 웨딩홀부터 스드메(스튜디오·드레스·메이크업)까지, 일일이 가격 비교하느라 벌써 지치셨을 거예요.
+          - paragraph [ref=e79]
+          - paragraph [ref=e84]: 이제 힘들게 발품 팔지 마세요. 이 박람회에 오시면 인기 있는 브랜드와 견적을 한자리에서 싹 비교할 수 있어요. 당연히 박람회 특가로 가격 부담은 확 줄였고요!
+          - paragraph [ref=e89]
+          - paragraph [ref=e94]: ▼ 바쁘신 예비부부님들! 고민은 줄이고 혜택은 챙기세요. (아래에서 3초 만에 무료 신청)
+          - table [ref=e99]:
+            - rowgroup [ref=e100]:
+              - row "📌 웨딩박람회 무료 쿠폰 신청" [ref=e101]:
+                - cell "📌 웨딩박람회 무료 쿠폰 신청" [ref=e102]:
+                  - paragraph [ref=e104]:
+                    - link "📌 웨딩박람회 무료 쿠폰 신청" [ref=e106] [cursor=pointer]:
+                      - /url: https://vo.la/5uyGQkG
+          - paragraph [ref=e116]: 결혼 준비의 신세계? 웨딩박람회 무료 쿠폰 신청으로 혜택 대박 터뜨리는 방법!
+          - paragraph [ref=e121]
+          - paragraph [ref=e126]: "\"결혼 준비, 어디서부터 시작해야 할지 막막하시죠?\" 아마 이 글을 읽고 계신 예비부부라면 다들 고개를 끄덕이실 거예요. 평생 한 번뿐인 소중한 날이지만, 막상 준비하려니 끝없이 늘어나는 비용과 정보의 홍수 속에서 길을 잃기 십상이죠. 스드메(스튜디오, 드레스, 메이크업)부터 예식장, 허니문, 예물, 혼수까지… 대체 어디서부터 손대야 할지, 어떻게 하면 좀 더 알뜰하게 준비할 수 있을지 밤잠 설치며 고민하고 계신가요?"
+          - paragraph [ref=e131]
+          - paragraph [ref=e136]: 걱정 마세요! 여러분의 결혼 준비에 '빛'이 되어줄 비장의 무기, 바로 웨딩박람회 무료 쿠폰이 있답니다! 이게 뭔데 이렇게 호들갑이냐고요? 잠깐만요, 이 쿠폰 하나로 여러분의 결혼 준비가 얼마나 쉽고, 저렴하고, 풍성해질 수 있는지 지금부터 자세히 알려드릴게요. 혹시 아직도 웨딩박람회 방문을 망설이고 있다면, 이 글을 읽고 나면 아마 당장이라도 무료 쿠폰 신청- 버튼을 누르고 싶어질 걸요?
+          - paragraph [ref=e141]
+          - paragraph [ref=e146]: "H1: 왜 웨딩박람회 무료 쿠폰이 결혼 준비의 '치트키'일까요?"
+          - paragraph [ref=e151]
+          - paragraph [ref=e156]: 무료 쿠폰이라니, 뭔가 함정이 있을 것 같다고요? 전혀요! 오히려 이걸 활용하지 않는 게 손해랍니다. 왜 웨딩박람회 무료 쿠폰이 여러분의 결혼 준비를 훨씬 수월하게 만들 수 있는지, 그 특별한 이유들을 함께 살펴볼까요?
+          - paragraph [ref=e161]
+          - paragraph [ref=e166]: "H2: 상상 이상의 파격 할인과 혜택이 쏟아진다!"
+          - paragraph [ref=e171]
+          - paragraph [ref=e176]: 솔직히 말해볼까요? 결혼식은 돈 먹는 하마 같잖아요. 하지만 웨딩박람회는 이런 결혼식 비용 부담을 확! 줄여줄 수 있는 최고의 기회예요. 특히 무료 쿠폰을 가지고 가면 이야기가 완전히 달라지죠. 보통 웨딩박람회 현장에서는 오직 박람회 방문객에게만 제공되는 특별 할인 프로모션이 잔뜩 열리는데요, 이 무료 쿠폰이 바로 그 혜택을 받을 수 있는 '입장권' 같은 역할을 한답니다.
+          - paragraph [ref=e181]
+          - paragraph [ref=e186]: 예를 들어, 보통 300만원이 넘는 스드메 패키지를 박람회 무료 쿠폰 덕분에 200만원 초반대에 계약하는 경우도 흔하고요, 꿈에 그리던 예식장 대관료를 수십 퍼센트 할인받거나, 비싼 혼수 가구를 파격적인 가격으로 구매할 수도 있어요. 심지어 허니문 상품을 예약하면 고급 카메라나 캐리어를 사은품으로 받거나, 예물 구매 시 추가 다이아몬드를 증정하는 등, 그야말로 '상상 초월'의 웨딩 할인과 웨딩 혜택이 가득하답니다. 이 모든 혜택을 놓치면 정말 아깝지 않겠어요? 결혼 준비 비용을 대폭 절감하고 싶은 예비부부라면, 웨딩박람회 무료 쿠폰은 선택이 아닌 필수예요!
+          - paragraph [ref=e191]
+          - paragraph [ref=e196]: "H2: 숨겨진 알짜 정보와 최신 웨딩 트렌드까지 한 번에!"
+          - paragraph [ref=e201]
+          - paragraph [ref=e206]: 단순히 돈만 아끼는 게 다가 아니에요. 웨딩박람회는 한 곳에서 수십, 수백 개의 웨딩 관련 업체를 직접 만나보고 비교할 수 있는 아주 귀한 자리랍니다. 특히 무료 쿠폰 신청을 통해 방문하면 전문 웨딩 플래너와의 1:1 무료 상담 기회가 주어지는 경우가 많아요.
+          - paragraph [ref=e211]
+          - paragraph [ref=e216]: 이때 평소 궁금했던 점들을 실시간으로 물어보고, 나에게 딱 맞는 맞춤형 결혼 준비- 가이드를 받아볼 수 있죠. "어떤 스튜디오가 인물 위주로 잘 찍나요?", "제 체형에는 어떤 드레스 라인이 어울릴까요?", "최신 웨딩 트렌드는 뭐예요?" 등등, 궁금증을 시원하게 해결할 수 있답니다. 인터넷 검색만으로는 얻기 힘든 업계 전문가의 생생한 정보와 조언을 얻고, 다양한 업체의 포트폴리오를 직접 눈으로 보면서 나만의 결혼식을 구체적으로 그려볼 수 있는 절호의 기회예요. 무료 쿠폰으로 얻는 정보의 가치는 돈으로 환산할 수 없을 정도랍니다!
+          - paragraph [ref=e221]
+          - paragraph [ref=e226]: "H1: 웨딩박람회 무료 쿠폰, 초간단 신청 방법과 꿀팁 대방출!"
+          - paragraph [ref=e231]
+          - paragraph [ref=e236]: 이렇게 좋은 무료 쿠폰, 그럼 대체 어떻게 신청하는 걸까요? 어렵지 않을까 걱정 마세요. 생각보다 훨씬 간단하답니다!
+          - paragraph [ref=e241]
+          - paragraph [ref=e246]: "H2: 3단계로 끝! 웨딩박람회 무료 쿠폰 신청 프로세스"
+          - paragraph [ref=e251]
+          - paragraph [ref=e256]: 1. 온라인 사전 신청:- 대부분의 웨딩박람회는 공식 홈페이지나 제휴 채널을 통해 무료 참가 신청을 받아요. 이름, 연락처, 결혼 예정일 등 간단한 정보만 입력하면 끝! 대략 1~2분이면 신청이 완료됩니다. 이때 쿠폰 발급 여부를 확인하고, 어떤 혜택이 있는지 미리 살펴보면 더욱 좋겠죠?
+          - paragraph [ref=e261]: 2. 초대장 또는 QR 코드 수령:- 신청이 완료되면 문자로 모바일 초대장이나 박람회 입장 시 필요한 QR 코드를 보내주는 경우가 많아요. 이걸 잘 보관해두세요! 박람회 현장에서 본인 확인 후 바로 입장할 수 있답니다.
+          - paragraph [ref=e266]: 3. 박람회 현장에서 혜택 즐기기!:- 박람회장에 도착해서 무료 쿠폰을 제시하거나, 신청 확인 절차를 거치면 다양한 웨딩 할인 쿠폰이나 현장 이벤트 참여권을 받을 수 있어요. 이걸 들고 원하는 부스를 방문해서 상담받고, 계약 시 특별 혜택을 요구하면 된답니다. 간단하죠?
+          - paragraph [ref=e271]
+          - paragraph [ref=e276]: "H2: 웨딩박람회 무료 쿠폰, 이것만은 꼭 주의하세요!"
+          - paragraph [ref=e281]
+          - paragraph [ref=e286]: "\"혹시 신청하면 스팸 전화 오는 거 아니에요?\" \"무료라고 했는데 결국 바가지 쓰는 거 아니야?\" 이런 걱정 충분히 이해해요. 그래서 몇 가지 주의사항을 알려드릴게요."
+          - paragraph [ref=e291]
+          - paragraph [ref=e296]: "- 정보 제공 동의 범위 확인:- 무료 쿠폰 신청 시 개인정보 활용 동의 범위를 꼼꼼히 살펴보세요. 불필요한 마케팅 정보 수신을 원치 않는다면 동의하지 않거나, 나중에 철회할 수 있는지 확인하는 게 좋아요."
+          - paragraph [ref=e301]: "- 혜택 내용 구체적으로 확인:- '최대 70% 할인' 같은 문구에 현혹되기보다는, 어떤 품목에 얼마큼 할인이 적용되는지 구체적인 조건을 확인하는 게 중요해요. 박람회 현장에서 상담할 때도 '무료 쿠폰'으로 받을 수 있는 혜택이 무엇인지 명확하게 물어보세요."
+          - paragraph [ref=e306]: "- 충분한 비교는 필수!:- 무료 쿠폰으로 받은 혜택이 아무리 좋아 보여도, 한두 군데만 보고 덜컥 계약하기보다는 여러 업체의 상품과 가격을 꼼꼼히 비교해보는 현명함이 필요해요. 알뜰 결혼의 지름길은 바로 '비교'에 있답니다!"
+          - paragraph [ref=e311]
+          - paragraph [ref=e316]: "H1: 무료 쿠폰으로 웨딩박람회 120% 활용하는 꿀팁 대공개!"
+          - paragraph [ref=e321]
+          - paragraph [ref=e326]: 이제 웨딩박람회 무료 쿠폰도 신청했고, 어떤 점을 주의해야 할지도 알았으니, 이제 정말 '본격적인' 활용법을 알아볼 시간이에요. 그냥 가서 구경만 하다 오는 게 아니라, 정말 혜택을 싹쓸이해 오는 꿀팁들을 알려드릴게요!
+          - paragraph [ref=e331]
+          - paragraph [ref=e336]: "H2: 똑똑한 박람회 투어를 위한 준비물 & 마인드셋"
+          - paragraph [ref=e341]
+          - paragraph [ref=e346]: 맨몸으로 가는 것보다는 몇 가지 준비물을 챙겨가면 훨씬 효율적인 박람회 투어를 할 수 있어요.
+          - paragraph [ref=e351]
+          - paragraph [ref=e356]: "- 편한 신발:- 박람회장은 넓고, 구경할 부스가 많아요. 발이 편해야 오래 돌아다니며 더 많은 정보를 얻을 수 있겠죠?"
+          - paragraph [ref=e361]: "- 메모장과 펜(혹은 스마트폰):- 상담받은 내용, 계약 조건, 업체 정보 등을 꼼꼼하게 메모해두세요. 나중에 비교하고 결정할 때 큰 도움이 된답니다. 마음에 드는 드레스나 스튜디오 샘플이 있다면 사진을 찍어두는 것도 좋아요!"
+          - paragraph [ref=e366]: "- 궁금한 점 리스트:- 미리 궁금했던 점들을 정리해서 가면, 잊지 않고 물어볼 수 있어요. \"식대는 얼마인가요?\", \"혼주 한복 대여도 가능한가요?\", \"웨딩카 서비스는 있나요?\" 등 구체적인 질문일수록 명확한 답변을 얻을 수 있답니다."
+          - paragraph [ref=e371]: "- '비교 분석 전문가' 마인드셋:- 판매자의 달콤한 말에 현혹되지 않고, 객관적인 시각으로 업체들을 비교 분석하겠다는 마음가짐이 중요해요. 여러 부스를 다니면서 견적을 받아보고, 장단점을 명확히 파악하세요."
+          - paragraph [ref=e376]
+          - paragraph [ref=e381]: "H2: '나만의 맞춤 결혼식' 꿈을 현실로 만드는 박람회 활용법"
+          - paragraph [ref=e386]
+          - paragraph [ref=e391]: 무료 쿠폰으로 박람회 문턱을 넘었다면, 이제 여러분의 꿈을 펼칠 시간이에요. 단순히 할인을 받는 것을 넘어, '나만의 특별한 결혼식'을 기획하는 기회로 삼아보세요.
+          - paragraph [ref=e396]
+          - paragraph [ref=e401]: "- 플래너와 적극적으로 소통:- 박람회에서 만나는 웨딩 플래너는 결혼 준비의 베테랑이에요. 여러분의 예산, 원하는 컨셉, 하객 규모 등을 솔직하게 이야기하고, 현실적인 조언과 맞춤형 플랜을 받아보세요. 무료 상담이니 부담 없이 마음껏 질문하세요!"
+          - paragraph [ref=e406]: "- 다양한 업체와 상담:- 스드메, 예식장, 허니문, 예물, 한복, 답례품 등 관심 있는 모든 부스를 방문해서 상담을 받아보세요. 한 곳에서 여러 업체를 비교할 수 있는 기회는 흔치 않답니다."
+          - paragraph [ref=e411]: "- 현장 이벤트 참여:- 박람회에서는 방문객을 위한 다양한 현장 이벤트가 열리곤 해요. 무료 식사권, 드레스 피팅권, 메이크업 체험권 등 소소하지만 알찬 혜택을 얻을 수 있으니 적극적으로 참여해보세요."
+          - paragraph [ref=e416]
+          - paragraph [ref=e421]: 웨딩박람회 무료 쿠폰 신청은 단순히 돈을 아끼는 것을 넘어, 여러분의 결혼 준비- 과정을 훨씬 풍요롭고 즐겁게 만들어 줄 마법 같은 도구랍니다. 망설이지 말고 지금 바로 무료 쿠폰 신청을 통해 여러분의 특별한 결혼식을 위한 첫걸음을 내디뎌 보세요! 똑똑하고 현명한 예비부부의 선택, 바로 웨딩박람회에서 시작됩니다!
+          - paragraph [ref=e426]:
+            - generic [ref=e428]: 웨딩박람회 무료 쿠폰 신청 다양한 찐후기를 원하시는 분들은 아래에서 확인해보시길 바랍니다.
+          - table [ref=e433]:
+            - rowgroup [ref=e434]:
+              - row "📌 웨딩박람회 무료 쿠폰 신청" [ref=e435]:
+                - cell "📌 웨딩박람회 무료 쿠폰 신청" [ref=e436]:
+                  - paragraph [ref=e438]:
+                    - link "📌 웨딩박람회 무료 쿠폰 신청" [ref=e440] [cursor=pointer]:
+                      - /url: https://vo.la/5uyGQkG
+          - paragraph [ref=e445]
+          - paragraph [ref=e455]: 마무리하며
+          - paragraph [ref=e460]: 오늘은 웨딩박람회 무료 쿠폰 신청에 대해 살펴봤습니다. 어떻게 이 글이 조금이라도 도움이 되셨을까요? 사람들이 궁금해할만한 내용에 대해 핵심사항만 정리해봤는데요.
+          - paragraph [ref=e465]: 오늘도 긴 글 읽어주셔서 감사합니다. 조금이라도 도움이 되셨다면 댓글과 좋아요 부탁드립니다.
+        - generic [ref=e466]:
+          - link "핫딜 카페태그로 이동" [ref=e467] [cursor=pointer]:
+            - /url: "#"
+            - text: "#핫딜"
+          - link "핫딜정보 카페태그로 이동" [ref=e468] [cursor=pointer]:
+            - /url: "#"
+            - text: "#핫딜정보"
+          - link "쿠팡 카페태그로 이동" [ref=e469] [cursor=pointer]:
+            - /url: "#"
+            - text: "#쿠팡"
+          - link "쿠팡핫딜 카페태그로 이동" [ref=e470] [cursor=pointer]:
+            - /url: "#"
+            - text: "#쿠팡핫딜"
+          - link "쿠팡딜 카페태그로 이동" [ref=e471] [cursor=pointer]:
+            - /url: "#"
+            - text: "#쿠팡딜"
+          - link "쿠팡할인 카페태그로 이동" [ref=e472] [cursor=pointer]:
+            - /url: "#"
+            - text: "#쿠팡할인"
+          - link "쿠팡쿠폰 카페태그로 이동" [ref=e473] [cursor=pointer]:
+            - /url: "#"
+            - text: "#쿠팡쿠폰"
+          - link "쿠팡할인쿠폰 카페태그로 이동" [ref=e474] [cursor=pointer]:
+            - /url: "#"
+            - text: "#쿠팡할인쿠폰"
+          - link "쿠팡할인정보 카페태그로 이동" [ref=e475] [cursor=pointer]:
+            - /url: "#"
+            - text: "#쿠팡할인정보"
+          - link "쿠팡할인딜 카페태그로 이동" [ref=e476] [cursor=pointer]:
+            - /url: "#"
+            - text: "#쿠팡할인딜"
+      - generic [ref=e478]:
+        - button "좋아요 0" [ref=e479] [cursor=pointer]:
+          - generic [ref=e481]:
+            - img
+          - text: 좋아요
+          - emphasis [ref=e482]: "0"
+        - generic [ref=e484]:
+          - text: "'좋아요'로 마음을 나누세요!"
+          - img
+      - generic [ref=e485]:
+        - generic [ref=e487]:
+          - heading "댓글 6" [level=3] [ref=e489]:
+            - link "댓글 6" [ref=e490] [cursor=pointer]:
+              - /url: "#"
+              - text: 댓글
+              - emphasis [ref=e491]: "6"
+              - img
+          - generic [ref=e493]:
+            - generic [ref=e494]:
+              - strong [ref=e495]: 클린봇
+              - text: 이 악성 댓글을 감지합니다.
+            - button "클린봇 설정" [ref=e496] [cursor=pointer]:
+              - img
+        - list [ref=e500]:
+          - listitem [ref=e501]:
+            - generic [ref=e503]:
+              - generic [ref=e504]:
+                - generic [ref=e505]:
+                  - link "프로필 밀린숙젠먀 활동좀" [ref=e506] [cursor=pointer]:
+                    - /url: "#"
+                    - img "프로필" [ref=e509]
+                    - generic [ref=e511]: 밀린숙젠먀
+                    - emphasis [ref=e513]: 활동좀
+                  - generic [ref=e515]: 작성자
+                - paragraph [ref=e517]: 꼼꼼한 꿀팁 감사해요. 저도 이 내용 잘 따져보고 현명하게 소비하겠습니다.
+                - generic [ref=e518]:
+                  - text: 2026.04.02. 10:39
+                  - button "답글쓰기" [ref=e519] [cursor=pointer]
+              - generic [ref=e520]:
+                - button "옵션" [ref=e521] [cursor=pointer]:
+                  - generic [ref=e522]: 옵션
+                  - img
+                - button "좋아요" [ref=e524] [cursor=pointer]:
+                  - generic [ref=e526]: 좋아요
+          - listitem [ref=e527]:
+            - generic [ref=e529]:
+              - generic [ref=e530]:
+                - link "프로필 오리무둥이 구경꾼" [ref=e532] [cursor=pointer]:
+                  - /url: "#"
+                  - img "프로필" [ref=e535]
+                  - generic [ref=e537]: 오리무둥이
+                  - emphasis [ref=e539]: 구경꾼
+                - paragraph [ref=e541]: 제가 딱 필요했던 정보였어요. 덕분에 시간 절약했습니다! 좋은 내용 감사드립니다.
+                - generic [ref=e542]:
+                  - text: 2026.04.02. 10:40
+                  - button "답글쓰기" [ref=e543] [cursor=pointer]
+              - generic [ref=e544]:
+                - button "옵션" [ref=e545] [cursor=pointer]:
+                  - generic [ref=e546]: 옵션
+                  - img
+                - button "좋아요" [ref=e548] [cursor=pointer]:
+                  - generic [ref=e550]: 좋아요
+          - listitem [ref=e551]:
+            - generic [ref=e553]:
+              - generic [ref=e554]:
+                - link "프로필 허브라인 구경꾼" [ref=e556] [cursor=pointer]:
+                  - /url: "#"
+                  - img "프로필" [ref=e559]
+                  - generic [ref=e561]: 허브라인
+                  - emphasis [ref=e563]: 구경꾼
+                - paragraph [ref=e565]: 정말 감사드립니다. 핵심만 쏙쏙 뽑아 알려주셔서 이해하기가 훨씬 수월했어요.
+                - generic [ref=e566]:
+                  - text: 2026.04.02. 10:40
+                  - button "답글쓰기" [ref=e567] [cursor=pointer]
+              - generic [ref=e568]:
+                - button "옵션" [ref=e569] [cursor=pointer]:
+                  - generic [ref=e570]: 옵션
+                  - img
+                - button "좋아요" [ref=e572] [cursor=pointer]:
+                  - generic [ref=e574]: 좋아요
+          - listitem [ref=e575]:
+            - generic [ref=e577]:
+              - generic [ref=e578]:
+                - link "프로필 저스트보닌0 구경꾼" [ref=e580] [cursor=pointer]:
+                  - /url: "#"
+                  - img "프로필" [ref=e583]
+                  - generic [ref=e585]: 저스트보닌0
+                  - emphasis [ref=e587]: 구경꾼
+                - paragraph [ref=e589]: 이런 고급 정보를 무료로 알려주시다니, 정말 대단하십니다. 고맙습니다!
+                - generic [ref=e590]:
+                  - text: 2026.04.02. 10:41
+                  - button "답글쓰기" [ref=e591] [cursor=pointer]
+              - generic [ref=e592]:
+                - button "옵션" [ref=e593] [cursor=pointer]:
+                  - generic [ref=e594]: 옵션
+                  - img
+                - button "좋아요" [ref=e596] [cursor=pointer]:
+                  - generic [ref=e598]: 좋아요
+          - listitem [ref=e599]:
+            - generic [ref=e601]:
+              - generic [ref=e602]:
+                - link "프로필 정의강태건 구경꾼" [ref=e604] [cursor=pointer]:
+                  - /url: "#"
+                  - img "프로필" [ref=e607]
+                  - generic [ref=e609]: 정의강태건
+                  - emphasis [ref=e611]: 구경꾼
+                - paragraph [ref=e613]: 좋은 정보를 읽기 편하게 정리해 주셔서 감사합니다. 다음에 또 찾아올게요.
+                - generic [ref=e614]:
+                  - text: 2026.04.02. 10:41
+                  - button "답글쓰기" [ref=e615] [cursor=pointer]
+              - generic [ref=e616]:
+                - button "옵션" [ref=e617] [cursor=pointer]:
+                  - generic [ref=e618]: 옵션
+                  - img
+                - button "좋아요" [ref=e620] [cursor=pointer]:
+                  - generic [ref=e622]: 좋아요
+          - listitem [ref=e623]:
+            - generic [ref=e625]:
+              - generic [ref=e626]:
+                - link "프로필 랜슬롯d 구경꾼" [ref=e628] [cursor=pointer]:
+                  - /url: "#"
+                  - img "프로필" [ref=e631]
+                  - generic [ref=e633]: 랜슬롯d
+                  - emphasis [ref=e635]: 구경꾼
+                - paragraph [ref=e637]: 많은 사람에게 도움이 될 만한 귀한 정보를 공유해 주셔서 정말 고맙습니다.
+                - generic [ref=e638]:
+                  - text: 2026.04.02. 10:41
+                  - button "답글쓰기" [ref=e639] [cursor=pointer]
+              - generic [ref=e640]:
+                - button "옵션" [ref=e641] [cursor=pointer]:
+                  - generic [ref=e642]: 옵션
+                  - img
+                - button "좋아요" [ref=e644] [cursor=pointer]:
+                  - generic [ref=e646]: 좋아요
+        - link "프로필사진 지금 가입하고 댓글에 참여해보세요!" [ref=e648] [cursor=pointer]:
+          - /url: "#"
+          - img "프로필사진" [ref=e651]
+          - generic [ref=e652]: 지금 가입하고 댓글에 참여해보세요!
+      - generic [ref=e656]:
+        - link "전체글" [ref=e660] [cursor=pointer]:
+          - /url: /ca-fe/mkrlfd
+          - heading "전체글" [level=3] [ref=e661]:
+            - generic [ref=e662]: 전체글
+            - img
+        - generic [ref=e663]:
+          - generic [ref=e667]:
+            - list [ref=e668]:
+              - listitem [ref=e669]:
+                - link "웨딩박람회 사은품 증정 등록 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e670] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555846?tc=article_bottom_article_list
+                  - generic [ref=e671]:
+                    - generic [ref=e674]: 웨딩박람회 사은품 증정 등록 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e675]:
+                      - generic [ref=e676]: 밀린숙젠먀
+                      - generic [ref=e678]: 26.04.02.
+                      - generic [ref=e679]:
+                        - generic [ref=e680]: 댓글
+                        - img
+                        - generic [ref=e681]: "6"
+                  - generic [ref=e683]:
+                    - img [ref=e685]
+                    - emphasis [ref=e686]:
+                      - generic [ref=e687]: 게시글 내 이미지 갯수
+                      - generic [ref=e688]: 2+
+              - listitem [ref=e689]:
+                - link "웨딩박람회 무료 쿠폰 신청 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e690] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555842?tc=article_bottom_article_list
+                  - generic [ref=e691]:
+                    - generic [ref=e694]: 웨딩박람회 무료 쿠폰 신청 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e695]:
+                      - generic [ref=e696]: 밀린숙젠먀
+                      - generic [ref=e698]: 26.04.02.
+                      - generic [ref=e699]:
+                        - generic [ref=e700]: 댓글
+                        - img
+                        - generic [ref=e701]: "6"
+                  - generic [ref=e703]:
+                    - img [ref=e705]
+                    - emphasis [ref=e706]:
+                      - generic [ref=e707]: 게시글 내 이미지 갯수
+                      - generic [ref=e708]: 2+
+              - listitem [ref=e709]:
+                - link "2026 봄 결혼박람회 혜택 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e710] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555839?tc=article_bottom_article_list
+                  - generic [ref=e711]:
+                    - generic [ref=e714]: 2026 봄 결혼박람회 혜택 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e715]:
+                      - generic [ref=e716]: 밀린숙젠먀
+                      - generic [ref=e718]: 26.04.02.
+                      - generic [ref=e719]:
+                        - generic [ref=e720]: 댓글
+                        - img
+                        - generic [ref=e721]: "6"
+                  - generic [ref=e723]:
+                    - img [ref=e725]
+                    - emphasis [ref=e726]:
+                      - generic [ref=e727]: 게시글 내 이미지 갯수
+                      - generic [ref=e728]: 2+
+              - listitem [ref=e729]:
+                - link "2026 봄 웨딩페어 무료 참가 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e730] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555836?tc=article_bottom_article_list
+                  - generic [ref=e731]:
+                    - generic [ref=e734]: 2026 봄 웨딩페어 무료 참가 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e735]:
+                      - generic [ref=e736]: 밀린숙젠먀
+                      - generic [ref=e738]: 26.04.02.
+                      - generic [ref=e739]:
+                        - generic [ref=e740]: 댓글
+                        - img
+                        - generic [ref=e741]: "6"
+                  - generic [ref=e743]:
+                    - img [ref=e745]
+                    - emphasis [ref=e746]:
+                      - generic [ref=e747]: 게시글 내 이미지 갯수
+                      - generic [ref=e748]: 2+
+            - list [ref=e749]:
+              - listitem [ref=e750]:
+                - link "울산 웨딩박람회 무료 등록 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e751] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555833?tc=article_bottom_article_list
+                  - generic [ref=e752]:
+                    - generic [ref=e755]: 울산 웨딩박람회 무료 등록 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e756]:
+                      - generic [ref=e757]: 밀린숙젠먀
+                      - generic [ref=e759]: 26.04.02.
+                      - generic [ref=e760]:
+                        - generic [ref=e761]: 댓글
+                        - img
+                        - generic [ref=e762]: "6"
+                  - generic [ref=e764]:
+                    - img [ref=e766]
+                    - emphasis [ref=e767]:
+                      - generic [ref=e768]: 게시글 내 이미지 갯수
+                      - generic [ref=e769]: 2+
+              - listitem [ref=e770]:
+                - link "광주 결혼박람회 지금 신청 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e771] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555830?tc=article_bottom_article_list
+                  - generic [ref=e772]:
+                    - generic [ref=e775]: 광주 결혼박람회 지금 신청 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e776]:
+                      - generic [ref=e777]: 밀린숙젠먀
+                      - generic [ref=e779]: 26.04.02.
+                      - generic [ref=e780]:
+                        - generic [ref=e781]: 댓글
+                        - img
+                        - generic [ref=e782]: "6"
+                  - generic [ref=e784]:
+                    - img [ref=e786]
+                    - emphasis [ref=e787]:
+                      - generic [ref=e788]: 게시글 내 이미지 갯수
+                      - generic [ref=e789]: 2+
+              - listitem [ref=e790]:
+                - link "대전 웨딩페어 혜택 문의 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e791] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555827?tc=article_bottom_article_list
+                  - generic [ref=e792]:
+                    - generic [ref=e795]: 대전 웨딩페어 혜택 문의 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e796]:
+                      - generic [ref=e797]: 밀린숙젠먀
+                      - generic [ref=e799]: 26.04.02.
+                      - generic [ref=e800]:
+                        - generic [ref=e801]: 댓글
+                        - img
+                        - generic [ref=e802]: "6"
+                  - generic [ref=e804]:
+                    - img [ref=e806]
+                    - emphasis [ref=e807]:
+                      - generic [ref=e808]: 게시글 내 이미지 갯수
+                      - generic [ref=e809]: 2+
+              - listitem [ref=e810]:
+                - link "대구 웨딩박람회 무료 상담 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e811] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555824?tc=article_bottom_article_list
+                  - generic [ref=e812]:
+                    - generic [ref=e815]: 대구 웨딩박람회 무료 상담 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e816]:
+                      - generic [ref=e817]: 밀린숙젠먀
+                      - generic [ref=e819]: 26.04.02.
+                      - generic [ref=e820]:
+                        - generic [ref=e821]: 댓글
+                        - img
+                        - generic [ref=e822]: "6"
+                  - generic [ref=e824]:
+                    - img [ref=e826]
+                    - emphasis [ref=e827]:
+                      - generic [ref=e828]: 게시글 내 이미지 갯수
+                      - generic [ref=e829]: 2+
+            - list [ref=e830]:
+              - listitem [ref=e831]:
+                - link "울산 웨딩박람회 무료 등록 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e832] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555833?tc=article_bottom_article_list
+                  - generic [ref=e833]:
+                    - generic [ref=e836]: 울산 웨딩박람회 무료 등록 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e837]:
+                      - generic [ref=e838]: 밀린숙젠먀
+                      - generic [ref=e840]: 26.04.02.
+                      - generic [ref=e841]:
+                        - generic [ref=e842]: 댓글
+                        - img
+                        - generic [ref=e843]: "6"
+                  - generic [ref=e845]:
+                    - img [ref=e847]
+                    - emphasis [ref=e848]:
+                      - generic [ref=e849]: 게시글 내 이미지 갯수
+                      - generic [ref=e850]: 2+
+              - listitem [ref=e851]:
+                - link "광주 결혼박람회 지금 신청 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e852] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555830?tc=article_bottom_article_list
+                  - generic [ref=e853]:
+                    - generic [ref=e856]: 광주 결혼박람회 지금 신청 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e857]:
+                      - generic [ref=e858]: 밀린숙젠먀
+                      - generic [ref=e860]: 26.04.02.
+                      - generic [ref=e861]:
+                        - generic [ref=e862]: 댓글
+                        - img
+                        - generic [ref=e863]: "6"
+                  - generic [ref=e865]:
+                    - img [ref=e867]
+                    - emphasis [ref=e868]:
+                      - generic [ref=e869]: 게시글 내 이미지 갯수
+                      - generic [ref=e870]: 2+
+              - listitem [ref=e871]:
+                - link "대전 웨딩페어 혜택 문의 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e872] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555827?tc=article_bottom_article_list
+                  - generic [ref=e873]:
+                    - generic [ref=e876]: 대전 웨딩페어 혜택 문의 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e877]:
+                      - generic [ref=e878]: 밀린숙젠먀
+                      - generic [ref=e880]: 26.04.02.
+                      - generic [ref=e881]:
+                        - generic [ref=e882]: 댓글
+                        - img
+                        - generic [ref=e883]: "6"
+                  - generic [ref=e885]:
+                    - img [ref=e887]
+                    - emphasis [ref=e888]:
+                      - generic [ref=e889]: 게시글 내 이미지 갯수
+                      - generic [ref=e890]: 2+
+              - listitem [ref=e891]:
+                - link "대구 웨딩박람회 무료 상담 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e892] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555824?tc=article_bottom_article_list
+                  - generic [ref=e893]:
+                    - generic [ref=e896]: 대구 웨딩박람회 무료 상담 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e897]:
+                      - generic [ref=e898]: 밀린숙젠먀
+                      - generic [ref=e900]: 26.04.02.
+                      - generic [ref=e901]:
+                        - generic [ref=e902]: 댓글
+                        - img
+                        - generic [ref=e903]: "6"
+                  - generic [ref=e905]:
+                    - img [ref=e907]
+                    - emphasis [ref=e908]:
+                      - generic [ref=e909]: 게시글 내 이미지 갯수
+                      - generic [ref=e910]: 2+
+            - list [ref=e911]:
+              - listitem [ref=e912]:
+                - link "울산 웨딩박람회 무료 등록 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e913] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555833?tc=article_bottom_article_list
+                  - generic [ref=e914]:
+                    - generic [ref=e917]: 울산 웨딩박람회 무료 등록 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e918]:
+                      - generic [ref=e919]: 밀린숙젠먀
+                      - generic [ref=e921]: 26.04.02.
+                      - generic [ref=e922]:
+                        - generic [ref=e923]: 댓글
+                        - img
+                        - generic [ref=e924]: "6"
+                  - generic [ref=e926]:
+                    - img [ref=e928]
+                    - emphasis [ref=e929]:
+                      - generic [ref=e930]: 게시글 내 이미지 갯수
+                      - generic [ref=e931]: 2+
+              - listitem [ref=e932]:
+                - link "광주 결혼박람회 지금 신청 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e933] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555830?tc=article_bottom_article_list
+                  - generic [ref=e934]:
+                    - generic [ref=e937]: 광주 결혼박람회 지금 신청 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e938]:
+                      - generic [ref=e939]: 밀린숙젠먀
+                      - generic [ref=e941]: 26.04.02.
+                      - generic [ref=e942]:
+                        - generic [ref=e943]: 댓글
+                        - img
+                        - generic [ref=e944]: "6"
+                  - generic [ref=e946]:
+                    - img [ref=e948]
+                    - emphasis [ref=e949]:
+                      - generic [ref=e950]: 게시글 내 이미지 갯수
+                      - generic [ref=e951]: 2+
+              - listitem [ref=e952]:
+                - link "대전 웨딩페어 혜택 문의 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e953] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555827?tc=article_bottom_article_list
+                  - generic [ref=e954]:
+                    - generic [ref=e957]: 대전 웨딩페어 혜택 문의 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e958]:
+                      - generic [ref=e959]: 밀린숙젠먀
+                      - generic [ref=e961]: 26.04.02.
+                      - generic [ref=e962]:
+                        - generic [ref=e963]: 댓글
+                        - img
+                        - generic [ref=e964]: "6"
+                  - generic [ref=e966]:
+                    - img [ref=e968]
+                    - emphasis [ref=e969]:
+                      - generic [ref=e970]: 게시글 내 이미지 갯수
+                      - generic [ref=e971]: 2+
+              - listitem [ref=e972]:
+                - link "대구 웨딩박람회 무료 상담 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e973] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555824?tc=article_bottom_article_list
+                  - generic [ref=e974]:
+                    - generic [ref=e977]: 대구 웨딩박람회 무료 상담 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e978]:
+                      - generic [ref=e979]: 밀린숙젠먀
+                      - generic [ref=e981]: 26.04.02.
+                      - generic [ref=e982]:
+                        - generic [ref=e983]: 댓글
+                        - img
+                        - generic [ref=e984]: "6"
+                  - generic [ref=e986]:
+                    - img [ref=e988]
+                    - emphasis [ref=e989]:
+                      - generic [ref=e990]: 게시글 내 이미지 갯수
+                      - generic [ref=e991]: 2+
+            - list [ref=e992]:
+              - listitem [ref=e993]:
+                - link "울산 웨딩박람회 무료 등록 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e994] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555833?tc=article_bottom_article_list
+                  - generic [ref=e995]:
+                    - generic [ref=e998]: 울산 웨딩박람회 무료 등록 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e999]:
+                      - generic [ref=e1000]: 밀린숙젠먀
+                      - generic [ref=e1002]: 26.04.02.
+                      - generic [ref=e1003]:
+                        - generic [ref=e1004]: 댓글
+                        - img
+                        - generic [ref=e1005]: "6"
+                  - generic [ref=e1007]:
+                    - img [ref=e1009]
+                    - emphasis [ref=e1010]:
+                      - generic [ref=e1011]: 게시글 내 이미지 갯수
+                      - generic [ref=e1012]: 2+
+              - listitem [ref=e1013]:
+                - link "광주 결혼박람회 지금 신청 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e1014] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555830?tc=article_bottom_article_list
+                  - generic [ref=e1015]:
+                    - generic [ref=e1018]: 광주 결혼박람회 지금 신청 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e1019]:
+                      - generic [ref=e1020]: 밀린숙젠먀
+                      - generic [ref=e1022]: 26.04.02.
+                      - generic [ref=e1023]:
+                        - generic [ref=e1024]: 댓글
+                        - img
+                        - generic [ref=e1025]: "6"
+                  - generic [ref=e1027]:
+                    - img [ref=e1029]
+                    - emphasis [ref=e1030]:
+                      - generic [ref=e1031]: 게시글 내 이미지 갯수
+                      - generic [ref=e1032]: 2+
+              - listitem [ref=e1033]:
+                - link "대전 웨딩페어 혜택 문의 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e1034] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555827?tc=article_bottom_article_list
+                  - generic [ref=e1035]:
+                    - generic [ref=e1038]: 대전 웨딩페어 혜택 문의 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e1039]:
+                      - generic [ref=e1040]: 밀린숙젠먀
+                      - generic [ref=e1042]: 26.04.02.
+                      - generic [ref=e1043]:
+                        - generic [ref=e1044]: 댓글
+                        - img
+                        - generic [ref=e1045]: "6"
+                  - generic [ref=e1047]:
+                    - img [ref=e1049]
+                    - emphasis [ref=e1050]:
+                      - generic [ref=e1051]: 게시글 내 이미지 갯수
+                      - generic [ref=e1052]: 2+
+              - listitem [ref=e1053]:
+                - link "대구 웨딩박람회 무료 상담 똑똑한 예랑예신들은 이렇게 아껴요! 밀린숙젠먀 26.04.02. 댓글 6 게시글 내 이미지 갯수 2+" [ref=e1054] [cursor=pointer]:
+                  - /url: /ca-fe/web/cafes/19444497/articles/555824?tc=article_bottom_article_list
+                  - generic [ref=e1055]:
+                    - generic [ref=e1058]: 대구 웨딩박람회 무료 상담 똑똑한 예랑예신들은 이렇게 아껴요!
+                    - generic [ref=e1059]:
+                      - generic [ref=e1060]: 밀린숙젠먀
+                      - generic [ref=e1062]: 26.04.02.
+                      - generic [ref=e1063]:
+                        - generic [ref=e1064]: 댓글
+                        - img
+                        - generic [ref=e1065]: "6"
+                  - generic [ref=e1067]:
+                    - img [ref=e1069]
+                    - emphasis [ref=e1070]:
+                      - generic [ref=e1071]: 게시글 내 이미지 갯수
+                      - generic [ref=e1072]: 2+
+          - generic [ref=e1074]:
+            - button "5페이지중 1페이지 버튼 선택됨" [pressed] [ref=e1075] [cursor=pointer]:
+              - generic [ref=e1076]: 5페이지중 1페이지 버튼 선택됨
+            - button "5페이지중 2페이지 버튼" [ref=e1077] [cursor=pointer]:
+              - generic [ref=e1078]: 5페이지중 2페이지 버튼
+            - button "5페이지중 3페이지 버튼" [ref=e1079] [cursor=pointer]:
+              - generic [ref=e1080]: 5페이지중 3페이지 버튼
+            - button "5페이지중 4페이지 버튼" [ref=e1081] [cursor=pointer]:
+              - generic [ref=e1082]: 5페이지중 4페이지 버튼
+            - button "5페이지중 5페이지 버튼" [ref=e1083] [cursor=pointer]:
+              - generic [ref=e1084]: 5페이지중 5페이지 버튼
+    - generic [ref=e1085]:
+      - link "목록으로" [ref=e1086] [cursor=pointer]:
+        - /url: "#"
+        - img
+        - generic [ref=e1087]: 목록으로
+      - generic [ref=e1088]:
+        - button "좋아요 0" [ref=e1091] [cursor=pointer]:
+          - generic [ref=e1092]: 좋아요
+          - generic [ref=e1094]:
+            - img
+          - emphasis [ref=e1095]: "0"
+        - link "댓글 6" [ref=e1096] [cursor=pointer]:
+          - /url: "#"
+          - img
+          - generic [ref=e1097]: 댓글
+          - emphasis [ref=e1098]: "6"
+        - generic [ref=e1099]:
+          - img
+          - generic [ref=e1100]: 공유하기
+  - generic [ref=e1103]:
+    - paragraph [ref=e1104]: 새 글, 새 댓글을 놓치지 않게 카페앱으로 이용해보세요!
+    - generic [ref=e1105]:
+      - button "앱으로 보기" [ref=e1106] [cursor=pointer]
+      - button "앱 설치하기" [ref=e1107] [cursor=pointer]
+  - contentinfo [ref=e1109]:
+    - generic [ref=e1111]:
+      - generic [ref=e1112]:
+        - button "네이버 메인에 추가" [ref=e1115] [cursor=pointer]:
+          - generic [ref=e1118]: 네이버 메인에 추가
+        - button "맨위로" [ref=e1120] [cursor=pointer]:
+          - img
+          - generic [ref=e1121]: 맨위로
+      - generic [ref=e1122]:
+        - link "로그아웃" [ref=e1123] [cursor=pointer]:
+          - /url: "#"
+        - link "전체서비스" [ref=e1124] [cursor=pointer]:
+          - /url: "#"
+        - link "PC버전" [ref=e1125] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e1126]:
+        - link "이용약관" [ref=e1127] [cursor=pointer]:
+          - /url: "#"
+        - link "개인정보처리방침" [ref=e1128] [cursor=pointer]:
+          - /url: "#"
+        - link "카페 고객센터" [ref=e1129] [cursor=pointer]:
+          - /url: https://help.naver.com/alias/cafe/cafe_code_01.naver
+        - link "카페 공지사항" [ref=e1130] [cursor=pointer]:
+          - /url: https://notice.naver.com/notices/cafe
+        - link "오류신고" [ref=e1131] [cursor=pointer]:
+          - /url: https://help.naver.com/alias/cafe/cafe_code_02.naver
+      - generic [ref=e1132]:
+        - text: ©
+        - link "NAVER Corp." [ref=e1133] [cursor=pointer]:
+          - /url: https://www.navercorp.com
+        - text: "대표번호 : 1588-3820"

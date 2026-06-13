@@ -1,0 +1,139 @@
+# Capture Queue: interior-estimate
+
+Open high-signal URLs manually in Chrome, then run:
+
+```powershell
+python src\cdp_capture_current_page.py --source korean-community --slug interior-estimate --url-regex "naver|threads|dcinside|clien|ppomppu|teamblind|tistory|blog"
+```
+
+## Query List
+
+- 인테리어 견적 추가비용 후기
+- 인테리어 업체 상담 전 체크리스트
+- 인테리어 견적 비교 후기
+- 인테리어 업체 고르는 기준 커뮤니티
+- 인테리어 상담 후회 후기
+- 아파트 인테리어 견적 질문 리스트
+
+## Candidate URLs
+
+- [blog] 한샘인테리어 견적 비용 후기 아파트리모델링 해보니 진짜...  - https://blog.naver.com/starpdzzang/223921615530
+- [blog] 서울 인테리어 업체 아파트 리모델링 비용 견적 시공 후기 - https://blog.naver.com/vkool5645/224159957490
+- [blog] 인테리어 공사 비용, 일거리장터에서 5분 만에 견적 비교한 후기 - https://blog.naver.com/boomcart/224291969746
+- [blog] 한샘인테리어 주방 욕실 리모델링 견적비용 후기 - https://blog.naver.com/cocobloglife/223996230817
+- [blog] 아파트 인테리어 후기 업체 비용 견적 아정당 시공 받은 소감...  - https://blog.naver.com/tm5046/224096704878
+- [blog] 천장 부분도배 비용 견적... 30평대 아파트 화이트인테리어 후기 - https://blog.naver.com/jssmsh3/223977518212
+- [blog] 32평아파트인테리어견적 업체 비용 모던 컨셉으로 시공한 후기 - https://blog.naver.com/realkthworld/224205571162
+- [blog] 서울 30평대 구축아파트 인테리어 리모델링 후기! 비용 견적...  - https://blog.naver.com/sdsdblog/224136248207
+- [blog] 인테리어 후기 1편 : 턴키 비용 비교 견적(창원 용지더샵) - https://blog.naver.com/rrrr99ss/224073641136
+- [blog] 체육관 인테리어 견적 실제 비용과 후기 - https://blog.naver.com/llydxey980/224295481170
+- [cafearticle] 33평 아파트 인테리어 비용 견적 시공 후기 - http://cafe.naver.com/1sejongcity/1951113
+- [cafearticle] 단독주택 인테리어 비용 견적 깔끔한 디자인 시공 후기 - http://cafe.naver.com/1sejongcity/1952630
+- [cafearticle] 한샘 인테리어 리모델링 비용 후기 보다가 결국 견적 상담까지 받았어요 - http://cafe.naver.com/kmhking/2061394
+- [cafearticle] 10평 미용실 인테리어 컨셉별 견적 비용 시공 후기 완벽 분석 - http://cafe.naver.com/1sejongcity/1930682
+- [cafearticle] 24평인테리어 견적 스페이스 201을 이용한 이유 - http://cafe.naver.com/culturebloom/3230772
+- [cafearticle] [올인테리어 후기] 27평대 구축 아파트 전체 리모델링 — 견적 1,400에서 최종 2,800까지 (비용/일정/업체 ... - http://cafe.naver.com/overseer/1651078
+- [cafearticle] 30평대(33평,34평, 전용84) 10년차 아파트 전체 인테리어 비용및 견적 - http://cafe.naver.com/overseer/1645207
+- [cafearticle] 대구 30평대 구축 반셀프 인테리어 도전기-1.턴키 견적후기 - http://cafe.naver.com/overseer/1659809
+- [cafearticle] 구리 인테리어 비용 시공 업체 추천 견적 정리 - http://cafe.naver.com/kig/19519035
+- [cafearticle] 25평인테리어 스페이스 201 이용한 후기 - http://cafe.naver.com/culturebloom/3230768
+- [blog] 인테리어] 인테리어 업체 선정, 반셀프 vs 턴키 비교, 상담 전...  - https://blog.naver.com/jbbj7790/224304600450
+- [blog] 뜻 동탄 아파트 인테리어 리모델링 업체 상담 후기 체크리스트 - https://blog.naver.com/rainkisses01/224209630615
+- [blog] 순천 인테리어 업체 상담 전 체크리스트 – 효율적인 견적...  - https://blog.naver.com/aromatic6027/224263091662
+- [blog] 오늘의집 인테리어업체의 상담과정과 체크 리스트를 공개합니다!! - https://blog.naver.com/byhack/223671679949
+- [blog] 인테리어 업체 선정 상담 준비 체크리스트 - https://blog.naver.com/eunieful/224135598718
+- [blog] 인테리어 준비하기! 상담 전 업체선정 팁 체크리스트 공유 - https://blog.naver.com/nps31400/223571671304
+- [blog] 인테리어 업체와의 상담을 위한 사전 체크리스트 [공감디자인...  - https://blog.naver.com/ggid0103/224067134291
+- [blog] 이사 업체 견적 상담 전 비용 절감 필수 체크리스트 공유(이것...  - https://blog.naver.com/lloo_ook/224243889657
+- [blog] 인테리어, 호구 안 당하는 체크리스트예산짜는법, 업체찾는법...  - https://blog.naver.com/ivy862/224271100092
+- [blog] 인테리어 업체 선정 전 꼭 확인해야 할 5가지 체크리스트는? - https://blog.naver.com/sp6402/224182718851
+- [cafearticle] 계양구 철거 방문견적 전 체크리스트 - http://cafe.naver.com/0404ab/4146493
+- [cafearticle] 수원인테리어 비용 견적 잘하는 리모델링 업체 추천해요 - http://cafe.naver.com/kig/19531508
+- [cafearticle] 서울입주청소업체 체크리스트 - http://cafe.naver.com/1sejongcity/1953289
+- [cafearticle] 신혼집 인테리어 전 후 후기입니다 ~ (인테리어 업체 : 디자인힐로) - http://cafe.naver.com/directwedding/9035573
+- [cafearticle] 노원구 철거 체크리스트 - http://cafe.naver.com/0404ab/4164494
+- [cafearticle] 삼향동 추천 이삿짐센터 업체 선택 전 필수 체크리스트 99% - http://cafe.naver.com/ourman/514545
+- [cafearticle] 김천입주청소 업체 가격 체크리스트! - http://cafe.naver.com/1sejongcity/1955058
+- [cafearticle] 답십리동 이사 업체 상담 전 필수 체크리스트 3가지 - http://cafe.naver.com/ourman/276882
+- [cafearticle] 태장동 포장이사 업체 선택 전 1분만에 보는 체크리스트 - http://cafe.naver.com/ourman/301387
+- [cafearticle] 결혼 준비 체크리스트 정리한 것들~ - http://cafe.naver.com/poohstory/324434
+- [blog] 부산 아파트 인테리어 업체 견적 비교 후 선택 후기 - https://blog.naver.com/fjqmffltnqls/224310638731
+- [blog] 대전 인테리어 견적 비교 후 마음에 든 업체로 시공한 후기 - https://blog.naver.com/banidad/224305800949
+- [blog] 47평 아파트 인테리어 견적 비교 후회없는 선택 후기 - https://blog.naver.com/realkthworld/224277730672
+- [blog] 부천 원미동 인테리어 견적 비교후기 - https://blog.naver.com/olijdfqhp/224218071524
+- [blog] 안양 아파트 인테리어 견적 비교 후기 - https://blog.naver.com/hvyikutkj/224156006170
+- [blog] 부산 인테리어 업체 견적 비교 후 결정했던 후기 - https://blog.naver.com/ryeosan/224189511203
+- [blog] 김포인테리어 업체 견적 비교후 결정한 리모델링 후기 - https://blog.naver.com/6012051057/224226919625
+- [blog] 과천 아파트 인테리어 견적 비교 후기 - https://blog.naver.com/nncwmpuqo/224120980828
+- [blog] 부산 인테리어 업체 견적 비교 후 선택했던 후기 - https://blog.naver.com/ggomo882/224195314144
+- [blog] 아파트 인테리어 공사 비용... 5분 만에 견적 비교한 후기 - https://blog.naver.com/boomcart/224291969746
+- [cafearticle] 속초 인테리어 견적비교 1 0 0 이상 아끼려면요 - http://cafe.naver.com/usemapcomputer/784473
+- [cafearticle] 대구 30평대 구축 반셀프 인테리어 도전기-1.턴키 견적후기 - http://cafe.naver.com/overseer/1659809
+- [cafearticle] 인테리어비교견적사이트 여러곳 견적 비교하다 이곳으로 정했습니다. - http://cafe.naver.com/navercafez/351787
+- [cafearticle] 인테리어견적비교 이 업체에서 해결했습니다. - http://cafe.naver.com/geegoopuzzle/38320
+- [cafearticle] 신혼집 인테리어 시공 전후 비교 후기_디자인갤러리 - http://cafe.naver.com/directwedding/8980917
+- [cafearticle] 부산 남구 아파트 인테리어 견적 비교 후기입니다 - http://cafe.naver.com/coodos9/121395
+- [cafearticle] 인테리어 견적비교 후기 모음 찾아보면 어떤 부분이 가장 참고되시나요? - http://cafe.naver.com/coodos9/120473
+- [cafearticle] 인테리어 견적비교 후기 찾아보는 중인데 실제 결정에 도움 됐나요? - http://cafe.naver.com/coodos9/120478
+- [cafearticle] X5장기렌트 모의견적 비교 후기 풀어요. - http://cafe.naver.com/ourman/513585
+- [cafearticle] 신축아파트 인테리어후기 + 추천 - http://cafe.naver.com/dongtantwomom/2521252
+- [blog] 인테리어철거업체 추가 요금 걱정 없이 고르는 3가지 기준 - https://blog.naver.com/pioneer0301/224070689455
+- [blog] 서울 인테리어 업체 감각적인 시공사 고르는 선택 기준 - https://blog.naver.com/bymissong/224042257401
+- [blog] 천안인테리어 업체 고르는 법, 전문가가 알려주는 5가지 기준 - https://blog.naver.com/shway66/224299369438
+- [blog] 영통구 철거업체 후기 인테리어 업체 고르는 기준 - https://blog.naver.com/notebookplayer10/224297451802
+- [blog] 에어비앤비 인테리어 업체 고르는 기준 - https://blog.naver.com/ddid22728/224289967026
+- [blog] 광주부분인테리어, 전문 업체를 고르는 핵심 기준 - https://blog.naver.com/claireya/223929940180
+- [blog] 안동 철거업체 후기 인테리어 업체 고르는 기준 - https://blog.naver.com/desireluck72/224292286859
+- [blog] 서대문 인테리어 철거업체 똑똑하게 고르는 5가지 핵심 기준 - https://blog.naver.com/vice2927/224138215619
+- [blog] 착한 인테리어 업체 고르는 5가지 기준 - https://blog.naver.com/kanggoo1004/223982044160
+- [blog] 울산 요양원 인테리어 업체 고르는 기준 3가지 - https://blog.naver.com/sbluesoundf59/224086275956
+- [cafearticle] 인테리어 업체 선정기준 - http://cafe.naver.com/llchyll/2512228
+- [cafearticle] 인테리어업체 고르는 기준? - http://cafe.naver.com/directwedding/8978860
+- [cafearticle] ★실속정보★ 인테리어업체추천 제대로 고르는 현실 기준 공유 - http://cafe.naver.com/jaengid/121231
+- [cafearticle] 병원 인테리어 업체 고르는 기준이 없어서 막막해요 - http://cafe.naver.com/doctorinsight/604
+- [cafearticle] 상가인테리어 업체 고르는 방법 - http://cafe.naver.com/yangmom/708189
+- [cafearticle] 부산 식당 인테리어 업체 고르는 기준 - http://cafe.naver.com/jangsin1004/517401
+- [cafearticle] 아산 인테리어 업체 고르는 기준이 있을까요? - http://cafe.naver.com/ehgus0907/210358
+- [cafearticle] 대구 인테리어업체 고르는 게 이렇게 어려운가요? - http://cafe.naver.com/jaengid/123784
+- [cafearticle] 수원입주청소 좋은 청소업체 고르는 꿀팁!! - http://cafe.naver.com/1sejongcity/1957369
+- [cafearticle] 강서구인테리어 업체 찾다가 지쳤는데 여기서 한 번에 해결됐어요 - http://cafe.naver.com/culturebloom/3207180
+- [blog] 판교인테리어 맡겼다가 후회하는 이유? 구축아파트 인테리어 후기 - https://blog.naver.com/ziniz77/224243952885
+- [blog] 이 얘기 안 들으면 무조건 후회합니다!! (디자인핀 실제 상담 후기) - https://blog.naver.com/fincreate/224126124655
+- [blog] 광교인테리어 후회 없는 선택 상담부터 설계까지 리얼 후기 - https://blog.naver.com/pi33/224193566077
+- [blog] 인테리어 엘앤아이디 후기... 6천만원, 몇 년 살고보니 후회...  - https://blog.naver.com/areum_land/224286963129
+- [blog] 내 집, 혹시 후회할까? 서초구 인테리어 상담 솔직 후기 - https://blog.naver.com/qbreakaij74/224085890708
+- [blog] 전체인테리어 1년 살아본 후기 (전/후, 잘한점, 후회하는점) - https://blog.naver.com/blue5622/224304257138
+- [blog] 가격만 보고 했다가 후회한 썰 푼다! (feat. 유로 레하우 후기) - https://blog.naver.com/gkstkfkd2015/223872004449
+- [blog] 살아서 돌아온 34평 구축 인테리어 후기1(내돈내산/ 후회하는...  - https://blog.naver.com/kimkdy0524/224154779205
+- [blog] 47평 아파트 인테리어 견적 비교 후회없는 선택 후기 - https://blog.naver.com/realkthworld/224277730672
+- [blog] 놓치면 후회! 인테리어 상담 필수 질문 15가지!! - https://blog.naver.com/cdl_interior/224009028031
+- [cafearticle] 두달 지나 쓰는 인테리어 후기: 잘한 점과 후회되는 점(34평, 12년차) - http://cafe.naver.com/overseer/1651172
+- [cafearticle] 인천 턴키 32평 구축 인테리어 후기 - http://cafe.naver.com/overseer/1669687
+- [cafearticle] 25평 신혼집 주방 / 하나싱크 인테리어 후기 - http://cafe.naver.com/directwedding/8894291
+- [cafearticle] 오피스인테리어 처음 해봤는데 이 업체 아니었으면 진짜 후회할 뻔했어요 - http://cafe.naver.com/culturebloom/3225161
+- [cafearticle] 분당 20년 넘은 구축 올수리 후기 (인테리어 업체 고민하시는 분들께 - http://cafe.naver.com/overseer/1671419
+- [cafearticle] 부산/경남 30평대 인테리어 후기 - http://cafe.naver.com/overseer/1670327
+- [cafearticle] 34평 인테리어 후기 ^^ 커튼&블라인드편) - http://cafe.naver.com/overseer/1650742
+- [cafearticle] 부산 51평 반셀프 인테리어 한달 후기 - http://cafe.naver.com/overseer/1658115
+- [cafearticle] 신혼집 구축 아파트 인테리어 전/후, with 하우스디자인 - http://cafe.naver.com/directwedding/9033598
+- [cafearticle] 분당 구축 32평 부모님댁 3천만원대 반셀프 인테리어 후기 - http://cafe.naver.com/overseer/1668720
+- [blog] 40평 아파트 인테리어 견적 및 체크포인트 - https://blog.naver.com/elboy01/224192678664
+- [blog] 견적] 상담받기 전 꼭 물어볼 ‘공간별 질문 체크리스트’ - https://blog.naver.com/thedanjilog/224108538785
+- [blog] 남종면아파트인테리어 24평 인테리어 업체 상담 시 질문 리스트 - https://blog.naver.com/bliketoughi/224259526033
+- [blog] 40평대 아파트 인테리어 비용 기준 시공 준비 필수 체크리스트 - https://blog.naver.com/realkthworld/224302695323
+- [blog] 25평 아파트 인테리어 견적 문의 전 체크리스트 | 철거 범위...  - https://blog.naver.com/qowsdsx31/224117109820
+- [blog] 수원 아파트 인테리어 27평 합리적인 견적 - https://blog.naver.com/eenthmit30/223900646665
+- [blog] 아파트 인테리어 팁 - 인테리어 상담시 필수 질문리스트 17개...  - https://blog.naver.com/chunj_/224170589532
+- [blog] 아파트 인테리어] 인테리어... vs 턴키 비교, 상담 전 체크리스트 - https://blog.naver.com/jbbj7790/224304600450
+- [blog] 20년 된 구축 아파트 인테리어... 실패 없는 리모델링 체크리스트 - https://blog.naver.com/grid_design_bc/224234500352
+- [blog] 수성구 아파트 인테리어 견적 알아보기 - https://blog.naver.com/togi365/224306949115
+- [cafearticle] 구리 아파트 인테리어 경기도 구리시 인창동 원일 33평 아파트 인테리어 견적 문의 [7944번 고객 의뢰] - http://cafe.naver.com/pcarpenter/728901
+- [cafearticle] 대구 아파트 인테리어 10년 이상의 노하우 - http://cafe.naver.com/kts9719/3597743
+- [cafearticle] 서구 검암경서동 40평아파트인테리어, 저만 이렇게 불안한가요? 매일 밤 카페 눈팅만 했어니다... - http://cafe.naver.com/ysmom/122510
+- [cafearticle] [한가해보이] 임대용 수리, 이렇게만 하면 성공합니다 - 아파트 인테리어 수리 2탄 - http://cafe.naver.com/wecando7/11585037
+- [cafearticle] 부산 해운대 아파트 인테리어 비용 총정리! 평당 견적 및 리모델링 가격 비교 꿀팁 - http://cafe.naver.com/greenvq0oa/27171
+- [cafearticle] 20년 넘은 구축 아파트 인테리어 - 내가 찾은 턴키업체의 장단점 및 견적 금액(9군데) - http://cafe.naver.com/overseer/973777
+- [cafearticle] [5483번 고객 인천2호 지정 견적의뢰] 경기도 김포시 풍년마을 진흥흥화 24평 아파트 인테리어 견적의뢰 - http://cafe.naver.com/pcarpenter/467423
+- [cafearticle] 33평 인테리어 서울 성동구 래미안옥수리버젠 아파트 인테리어 시공 의뢰 [**00번 고객 의뢰] - http://cafe.naver.com/pcarpenter/759432
+- [cafearticle] [1011번 고객 대신 의뢰] 경기도 수원시 영통구 호수마을 참누리레이크 아파트 인테리어 공사 견적 의뢰 - http://cafe.naver.com/pcarpenter/509714
+- [cafearticle] 아파트 인테리어 상담 다녀온 후기 공유요!!! - http://cafe.naver.com/baby8/2448693

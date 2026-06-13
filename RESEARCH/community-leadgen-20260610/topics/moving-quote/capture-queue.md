@@ -1,0 +1,139 @@
+# Capture Queue: moving-quote
+
+Open high-signal URLs manually in Chrome, then run:
+
+```powershell
+python src\cdp_capture_current_page.py --source korean-community --slug moving-quote --url-regex "naver|threads|dcinside|clien|ppomppu|teamblind|tistory|blog"
+```
+
+## Query List
+
+- 이사 견적 전화 스트레스
+- 포장이사 견적 비교 후기
+- 이사 업체 견적 추가요금 후기
+- 반포장이사 포장이사 선택 기준
+- 이사 견적 상담 전화 많이 와요
+- 이사 견적 받기 전 체크리스트
+
+## Candidate URLs
+
+- [blog] 이사 스트레스 끝! 단 2곳만 비교하는 새로운 포장이사 견적...  - https://blog.naver.com/gudrkq89/224204131523
+- [blog] 이사 견적 스트레스 끝! 우수지점 2곳만 연결해 주는 서경석...  - https://blog.naver.com/ccf1004/224204748635
+- [blog] [이사스토리] 포장이사견적, 부천포장이사 스트레스 없이 완료! - https://blog.naver.com/song_gina/224189457220
+- [blog] 안산포장이사 무료 견적 받아본 후기, 딱이사로 업체 스트레스...  - https://blog.naver.com/reviewhanjan/224297026011
+- [blog] [스마트이사견적법] 다이사... 입주청소패키지 이사스트레스제...  - https://blog.naver.com/tjsgh0304/224309970448
+- [blog] 포장이사견적 스트레스없이 비교하는법 - https://blog.naver.com/mong-gwa/223679255974
+- [blog] 이사 견적 전화할 때 이렇게 물어보면 바가지 안 씁니다 - https://blog.naver.com/momentic_/224272112523
+- [blog] 이사 견적 스트레스 해결. 서경석 이사방! 포장이사 견적비교...  - https://blog.naver.com/starlight_path/224226330501
+- [blog] 포장이사견적 | 스트레스없는이사 위한 스마트한선택 - https://blog.naver.com/wqgparticular/224160203915
+- [blog] 원룸이사 비용 업체 견적비교 꿀팁 정리! - https://blog.naver.com/asdf9752/224294536694
+- [cafearticle] 포장이사 반포장이사 비용 차이 견적비교 선택 - http://cafe.naver.com/directwedding/8998771
+- [cafearticle] 청라이사업체 포장이사 비용견적 - http://cafe.naver.com/0404ab/4146551
+- [cafearticle] 이사견적, 싸다고 무조건 좋은 걸까요? - http://cafe.naver.com/djnoen/1336052
+- [cafearticle] 대전 원룸이사 견적안내 - http://cafe.naver.com/0404ab/4136295
+- [cafearticle] 이사견적, 싸다고 무조건 좋은 걸까요? - http://cafe.naver.com/no1sejong/4226513
+- [cafearticle] 전국 포장이사견적비교 이사짐센터 비용 비교 다이사! - http://cafe.naver.com/llchyll/2478974
+- [cafearticle] 남촌동 포장이사 견적 3가지 내용으로 스트레스 최소화 - http://cafe.naver.com/ourman/145458
+- [cafearticle] 원룸 포장이사 비용 업체 견적 후기 꼼꼼하게! - http://cafe.naver.com/llchyll/2376990
+- [cafearticle] 월영동 이삿짐센터 업체 이사 스트레스 줄이는 1분 요령 - http://cafe.naver.com/thenewcclass/158845
+- [cafearticle] 포장이사견적후기 개인 후기 위주 - http://cafe.naver.com/ourman/475439
+- [blog] 강서구 포장이사 업체 순위 비용 견적 비교 솔직 후기 - https://blog.naver.com/sphhs/224310453742
+- [blog] 포장이사 견적비교 진행하고 이사짐센터 비용 절감한 후기 - https://blog.naver.com/catconomy_/224308116501
+- [blog] 동탄이삿짐센터 30평 포장이사 견적 비교 후기 — 업체 3곳...  - https://blog.naver.com/daliga21cc/224309480899
+- [blog] 포장이사 견적비교 후 선택했던 업체 후기! - https://blog.naver.com/inmagoong/224182763346
+- [blog] 포장이사 견적 비교해보니 이삿짐센터 비용 차이 놀랐던 후기 - https://blog.naver.com/aesu/224290453181
+- [blog] 원주 포장이사 비용, 업체 견적비교 내돈내산 후기! - https://blog.naver.com/byharu_/224289779812
+- [blog] 포장이사 견적비교 비용 정리, 이삿짐센터 선택 후기 (24평...  - https://blog.naver.com/ogee1999/224263494738
+- [blog] 포장이사비용 견적 비교하고 결정한 이사짐센터 후기 - https://blog.naver.com/ichiyoung/224296855173
+- [blog] 구리 포장이사 업체 견적비교 솔직후기 - https://blog.naver.com/progomland/224210408581
+- [blog] 포장이사견적비교 후 최종 선택했던 업체 후기! (+체크리스트) - https://blog.naver.com/smarthouse_/224181567856
+- [cafearticle] 원룸포장이사 비용 전문업체 견적 비교 선택한 후기 - http://cafe.naver.com/directwedding/8989654
+- [cafearticle] 세종포장이사업체 가격 비교 후기 - http://cafe.naver.com/directwedding/8993975
+- [cafearticle] 오피스텔 포장이사 비용 가격비교 저렴한 견적 받는 팁 - http://cafe.naver.com/culturebloom/3213030
+- [cafearticle] 34평 아파트 포장이사 비용 견적비교 사이트 추천하는 곳 - http://cafe.naver.com/1sejongcity/1952829
+- [cafearticle] 부산포장이사 업체 견적비교 이용 후기 - http://cafe.naver.com/directwedding/8978421
+- [cafearticle] 아파트 포장이사 가격 견적비교 만족스러운 곳 - http://cafe.naver.com/culturebloom/3212247
+- [cafearticle] 투룸 포장이사 비용 가격 견적비교 최적의 설계안 - http://cafe.naver.com/1sejongcity/1945310
+- [cafearticle] 이삿짐센터 비용 포장이사 견적비교 가격비교 사이트 추천 - http://cafe.naver.com/culturebloom/3231308
+- [cafearticle] 원룸포장이사 비용 가격비교 견적 괜찮은 업체 추천 - http://cafe.naver.com/culturebloom/3212981
+- [cafearticle] 목포포장이사 견적비교 참고용 후기 공유 - http://cafe.naver.com/ourman/416131
+- [blog] 평수별 예상비용 추가요금 절약팁 견적비교 이사청소 정기계약 - https://blog.naver.com/carcros/224294365241
+- [blog] 딱 2곳만 비교하고 추가요금 걱정 없이 이사한 솔직 후기 - https://blog.naver.com/goun1500/224281650422
+- [blog] 구미포장이사 추가 요금 없이 깔끔했던 업체 후기 - https://blog.naver.com/wansojun/224223718700
+- [blog] 원룸이사 비용 실제 견적 공개 (추가요금 없이 끝낸 방법) - https://blog.naver.com/ogee1999/224270601760
+- [blog] 영구이사 이용후기, 추가요금 걱정 없던 포장이사업체 영구크린 - https://blog.naver.com/jaekichun1/224310658880
+- [blog] 부천 포장이사 비용 업체 내돈내산 견적비교 후기! - https://blog.naver.com/asdf9752/224291457737
+- [blog] 부천포장이사 비용 업체 내돈내산 견적 후기 - https://blog.naver.com/surfingtaiji/224295993909
+- [blog] 강서구 포장이사 업체 순위 비용 견적 비교 솔직 후기 - https://blog.naver.com/sphhs/224310453742
+- [blog] 대구 포장이사 비용, 이사업체 견적 비교 후기! - https://blog.naver.com/byharu_/224284487147
+- [blog] 포장이사 견적 이삿짐센터 업체 가격 비교 후기 - https://blog.naver.com/cheongchun82/224274151679
+- [cafearticle] 부산 이사업체 견적 추가요금 확인하세요 - http://cafe.naver.com/thenewcclass/131185
+- [cafearticle] 부산포장이사 업체 견적비교 이용 후기 - http://cafe.naver.com/directwedding/8978421
+- [cafearticle] 사무실이사 전문 업체 비용 견적비교 이용해본 후기 - http://cafe.naver.com/culturebloom/3212798
+- [cafearticle] 선릉 이사업체 견적 만족 후기! - http://cafe.naver.com/ourman/352593
+- [cafearticle] 원룸포장이사 비용 전문업체 견적 비교 선택한 후기 - http://cafe.naver.com/directwedding/8989654
+- [cafearticle] 이사업체 가격 견적비교 저렴하게 가능한 곳 - http://cafe.naver.com/culturebloom/3212273
+- [cafearticle] 원미구 이사 업체 99%가 놓치는 추가 요금 방지법 - http://cafe.naver.com/ourman/287781
+- [cafearticle] 안성이사업체 친절하고 가성비 좋은 곳 - http://cafe.naver.com/ishift/1120835
+- [cafearticle] 서울이사업체 좋은 곳 선택했어요 - http://cafe.naver.com/ishift/1119600
+- [cafearticle] 김해이사업체 친절하고 가성비 좋은 곳 - http://cafe.naver.com/ishift/1119475
+- [blog] 포장이사 반포장이사 비용 및 견적비교 솔직 후기 (20평대...  - https://blog.naver.com/sphhs/224226553261
+- [blog] 포장이사 반포장이사 뜻, 비용 비교 후기 정리! - https://blog.naver.com/byharu_/224269475436
+- [blog] 포장 반포장이사 견적비교 업체 후기 - https://blog.naver.com/ichiyoung/224215210100
+- [blog] 포장이사 반포장이사 비용 견적비교 업체 솔직 후기 - https://blog.naver.com/cheongchun82/224279181478
+- [blog] 포장이사 반포장이사 차이 가격비교 후기 - https://blog.naver.com/smarthouse_/223636906027
+- [blog] 반포장이사와 포장이사 비용... 생각보다 기준이 많았습니다 - https://blog.naver.com/visul72240/224283807118
+- [blog] 반포장이사와 포장이사의 차이점 - https://blog.naver.com/rlfgusdldi/224297688006
+- [blog] 원룸이사용달 반포장 포장이사 차이, 비용 비교와 선택 기준 - https://blog.naver.com/ptrackuog79/224311778035
+- [blog] 포장이사 반포장이사 견적비교 해본 후기 - https://blog.naver.com/kimhsky/224213063501
+- [blog] 용달이사 반포장 포장 차이, 비용 비교부터 선택 기준 - https://blog.naver.com/sendy_ai/224304056389
+- [cafearticle] 포장이사 반포장이사 비용 차이 한눈에 - http://cafe.naver.com/culturebloom/3205743
+- [cafearticle] 포장이사 반포장이사 비용 견적 비교 전문업체 선택 방법 - http://cafe.naver.com/culturebloom/3167957
+- [cafearticle] 포장이사 반포장이사 비용 차이 특징 알아보기 - http://cafe.naver.com/directwedding/8869766
+- [cafearticle] 포장이사 반포장이사 뜻 비용 차이 견적비교 팁 - http://cafe.naver.com/1sejongcity/1952933
+- [cafearticle] 반포장이사 포장이사 차이...평수별 견적·비용 총정리 - http://cafe.naver.com/uccplus/2396601
+- [cafearticle] 포장이사 반포장이사 차이 어떤게 있을까? - http://cafe.naver.com/rc003/342125
+- [cafearticle] 포장이사 반포장이사 비용 차이 견적비교 선택 - http://cafe.naver.com/directwedding/8998771
+- [cafearticle] 의정부반포장이사 포장이사 비용 체크! - http://cafe.naver.com/thenewcclass/149734
+- [cafearticle] 포장이사 반포장이사 추천 비용 현명한 선택은? - http://cafe.naver.com/directwedding/8686571
+- [cafearticle] 거제시 옥포동 반포장이사 믿을 수 있는 7가지 선택 기준 - http://cafe.naver.com/ourman/101377
+- [blog] 포장이사 견적 전화폭탄 없이 끝내는 스마트한 방법 추천...  - https://blog.naver.com/gudrkq89/224292244978
+- [blog] 광명 이사업체 숨고 견적 비교 후기 - https://blog.naver.com/wi6212/224285305475
+- [blog] 충주포장이사업체 이삿짐센터 비용 합리적인 견적 사이트 - https://blog.naver.com/catconomy_/224303251690
+- [blog] 구미 포장이사 비용 및 이삿짐센터 견적 후기! - https://blog.naver.com/tekken_bgr/224294459504
+- [blog] 남양주 이사 추가 비용없는 무료 방문 상담 견적 추천 - https://blog.naver.com/nyj3800/224289132380
+- [blog] 평택이사 업체 견적비교 쉽게 하는방법(손없는 날 달력 체크하기) - https://blog.naver.com/jener0020/224302676317
+- [blog] 이사방 포장이사 견적 및 후기 총정리 - https://blog.naver.com/babohyunjoo/224178627974
+- [blog] 아파트 포장이사 반포장이사 가격 및 이삿짐센터 비용 견적 비교 - https://blog.naver.com/sphhs/224303779895
+- [blog] 부천포장이사 비용 업체 내돈내산 견적 후기 - https://blog.naver.com/surfingtaiji/224295993909
+- [blog] 창원 포장이사 비용, 이삿짐센터 가격 견적 후기! - https://blog.naver.com/tekken_bgr/224294656600
+- [cafearticle] 포장이사 반포장이사 비용 차이 견적비교 선택 - http://cafe.naver.com/directwedding/8998771
+- [cafearticle] 사무실포장이사견적 견적 정리된 기준 공유 - http://cafe.naver.com/ourman/474778
+- [cafearticle] 노원구포장이사업체 만족스러운 상담 - http://cafe.naver.com/1sejongcity/1938835
+- [cafearticle] 대구용달이사 비용견적 - http://cafe.naver.com/0404ab/4118145
+- [cafearticle] 광주용달이사 비용견적 - http://cafe.naver.com/allichicken/43490
+- [cafearticle] 인천 부평 미추홀구 용달이사 견적 업체 선정 방법 핵심 정리 - http://cafe.naver.com/directwedding/8830606
+- [cafearticle] 포장이사 반포장이사 견적 비교 업체 선택 꿀팁 견적 가이드 - http://cafe.naver.com/culturebloom/3170285
+- [cafearticle] 포장이사견적사이트 비용 선택 전 참고글 - http://cafe.naver.com/thenewcclass/144778
+- [cafearticle] 기업이사견적 견적 알아보며 느낀 점 - http://cafe.naver.com/ourman/461595
+- [cafearticle] 하남이사업체 믿고 맡길만한 곳 - http://cafe.naver.com/ishift/1121170
+- [blog] 이사준비 #02-1｜입주청소 업체 견적 받기 전 체크리스트...  - https://blog.naver.com/dorivo0112/224171453216
+- [blog] 이사준비 체크리스트 이사짐 센터 입주청소 견적 받기 비용 - 포항 - https://blog.naver.com/baleine11/223984375780
+- [blog] 이사 견적 받기 전에 꼭 확인해야 할 체크리스트 - https://blog.naver.com/4126830/224243960263
+- [blog] 성남 이사업체 견적 받기 전, 진짜 도움 된 4가지 체크리스트 - https://blog.naver.com/u_yong/224070231747
+- [blog] 연천군 용달이사 견적받기 전 필독! 손해 안보는 체크리스트 - https://blog.naver.com/deprive5013/224259181586
+- [blog] 이사 견적 받기 전 꼭 알아야 할 7가지 체크리스트 - https://blog.naver.com/xdfgzddsfg569/223636029482
+- [blog] 이사 견적 똑똑하게 받기: 당부사항과 체크리스트 - https://blog.naver.com/possess_528926/224110283469
+- [blog] 의정부 이사 업체 견적 받기 위한 필수 체크리스트 - https://blog.naver.com/3pjrbvx/224158532545
+- [blog] 이사전 체크리스트 및 포장이사비용견적 비법 공유 - https://blog.naver.com/how2337/223674393824
+- [blog] 이사 비용 절약을 위한 똑똑한 견적 받기 꿀팁 체크리스트 - https://blog.naver.com/soso_3622/223590692123
+- [cafearticle] 임실 이사 업체 이사견적 받기 전 꼭 확인할 3가지 체크리스트 - http://cafe.naver.com/ourman/194501
+- [cafearticle] 상패동 이사 견적 받아보기 전 꼭 챙길 3가지 체크리스트 - http://cafe.naver.com/ourman/162729
+- [cafearticle] 영서동 당일 이사 업체 예약 전 빠뜨리기 쉬운 7가지 체크리스트 - http://cafe.naver.com/ourman/496256
+- [cafearticle] 평택 천안 화성 원룸 보관이사 무료견적 체크리스트 - http://cafe.naver.com/culturebloom/3125818
+- [cafearticle] 이사전체크리스트 가성비를 찾으신다면 - http://cafe.naver.com/ourman/279542
+- [cafearticle] 염곡동 포장이사 업체 견적 받기 전 7가지 필수 체크포인트 - http://cafe.naver.com/ourman/276266
+- [cafearticle] 이사준비체크리스트 견적 체크요령 - http://cafe.naver.com/ourman/487847
+- [cafearticle] 포장 이사 견적 평당 가격 알아보기 - http://cafe.naver.com/directwedding/8960203
+- [cafearticle] 이사로 인한 인생 공부중 ㅇㅅㅇ (새벽 주절주절) - http://cafe.naver.com/cafe1535/1841358
+- [cafearticle] 이사전체크리스트 여기 하나면 END ! - http://cafe.naver.com/ourman/465864

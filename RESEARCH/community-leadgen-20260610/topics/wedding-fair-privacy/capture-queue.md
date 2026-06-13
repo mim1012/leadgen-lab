@@ -1,0 +1,181 @@
+# Capture Queue: wedding-fair-privacy
+
+Open high-signal URLs manually in Chrome, then run:
+
+```powershell
+python src\cdp_capture_current_page.py --source korean-community --slug wedding-fair-privacy --url-regex "naver|threads|dcinside|clien|ppomppu|teamblind|tistory|blog"
+```
+
+## Query List
+
+- 웨딩박람회 전화 많이 와요
+- 웨딩박람회 개인정보 후기
+- 웨딩박람회 호구 안되는법
+- 웨딩박람회 상담 전화 후기
+- 웨딩박람회 신청 전 체크리스트
+- 결혼준비 카페 웨딩박람회 후기 광고 아님
+- 웨딩박람회 스팸 전화
+- 웨딩박람회 플래너 상담 후기
+
+## Candidate URLs
+
+- [blog] 부산결혼준비? 부산 벡스코 웨딩박람회 가보면 감이 딱 와요! - https://blog.naver.com/gmlwl38/223985416427
+- [blog] 서울 다이렉트 웨딩박람회 일정 및 후기 정리 - https://blog.naver.com/wedding_list/224309547955
+- [blog] 창원 웨딩박람회 일정 및 결혼박람회 후기 총정리! - https://blog.naver.com/tekken_bgr/224295335317
+- [blog] 대전 웨딩박람회 일정, 사전예약 혜택 신청 후기! - https://blog.naver.com/bbobbny/224291192207
+- [blog] 대구웨딩박람회 일정 5월 6월 주의사항 경험담 후기 - https://blog.naver.com/teemogogo/224272352388
+- [blog] 대구웨딩박람회 상담받고 온 솔직 후기! - https://blog.naver.com/wansojun/224311016937
+- [blog] 대구웨딩박람회후기, 한번 체험해보세요! - https://blog.naver.com/docsoo0721/224259666905
+- [blog] 대구웨딩박람회후기, 꼭 한 번은 가보세요! - https://blog.naver.com/54fany/224228282206
+- [blog] 대구 웨딩박람회 일정 알아보고 다녀온 리얼 후기 - https://blog.naver.com/wedding_list/224299965984
+- [blog] 대구웨딩박람회 일정 추천 실제 방문 후기 - https://blog.naver.com/kikiwa1004/224293448255
+- [cafearticle] 광주웨딩박람회 일정 소소한 팁 - http://cafe.naver.com/ungsangjang/838902
+- [cafearticle] 포항웨딩박람회 BEST 일정 총정리! - http://cafe.naver.com/ungsangjang/839335
+- [cafearticle] 부산결혼박람회 BEST 일정 총정리! - http://cafe.naver.com/culturebloom/3210161
+- [cafearticle] 서울 다이렉트 웨딩박람회 다녀왔습니다~! - http://cafe.naver.com/directwedding/9046928
+- [cafearticle] 일산웨딩박람회 일산 웨딩박람회 방문 전 필수 확인 팁 - http://cafe.naver.com/1sejongcity/1939326
+- [cafearticle] W웨딩박람회 vs 다이렉트 웨딩 - http://cafe.naver.com/directwedding/8944615
+- [cafearticle] 원주웨딩박람회 BEST 일정 & 소소한 팁 - http://cafe.naver.com/ungsangjang/839125
+- [cafearticle] 울산웨딩박람회 일정 BEST 총정리! - http://cafe.naver.com/culturebloom/3209294
+- [cafearticle] 대구웨딩박람회 일정 BEST 총정리했어요! - http://cafe.naver.com/ungsangjang/838105
+- [cafearticle] 부천웨딩박람회 BEST 일정 총정리!! - http://cafe.naver.com/ungsangjang/838745
+- [blog] 서울 웨딩박람회 후기 및 내돈내산 정보 확인! - https://blog.naver.com/kies0002/224281171972
+- [blog] 진주웨딩박람회 후기 및 사전예약 방문 혜택 정보 - https://blog.naver.com/alyssa_lee/224291630220
+- [blog] 광주 웨딩박람회 일정 정보, 방문 후기 - https://blog.naver.com/jmj0429/224278050013
+- [blog] 수원 웨딩박람회 후기 예약 일정! - https://blog.naver.com/tekken_bgr/224301206894
+- [blog] 코엑스 웨딩박람회 후기 - https://blog.naver.com/vkeo3136/224304254001
+- [blog] 대구웨딩박람회 일정 6월 알아본 후기 - https://blog.naver.com/pretty4415/224310939797
+- [blog] 창원웨딩박람회 일정 및 후기, 혜택 정리 공유! - https://blog.naver.com/smarthouse_/224309444496
+- [blog] 부산웨딩박람회 6월 일정 및 무료혜택 리얼 후기! - https://blog.naver.com/revivalloan/224311755745
+- [blog] 수원메쎄웨딩박람회 최신 일정, 방문 후기! - https://blog.naver.com/bbobbny/224290182173
+- [blog] 광주 웨딩박람회 5월 일정 및 후기! - https://blog.naver.com/asdf9752/224275142634
+- [cafearticle] 비용 아끼는 수원 평택 포항 웨딩박람회 후기 비밀 - http://cafe.naver.com/1sejongcity/1943750
+- [cafearticle] 수백만 원 아끼는 세텍 하우투웨딩 제이웨딩 박람회 후기 - http://cafe.naver.com/1sejongcity/1943748
+- [cafearticle] 서울 다이렉트 본사 방문 웨딩 박람회 후기 (드메, 예복, 예물 계약 O) - http://cafe.naver.com/directwedding/9010082
+- [cafearticle] 익산 웨딩박람회 5가지만 알면 알찬 준비 끝 - http://cafe.naver.com/ourman/502379
+- [cafearticle] 서울결혼박람회 제이웨딩 후기 - http://cafe.naver.com/b00k2012/1586941
+- [cafearticle] 수백만 원 아끼는 제주 벡스코 코엑스 웨딩박람회 솔직후기 - http://cafe.naver.com/1sejongcity/1943749
+- [cafearticle] 당장 안 보면 수백만 원 손해 웨딩박람회후기 웨딩박람회 후기 - http://cafe.naver.com/1sejongcity/1945431
+- [cafearticle] 위약금 폭탄 피하는 대구 대전 부산 웨딩박람회 후기 핵심 정리 - http://cafe.naver.com/1sejongcity/1942900
+- [cafearticle] 필독 대전웨딩박람회 일정과 웨딩박람회 후기 - http://cafe.naver.com/1sejongcity/1940146
+- [cafearticle] 지금 안 보면 손해인 다이렉트웨딩 아이니웨딩 팜투어 박람회 후기 - http://cafe.naver.com/1sejongcity/1943747
+- [blog] 웨딩크라우드 스드메 계약... 박람회에서 호구 안되는 법(꿀팁...  - https://blog.naver.com/dlkkukku/224282176924
+- [blog] 결혼준비 가계약금 호구 안당하는 법  (ft. 웨딩박람회 일정 모음) - https://blog.naver.com/jinwhi_/224240531064
+- [blog] 서울웨딩박람회 결혼준비 호구 안 당하는 법 총정리 - https://blog.naver.com/wedding2022/223996461201
+- [blog] [웨딩기록] 웨딩박람회 호구 안당하는 법 계약 가이드 청약철회...  - https://blog.naver.com/suggml25/224181306639
+- [blog] 웨딩박람회 가는 이유 2가지와 호구안당하는법 - https://blog.naver.com/vaodereve/224178381049
+- [blog] 웨딩박람회가는 이유, 호구당하지 않는법, 주의사항 꿀팁 - https://blog.naver.com/kiukiu911/223830995928
+- [blog] [결혼준비] 전국 웨딩 박람회 일정 총정리! 스드메 호구 안 되는...  - https://blog.naver.com/caps9999/224295244374
+- [blog] 코엑스 웨딩 박람회를 직접 경험한 꿀팁 4가지, 호구 안되는법!...  - https://blog.naver.com/suda_zip/223766980642
+- [blog] 웨딩박람회에서 영등포... 결혼식) + 호구,사기 안 당하는 법...  - https://blog.naver.com/kj930426/224246596568
+- [blog] 웨딩박람회 방문 전 필수 체크리스트: '호구' 안 되는 5가지 방법 - https://blog.naver.com/pi4989/224279605929
+- [cafearticle] 200만원 아끼는 서울웨딩박람회 호구 탈출법 - http://cafe.naver.com/1sejongcity/1946244
+- [cafearticle] 호구 계약 주의 코엑스 웨딩박람회 4월 킨텍스웨딩박람회 5월 4월 견적 비교 5분 요약 - http://cafe.naver.com/1sejongcity/1933696
+- [cafearticle] 부산웨딩박람회일정 확인하고 호구 피하는 부산 웨딩박람회 일정 꿀팁 - http://cafe.naver.com/1sejongcity/1938373
+- [cafearticle] 다이렉트 웨딩박람회 안 가면 손해인 이유 3가지 - http://cafe.naver.com/1sejongcity/1950601
+- [cafearticle] 춘천웨딩박람회 방문 전 무조건 알아야 할 호구 탈출 비법 - http://cafe.naver.com/1sejongcity/1940593
+- [cafearticle] 김해웨딩박람회 안 가면 1천만 원 손해 보는 이유 - http://cafe.naver.com/1sejongcity/1940595
+- [cafearticle] 스드메 100만 원 아끼는 인천 웨딩박람회 - http://cafe.naver.com/1sejongcity/1953411
+- [cafearticle] 서울 웨딩박람회 놓치면 500만원 손해 보는 이유 - http://cafe.naver.com/1sejongcity/1950604
+- [cafearticle] 수원웨딩박람회 방문 전 필수 확인 3가지 - http://cafe.naver.com/1sejongcity/1946243
+- [cafearticle] 송도웨딩박람회 진짜 혜택 일정표 - http://cafe.naver.com/1sejongcity/1940142
+- [blog] 대구웨딩박람회 상담받고 온 솔직 후기! - https://blog.naver.com/wansojun/224311016937
+- [blog] 대구웨딩박람회 일정 상담신청 후기 - https://blog.naver.com/kmsmichelle/224222566790
+- [blog] 박람회 위드유웨딩에서 당일계약하고 온 솔직후기 + 견적상담...  - https://blog.naver.com/milgari777/224219716098
+- [blog] 부산웨딩박람회 견적 상담받아본 후기 - https://blog.naver.com/bbobbny/224104882225
+- [blog] [웨딩박람회❤️] 청주 에이스웨딩 웨딩박람회 상담 후기...  - https://blog.naver.com/mangju1115/224305747959
+- [blog] 결혼준비, 웨딩박람회 후기(2)... 다이렉트웨딩 본사 방문상담...  - https://blog.naver.com/snflgg/224081479920
+- [blog] 대구웨딩박람회 일정 및 방문 후기 공유 - https://blog.naver.com/wedding_list/224289147471
+- [blog] 대구웨딩박람회 일정 추천 실제 방문 후기 - https://blog.naver.com/kikiwa1004/224293448255
+- [blog] 01. 서울 다이렉트 웨딩 박람회 방문 및 상담 후기 - https://blog.naver.com/holy_blameless/224251274484
+- [blog] 수원 웨딩박람회 후기 및 일정 정리! - https://blog.naver.com/asdf9752/224310374395
+- [cafearticle] 서울 다이렉트 웨딩박람회 상담 후기 (예복 : 포튼가먼트, 계약O) - http://cafe.naver.com/directwedding/9030543
+- [cafearticle] 서울 다이렉트 웨딩박람회 상담 후기 (계약O) - http://cafe.naver.com/directwedding/8998510
+- [cafearticle] 지금 안 보면 손해인 다이렉트웨딩 아이니웨딩 팜투어 박람회 후기 - http://cafe.naver.com/1sejongcity/1943747
+- [cafearticle] 서울 다이렉트 웨딩박람회 상담 후기(계약O) - http://cafe.naver.com/directwedding/9008199
+- [cafearticle] 서울 다이렉트 웨딩박람회 상담 후기입니다!(계약 O) - http://cafe.naver.com/directwedding/9032130
+- [cafearticle] (서울)다이렉트 웨딩 박람회 상담 후기 - http://cafe.naver.com/directwedding/9036258
+- [cafearticle] 백작피렌체 웨딩박람회 상담 후기 - http://cafe.naver.com/directwedding/8972818
+- [cafearticle] 서울 다이렉트 웨딩박람회 오르시아 상담 후기 - http://cafe.naver.com/directwedding/9046456
+- [cafearticle] 지니의 수원 다이렉트 웨딩박람회 상담 후기(5. 30.) - http://cafe.naver.com/directwedding/9009202
+- [cafearticle] 서울 다이렉트 웨딩 박람회 방문 상담 후기 - http://cafe.naver.com/directwedding/9019861
+- [blog] 대구웨딩박람회 일정 & 방문 전 준비 체크리스트 이것만 알고...  - https://blog.naver.com/jeil274/224300318110
+- [blog] 코엑스 웨딩박람회 4월 사전신청 필수 체크리스트 - https://blog.naver.com/hooya0078/224232181728
+- [blog] 결혼박람회 일정 웨딩 계약 방문 신청 방법 체크리스트 - https://blog.naver.com/lulliom/224240437349
+- [blog] 코엑스 웨딩박람회 일정 및 체크리스트 정리 - https://blog.naver.com/fairy-tale-boy/224153830431
+- [blog] 대구웨딩박람회 11월,12월 일정 가기전 꼭 알아야할 체크리스트 - https://blog.naver.com/revivalloan/224086569526
+- [blog] 대구웨딩박람회6월 방문전 체크리스트 - https://blog.naver.com/dmsql1490/224289130181
+- [blog] 벡스코웨딩박람회 후기! 계약 전 꼭 알아야 할 체크리스트 - https://blog.naver.com/hsnhj0304/223799577525
+- [blog] 수원웨딩박람회, 5월 방문 전 꼭 봐야 할 현장 체크리스트 - https://blog.naver.com/likeabusiness/224276208942
+- [blog] 한나 웨딩박람회 참가 전 알아야 할 핵심 체크리스트로 시간과...  - https://blog.naver.com/tguaz6644/224126409944
+- [blog] 웨딩홀대관비용비교 예식장체크리스트 전국웨딩박람회 - https://blog.naver.com/cocobloglife/224308558607
+- [cafearticle] 구리 웨딩박람회 신청 전 필수 체크리스트 99% - http://cafe.naver.com/ourman/189146
+- [cafearticle] 구로 웨딩박람회 신청 전 3가지 체크리스트 - http://cafe.naver.com/ourman/313379
+- [cafearticle] 충주 웨딩박람회 체크리스트 신청 전에 알아야 할 3가지 - http://cafe.naver.com/ggzilian/85075
+- [cafearticle] 구로 웨딩박람회 99%가 준비 전에 알아야 할 체크리스트 - http://cafe.naver.com/thenewcclass/92886
+- [cafearticle] 창원 웨딩박람회 체크리스트 계약전 필수확인 - http://cafe.naver.com/uouv96/7457
+- [cafearticle] 웨딩박람회 체크리스트 90%가 모르는 예식비용 아끼는 법! - http://cafe.naver.com/ggzilian/104020
+- [cafearticle] 부산 결혼박람회 필수 체크리스트 웨딩박람회 5월 - http://cafe.naver.com/1sejongcity/1938374
+- [cafearticle] IWC 천안 웨딩박람회 참석 전 3가지 체크리스트 필수 - http://cafe.naver.com/ourman/296522
+- [cafearticle] 제주 오리엔탈호텔 웨딩박람회 방문 1분 전에 해야 할 체크리스트 - http://cafe.naver.com/ourman/314016
+- [cafearticle] 고양 2026 웨딩박람회 95%가 놓치는 체크리스트 알아보기 - http://cafe.naver.com/ourman/315883
+- [blog] 대구 결혼 준비 시작! 연웨딩 박람회 방문 후기 (광고 아님) - https://blog.naver.com/seo_sango/224251284431
+- [blog] 웨딩박람회 바로 계약 해버린 후기, 이게 맞나? 광고 아님...  - https://blog.naver.com/yungna0319/223944966964
+- [blog] 다이렉트 결혼준비 솔직후기 (포인트쌓기좋은 카페) 광고X...  - https://blog.naver.com/bonayoon1985/223754396855
+- [blog] 코웨드웨딩 박람회 당일계약 후기, 스드메비용, 광고없음 - https://blog.naver.com/maryabin/224280328536
+- [blog] 삼성역 섬유센터에서 다녀온 웨딩박람회 후기 :) 결혼준비...  - https://blog.naver.com/cowboy_348/224299444317
+- [blog] 결혼 준비 다이렉트 웨딩 박람회 후기 방문전 준비사항 - https://blog.naver.com/dkfk0870/224277839705
+- [blog] 다이렉트결혼준비 웨딩카페에서 해야하는 이유 (+박람회 후기까...  - https://blog.naver.com/ghning19/224199482843
+- [blog] 다이렉트 결혼준비 웨딩박람회 드레스샵 상담 후기(더에이미...  - https://blog.naver.com/swannnzy/224246580796
+- [blog] 결혼준비1) 웨딩박람회 처음가본 후기 - https://blog.naver.com/hana895/224302060636
+- [blog] 광주 웨딩박람회 일정 및 후기 결혼 준비 팁 혜택 총정리! - https://blog.naver.com/wedding_list/224229055985
+- [cafearticle] 5월 서울다이렉트결혼준비 웨딩박람회 후기입니다 - http://cafe.naver.com/directwedding/8964433
+- [cafearticle] (서울) 다이렉트결혼준비 웨딩박람회 방문 - http://cafe.naver.com/directwedding/8967979
+- [cafearticle] 다이렉트 결혼준비 웨딩박람회 완벽정리! - http://cafe.naver.com/1sejongcity/1932333
+- [cafearticle] 다이렉트웨딩박람회 다이렉트결혼준비 파헤치기! - http://cafe.naver.com/ungsangjang/838944
+- [cafearticle] 수원메쎄웨딩박람회 vs 다이렉트결혼준비 수원점 비교 후기 - http://cafe.naver.com/directwedding/9023933
+- [cafearticle] 서울 웨딩박람회 다이렉트 일요일 오후 방문한 결혼 준비 상담 및 계약후기 - http://cafe.naver.com/directwedding/9047568
+- [cafearticle] 다이렉트 결혼준비 온라인박람회 후기입니다! 스드메 계약 시 활용하기 추천! - http://cafe.naver.com/directwedding/9034661
+- [cafearticle] 서울 다이렉트 웨딩박람회에서 계약을 했어요. - http://cafe.naver.com/directwedding/9046078
+- [cafearticle] 다이렉트결혼준비 웨딩박람회 스드메 서울 청담 로나 본식 메이크업 후기 - http://cafe.naver.com/directwedding/9042109
+- [cafearticle] 당장 안 보면 수백만 원 손해 웨딩박람회후기 웨딩박람회 후기 - http://cafe.naver.com/1sejongcity/1945431
+- [blog] 제주 웨딩박람회 일정 2026년 1월 초대박 혜택 - https://blog.naver.com/storefarm82/224150354717
+- [blog] 2026 전국웨딩박람회 일정: 서울 예비부부 스드메 호갱 피하고...  - https://blog.naver.com/todayslim/224249012068
+- [blog] 창원 웨딩박람회 후기,  2026 창원웨딩의전당 웨딩 기대되는! - https://blog.naver.com/audi77vip/224113860739
+- [blog] [W] Step 5-1 :) 웨딩플래너(스,드,메)결정 - 박람회 가계약...  - https://blog.naver.com/mine02140/220248221223
+- [blog] [내가 결혼이라니] 웨딩박람회, 꼭 가야 할까? 경험하니...  - https://blog.naver.com/lonely_long_lee/223667377115
+- [blog] [2025 수원 웨딩박람회] 메쎄 웨딩크라우드, 타임빌라스...  - https://blog.naver.com/hands_worlds/223715178765
+- [blog] 대구웨딩박람회 결정장애 때문에 고민이라면~! - https://blog.naver.com/marrynbride/222516443854
+- [blog] 신한카드 올댓 웨딩박람회 서울 또 방문 (신한라이프...  - https://blog.naver.com/creambutterfly/223390735459
+- [blog] Wedding #1. 순천 웨딩박람회 후기 (순천 아베끄 웨딩) - https://blog.naver.com/j-yeon1220/222280783174
+- [blog] [웨딩/결혼준비] 웨딩플래너를 만나다 - https://blog.naver.com/412hana/220946911204
+- [cafearticle] 웨딩박람회를 잘 활용하는 방법 - http://cafe.naver.com/llchyll/2477061
+- [cafearticle] 웨딩박람회 무료 쿠폰 신청 똑똑한 예랑예신들은 이렇게 아껴요! - http://cafe.naver.com/mkrlfd/555842
+- [cafearticle] 수도권 웨딩페어 사전등록 똑똑한 예랑예신들은 이렇게 아껴요! - http://cafe.naver.com/ourman/353159
+- [cafearticle] 예식 완료 후 총 평가 - 렌느브라이덜 / 까사비토 / 보이드바이박철 / 뮤토테일러 / 베스트뮤직 / 화니플로... - http://cafe.naver.com/directwedding/8770897
+- [cafearticle] 웨딩밴드 아크레도 청담점 상담 및 계약후기 - http://cafe.naver.com/directwedding/5483106
+- [cafearticle] 박람회방문포인트적립해주세요. - http://cafe.naver.com/directwedding/336620
+- [cafearticle] 박람회 참가하고 싶습니다 - http://cafe.naver.com/directwedding/191682
+- [cafearticle] 박람회 12월 20일 방문하고싶습니다~~ - http://cafe.naver.com/directwedding/192061
+- [cafearticle] 포인트 적립해 주세용~ - http://cafe.naver.com/directwedding/193556
+- [cafearticle] 대전지사 아뜰리에드망고 따끈따끈한 계약 내용 공유합니다~ - http://cafe.naver.com/directwedding/1909944
+- [blog] 수원메쎄웨딩박람회 플래너 후기 일정 정리 - https://blog.naver.com/ssmaa/224111923777
+- [blog] 서울 다이렉트 웨딩박람회 방문 플래너 상담 스드메 계약 후기 - https://blog.naver.com/minniek_/224189973382
+- [blog] 다이렉트 웨딩박람회 예약 방문 및 플래너님 스드메 상담 후기 - https://blog.naver.com/luckykudo/224305056128
+- [blog] aT센터 웨딩박람회 후기 스드메 기준부터 잡아준 플래너 계약...  - https://blog.naver.com/ezroc4beat/224284411306
+- [blog] W.1 다이렉트 웨딩 박람회 플래너 상담 후기 - https://blog.naver.com/wlss77/224141928916
+- [blog] [후기] 다이렉트 웨딩박람회 플래너 상담후기 - https://blog.naver.com/dnjswns9927/224258712444
+- [blog] 아이니웨딩박람회 플래너 상담후기 및 박람회 방문 꿀팁 - https://blog.naver.com/z5n_e/224296733398
+- [blog] 인천 송도컨벤시아 웨딩박람회 후기 솔직 정리 (+플래너 선택...  - https://blog.naver.com/blueoceankim/224284411786
+- [blog] 251019 아이니웨딩 박람회_플래너 상담 후기 - https://blog.naver.com/kelly92256/224225370212
+- [blog] 제이웨딩 웨딩박람회 솔직 후기(플래너 동행/비동행, 장단점, 팁) - https://blog.naver.com/orange5436/224288432119
+- [cafearticle] 인천 웨딩박람회 플래너 상담후기 - http://cafe.naver.com/cafemakecafebest/29326
+- [cafearticle] 서울 다이렉트 웨딩박람회 스드메 상담후기 (최다정 플래너님/계약O) - http://cafe.naver.com/directwedding/9005894
+- [cafearticle] 서울 다이렉트웨딩박람회 플래너와 스드메 상담 후기 - http://cafe.naver.com/directwedding/8963837
+- [cafearticle] (서울)다이렉트 웨딩 박람회 상담 후기 - http://cafe.naver.com/directwedding/9036258
+- [cafearticle] 서울 다이렉트 웨딩박람회 상담 후기입니다!(계약 O) - http://cafe.naver.com/directwedding/9032130
+- [cafearticle] 지니의 수원 다이렉트 웨딩박람회 상담 후기(5. 30.) - http://cafe.naver.com/directwedding/9009202
+- [cafearticle] 다이렉트 웨딩박람회 플래너 상담 및 계약 후기입니다. - http://cafe.naver.com/directwedding/8907535
+- [cafearticle] 서울 다이렉트 웨딩 박람회 방문 상담 후기 - http://cafe.naver.com/directwedding/9019861
+- [cafearticle] 아이니웨딩 박람회 플래너 상담후기 (플래너: 김윤아님) - http://cafe.naver.com/crc61class/140265
+- [cafearticle] [박람회 후기] 수원 웨딩박람회 방문 상담 후기 - http://cafe.naver.com/directwedding/9035755

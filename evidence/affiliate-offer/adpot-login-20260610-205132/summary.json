@@ -1,0 +1,35 @@
+{
+  "captured_at": "20260610-205132",
+  "source": "affiliate-offer",
+  "slug": "adpot-login",
+  "page_url": "https://adpot.kr/pc/join/login.html",
+  "page_title": "애드팟 로그인",
+  "frame_count": 1,
+  "best_frame_url": "https://adpot.kr/pc/join/login.html",
+  "best_frame_name": "",
+  "screenshot": "D:\\Project\\leadgen-lab\\evidence\\affiliate-offer\\adpot-login-20260610-205132\\screenshot.png",
+  "frames": [
+    {
+      "url": "https://adpot.kr/pc/join/login.html",
+      "name": "",
+      "text_length": 429,
+      "html_length": 18084,
+      "link_count": 58,
+      "image_count": 15,
+      "control_count": 4,
+      "meta": {
+        "title": "애드팟 로그인",
+        "canonical": "",
+        "h1": [
+          ""
+        ],
+        "h2": [
+          "로그인"
+        ],
+        "articleText": "",
+        "ogTitle": "애드팟 로그인",
+        "ogDescription": "마케팅의 잭팟~ 애드팟!"
+      }
+    }
+  ]
+}

@@ -1,0 +1,505 @@
+<!DOCTYPE html><html><head>
+<title>디비센스 회원가입</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="CPA 제휴마케팅 플랫폼~ 디비센스!">        
+<meta property="og:locale" content="ko_KR">
+<meta property="og:type" content="website">    
+<meta property="og:title" content="디비센스 회원가입">
+<meta property="og:description" content="CPA 제휴마케팅 플랫폼~ 디비센스!">
+<meta property="og:url" content="https://dbsense.kr/pc/join/join.html">
+<meta property="og:image" content="http://dbsense.kr/images/common/logo_400x400.jpg?2">    
+<link rel="stylesheet" href="/css/core/bootstrap.min.css">
+<link rel="stylesheet" href="/css/core/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/css/dev/common.css?18">
+<link rel="stylesheet" href="/css/common/cms_common.css?16">
+<link rel="stylesheet" href="/css/common.css?16">
+<link rel="stylesheet" href="/css/sub.css?16">
+<link rel="stylesheet" href="/css/core/animate.min.css">
+<!--[if lt IE 9]>
+  <script src="/js/core/html5shiv.min.js"></script>
+  <script src="/js/core/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-NL08L3Z5WP&amp;cx=c&amp;gtm=4e6641"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-307154556&amp;cx=c&amp;gtm=4e6641h1"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-189044349-1&amp;cx=c&amp;gtm=4e6641h1"></script><script src="/js/core/jquery.min.js"></script>
+<script src="/js/core/bootstrap.min.js"></script>
+<script src="/js/header/common.js"></script>
+<script src="/js/core/animate.js"></script><link rel="stylesheet" href="/css/member.css?2">
+<script src="/js/core/form_validate.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#btnJoin').click(function() {
+      $(this).button('loading');
+      setTimeout(function() {
+        $('#btnJoin').button('reset');
+      },1000)
+    })
+  });
+  $(document).ready(function() {
+    $("input[name='check00']").click(function() {
+      if ( $("input[name='check00']").prop("checked") ) {
+        $("input[name='check01']").prop("checked", true);
+        $("input[name='check02']").prop("checked", true);
+        $("input[name='check03']").prop("checked", true);
+        $("input[name='check04']").prop("checked", true);
+      } else {
+        $("input[name='check01']").prop("checked", false);
+        $("input[name='check02']").prop("checked", false);
+        $("input[name='check03']").prop("checked", false);
+        $("input[name='check04']").prop("checked", false);
+      }
+    });
+  });
+
+  function onSubmit() {
+    var f = document.joinForm;
+    if ( fv_isNotEmail(f.email) ) { return false; }    
+    if ( fv_inValidLength(f.pass1, 8, "비밀번호") ) { return false; }
+    if ( fv_notSameText(f.pass1, f.pass2, "비밀번호") ) { return false; }
+    if ( fv_inValidLength(f.nickname, 2, "닉네임") ) { return false; }
+
+    if ( !$("input[name='check01']").prop("checked") ) {
+      alert("서비스 이용약관 동의에 체크해 주세요!");
+      return false;
+    }
+    if ( !$("input[name='check02']").prop("checked") ) {
+      alert("개인정보 수집,이용 동의에 체크해 주세요!");
+      return false;
+    }
+    if ( !$("input[name='check04']").prop("checked") ) {
+      alert("캠페인 리포트 수신 동의에 체크해 주세요!");
+      return false;
+    }
+    if ( !$("input[name='check03']").prop("checked") ) {
+      if ( $('#check03_popup').val() != "Y" ) {
+        showPopup();
+        return false;
+      }
+    } 
+    $.ajax({
+      type: 'POST',
+      url: 'join_act.php',
+      data: $('#joinForm').serialize(),
+      success: function(out, status) {
+        var js = $.parseJSON(out);
+        if ( js.code == "000" ) {
+          location.replace("/pc/join/join_result.html");
+        } else {
+          alert(js.msg);
+        }
+      }
+    });
+    return false;
+  }
+</script>
+<script>
+  $(document).ready(function() {
+    $('#code').attr("disabled", "disabled");
+    $('#btnConfirm2').attr("disabled", "disabled");
+  })
+
+  function sendMobile() {
+    var f = document.joinForm;
+    if ( fv_notSameLength(f.tel1, 3, "전화번호를 올바로 입력해 주세요!") ) { return; }
+    if ( fv_notSameLength(f.tel2, 4, "전화번호를 올바로 입력해 주세요!") ) { return; }
+    if ( fv_notSameLength(f.tel3, 4, "전화번호를 올바로 입력해 주세요!") ) { return; }
+    $.ajax({
+      type: 'POST',
+      url: '/pc/join/mobile_confirm.php',
+      data: {'mode':'1','tel1':$('#tel1').val(),'tel2':$('#tel2').val(),'tel3':$('#tel3').val()},
+      success: function(out, status) {
+        var js = $.parseJSON(out);
+        if ( js.code == "000" ) {
+          $('#tel1').attr("readonly", "readonly");
+          $('#tel2').attr("readonly", "readonly");
+          $('#tel3').attr("readonly", "readonly"); 
+          $('#code').removeAttr("disabled");
+          $('#btnConfirm2').removeAttr("disabled");
+          $('#code').focus();                   
+          alert("인증번호가 발송되었습니다.");
+        } else {
+          alert(js.msg);
+        }
+      }
+    });
+  }
+
+  function confirmMobile() {
+    var f = document.joinForm;
+    if ( fv_notSameLength(f.code, 6, "인증코드를 올바로 입력해 주세요!") ) { return; }        
+    $.ajax({
+      type: 'POST',
+      url: '/pc/join/mobile_confirm.php',
+      data: {'mode':'2','code':$('#code').val(),'tel1':$('#tel1').val(),'tel2':$('#tel2').val(),'tel3':$('#tel3').val()},
+      success: function(out, status) {
+        var js = $.parseJSON(out);
+        $('#code').val('');
+        if ( js.code == "000" ) {
+          $('#tel1').attr("readonly", "readonly");
+          $('#tel2').attr("readonly", "readonly");
+          $('#tel3').attr("readonly", "readonly");
+          $('#btnConfirm').attr("disabled", "disabled");
+          $('#code').attr("disabled", "disabled");
+          $('#btnConfirm2').attr("disabled", "disabled");          
+          f.mobile_confirm.value = "Y";
+          alert("인증이 완료되었습니다.");
+        } else {
+          alert("인증에 실패했습니다. 다시 시도해 주세요.");
+        }
+      }
+    });
+  }      
+</script>
+<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+<script>
+  var faWrapID = 'findAddressWrap';
+  var faboxID = 'findAddressbox';
+  var faCodeID = 'postcode';
+  var faAddr1ID = 'addr1';
+  var faAddr2ID = 'addr2';
+
+  function closeFindAddress() {
+    document.getElementById(faWrapID).style.display = 'none';
+  }
+
+  function showFindAddress() {
+    var faWrapEl = document.getElementById(faWrapID);
+    var faboxEl = document.getElementById(faboxID);
+    var faCodeEl = document.getElementById(faCodeID);
+    var faAddr1El = document.getElementById(faAddr1ID);
+    var faAddr2El = document.getElementById(faAddr2ID);
+
+    new daum.Postcode({
+      oncomplete: function(data) {
+        var addr = ''; // 주소 변수
+        var extraAddr = ''; // 참고항목 변수
+
+        if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+          addr = data.roadAddress;
+        } else { // 사용자가 지번 주소를 선택했을 경우(J)
+          addr = data.jibunAddress;
+        }
+
+        if(data.userSelectedType === 'R'){
+          if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+            extraAddr += data.bname;
+          }
+          if(data.buildingName !== '' && data.apartment === 'Y'){
+            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+          }
+          if(extraAddr !== ''){
+            extraAddr = ' (' + extraAddr + ')';
+          }
+        } else {
+        }
+
+        faCodeEl.value = data.zonecode;
+        faAddr1El.value = addr;
+        faAddr2El.focus();
+        faWrapEl.style.display = 'none';
+      },
+      width : '100%',
+      height : '100%',
+      maxSuggestItems : 5
+    }).embed(faboxEl);
+
+    faWrapEl.style.display = 'block';
+
+    initLayerPosition();
+  }
+
+  function initLayerPosition(){
+    var width = 600;
+    var height = 600;
+    var borderWidth = 5;
+    var faboxEl = document.getElementById(faboxID);     
+
+    faboxEl.style.width = width + 'px';
+    faboxEl.style.height = height + 'px';
+    faboxEl.style.border = borderWidth + 'px solid';
+    faboxEl.style.left = (((window.innerWidth || document.documentElement.clientWidth) - width)/2 - borderWidth) + 'px';
+    faboxEl.style.top = (((window.innerHeight || document.documentElement.clientHeight) - height)/2 - borderWidth) + 'px';
+  }
+</script>
+<script type="text/javascript" async="" src="https://ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/307154556/?random=1781092295090&amp;cv=11&amp;fst=1781092295090&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be6641v896369676za200zb882808951zd882808951xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0~115938466~115938469&amp;u_w=3440&amp;u_h=1440&amp;url=https%3A%2F%2Fdbsense.kr%2Fpc%2Fjoin%2Fjoin.html&amp;ref=https%3A%2F%2Fdbsense.kr%2Fpc%2Fjoin%2Flogin.html&amp;rcb=6&amp;frm=0&amp;tiba=%EB%94%94%EB%B9%84%EC%84%BC%EC%8A%A4%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=627012841.1781092277&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B149.0.7827.53%7CChromium%3B149.0.7827.53%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/307154556/?random=1781092300812&amp;cv=11&amp;fst=1781092300812&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=form_start&amp;gtm=45be6641v896369676za200zb882808951zd882808951xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0~115938466~115938469&amp;u_w=3440&amp;u_h=1440&amp;url=https%3A%2F%2Fdbsense.kr%2Fpc%2Fjoin%2Fjoin.html&amp;ref=https%3A%2F%2Fdbsense.kr%2Fpc%2Fjoin%2Flogin.html&amp;rcb=6&amp;frm=0&amp;tiba=%EB%94%94%EB%B9%84%EC%84%BC%EC%8A%A4%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85&amp;ae=a&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=627012841.1781092277&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B149.0.7827.53%7CChromium%3B149.0.7827.53%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dform_start&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script></head>
+<body>
+<div id="findAddressWrap" style="display: none; position: fixed; width: 100%; height: 100%; background:rgba(0, 0, 0, 0.6); z-index: 9999; overflow: hidden; -webkit-overflow-scrolling: touch;">
+  <div id="findAddressbox" style="position: fixed; background:#fff; box-shadow:0 15px 26px rgba(0, 0, 0, 0.5); z-index: 99999;">
+    <a href="javascript:closeFindAddress()" style="position: absolute; top: 0px; right: -25px; width: 25px; height: 25px; font-size: 20px; font-weight:bold; padding: 5px; color: white; border: 1px solid #fff;">X</a>
+  </div>
+</div>
+<div class="wrap">
+
+        <div class="header">
+        <div class="top">
+            <ul class="top_L">
+                <li><a href="/pc/center/notice.html">공지사항</a></li>
+                <li><a href="/pc/center/faq.html">자주하는질문</a></li>
+                <li><a href="/pc/center/event.html">이벤트</a></li>                
+                <li><a href="/pc/center/inquire.html">1:1문의</a></li>
+            </ul>
+            <ul class="top_R">
+                <li><a href="/pc/my/my_camp.html">내캠페인</a></li>                
+                <li><a href="/pc/report/db_cpa.html">상세실적 내역</a></li>
+                <li><a href="/pc/report/daily_cpa.html">일별/월별 통계</a></li>
+                <li><a href="/pc/my/point.html">출금신청</a></li>
+            </ul>
+        </div>
+        <!--h_top-->
+        <div class="middle">
+            <h1><a href="/"><img id="logoId" src="/images/common/logo.jpg?2" alt="디비센스" class=""></a></h1>
+            <ol>
+                <li><a class="btn_login" href="/pc/join/login.html">로그인</a></li>
+                <li><a class="btn_join" href="/pc/join/join.html">회원가입</a></li>
+                
+            </ol>
+            <div class="_letter" onclick="goUrl('/pc/center/message.html')">
+                <div class="_num_wrap"><div id="letterId" class="_num ">0</div></div>
+            </div>
+        </div>
+        <!--h_middle-->
+        <!--메뉴 시작-->
+        <div class="gnb_wrap">
+            <!--서브메뉴 활성화 시 배경-->
+            <ul class="gnb">
+                <li><a href="/pc/intro/intro.html">디비센스 소개</a></li>
+                <li><a href="/pc/team/team_list.html">☆ 팀 제도 ☆</a></li>
+                <li><a href="/pc/camp/camp_cpa.html">CPA 캠페인 목록</a></li>
+                <li><a href="/pc/camp/camp_cpc.html">CPC 캠페인 목록</a></li>
+                <li><a href="/pc/bbs/7/list.html" style="color: #fffa7f;">출금인증 &amp; 이벤트</a></li>
+                <li><a href="/pc/lect/lect04_list.html" style="color: #cefdff;">지식마켓 &amp; 초보가이드</a></li>
+            </ul>
+        </div>
+        <!--gnb-->
+        <!--메뉴끝-->
+    </div>
+
+    <!--quick메뉴-->
+    <aside class="right">
+        <div class="quick04">
+            <a href="https://open.kakao.com/o/gdK35pFc" target="_blank"><img src="/images/common/sky_05.jpg?1" alt="디비센스 공식 단톡방"></a>
+            <div style="position: absolute; bottom: -5px; left: 0; width: 130px; text-align: center; color: #CC723D; font-size: 12px;">(비번:로그인후)</div>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/notice_view.html?code=3" target="_blank"><img src="/images/common/sky_02.jpg" alt="공지방, 알림 설정"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/notice_view.html?code=17&amp;" target="_blank"><img src="/images/common/sky_04.jpg" alt="카카오톡 1:1 채팅 상담"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/notice_view.html?code=16&amp;" target="_blank"><img src="/images/common/sky_01.jpg" alt="텔레그램 1:1 채팅 상담"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/inquire.html" target="_blank"><img src="/images/common/sky_03.jpg" alt="1:1 문의 게시판"></a>
+        </div>
+    </aside>
+
+    <aside class="left">
+        <div class="quick04">
+            <a href="/pc/team/team_intro.html" target="_blank"><img src="/images/common/sky_15.jpg" alt="디비센스 팀 제도"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/faq_view.html?code=14&amp;" target="_blank"><img src="/images/common/sky_11.jpg" alt="타기관 수익인증으로 센스등급 등업하기"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/faq_view.html?code=13&amp;" target="_blank"><img src="/images/common/sky_12.jpg" alt="랜딩 페이지에 스크립트 삽입 요청"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/faq_view.html?code=15&amp;" target="_blank"><img src="/images/common/sky_13.jpg" alt="페북 도메인 차단시 해결 방법"></a>
+        </div>
+        <div class="quick04">
+            <a href="/pc/center/notice_view.html?code=3" target="_blank"><img src="/images/common/sky_14.jpg" alt="DB 접수시 알림 받는 방법"></a>
+        </div>
+    </aside>
+<script>
+  $(document).ready(function() {
+    infiniteRandom_animateListLogo('logoId', 7000);
+      });
+</script>
+    <div class="member_bg">
+        <!--회원가입 전용 배경색-->
+        <div class="join_box">
+            <h2>회원가입</h2>
+            <div class="join">
+                <!--회원가입 입력폼 시작-->
+                <form id="joinForm" name="joinForm" method="post" onsubmit="return onSubmit()" data-gtm-form-interact-id="0">
+                  <input type="hidden" id="postcode" name="postcode" style="">
+                  <input type="hidden" id="mobile_confirm" name="mobile_confirm" style="">
+                  <input type="hidden" id="check03_popup" name="check03_popup" style="">
+                    <div class="join_input">
+                        <label>이메일<em>아이디로 사용할 이메일 주소를 입력해 주세요 (이메일 인증 필수)</em></label>
+                        <input type="text" id="email" name="email" placeholder="이메일 주소 (인증필수)" value="" maxlength="80" autofocus="" data-gtm-form-interact-field-id="0" style="">
+                    </div>
+                    <div class="join_input">
+                        <label>비밀번호<em>영문, 숫자, 특수문자를 포함한 8자리 이상</em></label>
+                        <input type="password" id="pass1" name="pass1" placeholder="비밀번호 (8자 이상)" value="" maxlength="20" aria-autocomplete="list" style="">
+                    </div>
+                    <div class="join_input">
+                        <label>비밀번호 확인</label>
+                        <input type="password" id="pass2" name="pass2" placeholder="비밀번호 확인" maxlength="20" style="">
+                    </div>
+                    <div class="join_input">
+                        <label>닉네임<em>사이트 이용시 표시되는 이름입니다.</em></label>
+                        <input type="text" id="nickname" name="nickname" placeholder="닉네임 (2자 이상)" maxlength="20" style="">
+                    </div>
+                    <div style="color: red; text-align: center;">※ 미성년자는 디비센스에서 홍보활동을 할 수 없습니다.</div>
+                    <button type="submit" class="join_btn" id="btnJoin" data-loading-text="잠시만 기다려주세요..." style="margin-top: 20px;">회원가입 </button>
+                    <ul style="margin-top: 40px;">
+                        <li>
+                        <label style="font-size: 14px; font-weight: bold;">
+                        <input type="checkbox" name="check00" style=""><span class="checkmark"></span>전체동의 </label>
+                        </li>                    
+                        <li style="padding-left: 15px;">
+                        <label>
+                        <input type="checkbox" name="check01" style=""><span class="checkmark2"></span>서비스 이용약관에 동의(필수) </label>
+                        <a href="/pc/join/policy01_02.html" target="_blank">내용보기</a>
+                        </li>
+                        <li style="padding-left: 15px;">
+                        <label>
+                        <input type="checkbox" name="check02" style=""><span class="checkmark2"></span>개인정보 수집, 이용에 대한 동의(필수) </label>
+                        <a href="/pc/join/policy02.html" target="_blank">내용보기</a>
+                        </li>
+                        <li style="padding-left: 15px;">
+                        <label>
+                        <input type="checkbox" name="check04" style=""><span class="checkmark2"></span>캠페인 리포트 수신 동의(필수) </label>
+                        </li>
+                        <li style="padding-left: 15px;">
+                        <label>
+                        <input type="checkbox" name="check03" value="Y" style=""><span class="checkmark2"></span>이벤트 알림 수신 동의(선택) </label>
+                        </li>
+                    </ul>
+                </form>
+                <!--회원가입 입력폼 끝-->
+            </div>
+        </div>
+    </div>
+
+<script>
+  function showPopup() {
+      $('#myModal').modal('show');
+  }
+  function hidePopup() {
+      $('#myModal').modal('hide');
+  }
+  function onYes() {
+    $('#check03_popup').val("Y");
+    $("input[name='check03']").prop("checked", true);
+    onSubmit()
+  }
+  function onNo() {
+    $('#check03_popup').val("Y");
+    onSubmit();
+  }
+</script>
+    
+<div class="modal fade" id="myModal" data-backdrop="static" onclick="hidePopup()">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div style="font-family: noto; font-size: 30px; line-height: 30px; font-weight: 700; text-align: center; padding-top: 30px; color: #0054FF;">"최대 3만원 당첨"</div>
+        <div style="font-family: noto; font-size: 20px; line-height: 24px; font-weight: 500; text-align: center; padding-top: 30px;">캠페인 리포트, 이벤트 알림 동의하고<br><span style="color: orangered; font-family: noto; font-size: 20px; line-height: 24px; font-weight: 500;">선물뽑기 5장</span> 혜택 받으세요~</div>
+        <div style="font-size: 12px; line-height: 18px; text-align: center; padding: 30px 0 00px;">캠페인 리포트 알림을 받으면<br>캠페인 진행 상황을 가장 빨리 알 수 있습니다.</div>
+      </div>
+      <div class="modal-footer" style="text-align: center; margin-bottom: 10px;">
+        <button class="btn btn-default" onclick="onNo()">안 받을래요</button>
+        <button class="btn btn-primary" onclick="onYes()">네! 받을께요</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="footer">
+        <div class="footer_content">
+            <ul>
+                <li><a href="/pc/join/policy01.html" target="_blank">서비스 이용약관</a></li>
+                <li><a href="/pc/join/policy02.html" target="_blank">개인정보 처리방침</a></li>
+                <li><a href="https://drive.google.com/file/d/1TW72bsfLKrdJ3mZwT_RUAW-xt_6ogbOn/view" target="_blank">홍보활동 운영정책</a></li>
+                <li><a href="https://drive.google.com/file/d/1iYBKzQnCdEKmc3_Cfs4yrW6nO23lLjgS/view?usp=sharing" target="_blank">생성형 AI활용 가이드라인</a></li>
+                <li><a href="https://drive.google.com/file/d/12_QphDodhEgm6T-CPZ8KyL8uy44VDYhB/view" target="_blank">[광고주용] 광고진행 소개서</a></li>
+                <li><a href="/pc/center/ad_inquire.html" target="_blank">광고문의</a></li>
+                <li><a href="/pc/mcnt/" target="_blank">광고주 어드민</a></li>
+            </ul>
+            <div class="address">
+                <em>(주)</em> 디제이랩 | 대표이사 최정원 | 사업자등록번호 : 530-88-01769 | 통신판매업신고번호 : 제 2025-서울송파-3075 호<br>
+                 소재지 : 서울특별시 송파구 오금로 111, 901-A18호(방이동, 세기빌딩) | 고객센터 : 02-6225-1020 | 이메일 info@d-jlab.com<br>
+                <br>
+                COPYRIGHTⓒDJLab Corp. All rights reserved.
+            </div>
+            <div class="footer_logo">
+                <img src="/images/common/logo_footer.png" alt="디비센스">
+            </div>
+        </div>
+    </div>
+
+
+<script type="application/ld+json">
+{
+ "@context": "http://schema.org",
+ "@type": "Person",
+ "name": "디비센스",
+ "url": "https://dbsense.kr/",
+ "sameAs": [
+   "https://cafe.naver.com/dbsense",
+   "https://blog.naver.com/dbsense",
+   "https://band.us/band/89270291",
+   "https://dbsense.tistory.com/",
+   "http://pf.kakao.com/_ttxdfK",
+   "https://www.youtube.com/channel/UCj5JSnDxTNQWhyNG7SDAvWw",
+   "https://www.tiktok.com/@dbsense",
+   "https://www.facebook.com/dbsense2010",
+   "https://www.instagram.com/dbsense2010/",
+   "https://twitter.com/dbsense2010",
+   "https://post.naver.com/dbsense"
+ ]
+}
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M21CWZ4E76"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M21CWZ4E76');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-189044349-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-189044349-1');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Ads: 307154556 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-307154556"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-307154556');
+</script>
+
+<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+<script type="text/javascript">
+      kakaoPixel('1068515117631687163').pageView();
+</script>
+
+<!-- Naver Analytics -->
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "17b562862fe7dc0";
+if(window.wcs) {
+wcs_do();
+}
+</script>
+
+</div>
+<!--wrap-->
+
+</body></html>

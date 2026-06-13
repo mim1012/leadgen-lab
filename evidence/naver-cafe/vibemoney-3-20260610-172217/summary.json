@@ -1,0 +1,238 @@
+{
+  "captured_at": "20260610-172217",
+  "page_url": "https://cafe.naver.com/vibemoney/3",
+  "page_title": "스레드로 돈 버는 법 - 바이브 코딩 이용한 DB 땡기기(본인 사이트 공개) : 네이버 카페",
+  "frame_count": 12,
+  "best_frame_url": "https://cafe.naver.com/ca-fe/cafes/31623270/articles/3?oldPath=%2FArticleRead.nhn%3Farticleid%3D3%26clubid%3D31623270",
+  "best_frame_name": "cafe_main",
+  "screenshot": "D:\\Project\\kmong\\.omc\\naver-cafe\\capture\\vibemoney-3-20260610-172217\\screenshot.png",
+  "frames": [
+    {
+      "url": "https://cafe.naver.com/vibemoney/3",
+      "name": "",
+      "text_length": 868,
+      "html_length": 184586,
+      "link_count": 135,
+      "image_count": 64,
+      "control_count": 81,
+      "meta": {
+        "title": "스레드로 돈 버는 법 - 바이브 코딩 이용한 DB 땡기기(본인 사이트 공개) : 네이버 카페",
+        "canonical": "",
+        "h1": [
+          "바이브코딩 : 바이브 머니, 온라인 수익화, 콘텐츠, 마케팅",
+          "내소식 댓글알림 설정"
+        ],
+        "h2": [
+          "내소식",
+          "바이브코딩 : 바이브 머니, 온라인 수익화, 콘텐츠, 마케팅",
+          "NAVER 카페"
+        ],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    },
+    {
+      "url": "about:blank",
+      "name": "padding",
+      "text_length": 0,
+      "html_length": 39,
+      "link_count": 0,
+      "image_count": 0,
+      "control_count": 0,
+      "meta": {
+        "title": "",
+        "canonical": "",
+        "h1": [],
+        "h2": [],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    },
+    {
+      "url": "about:blank",
+      "name": "padding",
+      "text_length": 0,
+      "html_length": 39,
+      "link_count": 0,
+      "image_count": 0,
+      "control_count": 0,
+      "meta": {
+        "title": "",
+        "canonical": "",
+        "h1": [],
+        "h2": [],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    },
+    {
+      "url": "about:blank",
+      "name": "padding",
+      "text_length": 0,
+      "html_length": 39,
+      "link_count": 0,
+      "image_count": 0,
+      "control_count": 0,
+      "meta": {
+        "title": "",
+        "canonical": "",
+        "h1": [],
+        "h2": [],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    },
+    {
+      "url": "about:blank",
+      "name": "padding",
+      "text_length": 0,
+      "html_length": 39,
+      "link_count": 0,
+      "image_count": 0,
+      "control_count": 0,
+      "meta": {
+        "title": "",
+        "canonical": "",
+        "h1": [],
+        "h2": [],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    },
+    {
+      "url": "about:blank",
+      "name": "join-cafe-iframe",
+      "text_length": 0,
+      "html_length": 39,
+      "link_count": 0,
+      "image_count": 0,
+      "control_count": 0,
+      "meta": {
+        "title": "",
+        "canonical": "",
+        "h1": [],
+        "h2": [],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    },
+    {
+      "url": "https://cafe.naver.com/ca-fe/cafes/31623270/articles/3?oldPath=%2FArticleRead.nhn%3Farticleid%3D3%26clubid%3D31623270",
+      "name": "cafe_main",
+      "text_length": 9566,
+      "html_length": 630917,
+      "link_count": 384,
+      "image_count": 93,
+      "control_count": 169,
+      "meta": {
+        "title": "네이버 카페",
+        "canonical": "",
+        "h1": [],
+        "h2": [
+          "전체글"
+        ],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    },
+    {
+      "url": "https://cafe.naver.com/ca-fe/cafes/31623270/articles/3?oldPath=%2FArticleRead.nhn%3Farticleid%3D3%26clubid%3D31623270",
+      "name": "cafe_sdk_tgtLREC",
+      "text_length": 480,
+      "html_length": 31337,
+      "link_count": 30,
+      "image_count": 6,
+      "control_count": 2,
+      "meta": {
+        "title": "광고",
+        "canonical": "",
+        "h1": [],
+        "h2": [
+          "파워링크"
+        ],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    },
+    {
+      "url": "about:blank",
+      "name": "cafe_check",
+      "text_length": 0,
+      "html_length": 39,
+      "link_count": 0,
+      "image_count": 0,
+      "control_count": 0,
+      "meta": {
+        "title": "",
+        "canonical": "",
+        "h1": [],
+        "h2": [],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    },
+    {
+      "url": "about:blank",
+      "name": "login_layer_bg_iframe",
+      "text_length": 0,
+      "html_length": 39,
+      "link_count": 0,
+      "image_count": 0,
+      "control_count": 0,
+      "meta": {
+        "title": "",
+        "canonical": "",
+        "h1": [],
+        "h2": [],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    },
+    {
+      "url": "about:blank",
+      "name": "checkFrame",
+      "text_length": 0,
+      "html_length": 72,
+      "link_count": 0,
+      "image_count": 0,
+      "control_count": 0,
+      "meta": {
+        "title": "",
+        "canonical": "",
+        "h1": [],
+        "h2": [],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    },
+    {
+      "url": "about:blank",
+      "name": "",
+      "text_length": 0,
+      "html_length": 39,
+      "link_count": 0,
+      "image_count": 0,
+      "control_count": 0,
+      "meta": {
+        "title": "",
+        "canonical": "",
+        "h1": [],
+        "h2": [],
+        "articleText": "",
+        "ogTitle": "",
+        "ogDescription": ""
+      }
+    }
+  ]
+}

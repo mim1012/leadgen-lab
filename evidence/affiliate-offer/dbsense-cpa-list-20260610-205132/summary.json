@@ -1,0 +1,35 @@
+{
+  "captured_at": "20260610-205132",
+  "source": "affiliate-offer",
+  "slug": "dbsense-cpa-list",
+  "page_url": "https://dbsense.kr/pc/join/join.html",
+  "page_title": "디비센스 회원가입",
+  "frame_count": 1,
+  "best_frame_url": "https://dbsense.kr/pc/join/join.html",
+  "best_frame_name": "",
+  "screenshot": "D:\\Project\\leadgen-lab\\evidence\\affiliate-offer\\dbsense-cpa-list-20260610-205132\\screenshot.png",
+  "frames": [
+    {
+      "url": "https://dbsense.kr/pc/join/join.html",
+      "name": "",
+      "text_length": 650,
+      "html_length": 23583,
+      "link_count": 37,
+      "image_count": 12,
+      "control_count": 15,
+      "meta": {
+        "title": "디비센스 회원가입",
+        "canonical": "",
+        "h1": [
+          ""
+        ],
+        "h2": [
+          "회원가입"
+        ],
+        "articleText": "",
+        "ogTitle": "디비센스 회원가입",
+        "ogDescription": "CPA 제휴마케팅 플랫폼~ 디비센스!"
+      }
+    }
+  ]
+}
