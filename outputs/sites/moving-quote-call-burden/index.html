@@ -882,16 +882,62 @@
     const resultEl    = document.querySelector("#result");
     const stepCount   = document.querySelector("#stepCount");
     const outboundUrl = "https://appu.kr/?i=12518178&utm_source=landing&utm_medium=outbound&utm_campaign=moving_quote_call_burden";
+    const TRACKING_ENDPOINT = "/api/track";
+    const SESSION_KEY = "moving_quote_call_burden_session";
+
+    function sessionId() {
+      const existing = sessionStorage.getItem(SESSION_KEY);
+      if (existing) return existing;
+      const generated = crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      sessionStorage.setItem(SESSION_KEY, generated);
+      return generated;
+    }
+
+    function currentUtm() {
+      const params = new URLSearchParams(location.search);
+      return {
+        utm_source: params.get("utm_source") || "direct",
+        utm_medium: params.get("utm_medium") || "none",
+        utm_campaign: params.get("utm_campaign") || "moving_quote_call_burden",
+        utm_content: params.get("utm_content") || "none",
+        utm_term: params.get("utm_term") || "none"
+      };
+    }
+
+    function ctaPosition(eventName) {
+      if (eventName === "diagnosis_ready_cta_clicked") return "diagnosis_ready";
+      if (eventName === "diagnosis_prepare_cta_clicked") return "diagnosis_prepare";
+      if (eventName === "outbound_cta_clicked") return "final";
+      return "none";
+    }
+
+    function sendServerEvent(event) {
+      const body = JSON.stringify(event);
+      if (navigator.sendBeacon) {
+        const blob = new Blob([body], { type: "application/json" });
+        if (navigator.sendBeacon(TRACKING_ENDPOINT, blob)) return;
+      }
+      fetch(TRACKING_ENDPOINT, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body,
+        keepalive: true
+      }).catch(() => {});
+    }
 
     function track(eventName, payload = {}) {
       const event = {
         event: eventName,
         campaign: "moving_quote_call_burden",
-        payload,
+        session_id: sessionId(),
+        path: location.pathname,
+        utm: currentUtm(),
+        payload: { ...payload, cta_position: ctaPosition(eventName) },
         ts: new Date().toISOString()
       };
       state.events.push(event);
       localStorage.setItem("moving_quote_call_burden_events", JSON.stringify(state.events));
+      sendServerEvent(event);
       window.dispatchEvent(new CustomEvent("leadgen:event", { detail: event }));
     }
 
