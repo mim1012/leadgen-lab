@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import json
+import os
+import urllib.error
+import urllib.request
 from http.server import BaseHTTPRequestHandler
 from typing import Final
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, urlencode, urlparse
 
 MAX_BODY_BYTES: Final[int] = 8192
 MAX_TEXT_LENGTH: Final[int] = 180
@@ -38,6 +41,10 @@ ALLOWED_PAYLOAD_KEYS: Final[frozenset[str]] = frozenset(
 ALLOWED_UTM_KEYS: Final[frozenset[str]] = frozenset(
     {"utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"}
 )
+ALERT_EVENTS: Final[frozenset[str]] = frozenset(
+    {"outbound_cta_clicked", "diagnosis_ready_cta_clicked"}
+)
+TELEGRAM_TIMEOUT_SECONDS: Final[int] = 5
 
 
 def _short_text(value: str) -> str:
@@ -65,6 +72,56 @@ def _safe_map(value: object, allowed_keys: frozenset[str]) -> dict[str, str]:
     return result
 
 
+def _telegram_message(event: dict[str, str | dict[str, str]]) -> str:
+    utm = event.get("utm")
+    payload = event.get("payload")
+    source = utm.get("utm_source", "unknown") if isinstance(utm, dict) else "unknown"
+    content = utm.get("utm_content", "unknown") if isinstance(utm, dict) else "unknown"
+    cta = payload.get("cta_position", "unknown") if isinstance(payload, dict) else "unknown"
+    href = payload.get("href", "") if isinstance(payload, dict) else ""
+    return "\n".join(
+        [
+            "🚕 Leadgen Lab alert",
+            f"event: {event.get('event', '')}",
+            f"source: {source}",
+            f"content: {content}",
+            f"cta: {cta}",
+            f"session: {event.get('session_id', '')}",
+            f"href: {href[:120]}",
+        ]
+    )
+
+
+def _send_telegram_alert(event: dict[str, str | dict[str, str]]) -> None:
+    if event.get("event") not in ALERT_EVENTS:
+        return
+
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
+    if not token or not chat_id:
+        return
+
+    encoded = urlencode({"chat_id": chat_id, "text": _telegram_message(event)})
+    request = urllib.request.Request(
+        f"https://api.telegram.org/bot{token}/sendMessage",
+        data=encoded.encode("utf-8"),
+        headers={"content-type": "application/x-www-form-urlencoded"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=TELEGRAM_TIMEOUT_SECONDS) as response:
+            response.read(256)
+    except (TimeoutError, urllib.error.URLError) as error:
+        print(
+            json.dumps(
+                {"type": "telegram_alert_error", "error": _short_text(str(error))},
+                ensure_ascii=False,
+                separators=(",", ":"),
+            ),
+            flush=True,
+        )
+
+
 def _first_query_values(path: str) -> dict[str, str]:
     parsed = urlparse(path)
     values = parse_qs(parsed.query, keep_blank_values=False)
@@ -90,6 +147,7 @@ class handler(BaseHTTPRequestHandler):
             return
 
         print(json.dumps(event, ensure_ascii=False, separators=(",", ":")), flush=True)
+        _send_telegram_alert(event)
         self._send_json(202, {"ok": True})
 
     def _read_event(self) -> dict[str, str | dict[str, str]]:
