@@ -60,3 +60,9 @@ Headlines should use short, forceful lines rather than long explanatory sentence
 - Do not make the page look like a coupon ad or urgency funnel.
 - Do not bury the diagnosis below long marketing copy.
 - Do not claim "no calls", "lowest price", or guaranteed savings.
+## 2026-06-16 acquisition refresh
+
+- Lead angle: checklist-first moving estimate prep for Threads/Naver Blog traffic.
+- Hero promise: reduce additional-fee anxiety before sending users to the Adlix/Appu offer.
+- Conversion rule: keep local page as a no-personal-data pre-lander; only qualified users click through to `https://appu.kr/?i=12518178`.
+- Copy pattern: cost trap → 30-second self-check → saved checklist → sponsored comparison CTA.
