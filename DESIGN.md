@@ -20,8 +20,8 @@
 - Trust signals:
   - Make `[광고]` and 제휴 수익 disclosure visible without making the page feel like a bait ad.
   - Explain that the local page does not collect personal data.
-  - Explain that the actual DB is created only on the Daisa/Adlix form.
-  - Show the exact handoff expectation before the CTA: name, phone, moving date, departure/destination fields.
+  - Explain application readiness in user language, not affiliate-platform language.
+  - Keep internal routing terms like Adlix/Appu/DB out of the main body copy; reserve legal/affiliate disclosure for disclosure areas.
 - Avoid:
   - Coupon/urgency aesthetics.
   - Fake neutrality.
@@ -66,7 +66,7 @@
   - No broad navigation. Use a single-page funnel with anchored sections.
 - Core routes/screens:
   - Hero/decision block.
-  - “What happens after click” handoff explainer.
+  - “신청 전에 준비할 것” readiness explainer.
   - Additional-fee checklist.
   - Optional readiness self-check.
   - Trust/disclosure block.
@@ -74,7 +74,7 @@
 - Content hierarchy:
   1. Direct reason to stay: “견적 신청 전 당일 추가요금 6가지만 확인하세요.”
   2. Immediate qualified CTA: “55일 이내 이사라면 다이사 가격비교 신청하기.”
-  3. Handoff transparency: “우리 설문은 DB로 안 넘어가고, 실제 입력은 다이사 폼에서 합니다.”
+  3. Readiness transparency: “연락처, 이사 날짜, 주소, 큰 짐, 상담 가능 시간을 미리 준비합니다.”
   4. Checklist value: 사다리차, 주말/손 없는 날, 분해설치, 대형가전, 층수/엘리베이터, 상담 가능 시간.
   5. Optional self-check, not a gate.
   6. Final sponsored CTA and disclosure.
@@ -85,8 +85,8 @@
   - If the user is already qualified, do not force a local quiz before the partner CTA.
 - Principle 2: Utility-first for skeptical users.
   - The pre-lander earns its place by answering “what should I check before giving my phone number?”
-- Principle 3: Transparent handoff.
-  - Clearly separate local guidance from Daisa/Adlix DB submission.
+- Principle 3: Natural transparency.
+  - Explain what users need to prepare without making the page sound like an affiliate routing notice.
 - Principle 4: Reduce form shock.
   - Before the CTA, show what fields the partner page asks for and why.
 - Tradeoffs:
@@ -133,7 +133,7 @@
   - Diagnostic chips as optional self-check.
   - Tracking hooks: `outbound_cta_clicked`, `diagnosis_completed`, `checklist_toggled`.
 - New/changed components:
-  - Hero handoff card: “이동 후 입력하는 항목”.
+  - Hero readiness card: “신청 전에 준비할 것”.
   - Extra-fee checklist module with six concrete questions.
   - “Apply now / save checklist” split CTA.
   - Optional readiness self-check moved below checklist or visually secondary.
@@ -190,7 +190,7 @@
 - Tone:
   - Direct, plain Korean, helper-like, not hype.
 - Terminology:
-  - Use “다이사 가격비교”, “제휴 견적”, “상담신청 DB”, “추가요금”, “55일 이내 이사일”.
+  - Use “다이사 가격비교”, “견적 상담”, “추가요금”, “55일 이내 이사일”. Avoid “DB”, “Adlix/Appu 경유” in main body copy.
 - Microcopy rules:
   - Say exactly what happens after click.
   - Use definite disclosure wording: “제휴 링크를 통한 신청 또는 클릭에 따라 운영자는 제휴 수익을 지급받습니다.”
@@ -210,7 +210,7 @@
   - Vercel static page with `/api/track` serverless function.
   - CTA must preserve `https://appu.kr/?i=12518178` and UTM variants.
 - Test/screenshot expectations:
-  - Verify live or local HTTP page contains the hero CTA, Appu URL, disclosure, and DB handoff explanation.
+  - Verify live or local HTTP page contains the hero CTA, Appu URL, disclosure, and readiness explanation.
   - Browser-click QA should confirm `/api/track` returns 202 and Appu redirects to Adlix Daisa.
 
 ## Recommended redesign for the current landing
@@ -221,9 +221,9 @@
 2. Keep CTA above the diagnostic:
    - Primary: “55일 이내 이사라면 다이사 가격비교 신청하기”
    - Secondary: “추가요금 체크리스트 먼저 보기”
-3. Add a compact handoff card before or beside the first CTA:
-   - “이동 후 입력: 이름, 연락처, 이사 날짜, 출발지, 도착지, 개인정보 동의”
-   - “우리 페이지 입력값은 다이사 DB로 전송되지 않습니다.”
+3. Add a compact readiness card before or beside the first CTA:
+   - “준비할 것: 연락처, 55일 이내 이사 날짜, 출발지, 도착지, 큰 짐 목록, 상담 가능한 시간”
+   - Avoid Adlix/Appu/DB routing language in the main body; keep formal affiliate disclosure in the disclosure area.
 4. Make checklist the hero value, not the quiz:
    - 사다리차 필요 여부
    - 주말/손 없는 날 비용
@@ -233,9 +233,9 @@
    - 상담 가능한 시간
 5. Move self-check lower and label it optional:
    - Use it to segment intent and improve tracking, not as a required user task.
-6. Add “누르면 어디로 가나” trust section:
-   - Appu promotion URL → Adlix Daisa form.
-   - Actual DB and 포인트 판단 are on Adlix/Daisa side.
+6. Add a natural “신청 전에 준비할 것” trust section:
+   - Focus on what the user should prepare for consultation.
+   - Keep platform attribution and payout mechanics out of the user-facing persuasion copy.
 7. Track content angles separately:
    - `utm_content=hero_cta`
    - `utm_content=fee_checklist_cta`
