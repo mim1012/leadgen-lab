@@ -247,3 +247,9 @@
 - [ ] Can Adlix provide approved copy or creative assets for Daisa? Owner: user/Adlix dashboard. Impact: safer compliance and higher trust.
 - [ ] Is a real downloadable/checkable moving checklist worth adding? Owner: implementation. Impact: gives a stronger reason to visit before clicking.
 - [ ] Should we add a small FAQ schema block for SEO? Owner: implementation. Impact: may help search snippets, but copy must remain people-first.
+
+## 2026-06-17 final CTA copy note
+
+- Final CTA copy should feel like a calm readiness checkpoint, not a sales close.
+- Prefer “날짜와 주소 확인”, “견적 상담 준비” language over “가격비교로 이동하세요”.
+- Keep disclosure short, definite, and visually quiet near the final CTA.
