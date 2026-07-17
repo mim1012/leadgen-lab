@@ -1154,22 +1154,48 @@
         const AFFILIATE_ID = '21452460';
         const ADLIX_CAMPAIGN_ID = '6936747';
         const AFFILIATE_URL = 'https://appu.kr/?i=12518178';
+        const SESSION_KEY = 'moving_quote_call_burden_session';
 
-        function affiliatePayload(source) {
+        function sessionId() {
+            const existing = sessionStorage.getItem(SESSION_KEY);
+            if (existing) return existing;
+            const generated = crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + '-' + Math.random().toString(36).slice(2);
+            sessionStorage.setItem(SESSION_KEY, generated);
+            return generated;
+        }
+
+        function currentUtm() {
+            const params = new URLSearchParams(location.search);
+            return {
+                utm_source: params.get('utm_source') || 'direct',
+                utm_medium: params.get('utm_medium') || 'none',
+                utm_campaign: params.get('utm_campaign') || 'moving_quote_call_burden',
+                utm_content: params.get('utm_content') || 'none',
+                utm_term: params.get('utm_term') || 'none'
+            };
+        }
+
+        function affiliateClickPayload(source) {
+            return {
+                href: AFFILIATE_URL,
+                cta_position: source,
+                affiliate_platform: AFFILIATE_PLATFORM,
+                affiliate_id: AFFILIATE_ID,
+                adlix_campaign_id: ADLIX_CAMPAIGN_ID,
+                outbound_host: 'appu.kr',
+                trigger: 'goToAppu'
+            };
+        }
+
+        function affiliateClickEvent(source) {
             return {
                 event: 'outbound_cta_clicked',
                 campaign: 'moving_quote_call_burden',
-                source: source,
-                timestamp: new Date().toISOString(),
-                payload: {
-                    href: AFFILIATE_URL,
-                    cta_position: source,
-                    affiliate_platform: AFFILIATE_PLATFORM,
-                    affiliate_id: AFFILIATE_ID,
-                    adlix_campaign_id: ADLIX_CAMPAIGN_ID,
-                    outbound_host: 'appu.kr',
-                    trigger: 'goToAppu'
-                }
+                session_id: sessionId(),
+                path: location.pathname,
+                utm: currentUtm(),
+                payload: affiliateClickPayload(source),
+                ts: new Date().toISOString()
             };
         }
 
@@ -1178,7 +1204,8 @@
                 fetch('/api/track', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(affiliatePayload(source))
+                    body: JSON.stringify(affiliateClickEvent(source)),
+                    keepalive: true
                 }).catch(e => {});
             } catch(e) {}
             
