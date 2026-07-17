@@ -8,6 +8,7 @@ from http.server import BaseHTTPRequestHandler
 from typing import Final
 from urllib.parse import parse_qs, urlencode, urlparse
 
+# redeploy trigger: selector_choice tracking
 MAX_BODY_BYTES: Final[int] = 8192
 MAX_TEXT_LENGTH: Final[int] = 180
 ALLOWED_EVENTS: Final[frozenset[str]] = frozenset(
