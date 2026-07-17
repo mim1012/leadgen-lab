@@ -36,6 +36,11 @@ ALLOWED_PAYLOAD_KEYS: Final[frozenset[str]] = frozenset(
         "item",
         "checked",
         "cta_position",
+        "affiliate_platform",
+        "affiliate_id",
+        "adlix_campaign_id",
+        "outbound_host",
+        "trigger",
     }
 )
 ALLOWED_UTM_KEYS: Final[frozenset[str]] = frozenset(
