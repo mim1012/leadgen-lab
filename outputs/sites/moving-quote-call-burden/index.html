@@ -819,7 +819,10 @@
                href="https://appu.kr/?i=12518178&utm_source=landing&utm_medium=outbound&utm_campaign=moving_quote_call_burden&utm_content=hero_cta"
                rel="nofollow sponsored noopener"
                target="_blank"
-               data-event="outbound_cta_clicked">55일 이내 이사라면 다이사 가격비교 신청하기 →</a>
+               data-event="outbound_cta_clicked"
+               data-affiliate-platform="adlix"
+               data-affiliate-id="12518178"
+               data-cta-position="hero">55일 이내 이사라면 다이사 가격비교 신청하기 →</a>
             <a class="button hero-secondary" href="#checklist">추가요금 체크리스트 보기</a>
           </div>
           <p class="hero-note">바로 신청해도 됩니다. 다만 날짜·주소·큰 짐 정보를 미리 정리해두면 상담이 훨씬 수월합니다.</p>
@@ -929,7 +932,10 @@
              href="https://appu.kr/?i=12518178&utm_source=landing&utm_medium=outbound&utm_campaign=moving_quote_call_burden&utm_content=fee_checklist_cta"
              rel="nofollow sponsored noopener"
              target="_blank"
-             data-event="outbound_cta_clicked">체크 끝났으면 다이사 가격비교 신청하기 →</a>
+             data-event="outbound_cta_clicked"
+               data-affiliate-platform="adlix"
+               data-affiliate-id="12518178"
+             data-cta-position="fee_checklist">체크 끝났으면 다이사 가격비교 신청하기 →</a>
           <a class="button" href="#diagnostic">아직 불안하면 자가점검 하기</a>
         </div>
       </div>
@@ -1038,7 +1044,10 @@
                href="https://appu.kr/?i=12518178&utm_source=landing&utm_medium=outbound&utm_campaign=moving_quote_call_burden&utm_content=ready_after_check_cta"
                rel="nofollow sponsored noopener"
                target="_blank"
-               data-event="outbound_cta_clicked">견적 상담 준비하고 신청하기 →</a>
+               data-event="outbound_cta_clicked"
+               data-affiliate-platform="adlix"
+               data-affiliate-id="12518178"
+               data-cta-position="final">견적 상담 준비하고 신청하기 →</a>
             <a class="button ghost" href="#checklist">체크리스트 다시 보기</a>
           </div>
         </div>
@@ -1066,6 +1075,8 @@
     const outboundUrl = "https://appu.kr/?i=12518178&utm_source=landing&utm_medium=outbound&utm_campaign=moving_quote_call_burden";
     const TRACKING_ENDPOINT = "/api/track";
     const SESSION_KEY = "moving_quote_call_burden_session";
+    const AFFILIATE_PLATFORM = "adlix";
+    const AFFILIATE_ID = "12518178";
 
     function sessionId() {
       const existing = sessionStorage.getItem(SESSION_KEY);
@@ -1086,11 +1097,24 @@
       };
     }
 
-    function ctaPosition(eventName) {
+    function ctaPosition(eventName, element = null) {
+      if (element?.dataset?.ctaPosition) return element.dataset.ctaPosition;
       if (eventName === "diagnosis_ready_cta_clicked") return "diagnosis_ready";
       if (eventName === "diagnosis_prepare_cta_clicked") return "diagnosis_prepare";
       if (eventName === "outbound_cta_clicked") return "final";
       return "none";
+    }
+
+    function affiliatePayload(element = null) {
+      const href = element?.getAttribute?.("href") || "";
+      const url = href ? new URL(href, location.href) : null;
+      return {
+        href,
+        affiliate_platform: element?.dataset?.affiliatePlatform || AFFILIATE_PLATFORM,
+        affiliate_id: element?.dataset?.affiliateId || AFFILIATE_ID,
+        adlix_campaign_id: url?.searchParams?.get("i") || AFFILIATE_ID,
+        outbound_host: url?.hostname || ""
+      };
     }
 
     function sendServerEvent(event) {
@@ -1107,14 +1131,14 @@
       }).catch(() => {});
     }
 
-    function track(eventName, payload = {}) {
+    function track(eventName, payload = {}, element = null) {
       const event = {
         event: eventName,
         campaign: "moving_quote_call_burden",
         session_id: sessionId(),
         path: location.pathname,
         utm: currentUtm(),
-        payload: { ...payload, cta_position: ctaPosition(eventName) },
+        payload: { ...payload, cta_position: ctaPosition(eventName, element) },
         ts: new Date().toISOString()
       };
       state.events.push(event);
@@ -1150,7 +1174,10 @@
           <a class="button accent full"
              href="${outboundUrl}&utm_content=diagnosis_ready_cta"
              rel="nofollow sponsored noopener" target="_blank"
-             data-event="diagnosis_ready_cta_clicked">불안 정리 완료 — 비교 견적 확인하기 →</a>
+             data-event="diagnosis_ready_cta_clicked"
+             data-affiliate-platform="adlix"
+             data-affiliate-id="12518178"
+             data-cta-position="diagnosis_ready">불안 정리 완료 — 비교 견적 확인하기 →</a>
         `;
         track("diagnosis_completed", { result: "ready", date: state.date, contact: state.contact, address: state.address, inventory: state.inventory });
       } else if (notReady) {
@@ -1184,10 +1211,17 @@
       });
     });
 
+    document.addEventListener("pointerdown", (event) => {
+      const node = event.target.closest("a[data-event]");
+      if (!node || node.dataset.pretracked === "true") return;
+      node.dataset.pretracked = "true";
+      track(node.dataset.event, { ...affiliatePayload(node), trigger: "pointerdown" }, node);
+    });
+
     document.addEventListener("click", (event) => {
       const node = event.target.closest("[data-event]");
       if (!node) return;
-      track(node.dataset.event, { href: node.getAttribute("href") || "" });
+      track(node.dataset.event, { ...affiliatePayload(node), trigger: "click" }, node);
     });
 
     document.querySelectorAll("[data-check]").forEach((checkbox) => {
