@@ -1,1237 +1,1189 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>이사 견적 추가요금 체크리스트 | 다이사 비교견적 전 30초 점검</title>
-  <meta name="description" content="이사 견적 신청 전 사다리차·주말·분해설치 추가요금과 상담 가능 시간을 30초로 점검하고, 준비된 경우에만 다이사 비교 견적으로 이동합니다.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2317624f'/%3E%3Cpath d='M18 18h28v28H18z' fill='%23fff'/%3E%3Cpath d='M23 28h18M23 36h12' stroke='%23d8662f' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
-  <style>
-    :root {
-      --primary:      #17624f;
-      --primary-mid:  #208364;
-      --primary-dark: #0d4035;
-      --primary-soft: #e7f2ed;
-      --accent:       #d8662f;
-      --accent-dark:  #9f431b;
-      --accent-soft:  #fff0e5;
-      --success:      #1f9d72;
-      --success-soft: #ecf8f2;
-      --warn:         #d68a1f;
-      --warn-soft:    #fff6dd;
-      --bg:           #f7f5ef;
-      --bg-alt:       #fcfbf7;
-      --ink:          #18201c;
-      --soft:         #53615a;
-      --muted:        #768078;
-      --line:         #ddd8cd;
-      --line-strong:  #cfc7b8;
-      --radius:       10px;
-      --radius-lg:    16px;
-      --max:          1120px;
-      --shadow-sm:    0 1px 3px rgba(24,32,28,.08), 0 1px 2px rgba(24,32,28,.06);
-      --shadow:       0 4px 20px rgba(24,32,28,.08), 0 2px 8px rgba(24,32,28,.06);
-      --shadow-lg:    0 10px 40px rgba(24,32,28,.14), 0 4px 16px rgba(24,32,28,.08);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: inherit; }
-
-    .wrap {
-      width: min(var(--max), calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    /* ── NAV ── */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      background: rgba(255,255,255,.92);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(14px);
-    }
-
-    .nav {
-      display: flex;
-      min-height: 62px;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      font-size: 16px;
-      color: var(--primary-dark);
-    }
-
-    .brand-mark {
-      display: grid;
-      width: 34px;
-      height: 34px;
-      place-items: center;
-      border-radius: 8px;
-      background: linear-gradient(135deg, var(--primary-mid), var(--primary-dark));
-      color: #fff;
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .nav-badge {
-      padding: 4px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: var(--soft);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    /* ── HERO ── */
-    .hero {
-      background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 58%, var(--accent-dark) 100%);
-      padding: 64px 0 56px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr minmax(0, 480px);
-      gap: 40px;
-      align-items: center;
-      position: relative;
-    }
-
-    .hero-copy { color: #fff; }
-
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 12px;
-      border: 1px solid rgba(255,255,255,.25);
-      border-radius: 999px;
-      background: rgba(255,255,255,.1);
-      color: #93c5fd;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .02em;
-      margin-bottom: 20px;
-    }
-
-    .eyebrow-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #34d399;
-      display: inline-block;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(36px, 4.8vw, 62px);
-      font-weight: 950;
-      line-height: 1.05;
-      letter-spacing: -.01em;
-      word-break: keep-all;
-      color: #fff;
-    }
-
-    .hero-accent { color: #ffd7bd; }
-
-    .hero-sub {
-      margin: 18px 0 0;
-      font-size: clamp(16px, 1.5vw, 19px);
-      color: rgba(255,255,255,.75);
-      font-weight: 650;
-      line-height: 1.5;
-      word-break: keep-all;
-      max-width: 520px;
-    }
-
-    .hero-sub strong { color: #fff; }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 26px;
-      align-items: center;
-    }
-
-    .hero-note {
-      margin: 12px 0 0;
-      color: rgba(255,255,255,.68);
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 1.5;
-    }
-
-    .hero-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .stat-chip {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 14px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.18);
-      color: #fff;
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .chip-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #34d399;
-      flex-shrink: 0;
-    }
-
-
-    .handoff-card {
-      background: rgba(255,255,255,.96);
-      border: 1px solid rgba(255,255,255,.72);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-lg);
-      padding: 24px;
-      color: var(--ink);
-    }
-
-    .handoff-kicker {
-      margin: 0 0 8px;
-      color: var(--accent-dark);
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: .02em;
-    }
-
-    .handoff-card h2 {
-      margin: 0;
-      font-size: clamp(22px, 2.4vw, 30px);
-      line-height: 1.2;
-      font-weight: 950;
-      word-break: keep-all;
-    }
-
-    .handoff-card p {
-      margin: 10px 0 0;
-      color: var(--soft);
-      font-size: 15px;
-      font-weight: 650;
-      line-height: 1.55;
-    }
-
-    .handoff-fields {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-      margin: 18px 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .handoff-fields li {
-      padding: 10px 12px;
-      border-radius: var(--radius);
-      background: var(--primary-soft);
-      color: var(--primary-dark);
-      font-size: 14px;
-      font-weight: 850;
-    }
-
-    .handoff-warning {
-      border-top: 1px solid var(--line);
-      padding-top: 14px;
-      font-size: 13px;
-      color: var(--soft);
-      font-weight: 750;
-      line-height: 1.5;
-    }
-
-    /* ── DIAGNOSTIC CARD ── */
-    .diagnostic {
-      background: #fff;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-lg);
-      overflow: hidden;
-    }
-
-    .diagnostic-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      padding: 18px 22px;
-      background: var(--bg-alt);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .diagnostic-head h2 {
-      margin: 0;
-      font-size: 18px;
-      font-weight: 900;
-      color: var(--primary-dark);
-    }
-
-    .step-pill {
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--primary-soft);
-      color: var(--primary-mid);
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .questions {
-      display: grid;
-      gap: 16px;
-      padding: 18px 22px;
-    }
-
-    .question h3 {
-      margin: 0 0 8px;
-      font-size: 12px;
-      font-weight: 900;
-      color: var(--soft);
-      text-transform: uppercase;
-      letter-spacing: .06em;
-    }
-
-    .choices {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
-    }
-
-    .chip {
-      min-height: 42px;
-      border: 1.5px solid var(--line);
-      border-radius: var(--radius);
-      padding: 8px 6px;
-      background: var(--bg);
-      color: var(--soft);
-      font: inherit;
-      font-size: 13px;
-      font-weight: 800;
-      cursor: pointer;
-      transition: all 140ms ease;
-      line-height: 1.3;
-    }
-
-    .chip:hover {
-      border-color: var(--primary-mid);
-      color: var(--primary-mid);
-      background: var(--primary-soft);
-    }
-
-    .chip[aria-pressed="true"] {
-      border-color: var(--primary-mid);
-      background: var(--primary-mid);
-      color: #fff;
-    }
-
-    .chip:focus-visible,
-    .button:focus-visible {
-      outline: 3px solid rgba(37,99,235,.3);
-      outline-offset: 2px;
-    }
-
-    .result {
-      margin: 0 18px 18px;
-      border-radius: var(--radius);
-      padding: 16px;
-      background: var(--bg-alt);
-      border: 1.5px solid var(--line);
-    }
-
-    .result strong {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 16px;
-      color: var(--ink);
-    }
-
-    .result p {
-      margin: 0;
-      color: var(--soft);
-      font-size: 14px;
-      font-weight: 650;
-    }
-
-    .result.ready   { background: var(--success-soft); border-color: #6ee7b7; }
-    .result.prepare { background: var(--warn-soft);    border-color: #fcd34d; }
-
-    /* ── BUTTONS ── */
-    .button {
-      display: inline-flex;
-      min-height: 48px;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      border: none;
-      border-radius: var(--radius);
-      padding: 12px 20px;
-      background: var(--primary-mid);
-      color: #fff;
-      font: inherit;
-      font-size: 15px;
-      font-weight: 900;
-      text-align: center;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 160ms ease;
-      letter-spacing: -.01em;
-    }
-
-    .button:hover { filter: brightness(0.9); transform: translateY(-1px); box-shadow: var(--shadow); }
-    .button:active { transform: translateY(0); filter: brightness(0.85); }
-
-    .button.accent { background: var(--accent); }
-    .button.hero-primary {
-      background: #fff;
-      color: var(--primary-dark);
-      box-shadow: 0 10px 28px rgba(0,0,0,.18);
-    }
-    .button.hero-secondary {
-      background: rgba(255,255,255,.10);
-      border: 1.5px solid rgba(255,255,255,.28);
-      color: #fff;
-    }
-    .button.full { width: 100%; margin-top: 12px; }
-
-    .button.ghost {
-      background: transparent;
-      border: 1.5px solid rgba(255,255,255,.35);
-      color: rgba(255,255,255,.75);
-    }
-    .button.ghost:hover { filter: none; background: rgba(255,255,255,.1); transform: none; box-shadow: none; }
-
-    .button.white { background: #fff; color: var(--primary-dark); }
-    .button.white:hover { filter: none; background: #f1f5f9; }
-
-    /* ── STATS BAND ── */
-    .stats-band {
-      padding: 36px 0;
-      background: var(--bg-alt);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-
-    .stat {
-      padding: 24px 28px;
-      background: #fff;
-      text-align: center;
-    }
-
-    .stat-num {
-      font-size: clamp(28px, 3vw, 40px);
-      font-weight: 950;
-      color: var(--primary-mid);
-      line-height: 1;
-    }
-
-    .stat-label {
-      margin-top: 6px;
-      color: var(--soft);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    /* ── SECTIONS ── */
-    .section { padding: 52px 0; }
-
-    .section-label {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 999px;
-      background: var(--primary-soft);
-      color: var(--primary-mid);
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: .04em;
-      margin-bottom: 14px;
-    }
-
-    .section-head { margin-bottom: 32px; }
-
-    .section-head h2 {
-      margin: 0 0 10px;
-      font-size: clamp(24px, 2.8vw, 36px);
-      font-weight: 950;
-      line-height: 1.18;
-      word-break: keep-all;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--soft);
-      font-weight: 650;
-      max-width: 520px;
-    }
-
-    /* ── STEPS ── */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      position: relative;
-    }
-
-    .steps::before {
-      content: "";
-      position: absolute;
-      top: 22px;
-      left: calc(16.6% + 16px);
-      right: calc(16.6% + 16px);
-      height: 2px;
-      background: linear-gradient(90deg, var(--primary-soft), var(--primary-mid), var(--primary-soft));
-    }
-
-    .step-card {
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: #fff;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-    }
-
-    .step-num {
-      display: grid;
-      width: 44px;
-      height: 44px;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--primary-mid);
-      color: #fff;
-      font-size: 18px;
-      font-weight: 900;
-      margin-bottom: 16px;
-    }
-
-    .step-card h3 { margin: 0 0 8px; font-size: 17px; font-weight: 900; }
-
-    .step-card p {
-      margin: 0;
-      color: var(--soft);
-      font-size: 14px;
-      font-weight: 650;
-      line-height: 1.55;
-    }
-
-    /* ── CHECKLIST ── */
-
-    .fee-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .fee-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .fee-card strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--primary-dark);
-      font-size: 16px;
-      font-weight: 950;
-      line-height: 1.35;
-    }
-
-    .fee-card p {
-      margin: 0;
-      color: var(--soft);
-      font-size: 14px;
-      font-weight: 650;
-      line-height: 1.55;
-    }
-
-    .inline-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      margin-top: 28px;
-    }
-    .checklist-section {
-      background: var(--bg-alt);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .checklist-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .checklist-intro {
-      padding: 28px;
-      border-radius: var(--radius-lg);
-      background: linear-gradient(145deg, var(--primary), var(--primary-dark));
-      color: #fff;
-    }
-
-    .checklist-intro h2 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      font-weight: 900;
-      line-height: 1.25;
-    }
-
-    .checklist-intro p {
-      margin: 0;
-      color: rgba(255,255,255,.76);
-      font-weight: 650;
-      font-size: 14px;
-    }
-
-    .checklist { display: grid; gap: 8px; }
-
-    .check {
-      display: grid;
-      grid-template-columns: 22px 1fr;
-      gap: 10px;
-      align-items: start;
-      padding: 14px 16px;
-      border: 1.5px solid var(--line);
-      border-radius: var(--radius);
-      background: #fff;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: border-color 140ms;
-    }
-
-    .check:has(input:checked) {
-      border-color: var(--primary-mid);
-      background: var(--primary-soft);
-    }
-
-    .check input {
-      width: 18px;
-      height: 18px;
-      margin-top: 2px;
-      accent-color: var(--primary-mid);
-      cursor: pointer;
-    }
-
-    .check input:focus-visible { outline: 3px solid rgba(37,99,235,.3); }
-
-    /* ── RISK ── */
-    .risk-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-
-    .risk {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 18px 20px;
-      border: 1px solid #fde68a;
-      border-radius: var(--radius-lg);
-      background: var(--warn-soft);
-    }
-
-    .risk-icon {
-      font-size: 22px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .risk-body { min-width: 0; }
-
-    .risk h3 {
-      margin: 0 0 4px;
-      font-size: 15px;
-      font-weight: 900;
-      color: #92400e;
-    }
-
-    .risk p {
-      margin: 0;
-      color: #a16207;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 1.45;
-    }
-
-    /* ── FINAL CTA ── */
-    .cta-section {
-      background: linear-gradient(145deg, var(--primary-dark), var(--primary));
-      padding: 56px 0;
-    }
-
-    .cta-inner {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .cta-inner h2 {
-      margin: 0 0 10px;
-      font-size: clamp(22px, 2.6vw, 34px);
-      font-weight: 950;
-      line-height: 1.18;
-      color: #fff;
-      word-break: keep-all;
-    }
-
-    .cta-inner p {
-      margin: 0;
-      color: rgba(255,255,255,.72);
-      font-weight: 650;
-      font-size: 15px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      min-width: 220px;
-    }
-
-    .disclosure {
-      margin-top: 18px;
-      color: rgba(255,255,255,.45);
-      font-size: 12px;
-      font-weight: 650;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--ink);
-      padding: 20px 0;
-    }
-
-    .footer-inner {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 650;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 960px) {
-      .hero-grid          { grid-template-columns: 1fr; gap: 32px; }
-      .steps              { grid-template-columns: 1fr; }
-      .steps::before      { display: none; }
-      .checklist-grid     { grid-template-columns: 1fr; }
-      .risk-grid          { grid-template-columns: 1fr; }
-      .fee-grid           { grid-template-columns: repeat(2, 1fr); }
-      .cta-inner          { grid-template-columns: 1fr; }
-      .cta-buttons        { flex-direction: row; }
-      .stats-row          { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 640px) {
-      .wrap        { width: min(100% - 28px, var(--max)); }
-      .nav         { min-height: 54px; }
-      .nav-badge   { display: none; }
-      .hero        { padding: 40px 0 36px; }
-      .choices     { grid-template-columns: 1fr; }
-      .fee-grid    { grid-template-columns: 1fr; }
-      .handoff-fields { grid-template-columns: 1fr; }
-      .cta-buttons { flex-direction: column; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>이사 견적 신청 전, 추가요금 조건 체크</title>
+    
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+    <style>
+        :root {
+            /* Hero Palette */
+            --hero-bg-dark: #08145E;
+            --hero-bg-main: #1020C9;
+            --hero-bg-light: #1D2BFF;
+            --hero-accent: #EAFB1D; /* 형광 옐로우 */
+            --hero-accent-soft: #F5FF37;
+            
+            /* Body / Card */
+            --bg-outer: #F8F9FA;
+            --bg-card: #FFFFFF;
+            
+            /* CTA Colors */
+            --primary: #1728F7;
+            --primary-hover: #0B1B8F;
+            --primary-active-bg: #EEF2FF;
+            
+            /* UI Colors */
+            --border: #DDE3EC;
+            --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-floating: 0 15px 35px rgba(0, 0, 0, 0.2);
+            --shadow-btn: 0 4px 14px rgba(23, 40, 247, 0.3);
+            
+            /* Text Colors */
+            --text-main: #111827;
+            --text-body: #374151;
+            --text-sub: #6B7280;
+            --text-muted: #9CA3AF;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-outer);
+            color: var(--text-body);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .app {
+            max-width: 430px;
+            margin: 0 auto;
+            background-color: var(--bg-outer);
+            min-height: 100dvh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        /* Screen Manager */
+        .screen {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            min-height: 100dvh;
+            animation: fadeIn 0.3s ease-in-out;
+            position: relative;
+        }
+        .screen.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUpCard {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes floatAnim1 {
+            0% { transform: translateY(0) rotate(-6deg); }
+            50% { transform: translateY(-5px) rotate(-4deg); }
+            100% { transform: translateY(0) rotate(-6deg); }
+        }
+        @keyframes floatAnim2 {
+            0% { transform: translateY(0) rotate(8deg); }
+            50% { transform: translateY(-8px) rotate(10deg); }
+            100% { transform: translateY(0) rotate(8deg); }
+        }
+
+        /* Hero Graphic Area */
+        .hero-graphic {
+            position: relative;
+            width: 100%;
+            height: 48vh;
+            background: radial-gradient(circle at 50% 30%, var(--hero-bg-light) 0%, var(--hero-bg-main) 50%, var(--hero-bg-dark) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 10vh;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        /* Search Motif (Magnifying Ring / Scanner) */
+        .search-motif {
+            position: absolute;
+            top: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: inset 0 0 40px rgba(234, 251, 29, 0.1);
+            z-index: 2;
+        }
+        .search-motif::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            border-top-color: rgba(234, 251, 29, 0.5);
+            transform: rotate(-45deg);
+        }
+
+        /* Floating Cards in Hero */
+        .fc {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--hero-bg-dark);
+            box-shadow: var(--shadow-floating);
+            backdrop-filter: blur(4px);
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .fc::before {
+            content: '✓';
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 900;
+        }
+        .fc-1 { top: 15%; left: 6%; animation: floatAnim1 4s ease-in-out infinite; }
+        .fc-2 { top: 8%; right: 4%; animation: floatAnim2 4.5s ease-in-out infinite; font-size: 12px; opacity: 0.9; }
+        .fc-3 { top: 28%; right: 8%; transform: rotate(5deg); animation: floatAnim1 5s ease-in-out infinite; }
+        .fc-4 { top: 25%; left: -3%; transform: rotate(-12deg); opacity: 0.75; padding: 6px 12px; }
+        .fc-5 { top: 35%; left: 35%; transform: rotate(3deg); opacity: 0.85; padding: 6px 12px; font-size: 12px;}
+
+        /* Hero Text */
+        .hero-text-wrap {
+            position: relative;
+            z-index: 4;
+            text-align: center;
+        }
+        .hero-title {
+            color: #FFFFFF;
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .hero-title span {
+            color: var(--hero-accent);
+        }
+        .hero-sub {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        /* Screen 0: Start Card */
+        .start-card-wrapper {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            padding: 0 20px 24px;
+            animation: slideUpCard 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .start-card {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 32px 24px;
+            box-shadow: var(--shadow-card);
+        }
+        .sc-badge {
+            display: inline-block;
+            background-color: var(--hero-bg-dark);
+            color: #FFF;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .sc-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1.35;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            word-break: keep-all;
+        }
+        .sc-desc {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-bottom: 20px;
+            line-height: 1.5;
+            word-break: keep-all;
+        }
+        .sc-info-box {
+            background: var(--bg-outer);
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-main);
+            text-align: center;
+            margin-bottom: 24px;
+            word-break: keep-all;
+        }
+        .sc-trust {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+        .sc-trust span {
+            background: #F3F4F6;
+            color: var(--text-sub);
+            font-size: 12px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        /* Buttons */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 56px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-primary { 
+            background-color: var(--primary); 
+            color: #FFFFFF; 
+            box-shadow: var(--shadow-btn);
+        }
+        .btn-primary:active { 
+            background-color: var(--primary-hover);
+            transform: scale(0.98); 
+        }
+        .btn-secondary { 
+            background-color: #FFFFFF; 
+            color: #1020C9; 
+            border: 1px solid var(--border); 
+            margin-top: 10px; 
+        }
+        .btn-secondary:active {
+            background-color: #F8FAFC;
+        }
+        .privacy-text {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 16px;
+            word-break: keep-all;
+            line-height: 1.4;
+        }
+
+        /* Question Screens - Blue Header Integration */
+        .blue-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 35vh; 
+            background: linear-gradient(135deg, var(--hero-bg-main) 0%, var(--hero-bg-dark) 100%);
+            z-index: 1;
+            padding: 24px 20px;
+        }
+        /* Decorative motif in question header */
+        .header-motif {
+            position: absolute;
+            right: -20px;
+            top: 20px;
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgba(255,255,255,0.05);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .progress-area {
+            position: relative;
+            z-index: 2;
+        }
+        .progress-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .progress-text {
+            font-size: 15px;
+            font-weight: 800;
+            color: #FFF;
+        }
+        .progress-subtext {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            font-weight: 600;
+        }
+        .progress-bar-bg {
+            width: 100%;
+            height: 6px;
+            background-color: rgba(255,255,255,0.25);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background-color: var(--hero-accent);
+            border-radius: 999px;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .q-content-wrapper {
+            position: relative;
+            z-index: 10;
+            padding: 0 20px 24px;
+            margin-top: 10vh; /* Pushes card down so it overlaps the blue header */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .q-card {
+            background-color: var(--bg-card);
+            border-radius: 22px;
+            padding: 22px;
+            box-shadow: 0 12px 30px rgba(8,20,94,0.14);
+            margin-bottom: auto; /* Pushes bottom nav down */
+        }
+        .q-status {
+            font-size: 13px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: inline-block;
+            background: var(--primary-active-bg);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        .q-title {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            word-break: keep-all;
+            line-height: 1.35;
+            letter-spacing: -0.5px;
+        }
+        .q-desc {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-bottom: 28px;
+            word-break: keep-all;
+            line-height: 1.4;
+        }
+        .q-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .q-btn {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            border-radius: 14px;
+            height: 52px;
+            font-size: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .q-btn.active {
+            background-color: var(--primary-active-bg);
+            border-color: var(--primary);
+            color: #1020C9;
+            font-weight: 700;
+        }
+        .q-btn.active::after {
+            content: "✓";
+            position: absolute;
+            right: 18px;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        @keyframes slideDownFeedback {
+            from { opacity: 0; transform: translateY(-10px); height: 0; padding: 0 16px; }
+            to { opacity: 1; transform: translateY(0); height: auto; padding: 16px; }
+        }
+
+        .feedback-box {
+            background-color: #EEF2FF;
+            border-radius: 14px;
+            margin-top: 16px;
+            border: 1px solid #BFDBFE;
+            display: none;
+            overflow: hidden;
+        }
+        .feedback-box.show {
+            display: block;
+            animation: slideDownFeedback 0.3s ease-out forwards;
+        }
+        .feedback-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .f-icon {
+            font-size: 16px;
+            margin-top: 2px;
+        }
+        .feedback-content p {
+            font-size: 14px;
+            line-height: 1.4;
+            color: #1E3A8A;
+            word-break: keep-all;
+        }
+        .feedback-content p strong {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 6px;
+            color: var(--hero-bg-main);
+        }
+
+        /* Bottom Nav */
+        .bottom-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 24px;
+        }
+        .btn-prev {
+            background: none;
+            border: none;
+            color: var(--text-sub);
+            font-size: 15px;
+            font-weight: 600;
+            padding: 10px 10px 10px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .btn-prev::before {
+            content: "‹";
+            font-size: 20px;
+            margin-right: 4px;
+            margin-top: -2px;
+        }
+        .btn-next {
+            padding: 0 24px;
+            height: 48px;
+            border-radius: 24px;
+            font-weight: 700;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-disabled {
+            background-color: var(--border);
+            color: var(--text-muted);
+            cursor: not-allowed;
+        }
+
+        /* Result Screen */
+        .result-header-content {
+            position: relative;
+            z-index: 2;
+            padding-top: 10px;
+        }
+        .r-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background-color: rgba(255,255,255,0.2);
+            color: var(--hero-accent);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .r-title {
+            color: #FFF;
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1.35;
+            word-break: keep-all;
+            margin-bottom: 6px;
+        }
+        .r-sub {
+            color: rgba(255,255,255,0.8);
+            font-size: 15px;
+        }
+        
+        .result-card {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            padding: 28px 24px;
+            box-shadow: var(--shadow-card);
+            margin-bottom: 20px;
+            margin-top: 5vh;
+            position: relative;
+            z-index: 10;
+        }
+        .result-card-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .check-item {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-body);
+            margin-bottom: 14px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--bg-outer);
+        }
+        .check-item:last-child { 
+            margin-bottom: 0; 
+            padding-bottom: 0; 
+            border-bottom: none; 
+        }
+        .check-item::before {
+            content: "✓";
+            color: var(--primary);
+            font-size: 16px;
+            font-weight: 900;
+            margin-right: 12px;
+        }
+        .result-desc {
+            font-size: 13px;
+            color: var(--text-sub);
+            text-align: center;
+            margin-top: 16px;
+            background: #F3F4F6;
+            padding: 12px;
+            border-radius: 8px;
+            word-break: keep-all;
+        }
+        
+        .btn-result-main {
+            height: 64px;
+            font-size: 18px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 8px 20px rgba(23, 40, 247, 0.4);
+        }
+
+        /* Accordion */
+        .accordion-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 24px;
+        }
+        details {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        summary {
+            list-style: none;
+            padding: 16px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '▼';
+            font-size: 10px;
+            color: var(--text-muted);
+            transition: transform 0.2s;
+        }
+        details[open] summary::after { transform: rotate(180deg); }
+        .details-content {
+            padding: 0 16px 16px;
+        }
+        .details-content p {
+            font-size: 13px;
+            color: var(--text-sub);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .details-content p strong {
+            color: var(--hero-bg-main);
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        .details-content ol {
+            padding-left: 20px;
+            margin-bottom: 0;
+            font-size: 13px;
+            color: var(--text-sub);
+            line-height: 1.6;
+        }
+        .details-content li { margin-bottom: 6px; }
+
+        /* Detail List inside new accordion */
+        .detail-checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 8px;
+        }
+        .dc-item {
+            background: var(--bg-outer);
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #E5E7EB;
+        }
+        .dc-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--hero-bg-dark);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .dc-title::before {
+            content: "✓";
+            color: var(--primary);
+            margin-right: 6px;
+            font-size: 15px;
+        }
+        .dc-ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .dc-ul li {
+            font-size: 13px;
+            color: var(--text-body);
+            display: flex;
+            align-items: flex-start;
+        }
+        .dc-ul li::before {
+            content: "·";
+            color: var(--text-muted);
+            margin-right: 6px;
+            font-weight: 900;
+        }
+        .dc-desc {
+            font-size: 12px;
+            color: var(--primary);
+            background: var(--primary-active-bg);
+            padding: 8px 10px;
+            border-radius: 6px;
+            word-break: keep-all;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+    </style>
 </head>
 <body>
+    <div class="app">
+        
+        <!-- Screen 0: Start -->
+        <div class="screen active" id="screen-0">
+            <!-- Hero Graphic -->
+            <div class="hero-graphic">
+                <div class="search-motif"></div>
+                <div class="fc fc-1">이사 예정일</div>
+                <div class="fc fc-2">사다리차 필요 여부</div>
+                <div class="fc fc-3">큰 짐 체크</div>
+                <div class="fc fc-4">출발지·도착지</div>
+                <div class="fc fc-5">주말 이사</div>
+                
+                <div class="hero-text-wrap">
+                    <h1 class="hero-title">내 이사 조건,<br><span>먼저 체크하세요</span></h1>
+                    <p class="hero-sub">추가요금 조건을 미리 확인해보세요</p>
+                </div>
+            </div>
 
-  <header>
-    <div class="wrap nav">
-      <div class="brand">
-        <div class="brand-mark">이사</div>
-        견적 직전 불안 진단
-      </div>
-      <div class="nav-badge">제휴 광고 포함</div>
+            <!-- Start Card (Overlapping Hero) -->
+            <div class="start-card-wrapper">
+                <div class="start-card">
+                    <div class="sc-badge">이사 견적 설문 전 30초 체크</div>
+                    <h2 class="sc-title">견적 신청 전,<br>추가요금 조건부터 확인하세요</h2>
+                    <p class="sc-desc">사다리차, 주말 이사, 큰 짐 여부에 따라 상담 중 견적이 달라질 수 있습니다.</p>
+                    
+                    <div class="sc-info-box">
+                        6가지만 체크하면 실제 견적 설문에서 어떤 정보를 준비해야 하는지 바로 알 수 있습니다.
+                    </div>
+
+                    <div class="sc-trust">
+                        <span>✓ 개인정보 직접 수집 없음</span>
+                        <span>✓ 30초 조건 체크</span>
+                        <span>✓ 제휴 견적 설문 이동</span>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="goToScreen(1)">30초 체크 시작하기</button>
+                    <button class="btn btn-secondary" onclick="goToAppu('start')">바로 견적 설문으로 이동</button>
+                    <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.<br>신청은 제휴 견적 설문 페이지에서 진행됩니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="screen" id="screen-1">
+            <div class="blue-header">
+                <div class="header-motif"></div>
+                <div class="progress-area">
+                    <div class="progress-header">
+                        <span class="progress-text">1 / 6</span>
+                        <span class="progress-subtext">30초 체크 진행 중</span>
+                    </div>
+                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 16.6%;"></div></div>
+                </div>
+            </div>
+            
+            <div class="q-content-wrapper">
+                <div class="q-card">
+                    <div class="q-status">먼저 이사 날짜부터 확인할게요</div>
+                    <h2 class="q-title">이사 예정일이 언제인가요?</h2>
+                    <p class="q-desc">이사일이 가까우면 상담 가능 시간과 견적 안내 속도가 중요해집니다.</p>
+                    <div class="q-options">
+                        <button class="q-btn" onclick="selectOption(1, this, '좋아요. 이사 날짜는 견적 상담에서 가장 먼저 확인하는 조건입니다.', '다음은 상담 전화를 받을 수 있는지 확인할게요.')">55일 이내예요</button>
+                        <button class="q-btn" onclick="selectOption(1, this, '좋아요. 이사 날짜는 견적 상담에서 가장 먼저 확인하는 조건입니다.', '다음은 상담 전화를 받을 수 있는지 확인할게요.')">55일 이후예요</button>
+                        <button class="q-btn" onclick="selectOption(1, this, '좋아요. 이사 날짜는 견적 상담에서 가장 먼저 확인하는 조건입니다.', '다음은 상담 전화를 받을 수 있는지 확인할게요.')">아직 정확히 미정이에요</button>
+                    </div>
+                    <div class="feedback-box" id="feedback-1"></div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <div></div>
+                    <button class="btn-next btn-disabled" id="btn-next-1" disabled onclick="goToScreen(2)">다음</button>
+                </div>
+                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="screen" id="screen-2">
+            <div class="blue-header">
+                <div class="header-motif"></div>
+                <div class="progress-area">
+                    <div class="progress-header">
+                        <span class="progress-text">2 / 6</span>
+                        <span class="progress-subtext">30초 체크 진행 중</span>
+                    </div>
+                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 33.3%;"></div></div>
+                </div>
+            </div>
+            
+            <div class="q-content-wrapper">
+                <div class="q-card">
+                    <div class="q-status">상담 연결 조건 확인</div>
+                    <h2 class="q-title">견적 상담 전화를 받을 수 있나요?</h2>
+                    <p class="q-desc">전화를 받을 수 있어야 일정과 조건을 빠르게 확인할 수 있습니다.</p>
+                    <div class="q-options">
+                        <button class="q-btn" onclick="selectOption(2, this, '확인했습니다. 상담 가능 시간은 견적 연결에 중요한 기준입니다.', '이제 출발지와 도착지가 정해졌는지 볼게요.')">바로 상담 가능해요</button>
+                        <button class="q-btn" onclick="selectOption(2, this, '확인했습니다. 상담 가능 시간은 견적 연결에 중요한 기준입니다.', '이제 출발지와 도착지가 정해졌는지 볼게요.')">가능한 시간대가 있어요</button>
+                        <button class="q-btn" onclick="selectOption(2, this, '확인했습니다. 상담 가능 시간은 견적 연결에 중요한 기준입니다.', '이제 출발지와 도착지가 정해졌는지 볼게요.')">전화 상담은 어려워요</button>
+                    </div>
+                    <div class="feedback-box" id="feedback-2"></div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <button class="btn-prev" onclick="goToScreen(1)">이전</button>
+                    <button class="btn-next btn-disabled" id="btn-next-2" disabled onclick="goToScreen(3)">다음</button>
+                </div>
+                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="screen" id="screen-3">
+            <div class="blue-header">
+                <div class="header-motif"></div>
+                <div class="progress-area">
+                    <div class="progress-header">
+                        <span class="progress-text">3 / 6</span>
+                        <span class="progress-subtext">30초 체크 진행 중</span>
+                    </div>
+                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 50%;"></div></div>
+                </div>
+            </div>
+            
+            <div class="q-content-wrapper">
+                <div class="q-card">
+                    <div class="q-status">이동 조건 확인</div>
+                    <h2 class="q-title">출발지와 도착지가 정해졌나요?</h2>
+                    <p class="q-desc">출발지와 도착지에 따라 이동 거리와 현장 조건이 달라질 수 있습니다.</p>
+                    <div class="q-options">
+                        <button class="q-btn" onclick="selectOption(3, this, '좋습니다. 주소 확정 여부는 상담할 때 꼭 확인되는 항목입니다.', '다음은 사다리차나 엘리베이터 조건을 체크할게요.')">둘 다 정해졌어요</button>
+                        <button class="q-btn" onclick="selectOption(3, this, '좋습니다. 주소 확정 여부는 상담할 때 꼭 확인되는 항목입니다.', '다음은 사다리차나 엘리베이터 조건을 체크할게요.')">한쪽만 정해졌어요</button>
+                        <button class="q-btn" onclick="selectOption(3, this, '좋습니다. 주소 확정 여부는 상담할 때 꼭 확인되는 항목입니다.', '다음은 사다리차나 엘리베이터 조건을 체크할게요.')">아직 미정이에요</button>
+                    </div>
+                    <div class="feedback-box" id="feedback-3"></div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <button class="btn-prev" onclick="goToScreen(2)">이전</button>
+                    <button class="btn-next btn-disabled" id="btn-next-3" disabled onclick="goToScreen(4)">다음</button>
+                </div>
+                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="screen" id="screen-4">
+            <div class="blue-header">
+                <div class="header-motif"></div>
+                <div class="progress-area">
+                    <div class="progress-header">
+                        <span class="progress-text">4 / 6</span>
+                        <span class="progress-subtext">30초 체크 진행 중</span>
+                    </div>
+                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 66.6%;"></div></div>
+                </div>
+            </div>
+            
+            <div class="q-content-wrapper">
+                <div class="q-card">
+                    <div class="q-status">추가요금 가능 조건 확인</div>
+                    <h2 class="q-title">사다리차·엘리베이터·주차 조건을 알고 있나요?</h2>
+                    <p class="q-desc">층수, 엘리베이터, 주차 가능 여부에 따라 추가 비용이 생길 수 있습니다.</p>
+                    <div class="q-options">
+                        <button class="q-btn" onclick="selectOption(4, this, '확인했습니다. 현장 조건은 견적이 달라지기 쉬운 중요한 포인트입니다.', '이제 큰 짐이나 설치 품목을 확인할게요.')">확인해뒀어요</button>
+                        <button class="q-btn" onclick="selectOption(4, this, '확인했습니다. 현장 조건은 견적이 달라지기 쉬운 중요한 포인트입니다.', '이제 큰 짐이나 설치 품목을 확인할게요.')">일부만 알고 있어요</button>
+                        <button class="q-btn" onclick="selectOption(4, this, '확인했습니다. 현장 조건은 견적이 달라지기 쉬운 중요한 포인트입니다.', '이제 큰 짐이나 설치 품목을 확인할게요.')">아직 잘 몰라요</button>
+                    </div>
+                    <div class="feedback-box" id="feedback-4"></div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <button class="btn-prev" onclick="goToScreen(3)">이전</button>
+                    <button class="btn-next btn-disabled" id="btn-next-4" disabled onclick="goToScreen(5)">다음</button>
+                </div>
+                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="screen" id="screen-5">
+            <div class="blue-header">
+                <div class="header-motif"></div>
+                <div class="progress-area">
+                    <div class="progress-header">
+                        <span class="progress-text">5 / 6</span>
+                        <span class="progress-subtext" style="color:var(--hero-accent);">거의 다 왔어요</span>
+                    </div>
+                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 83.3%;"></div></div>
+                </div>
+            </div>
+            
+            <div class="q-content-wrapper">
+                <div class="q-card">
+                    <div class="q-status">거의 다 왔어요</div>
+                    <h2 class="q-title">큰 짐이나 분해·설치 품목이 있나요?</h2>
+                    <p class="q-desc">침대, 에어컨, 대형가전처럼 별도 작업이 필요한 짐은 견적에 영향을 줄 수 있습니다.</p>
+                    <div class="q-options">
+                        <button class="q-btn" onclick="selectOption(5, this, '좋아요. 큰 짐과 설치 품목은 상담 전에 정리해두면 좋습니다.', '마지막으로 상담 가능한 시간대를 확인할게요.')">정리해둔 편이에요</button>
+                        <button class="q-btn" onclick="selectOption(5, this, '좋아요. 큰 짐과 설치 품목은 상담 전에 정리해두면 좋습니다.', '마지막으로 상담 가능한 시간대를 확인할게요.')">대략만 알고 있어요</button>
+                        <button class="q-btn" onclick="selectOption(5, this, '좋아요. 큰 짐과 설치 품목은 상담 전에 정리해두면 좋습니다.', '마지막으로 상담 가능한 시간대를 확인할게요.')">아직 정리 못 했어요</button>
+                    </div>
+                    <div class="feedback-box" id="feedback-5"></div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <button class="btn-prev" onclick="goToScreen(4)">이전</button>
+                    <button class="btn-next btn-disabled" id="btn-next-5" disabled onclick="goToScreen(6)">다음</button>
+                </div>
+                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="screen" id="screen-6">
+            <div class="blue-header">
+                <div class="header-motif"></div>
+                <div class="progress-area">
+                    <div class="progress-header">
+                        <span class="progress-text">6 / 6</span>
+                        <span class="progress-subtext" style="color:var(--hero-accent);">마지막 항목입니다</span>
+                    </div>
+                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 100%;"></div></div>
+                </div>
+            </div>
+            
+            <div class="q-content-wrapper">
+                <div class="q-card">
+                    <div class="q-status">마지막 항목입니다</div>
+                    <h2 class="q-title">상담 가능한 시간대가 있나요?</h2>
+                    <p class="q-desc">받을 수 있는 시간대를 정해두면 상담 누락을 줄일 수 있습니다.</p>
+                    <div class="q-options">
+                        <button class="q-btn" onclick="selectOption(6, this, '체크가 완료됐습니다.', '')">바로 가능해요</button>
+                        <button class="q-btn" onclick="selectOption(6, this, '체크가 완료됐습니다.', '')">가능한 시간대가 있어요</button>
+                        <button class="q-btn" onclick="selectOption(6, this, '체크가 완료됐습니다.', '')">아직 정하기 어려워요</button>
+                    </div>
+                    <div class="feedback-box" id="feedback-6"></div>
+                </div>
+                
+                <div class="bottom-nav">
+                    <button class="btn-prev" onclick="goToScreen(5)">이전</button>
+                    <button class="btn-next btn-disabled" id="btn-next-6" disabled onclick="goToScreen(7)">결과 확인하기</button>
+                </div>
+                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
+            </div>
+        </div>
+
+        <!-- Screen 7: Result -->
+        <div class="screen" id="screen-7" style="padding:0;">
+            <!-- Blue Header for Result -->
+            <div class="blue-header" style="height: 38vh;">
+                <div class="header-motif"></div>
+                <div class="result-header-content">
+                    <div class="r-badge">✓ 체크 완료</div>
+                    <h1 class="r-title">이제 견적 설문으로<br>이동하면 됩니다</h1>
+                    <p class="r-sub">상담 전에 확인할 항목이 정리됐습니다.</p>
+                </div>
+            </div>
+            
+            <!-- Result Content Wrapper -->
+            <div class="q-content-wrapper" style="margin-top: 15vh;">
+                <div class="result-card">
+                    <div class="result-card-title">견적 상담 전 준비하면 좋은 항목</div>
+                    <div class="check-item">이사 예정일</div>
+                    <div class="check-item">출발지·도착지</div>
+                    <div class="check-item">사다리차·엘리베이터·주차 조건</div>
+                    <div class="check-item">큰 짐·분해설치 품목</div>
+                    <div class="check-item">상담 가능한 시간대</div>
+                    <div class="result-desc">
+                        이 정보가 정리되어 있으면 상담 시간이 줄고, 견적이 달라질 가능성도 줄일 수 있습니다.
+                    </div>
+                </div>
+                
+                <div>
+                    <button class="btn btn-primary btn-result-main" onclick="goToAppu('result')">견적 설문으로 이동하기</button>
+                    <button class="btn btn-secondary" onclick="goToScreen(0)">다시 체크하기</button>
+                </div>
+                
+                <!-- Accordions -->
+                <div class="accordion-wrapper">
+                    <details>
+                        <summary>
+                            <div>상담 전에 자세히 체크하면 좋은 항목<br><span style="font-size:12px; color:var(--text-sub); font-weight:500; display:block; margin-top:4px;">아래 항목을 미리 정리해두면 상담 중 다시 확인하는 시간을 줄일 수 있습니다.</span></div>
+                        </summary>
+                        <div class="details-content">
+                            <div class="detail-checklist">
+                                <div class="dc-item">
+                                    <div class="dc-title">1. 이사 예정일</div>
+                                    <ul class="dc-ul">
+                                        <li>이사 희망일이 정해졌는지</li>
+                                        <li>55일 이내 이사인지</li>
+                                        <li>평일/주말/손 없는 날 여부</li>
+                                        <li>오전/오후 중 원하는 시간대가 있는지</li>
+                                        <li>날짜 변경 가능성이 있는지</li>
+                                    </ul>
+                                    <div class="dc-desc">날짜 조건에 따라 상담 가능 일정과 견적이 달라질 수 있습니다.</div>
+                                </div>
+                                
+                                <div class="dc-item">
+                                    <div class="dc-title">2. 출발지 / 도착지</div>
+                                    <ul class="dc-ul">
+                                        <li>출발지 주소가 정해졌는지</li>
+                                        <li>도착지 주소가 정해졌는지</li>
+                                        <li>동/호수까지 확인 가능한지</li>
+                                        <li>차량 진입이 가능한지</li>
+                                        <li>주차 공간이 있는지</li>
+                                    </ul>
+                                    <div class="dc-desc">출발지와 도착지가 정해져야 이동 거리와 현장 조건을 더 정확히 확인할 수 있습니다.</div>
+                                </div>
+
+                                <div class="dc-item">
+                                    <div class="dc-title">3. 건물 / 현장 조건</div>
+                                    <ul class="dc-ul">
+                                        <li>출발지 층수</li>
+                                        <li>도착지 층수</li>
+                                        <li>엘리베이터 사용 가능 여부</li>
+                                        <li>사다리차 필요 여부</li>
+                                        <li>차량 진입 가능 여부</li>
+                                        <li>아파트/빌라/오피스텔/단독주택 등 건물 유형</li>
+                                        <li>관리실 사전 예약이 필요한지</li>
+                                    </ul>
+                                    <div class="dc-desc">층수, 엘리베이터, 주차 조건은 추가요금 발생 여부와 작업 방식에 영향을 줄 수 있습니다.</div>
+                                </div>
+
+                                <div class="dc-item">
+                                    <div class="dc-title">4. 큰 짐 / 특수 품목</div>
+                                    <ul class="dc-ul">
+                                        <li>침대 / 매트리스</li>
+                                        <li>냉장고 / 세탁기 / 건조기 / 에어컨 / TV</li>
+                                        <li>장롱/붙박이장</li>
+                                        <li>피아노/안마의자 등 무거운 품목</li>
+                                        <li>분해·조립이 필요한 가구</li>
+                                    </ul>
+                                    <div class="dc-desc">큰 짐이나 분해·설치 품목은 작업 인원, 차량, 추가 작업 여부에 영향을 줄 수 있습니다.</div>
+                                </div>
+
+                                <div class="dc-item">
+                                    <div class="dc-title">5. 짐 양 / 박스 수량</div>
+                                    <ul class="dc-ul">
+                                        <li>원룸/투룸/아파트 등 대략적인 집 크기</li>
+                                        <li>옷, 주방용품, 책 등 잔짐이 많은지</li>
+                                        <li>박스 포장이 필요한지</li>
+                                        <li>직접 포장할지, 포장 이사를 원할지</li>
+                                        <li>버릴 짐이 있는지</li>
+                                    </ul>
+                                    <div class="dc-desc">짐 양이 많거나 잔짐이 많은 경우 상담 시 확인할 내용이 늘어날 수 있습니다.</div>
+                                </div>
+
+                                <div class="dc-item">
+                                    <div class="dc-title">6. 상담 가능 시간</div>
+                                    <ul class="dc-ul">
+                                        <li>바로 전화 상담이 가능한지</li>
+                                        <li>통화 가능한 시간대가 있는지</li>
+                                        <li>부재중일 경우 다시 받을 수 있는지</li>
+                                        <li>문자/카톡 안내를 선호하는지</li>
+                                        <li>상담 연락을 받을 사람을 정했는지</li>
+                                    </ul>
+                                    <div class="dc-desc">상담 가능한 시간대를 정해두면 연락 누락을 줄이고 진행이 빨라질 수 있습니다.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>설문 전에 확인하면 좋은 6가지</summary>
+                        <div class="details-content">
+                            <ol>
+                                <li>이사 예정일</li>
+                                <li>출발지와 도착지</li>
+                                <li>사다리차·엘리베이터·주차 조건</li>
+                                <li>큰 짐 수량</li>
+                                <li>분해·설치 품목</li>
+                                <li>상담 가능한 시간대</li>
+                            </ol>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>견적이 달라지는 3가지 이유</summary>
+                        <div class="details-content">
+                            <p><strong>1. 날짜 조건</strong>주말, 손 없는 날, 성수기 여부에 따라 견적이 달라질 수 있습니다.</p>
+                            <p><strong>2. 현장 조건</strong>층수, 엘리베이터, 사다리차, 주차 가능 여부가 비용에 영향을 줄 수 있습니다.</p>
+                            <p><strong>3. 짐 조건</strong>대형가전, 침대, 에어컨, 분해·설치 품목에 따라 작업 방식이 달라질 수 있습니다.</p>
+                        </div>
+                    </details>
+                </div>
+                <p class="privacy-text" style="margin-bottom: 24px;">이 페이지는 개인정보를 직접 수집하지 않습니다.<br>신청은 제휴 견적 설문 페이지에서 진행됩니다.</p>
+            </div>
+        </div>
+
     </div>
-  </header>
 
-  <main>
+    <script>
+        function goToScreen(stepIndex) {
+            const screens = document.querySelectorAll('.screen');
+            screens.forEach(screen => screen.classList.remove('active'));
+            
+            const target = document.getElementById('screen-' + stepIndex);
+            if(target) {
+                target.classList.add('active');
+                window.scrollTo(0,0);
+            }
+        }
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <div class="hero-eyebrow">
-            <span class="eyebrow-dot"></span>
-            견적 신청 전 추가요금 체크
-          </div>
-          <h1>이사 견적 신청 전<br><span class="hero-accent">당일 추가요금 6가지</span>만 확인하세요</h1>
-          <p class="hero-sub">
-            사다리차·주말·손 없는 날·분해설치 조건을 모르고 신청하면 상담 중 가격이 흔들릴 수 있습니다.<br>
-            이사일이 55일 이내이고 상담 전화를 받을 수 있다면 바로 다이사 제휴 견적으로 이동하세요.
-          </p>
-          <div class="hero-actions">
-            <a class="button hero-primary"
-               id="heroOutboundCta"
-               href="https://appu.kr/?i=12518178&utm_source=landing&utm_medium=outbound&utm_campaign=moving_quote_call_burden&utm_content=hero_cta"
-               rel="nofollow sponsored noopener"
-               target="_blank"
-               data-event="outbound_cta_clicked"
-               data-affiliate-platform="adlix"
-               data-affiliate-id="12518178"
-               data-cta-position="hero">55일 이내 이사라면 다이사 가격비교 신청하기 →</a>
-            <a class="button hero-secondary" href="#checklist">추가요금 체크리스트 보기</a>
-          </div>
-          <p class="hero-note">바로 신청해도 됩니다. 다만 날짜·주소·큰 짐 정보를 미리 정리해두면 상담이 훨씬 수월합니다.</p>
-          <div class="hero-stats">
-            <div class="stat-chip"><span class="chip-dot"></span>55일 이내 이사일이면 바로 이동</div>
-            <div class="stat-chip"><span class="chip-dot"></span>신청 정보는 신청 화면에서 입력</div>
-            <div class="stat-chip"><span class="chip-dot"></span>이 페이지 개인정보 미수집</div>
-          </div>
-        </div>
+        function selectOption(step, btn, feedbackText, nextDescText) {
+            const parent = btn.parentElement;
+            const siblings = parent.querySelectorAll('.q-btn');
+            siblings.forEach(s => s.classList.remove('active'));
+            
+            btn.classList.add('active');
+            
+            const feedbackBox = document.getElementById('feedback-' + step);
+            const nextDescHtml = nextDescText ? `<br><span style="color:var(--text-sub); font-weight:500; margin-top:4px; display:inline-block;">${nextDescText}</span>` : '';
+            feedbackBox.innerHTML = `
+                <div class="feedback-content">
+                    <span class="f-icon">💡</span>
+                    <p><strong>${feedbackText}</strong>${nextDescHtml}</p>
+                </div>
+            `;
+            feedbackBox.classList.add('show');
+            
+            const nextBtn = document.getElementById('btn-next-' + step);
+            nextBtn.disabled = false;
+            nextBtn.classList.remove('btn-disabled');
+            nextBtn.classList.add('btn-primary');
 
-        <aside class="handoff-card" aria-label="이사 견적 신청 전 준비 항목">
-          <p class="handoff-kicker">신청 전에 준비할 것</p>
-          <h2>상담받을 준비가 됐는지만 확인하세요</h2>
-          <p>견적 비교를 신청하려면 상담원이 확인할 기본 정보가 필요합니다. 미리 정리해두면 신청 도중 멈추거나 상담을 놓칠 가능성이 줄어듭니다.</p>
-          <ul class="handoff-fields" aria-label="신청 전 준비 항목">
-            <li>받을 수 있는 연락처</li>
-            <li>55일 이내 이사 날짜</li>
-            <li>출발지 주소</li>
-            <li>도착지 주소</li>
-            <li>큰 짐 목록</li>
-            <li>상담 가능한 시간</li>
-          </ul>
-          <div class="handoff-warning">아직 이사 일정이 멀거나 전화를 받기 어렵다면 지금 신청보다 체크리스트를 먼저 정리하는 편이 낫습니다.</div>
-        </aside>
-      </div>
-    </section>
+            setTimeout(() => {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }, 150);
+        }
 
-    <!-- STATS -->
-    <div class="stats-band">
-      <div class="wrap">
-        <div class="stats-row">
-          <div class="stat">
-            <div class="stat-num">6가지</div>
-            <div class="stat-label">신청 전 추가요금 체크포인트</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">55일</div>
-            <div class="stat-label">이내 이사일일 때 신청 적합</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">0건</div>
-            <div class="stat-label">이 페이지가 직접 수집하는 개인정보</div>
-          </div>
-        </div>
-      </div>
-    </div>
+        const AFFILIATE_PLATFORM = 'adlix';
+        const AFFILIATE_ID = '21452460';
+        const ADLIX_CAMPAIGN_ID = '6936747';
+        const AFFILIATE_URL = 'https://appu.kr/?i=12518178';
 
-    <!-- HOW IT WORKS -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-label">이용 방법</div>
-          <h2>중간 페이지가 아니라 신청 전 준비표입니다</h2>
-          <p>가격비교 신청 전에 추가요금 질문과 상담 준비 항목을 먼저 정리해주는 페이지입니다.</p>
-        </div>
-        <div class="steps">
-          <div class="step-card">
-            <div class="step-num">1</div>
-            <h3>추가요금 질문 확인</h3>
-            <p>상담 전에 사다리차, 주말, 대형 짐, 분해설치 비용을 물어볼 준비를 합니다.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-num">2</div>
-            <h3>상담 준비 항목 확인</h3>
-            <p>상담에 필요한 연락처, 이사 날짜, 출발지와 도착지를 미리 정리합니다.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-num">3</div>
-            <h3>준비된 사람만 신청</h3>
-            <p>55일 이내 이사이고 상담 연락을 받을 수 있으면 가격비교 신청으로 이동합니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        function affiliatePayload(source) {
+            return {
+                event: 'outbound_cta_clicked',
+                campaign: 'moving_quote_call_burden',
+                source: source,
+                timestamp: new Date().toISOString(),
+                payload: {
+                    href: AFFILIATE_URL,
+                    cta_position: source,
+                    affiliate_platform: AFFILIATE_PLATFORM,
+                    affiliate_id: AFFILIATE_ID,
+                    adlix_campaign_id: ADLIX_CAMPAIGN_ID,
+                    outbound_host: 'appu.kr',
+                    trigger: 'goToAppu'
+                }
+            };
+        }
 
-    <!-- CHECKLIST -->
-    <section class="section checklist-section" id="checklist">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-label">추가요금 체크리스트</div>
-          <h2>가격비교 신청 전<br>이 6가지만 물어볼 준비를 하세요</h2>
-          <p>이 페이지의 핵심 가치는 신청 대행이 아니라, 상담 전 질문을 정리해서 가격 변동과 개인정보 입력 불안을 줄이는 것입니다.</p>
-        </div>
-        <div class="fee-grid" aria-label="이사 견적 추가요금 질문">
-          <article class="fee-card"><strong>1. 사다리차가 필요한가요?</strong><p>출발지와 도착지의 층수, 엘리베이터 사용 가능 여부를 먼저 확인하세요.</p></article>
-          <article class="fee-card"><strong>2. 주말·손 없는 날인가요?</strong><p>날짜 프리미엄이 붙는지, 평일 변경 시 차이가 있는지 물어볼 준비를 합니다.</p></article>
-          <article class="fee-card"><strong>3. 분해·설치 품목이 있나요?</strong><p>침대, 에어컨, 붙박이장, 대형 가전은 별도 비용 여부를 확인해야 합니다.</p></article>
-          <article class="fee-card"><strong>4. 큰 짐 수량이 정리됐나요?</strong><p>냉장고, 세탁기, 매트리스, 책장처럼 인력과 차량을 바꾸는 품목을 적어둡니다.</p></article>
-          <article class="fee-card"><strong>5. 상세주소가 확정됐나요?</strong><p>동/호수, 주차 가능 여부, 차량 진입 가능 여부가 견적에 영향을 줄 수 있습니다.</p></article>
-          <article class="fee-card"><strong>6. 상담 가능한 시간이 있나요?</strong><p>전화가 오면 받을 수 있는 시간대를 정해두면 상담거절/장기부재 리스크를 줄입니다.</p></article>
-        </div>
-        <div class="checklist-grid" style="margin-top: 32px;">
-          <div class="checklist-intro">
-            <h2>신청 전<br>마지막 확인</h2>
-            <p>체크가 끝났고 이사일이 55일 이내라면 다이사 가격비교 신청으로 넘어가세요.</p>
-          </div>
-          <div class="checklist" aria-label="이사 견적 체크리스트">
-            <label class="check"><input type="checkbox" data-check="ladder">사다리차·층수·엘리베이터 질문을 준비했다.</label>
-            <label class="check"><input type="checkbox" data-check="date">이사 날짜가 55일 이내이고 상담 신청에 적합하다.</label>
-            <label class="check"><input type="checkbox" data-check="install">분해/설치가 필요한 큰 품목을 적었다.</label>
-            <label class="check"><input type="checkbox" data-check="address">출발지/도착지 상세주소와 주차 조건을 확인했다.</label>
-            <label class="check"><input type="checkbox" data-check="contact">연락 가능한 시간대를 정했다.</label>
-          </div>
-        </div>
-        <div class="inline-cta">
-          <a class="button accent"
-             href="https://appu.kr/?i=12518178&utm_source=landing&utm_medium=outbound&utm_campaign=moving_quote_call_burden&utm_content=fee_checklist_cta"
-             rel="nofollow sponsored noopener"
-             target="_blank"
-             data-event="outbound_cta_clicked"
-               data-affiliate-platform="adlix"
-               data-affiliate-id="12518178"
-             data-cta-position="fee_checklist">체크 끝났으면 다이사 가격비교 신청하기 →</a>
-          <a class="button" href="#diagnostic">아직 불안하면 자가점검 하기</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- OPTIONAL SELF CHECK -->
-    <section class="section" id="diagnostic">
-      <div class="wrap">
-        <section class="diagnostic" aria-label="선택형 신청 가능 자가점검">
-          <div class="diagnostic-head">
-            <h2>선택사항: 신청 전 자가점검</h2>
-            <div class="step-pill" id="stepCount">0/4 선택</div>
-          </div>
-
-          <div class="questions">
-            <div class="question" data-group="date">
-              <h3>이사 예정일</h3>
-              <div class="choices">
-                <button class="chip" type="button" data-value="55일 이내">55일 이내</button>
-                <button class="chip" type="button" data-value="55일 이후">55일 이후</button>
-                <button class="chip" type="button" data-value="아직 미정">아직 미정</button>
-              </div>
-            </div>
-
-            <div class="question" data-group="contact">
-              <h3>상담 전화 수신</h3>
-              <div class="choices">
-                <button class="chip" type="button" data-value="상담 가능">상담 가능</button>
-                <button class="chip" type="button" data-value="시간 제한">시간 제한</button>
-                <button class="chip" type="button" data-value="전화 불가">전화 불가</button>
-              </div>
-            </div>
-
-            <div class="question" data-group="address">
-              <h3>출발지 / 도착지</h3>
-              <div class="choices">
-                <button class="chip" type="button" data-value="둘 다 확정">둘 다 확정</button>
-                <button class="chip" type="button" data-value="한쪽만 확정">한쪽만 확정</button>
-                <button class="chip" type="button" data-value="미정">미정</button>
-              </div>
-            </div>
-
-            <div class="question" data-group="inventory">
-              <h3>큰 짐 / 특이사항</h3>
-              <div class="choices">
-                <button class="chip" type="button" data-value="정리됨">정리됨</button>
-                <button class="chip" type="button" data-value="대략만">대략만</button>
-                <button class="chip" type="button" data-value="미정">미정</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="result" id="result">
-            <strong>진단은 선택사항입니다</strong>
-            <p>바로 신청해도 됩니다. 불안하면 4가지 질문으로 신청 전 준비 상태만 확인하세요.</p>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <!-- RISK -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-label">주의사항</div>
-          <h2>신청 전 알아두면 좋은 3가지</h2>
-          <p>가격·짐 규모·개인정보 입력 흐름을 알고 신청해야 중간 이탈이 줄어듭니다.</p>
-        </div>
-        <div class="risk-grid">
-          <article class="risk">
-            <div class="risk-icon">⚠️</div>
-            <div class="risk-body">
-              <h3>첫 가격 ≠ 최종 금액</h3>
-              <p>사다리차·주말·분해설치 포함 여부를 반드시 확인하세요.</p>
-            </div>
-          </article>
-          <article class="risk">
-            <div class="risk-icon">📦</div>
-            <div class="risk-body">
-              <h3>대형 짐은 방문 견적 필요</h3>
-              <p>큰 가전이 있으면 사진 견적만으로는 오차가 커질 수 있습니다.</p>
-            </div>
-          </article>
-          <article class="risk">
-            <div class="risk-icon">🔒</div>
-            <div class="risk-body">
-              <h3>개인정보 전달 업체 확인</h3>
-              <p>마케팅 수신 동의가 견적 신청과 분리돼 있는지 확인하세요.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="cta-section">
-      <div class="wrap">
-        <div class="cta-inner">
-          <div>
-            <h2>마지막으로 날짜와 주소만<br>한 번 더 확인하세요</h2>
-            <p>이사일이 55일 이내이고 통화 가능한 시간대가 있다면 견적 상담을 진행하기 좋습니다. 아직 애매하면 체크리스트만 저장해두세요.</p>
-          </div>
-          <div class="cta-buttons">
-            <a class="button accent"
-               id="outboundCta"
-               href="https://appu.kr/?i=12518178&utm_source=landing&utm_medium=outbound&utm_campaign=moving_quote_call_burden&utm_content=ready_after_check_cta"
-               rel="nofollow sponsored noopener"
-               target="_blank"
-               data-event="outbound_cta_clicked"
-               data-affiliate-platform="adlix"
-               data-affiliate-id="12518178"
-               data-cta-position="final">견적 상담 준비하고 신청하기 →</a>
-            <a class="button ghost" href="#checklist">체크리스트 다시 보기</a>
-          </div>
-        </div>
-        <p class="disclosure">[광고] 안내 링크를 통해 신청 또는 클릭이 발생하면 운영자는 제휴 수익을 지급받습니다.</p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="wrap footer-inner">Leadgen Lab MVP — static pre-lander. No local personal data collection.</div>
-  </footer>
-
-  <script>
-    // ADLIX affiliate tracking metadata is intentionally kept on the official appu.kr links.
-    const state = {
-      date: "",
-      contact: "",
-      address: "",
-      inventory: "",
-      events: []
-    };
-
-    const resultEl    = document.querySelector("#result");
-    const stepCount   = document.querySelector("#stepCount");
-    const outboundUrl = "https://appu.kr/?i=12518178&utm_source=landing&utm_medium=outbound&utm_campaign=moving_quote_call_burden";
-    const TRACKING_ENDPOINT = "/api/track";
-    const SESSION_KEY = "moving_quote_call_burden_session";
-    const AFFILIATE_PLATFORM = "adlix";
-    const AFFILIATE_ID = "12518178";
-
-    function sessionId() {
-      const existing = sessionStorage.getItem(SESSION_KEY);
-      if (existing) return existing;
-      const generated = crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-      sessionStorage.setItem(SESSION_KEY, generated);
-      return generated;
-    }
-
-    function currentUtm() {
-      const params = new URLSearchParams(location.search);
-      return {
-        utm_source: params.get("utm_source") || "direct",
-        utm_medium: params.get("utm_medium") || "none",
-        utm_campaign: params.get("utm_campaign") || "moving_quote_call_burden",
-        utm_content: params.get("utm_content") || "none",
-        utm_term: params.get("utm_term") || "none"
-      };
-    }
-
-    function ctaPosition(eventName, element = null) {
-      if (element?.dataset?.ctaPosition) return element.dataset.ctaPosition;
-      if (eventName === "diagnosis_ready_cta_clicked") return "diagnosis_ready";
-      if (eventName === "diagnosis_prepare_cta_clicked") return "diagnosis_prepare";
-      if (eventName === "outbound_cta_clicked") return "final";
-      return "none";
-    }
-
-    function affiliatePayload(element = null) {
-      const href = element?.getAttribute?.("href") || "";
-      const url = href ? new URL(href, location.href) : null;
-      return {
-        href,
-        affiliate_platform: element?.dataset?.affiliatePlatform || AFFILIATE_PLATFORM,
-        affiliate_id: element?.dataset?.affiliateId || AFFILIATE_ID,
-        adlix_campaign_id: url?.searchParams?.get("i") || AFFILIATE_ID,
-        outbound_host: url?.hostname || ""
-      };
-    }
-
-    function sendServerEvent(event) {
-      const body = JSON.stringify(event);
-      if (navigator.sendBeacon) {
-        const blob = new Blob([body], { type: "application/json" });
-        if (navigator.sendBeacon(TRACKING_ENDPOINT, blob)) return;
-      }
-      fetch(TRACKING_ENDPOINT, {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body,
-        keepalive: true
-      }).catch(() => {});
-    }
-
-    function track(eventName, payload = {}, element = null) {
-      const event = {
-        event: eventName,
-        campaign: "moving_quote_call_burden",
-        session_id: sessionId(),
-        path: location.pathname,
-        utm: currentUtm(),
-        payload: { ...payload, cta_position: ctaPosition(eventName, element) },
-        ts: new Date().toISOString()
-      };
-      state.events.push(event);
-      localStorage.setItem("moving_quote_call_burden_events", JSON.stringify(state.events));
-      sendServerEvent(event);
-      window.dispatchEvent(new CustomEvent("leadgen:event", { detail: event }));
-    }
-
-    function selectedCount() {
-      return [state.date, state.contact, state.address, state.inventory].filter(Boolean).length;
-    }
-
-    function updateResult() {
-      const selected = selectedCount();
-      stepCount.textContent = `${selected}/4 선택`;
-      if (!selected) return;
-
-      const isEligibleDate   = state.date     === "55일 이내";
-      const isIneligibleDate = state.date     === "55일 이후" || state.date === "아직 미정";
-      const canTakeCalls     = state.contact  === "상담 가능" || state.contact === "시간 제한";
-      const cannotTakeCalls  = state.contact  === "전화 불가";
-      const hasAddress       = state.address  === "둘 다 확정" || state.address === "한쪽만 확정";
-      const hasInventory     = state.inventory === "정리됨" || state.inventory === "대략만";
-
-      const ready    = selected >= 4 && isEligibleDate && canTakeCalls && hasAddress && hasInventory;
-      const notReady = selected >= 4 && (isIneligibleDate || cannotTakeCalls || !hasAddress || !hasInventory);
-
-      if (ready) {
-        resultEl.className = "result ready";
-        resultEl.innerHTML = `
-          <strong>✅ 불안 포인트 정리 완료 — 지금 신청할 수 있습니다</strong>
-          <p>이사일, 연락 시간, 주소, 짐 정보가 준비됐고 상담 연락도 받을 수 있는 상태입니다. 아래에서 비교 견적을 확인하세요.</p>
-          <a class="button accent full"
-             href="${outboundUrl}&utm_content=diagnosis_ready_cta"
-             rel="nofollow sponsored noopener" target="_blank"
-             data-event="diagnosis_ready_cta_clicked"
-             data-affiliate-platform="adlix"
-             data-affiliate-id="12518178"
-             data-cta-position="diagnosis_ready">불안 정리 완료 — 비교 견적 확인하기 →</a>
-        `;
-        track("diagnosis_completed", { result: "ready", date: state.date, contact: state.contact, address: state.address, inventory: state.inventory });
-      } else if (notReady) {
-        resultEl.className = "result prepare";
-        resultEl.innerHTML = `
-          <strong>📋 아직 신청 전 불안이 남아 있습니다</strong>
-          <p>이사일, 연락 가능 시간, 주소와 짐 정보를 먼저 정리하세요. 특히 전화 받을 시간과 추가요금 질문이 없으면 신청 후 상담이 더 부담스러울 수 있습니다.</p>
-          <a class="button full" href="#checklist" data-event="diagnosis_prepare_cta_clicked">불안 포인트 먼저 정리하기</a>
-        `;
-        track("diagnosis_completed", { result: "prepare_first", date: state.date, contact: state.contact, address: state.address, inventory: state.inventory });
-      } else {
-        resultEl.className = "result";
-        resultEl.innerHTML = `
-          <strong>준비 확인 중 — ${selected}/4개 선택 완료</strong>
-          <p>남은 질문을 선택하면 지금 준비된 상태인지 확인해 드립니다.</p>
-        `;
-      }
-    }
-
-    document.querySelectorAll(".question").forEach((group) => {
-      const groupName = group.dataset.group;
-      group.querySelectorAll(".chip").forEach((button) => {
-        button.setAttribute("aria-pressed", "false");
-        button.addEventListener("click", () => {
-          group.querySelectorAll(".chip").forEach((other) => other.setAttribute("aria-pressed", "false"));
-          button.setAttribute("aria-pressed", "true");
-          state[groupName] = button.dataset.value;
-          track("selector_choice", { group: groupName, value: button.dataset.value });
-          updateResult();
-        });
-      });
-    });
-
-    document.addEventListener("pointerdown", (event) => {
-      const node = event.target.closest("a[data-event]");
-      if (!node || node.dataset.pretracked === "true") return;
-      node.dataset.pretracked = "true";
-      track(node.dataset.event, { ...affiliatePayload(node), trigger: "pointerdown" }, node);
-    });
-
-    document.addEventListener("click", (event) => {
-      const node = event.target.closest("[data-event]");
-      if (!node) return;
-      track(node.dataset.event, { ...affiliatePayload(node), trigger: "click" }, node);
-    });
-
-    document.querySelectorAll("[data-check]").forEach((checkbox) => {
-      checkbox.addEventListener("change", () => {
-        track("checklist_toggled", { item: checkbox.dataset.check, checked: checkbox.checked });
-      });
-    });
-
-    track("page_view", { path: location.pathname, referrer: document.referrer || "" });
-  </script>
+        function goToAppu(source) {
+            try {
+                fetch('/api/track', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(affiliatePayload(source))
+                }).catch(e => {});
+            } catch(e) {}
+            
+            window.location.href = AFFILIATE_URL;
+        }
+    </script>
 </body>
 </html>
