@@ -1145,6 +1145,8 @@
             nextBtn.classList.remove('btn-disabled');
             nextBtn.classList.add('btn-primary');
 
+            trackSelectorChoice(step, btn.textContent.trim());
+
             setTimeout(() => {
                 window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
             }, 150);
@@ -1199,6 +1201,46 @@
             };
         }
 
+        const STEP_GROUPS = {
+            1: 'moving_date',
+            2: 'phone_availability',
+            3: 'address_confirmed',
+            4: 'site_conditions',
+            5: 'large_items',
+            6: 'consult_time'
+        };
+
+        function selectorChoicePayload(step, item) {
+            return {
+                group: STEP_GROUPS[step] || ('step_' + step),
+                item: item,
+                value: String(step)
+            };
+        }
+
+        function selectorChoiceEvent(step, item) {
+            return {
+                event: 'selector_choice',
+                campaign: 'moving_quote_call_burden',
+                session_id: sessionId(),
+                path: location.pathname,
+                utm: currentUtm(),
+                payload: selectorChoicePayload(step, item),
+                ts: new Date().toISOString()
+            };
+        }
+
+        function trackSelectorChoice(step, item) {
+            try {
+                fetch('/api/track', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(selectorChoiceEvent(step, item)),
+                    keepalive: true
+                }).catch(e => {});
+            } catch(e) {}
+        }
+
         function goToAppu(source) {
             try {
                 fetch('/api/track', {
@@ -1214,3 +1256,4 @@
     </script>
 </body>
 </html>
+
