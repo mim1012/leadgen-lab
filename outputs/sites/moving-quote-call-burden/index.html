@@ -1,1259 +1,366 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>이사 견적 신청 전, 추가요금 조건 체크</title>
-    
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
-    <style>
-        :root {
-            /* Hero Palette */
-            --hero-bg-dark: #08145E;
-            --hero-bg-main: #1020C9;
-            --hero-bg-light: #1D2BFF;
-            --hero-accent: #EAFB1D; /* 형광 옐로우 */
-            --hero-accent-soft: #F5FF37;
-            
-            /* Body / Card */
-            --bg-outer: #F8F9FA;
-            --bg-card: #FFFFFF;
-            
-            /* CTA Colors */
-            --primary: #1728F7;
-            --primary-hover: #0B1B8F;
-            --primary-active-bg: #EEF2FF;
-            
-            /* UI Colors */
-            --border: #DDE3EC;
-            --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --shadow-floating: 0 15px 35px rgba(0, 0, 0, 0.2);
-            --shadow-btn: 0 4px 14px rgba(23, 40, 247, 0.3);
-            
-            /* Text Colors */
-            --text-main: #111827;
-            --text-body: #374151;
-            --text-sub: #6B7280;
-            --text-muted: #9CA3AF;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이사 견적 비교 — 같은 이사, 업체마다 최대 120만원 차이</title>
+<meta name="description" content="이사 유형과 날짜만 넣으면 최대 5곳 견적을 한 번에 비교합니다. 30초면 끝.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1a1a1a;
+  --ink-soft:#555;
+  --ink-muted:#888;
+  --surface:#fafaf8;
+  --surface-warm:#f5f0e8;
+  --surface-card:#fff;
+  --accent:#c85a2a;
+  --accent-hover:#a84820;
+  --accent-soft:rgba(200,90,42,.08);
+  --border:#e0dcd4;
+  --radius:6px;
+  --font-body:'Pretendard Variable',system-ui,-apple-system,sans-serif;
+  --font-display:'Noto Serif KR',serif;
+  --max-w:680px;
+}
+html{font-size:17px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);color:var(--ink);background:var(--surface);line-height:1.7}
 
-        * {
-            box-sizing: border-box;
-            font-family: 'Pretendard', -apple-system, sans-serif;
-            margin: 0;
-            padding: 0;
-            -webkit-tap-highlight-color: transparent;
-        }
+/* === HERO === */
+.hero{
+  padding:clamp(3rem,8vw,6rem) 1.5rem clamp(2rem,5vw,4rem);
+  text-align:left;
+  max-width:var(--max-w);
+  margin:0 auto;
+}
+.hero-eyebrow{
+  font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--accent);font-weight:600;margin-bottom:.75rem;
+}
+.hero h1{
+  font-family:var(--font-display);font-size:clamp(1.6rem,4.5vw,2.4rem);
+  font-weight:700;line-height:1.35;color:var(--ink);margin-bottom:1rem;
+}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:1rem;color:var(--ink-soft);max-width:480px;margin-bottom:2rem}
 
-        body {
-            background-color: var(--bg-outer);
-            color: var(--text-body);
-            font-size: 15px;
-            line-height: 1.5;
-        }
+/* === FORM === */
+.quote-form{
+  background:var(--surface-card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:1.75rem 1.5rem;
+  display:flex;flex-direction:column;gap:1rem;
+}
+.form-row{display:flex;gap:.75rem;flex-wrap:wrap}
+.form-row > *{flex:1;min-width:0}
+.form-field{display:flex;flex-direction:column;gap:.35rem}
+.form-field label{font-size:.78rem;font-weight:600;color:var(--ink-soft)}
+.form-field select,
+.form-field input{
+  font-family:var(--font-body);font-size:.95rem;
+  padding:.65rem .75rem;border:1px solid var(--border);border-radius:var(--radius);
+  background:var(--surface);color:var(--ink);transition:border-color .15s;
+}
+.form-field select:focus,
+.form-field input:focus{outline:none;border-color:var(--accent)}
+.form-submit{
+  font-family:var(--font-body);font-size:1rem;font-weight:600;
+  background:var(--accent);color:#fff;border:none;border-radius:var(--radius);
+  padding:.85rem 1.5rem;cursor:pointer;transition:background .15s;
+  margin-top:.25rem;
+}
+.form-submit:hover{background:var(--accent-hover)}
+.form-note{font-size:.75rem;color:var(--ink-muted);text-align:center;margin-top:.25rem}
 
-        .app {
-            max-width: 430px;
-            margin: 0 auto;
-            background-color: var(--bg-outer);
-            min-height: 100dvh;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
-            overflow: hidden;
-        }
+/* === COST SECTION === */
+.cost-section{
+  max-width:var(--max-w);margin:0 auto;
+  padding:3rem 1.5rem;
+}
+.cost-section h2{
+  font-family:var(--font-display);font-size:1.25rem;font-weight:600;
+  margin-bottom:1.25rem;line-height:1.4;
+}
+.cost-table{
+  width:100%;border-collapse:collapse;font-size:.9rem;
+}
+.cost-table th{
+  text-align:left;padding:.6rem .75rem;
+  background:var(--surface-warm);font-weight:600;font-size:.78rem;
+  color:var(--ink-soft);letter-spacing:.03em;
+  border-bottom:1px solid var(--border);
+}
+.cost-table td{
+  padding:.7rem .75rem;border-bottom:1px solid var(--border);
+}
+.cost-table tr:last-child td{border-bottom:none}
+.cost-table .highlight{color:var(--accent);font-weight:700}
+.cost-table .diff{
+  font-size:.78rem;color:var(--ink-muted);display:block;margin-top:.15rem;
+}
 
-        /* Screen Manager */
-        .screen {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            min-height: 100dvh;
-            animation: fadeIn 0.3s ease-in-out;
-            position: relative;
-        }
-        .screen.active {
-            display: flex;
-        }
+/* === STEPS === */
+.steps-section{
+  background:var(--surface-warm);padding:3rem 1.5rem;
+}
+.steps-inner{max-width:var(--max-w);margin:0 auto}
+.steps-section h2{
+  font-family:var(--font-display);font-size:1.15rem;font-weight:600;
+  margin-bottom:1.5rem;
+}
+.step{
+  display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem;
+}
+.step:last-child{margin-bottom:0}
+.step-num{
+  flex-shrink:0;width:2rem;height:2rem;
+  border-radius:50%;background:var(--accent);color:#fff;
+  font-size:.8rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:.15rem;
+}
+.step-body h3{font-size:.95rem;font-weight:600;margin-bottom:.2rem}
+.step-body p{font-size:.88rem;color:var(--ink-soft)}
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideUpCard {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes floatAnim1 {
-            0% { transform: translateY(0) rotate(-6deg); }
-            50% { transform: translateY(-5px) rotate(-4deg); }
-            100% { transform: translateY(0) rotate(-6deg); }
-        }
-        @keyframes floatAnim2 {
-            0% { transform: translateY(0) rotate(8deg); }
-            50% { transform: translateY(-8px) rotate(10deg); }
-            100% { transform: translateY(0) rotate(8deg); }
-        }
+/* === FAQ === */
+.faq-section{max-width:var(--max-w);margin:0 auto;padding:3rem 1.5rem}
+.faq-section h2{
+  font-family:var(--font-display);font-size:1.15rem;font-weight:600;
+  margin-bottom:1.25rem;
+}
+.faq-item{border-bottom:1px solid var(--border);padding:1rem 0}
+.faq-q{font-weight:600;font-size:.92rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.1rem;color:var(--ink-muted);transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{
+  font-size:.88rem;color:var(--ink-soft);line-height:1.7;
+  max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;
+  padding-top:0;
+}
+.faq-item.open .faq-a{max-height:200px;padding-top:.75rem}
 
-        /* Hero Graphic Area */
-        .hero-graphic {
-            position: relative;
-            width: 100%;
-            height: 48vh;
-            background: radial-gradient(circle at 50% 30%, var(--hero-bg-light) 0%, var(--hero-bg-main) 50%, var(--hero-bg-dark) 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding-top: 10vh;
-            overflow: hidden;
-            z-index: 1;
-        }
+/* === BOTTOM CTA === */
+.bottom-cta{
+  text-align:center;padding:3rem 1.5rem 4rem;
+  max-width:var(--max-w);margin:0 auto;
+}
+.bottom-cta p{font-size:.95rem;color:var(--ink-soft);margin-bottom:1rem}
+.bottom-cta .form-submit{display:inline-block;padding:.85rem 2.5rem}
 
-        /* Search Motif (Magnifying Ring / Scanner) */
-        .search-motif {
-            position: absolute;
-            top: 12%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 260px;
-            height: 260px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: inset 0 0 40px rgba(234, 251, 29, 0.1);
-            z-index: 2;
-        }
-        .search-motif::after {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border-radius: 50%;
-            border: 2px solid transparent;
-            border-top-color: rgba(234, 251, 29, 0.5);
-            transform: rotate(-45deg);
-        }
+/* === SERVICES ASIDE === */
+.services-aside{
+  max-width:var(--max-w);margin:0 auto;padding:2rem 1.5rem 3rem;
+}
+.services-aside h2{
+  font-size:.85rem;font-weight:600;color:var(--ink-muted);
+  letter-spacing:.04em;text-transform:uppercase;margin-bottom:1rem;
+}
+.service-pills{display:flex;gap:.5rem;flex-wrap:wrap}
+.service-pill{
+  font-size:.82rem;padding:.45rem .9rem;
+  border:1px solid var(--border);border-radius:20px;
+  color:var(--ink-soft);text-decoration:none;transition:all .15s;
+  background:var(--surface-card);
+}
+.service-pill:hover{border-color:var(--accent);color:var(--accent)}
 
-        /* Floating Cards in Hero */
-        .fc {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 8px 14px;
-            border-radius: 10px;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--hero-bg-dark);
-            box-shadow: var(--shadow-floating);
-            backdrop-filter: blur(4px);
-            z-index: 3;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .fc::before {
-            content: '✓';
-            color: var(--primary);
-            font-size: 14px;
-            font-weight: 900;
-        }
-        .fc-1 { top: 15%; left: 6%; animation: floatAnim1 4s ease-in-out infinite; }
-        .fc-2 { top: 8%; right: 4%; animation: floatAnim2 4.5s ease-in-out infinite; font-size: 12px; opacity: 0.9; }
-        .fc-3 { top: 28%; right: 8%; transform: rotate(5deg); animation: floatAnim1 5s ease-in-out infinite; }
-        .fc-4 { top: 25%; left: -3%; transform: rotate(-12deg); opacity: 0.75; padding: 6px 12px; }
-        .fc-5 { top: 35%; left: 35%; transform: rotate(3deg); opacity: 0.85; padding: 6px 12px; font-size: 12px;}
+/* === FOOTER === */
+footer{
+  max-width:var(--max-w);margin:0 auto;padding:1.5rem;
+  border-top:1px solid var(--border);
+  font-size:.75rem;color:var(--ink-muted);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+}
+footer a{color:var(--ink-muted);text-decoration:none}
+footer a:hover{color:var(--ink)}
 
-        /* Hero Text */
-        .hero-text-wrap {
-            position: relative;
-            z-index: 4;
-            text-align: center;
-        }
-        .hero-title {
-            color: #FFFFFF;
-            font-size: 28px;
-            font-weight: 900;
-            line-height: 1.3;
-            letter-spacing: -0.5px;
-            margin-bottom: 12px;
-            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        .hero-title span {
-            color: var(--hero-accent);
-        }
-        .hero-sub {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 15px;
-            font-weight: 500;
-        }
-
-        /* Screen 0: Start Card */
-        .start-card-wrapper {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 10;
-            padding: 0 20px 24px;
-            animation: slideUpCard 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-        .start-card {
-            background: var(--bg-card);
-            border-radius: 24px;
-            padding: 32px 24px;
-            box-shadow: var(--shadow-card);
-        }
-        .sc-badge {
-            display: inline-block;
-            background-color: var(--hero-bg-dark);
-            color: #FFF;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-        .sc-title {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--text-main);
-            line-height: 1.35;
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
-            word-break: keep-all;
-        }
-        .sc-desc {
-            font-size: 14px;
-            color: var(--text-sub);
-            margin-bottom: 20px;
-            line-height: 1.5;
-            word-break: keep-all;
-        }
-        .sc-info-box {
-            background: var(--bg-outer);
-            border-radius: 12px;
-            padding: 16px;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-main);
-            text-align: center;
-            margin-bottom: 24px;
-            word-break: keep-all;
-        }
-        .sc-trust {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            justify-content: center;
-            margin-bottom: 28px;
-        }
-        .sc-trust span {
-            background: #F3F4F6;
-            color: var(--text-sub);
-            font-size: 12px;
-            padding: 6px 10px;
-            border-radius: 6px;
-            font-weight: 500;
-        }
-
-        /* Buttons */
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 56px;
-            border-radius: 14px;
-            font-size: 16px;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-        .btn-primary { 
-            background-color: var(--primary); 
-            color: #FFFFFF; 
-            box-shadow: var(--shadow-btn);
-        }
-        .btn-primary:active { 
-            background-color: var(--primary-hover);
-            transform: scale(0.98); 
-        }
-        .btn-secondary { 
-            background-color: #FFFFFF; 
-            color: #1020C9; 
-            border: 1px solid var(--border); 
-            margin-top: 10px; 
-        }
-        .btn-secondary:active {
-            background-color: #F8FAFC;
-        }
-        .privacy-text {
-            font-size: 12px;
-            color: var(--text-muted);
-            text-align: center;
-            margin-top: 16px;
-            word-break: keep-all;
-            line-height: 1.4;
-        }
-
-        /* Question Screens - Blue Header Integration */
-        .blue-header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 35vh; 
-            background: linear-gradient(135deg, var(--hero-bg-main) 0%, var(--hero-bg-dark) 100%);
-            z-index: 1;
-            padding: 24px 20px;
-        }
-        /* Decorative motif in question header */
-        .header-motif {
-            position: absolute;
-            right: -20px;
-            top: 20px;
-            width: 100px;
-            height: 100px;
-            border: 2px solid rgba(255,255,255,0.05);
-            border-radius: 50%;
-            z-index: 1;
-        }
-        
-        .progress-area {
-            position: relative;
-            z-index: 2;
-        }
-        .progress-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 12px;
-        }
-        .progress-text {
-            font-size: 15px;
-            font-weight: 800;
-            color: #FFF;
-        }
-        .progress-subtext {
-            font-size: 13px;
-            color: rgba(255,255,255,0.7);
-            font-weight: 600;
-        }
-        .progress-bar-bg {
-            width: 100%;
-            height: 6px;
-            background-color: rgba(255,255,255,0.25);
-            border-radius: 999px;
-            overflow: hidden;
-        }
-        .progress-bar-fill {
-            height: 100%;
-            background-color: var(--hero-accent);
-            border-radius: 999px;
-            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .q-content-wrapper {
-            position: relative;
-            z-index: 10;
-            padding: 0 20px 24px;
-            margin-top: 10vh; /* Pushes card down so it overlaps the blue header */
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .q-card {
-            background-color: var(--bg-card);
-            border-radius: 22px;
-            padding: 22px;
-            box-shadow: 0 12px 30px rgba(8,20,94,0.14);
-            margin-bottom: auto; /* Pushes bottom nav down */
-        }
-        .q-status {
-            font-size: 13px;
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 8px;
-            display: inline-block;
-            background: var(--primary-active-bg);
-            padding: 4px 10px;
-            border-radius: 6px;
-        }
-        .q-title {
-            font-size: 20px;
-            font-weight: 800;
-            margin-bottom: 10px;
-            color: var(--text-main);
-            word-break: keep-all;
-            line-height: 1.35;
-            letter-spacing: -0.5px;
-        }
-        .q-desc {
-            font-size: 14px;
-            color: var(--text-sub);
-            margin-bottom: 28px;
-            word-break: keep-all;
-            line-height: 1.4;
-        }
-        .q-options {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .q-btn {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            border-radius: 14px;
-            height: 52px;
-            font-size: 15px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            transition: all 0.2s;
-            cursor: pointer;
-        }
-        .q-btn.active {
-            background-color: var(--primary-active-bg);
-            border-color: var(--primary);
-            color: #1020C9;
-            font-weight: 700;
-        }
-        .q-btn.active::after {
-            content: "✓";
-            position: absolute;
-            right: 18px;
-            font-size: 16px;
-            font-weight: 800;
-        }
-
-        @keyframes slideDownFeedback {
-            from { opacity: 0; transform: translateY(-10px); height: 0; padding: 0 16px; }
-            to { opacity: 1; transform: translateY(0); height: auto; padding: 16px; }
-        }
-
-        .feedback-box {
-            background-color: #EEF2FF;
-            border-radius: 14px;
-            margin-top: 16px;
-            border: 1px solid #BFDBFE;
-            display: none;
-            overflow: hidden;
-        }
-        .feedback-box.show {
-            display: block;
-            animation: slideDownFeedback 0.3s ease-out forwards;
-        }
-        .feedback-content {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-        }
-        .f-icon {
-            font-size: 16px;
-            margin-top: 2px;
-        }
-        .feedback-content p {
-            font-size: 14px;
-            line-height: 1.4;
-            color: #1E3A8A;
-            word-break: keep-all;
-        }
-        .feedback-content p strong {
-            font-weight: 700;
-            display: block;
-            margin-bottom: 6px;
-            color: var(--hero-bg-main);
-        }
-
-        /* Bottom Nav */
-        .bottom-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 24px;
-        }
-        .btn-prev {
-            background: none;
-            border: none;
-            color: var(--text-sub);
-            font-size: 15px;
-            font-weight: 600;
-            padding: 10px 10px 10px 0;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
-        .btn-prev::before {
-            content: "‹";
-            font-size: 20px;
-            margin-right: 4px;
-            margin-top: -2px;
-        }
-        .btn-next {
-            padding: 0 24px;
-            height: 48px;
-            border-radius: 24px;
-            font-weight: 700;
-            font-size: 15px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .btn-disabled {
-            background-color: var(--border);
-            color: var(--text-muted);
-            cursor: not-allowed;
-        }
-
-        /* Result Screen */
-        .result-header-content {
-            position: relative;
-            z-index: 2;
-            padding-top: 10px;
-        }
-        .r-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            background-color: rgba(255,255,255,0.2);
-            color: var(--hero-accent);
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-        .r-title {
-            color: #FFF;
-            font-size: 24px;
-            font-weight: 800;
-            line-height: 1.35;
-            word-break: keep-all;
-            margin-bottom: 6px;
-        }
-        .r-sub {
-            color: rgba(255,255,255,0.8);
-            font-size: 15px;
-        }
-        
-        .result-card {
-            background-color: var(--bg-card);
-            border-radius: 20px;
-            padding: 28px 24px;
-            box-shadow: var(--shadow-card);
-            margin-bottom: 20px;
-            margin-top: 5vh;
-            position: relative;
-            z-index: 10;
-        }
-        .result-card-title {
-            font-size: 15px;
-            font-weight: 800;
-            color: var(--text-main);
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .check-item {
-            display: flex;
-            align-items: center;
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-body);
-            margin-bottom: 14px;
-            padding-bottom: 14px;
-            border-bottom: 1px solid var(--bg-outer);
-        }
-        .check-item:last-child { 
-            margin-bottom: 0; 
-            padding-bottom: 0; 
-            border-bottom: none; 
-        }
-        .check-item::before {
-            content: "✓";
-            color: var(--primary);
-            font-size: 16px;
-            font-weight: 900;
-            margin-right: 12px;
-        }
-        .result-desc {
-            font-size: 13px;
-            color: var(--text-sub);
-            text-align: center;
-            margin-top: 16px;
-            background: #F3F4F6;
-            padding: 12px;
-            border-radius: 8px;
-            word-break: keep-all;
-        }
-        
-        .btn-result-main {
-            height: 64px;
-            font-size: 18px;
-            border-radius: 16px;
-            margin-bottom: 12px;
-            box-shadow: 0 8px 20px rgba(23, 40, 247, 0.4);
-        }
-
-        /* Accordion */
-        .accordion-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 24px;
-        }
-        details {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        summary {
-            list-style: none;
-            padding: 16px;
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--text-main);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        summary::-webkit-details-marker { display: none; }
-        summary::after {
-            content: '▼';
-            font-size: 10px;
-            color: var(--text-muted);
-            transition: transform 0.2s;
-        }
-        details[open] summary::after { transform: rotate(180deg); }
-        .details-content {
-            padding: 0 16px 16px;
-        }
-        .details-content p {
-            font-size: 13px;
-            color: var(--text-sub);
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-        .details-content p strong {
-            color: var(--hero-bg-main);
-            display: block;
-            margin-bottom: 4px;
-            font-weight: 700;
-        }
-        .details-content ol {
-            padding-left: 20px;
-            margin-bottom: 0;
-            font-size: 13px;
-            color: var(--text-sub);
-            line-height: 1.6;
-        }
-        .details-content li { margin-bottom: 6px; }
-
-        /* Detail List inside new accordion */
-        .detail-checklist {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 8px;
-        }
-        .dc-item {
-            background: var(--bg-outer);
-            padding: 14px;
-            border-radius: 10px;
-            border: 1px solid #E5E7EB;
-        }
-        .dc-title {
-            font-size: 14px;
-            font-weight: 800;
-            color: var(--hero-bg-dark);
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-        }
-        .dc-title::before {
-            content: "✓";
-            color: var(--primary);
-            margin-right: 6px;
-            font-size: 15px;
-        }
-        .dc-ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 10px 0;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        .dc-ul li {
-            font-size: 13px;
-            color: var(--text-body);
-            display: flex;
-            align-items: flex-start;
-        }
-        .dc-ul li::before {
-            content: "·";
-            color: var(--text-muted);
-            margin-right: 6px;
-            font-weight: 900;
-        }
-        .dc-desc {
-            font-size: 12px;
-            color: var(--primary);
-            background: var(--primary-active-bg);
-            padding: 8px 10px;
-            border-radius: 6px;
-            word-break: keep-all;
-            line-height: 1.4;
-            font-weight: 500;
-        }
-
-    </style>
+/* === MOBILE === */
+@media(max-width:600px){
+  html{font-size:16px}
+  .form-row{flex-direction:column}
+  .hero{padding:2.5rem 1.25rem 2rem}
+  .cost-table{font-size:.82rem}
+  .cost-table th,.cost-table td{padding:.5rem}
+}
+</style>
 </head>
 <body>
-    <div class="app">
-        
-        <!-- Screen 0: Start -->
-        <div class="screen active" id="screen-0">
-            <!-- Hero Graphic -->
-            <div class="hero-graphic">
-                <div class="search-motif"></div>
-                <div class="fc fc-1">이사 예정일</div>
-                <div class="fc fc-2">사다리차 필요 여부</div>
-                <div class="fc fc-3">큰 짐 체크</div>
-                <div class="fc fc-4">출발지·도착지</div>
-                <div class="fc fc-5">주말 이사</div>
-                
-                <div class="hero-text-wrap">
-                    <h1 class="hero-title">내 이사 조건,<br><span>먼저 체크하세요</span></h1>
-                    <p class="hero-sub">추가요금 조건을 미리 확인해보세요</p>
-                </div>
-            </div>
 
-            <!-- Start Card (Overlapping Hero) -->
-            <div class="start-card-wrapper">
-                <div class="start-card">
-                    <div class="sc-badge">이사 견적 설문 전 30초 체크</div>
-                    <h2 class="sc-title">견적 신청 전,<br>추가요금 조건부터 확인하세요</h2>
-                    <p class="sc-desc">사다리차, 주말 이사, 큰 짐 여부에 따라 상담 중 견적이 달라질 수 있습니다.</p>
-                    
-                    <div class="sc-info-box">
-                        6가지만 체크하면 실제 견적 설문에서 어떤 정보를 준비해야 하는지 바로 알 수 있습니다.
-                    </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">이사 견적 비교</div>
+  <h1>같은 포장이사,<br>업체마다 <em>최대 120만원</em> 차이납니다</h1>
+  <p class="hero-sub">조건만 넣으면 최대 5곳 견적을 한 번에 받아볼 수 있습니다.</p>
 
-                    <div class="sc-trust">
-                        <span>✓ 개인정보 직접 수집 없음</span>
-                        <span>✓ 30초 조건 체크</span>
-                        <span>✓ 제휴 견적 설문 이동</span>
-                    </div>
-
-                    <button class="btn btn-primary" onclick="goToScreen(1)">30초 체크 시작하기</button>
-                    <button class="btn btn-secondary" onclick="goToAppu('start')">바로 견적 설문으로 이동</button>
-                    <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.<br>신청은 제휴 견적 설문 페이지에서 진행됩니다.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Question 1 -->
-        <div class="screen" id="screen-1">
-            <div class="blue-header">
-                <div class="header-motif"></div>
-                <div class="progress-area">
-                    <div class="progress-header">
-                        <span class="progress-text">1 / 6</span>
-                        <span class="progress-subtext">30초 체크 진행 중</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 16.6%;"></div></div>
-                </div>
-            </div>
-            
-            <div class="q-content-wrapper">
-                <div class="q-card">
-                    <div class="q-status">먼저 이사 날짜부터 확인할게요</div>
-                    <h2 class="q-title">이사 예정일이 언제인가요?</h2>
-                    <p class="q-desc">이사일이 가까우면 상담 가능 시간과 견적 안내 속도가 중요해집니다.</p>
-                    <div class="q-options">
-                        <button class="q-btn" onclick="selectOption(1, this, '좋아요. 이사 날짜는 견적 상담에서 가장 먼저 확인하는 조건입니다.', '다음은 상담 전화를 받을 수 있는지 확인할게요.')">55일 이내예요</button>
-                        <button class="q-btn" onclick="selectOption(1, this, '좋아요. 이사 날짜는 견적 상담에서 가장 먼저 확인하는 조건입니다.', '다음은 상담 전화를 받을 수 있는지 확인할게요.')">55일 이후예요</button>
-                        <button class="q-btn" onclick="selectOption(1, this, '좋아요. 이사 날짜는 견적 상담에서 가장 먼저 확인하는 조건입니다.', '다음은 상담 전화를 받을 수 있는지 확인할게요.')">아직 정확히 미정이에요</button>
-                    </div>
-                    <div class="feedback-box" id="feedback-1"></div>
-                </div>
-                
-                <div class="bottom-nav">
-                    <div></div>
-                    <button class="btn-next btn-disabled" id="btn-next-1" disabled onclick="goToScreen(2)">다음</button>
-                </div>
-                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
-            </div>
-        </div>
-
-        <!-- Question 2 -->
-        <div class="screen" id="screen-2">
-            <div class="blue-header">
-                <div class="header-motif"></div>
-                <div class="progress-area">
-                    <div class="progress-header">
-                        <span class="progress-text">2 / 6</span>
-                        <span class="progress-subtext">30초 체크 진행 중</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 33.3%;"></div></div>
-                </div>
-            </div>
-            
-            <div class="q-content-wrapper">
-                <div class="q-card">
-                    <div class="q-status">상담 연결 조건 확인</div>
-                    <h2 class="q-title">견적 상담 전화를 받을 수 있나요?</h2>
-                    <p class="q-desc">전화를 받을 수 있어야 일정과 조건을 빠르게 확인할 수 있습니다.</p>
-                    <div class="q-options">
-                        <button class="q-btn" onclick="selectOption(2, this, '확인했습니다. 상담 가능 시간은 견적 연결에 중요한 기준입니다.', '이제 출발지와 도착지가 정해졌는지 볼게요.')">바로 상담 가능해요</button>
-                        <button class="q-btn" onclick="selectOption(2, this, '확인했습니다. 상담 가능 시간은 견적 연결에 중요한 기준입니다.', '이제 출발지와 도착지가 정해졌는지 볼게요.')">가능한 시간대가 있어요</button>
-                        <button class="q-btn" onclick="selectOption(2, this, '확인했습니다. 상담 가능 시간은 견적 연결에 중요한 기준입니다.', '이제 출발지와 도착지가 정해졌는지 볼게요.')">전화 상담은 어려워요</button>
-                    </div>
-                    <div class="feedback-box" id="feedback-2"></div>
-                </div>
-                
-                <div class="bottom-nav">
-                    <button class="btn-prev" onclick="goToScreen(1)">이전</button>
-                    <button class="btn-next btn-disabled" id="btn-next-2" disabled onclick="goToScreen(3)">다음</button>
-                </div>
-                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
-            </div>
-        </div>
-
-        <!-- Question 3 -->
-        <div class="screen" id="screen-3">
-            <div class="blue-header">
-                <div class="header-motif"></div>
-                <div class="progress-area">
-                    <div class="progress-header">
-                        <span class="progress-text">3 / 6</span>
-                        <span class="progress-subtext">30초 체크 진행 중</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 50%;"></div></div>
-                </div>
-            </div>
-            
-            <div class="q-content-wrapper">
-                <div class="q-card">
-                    <div class="q-status">이동 조건 확인</div>
-                    <h2 class="q-title">출발지와 도착지가 정해졌나요?</h2>
-                    <p class="q-desc">출발지와 도착지에 따라 이동 거리와 현장 조건이 달라질 수 있습니다.</p>
-                    <div class="q-options">
-                        <button class="q-btn" onclick="selectOption(3, this, '좋습니다. 주소 확정 여부는 상담할 때 꼭 확인되는 항목입니다.', '다음은 사다리차나 엘리베이터 조건을 체크할게요.')">둘 다 정해졌어요</button>
-                        <button class="q-btn" onclick="selectOption(3, this, '좋습니다. 주소 확정 여부는 상담할 때 꼭 확인되는 항목입니다.', '다음은 사다리차나 엘리베이터 조건을 체크할게요.')">한쪽만 정해졌어요</button>
-                        <button class="q-btn" onclick="selectOption(3, this, '좋습니다. 주소 확정 여부는 상담할 때 꼭 확인되는 항목입니다.', '다음은 사다리차나 엘리베이터 조건을 체크할게요.')">아직 미정이에요</button>
-                    </div>
-                    <div class="feedback-box" id="feedback-3"></div>
-                </div>
-                
-                <div class="bottom-nav">
-                    <button class="btn-prev" onclick="goToScreen(2)">이전</button>
-                    <button class="btn-next btn-disabled" id="btn-next-3" disabled onclick="goToScreen(4)">다음</button>
-                </div>
-                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
-            </div>
-        </div>
-
-        <!-- Question 4 -->
-        <div class="screen" id="screen-4">
-            <div class="blue-header">
-                <div class="header-motif"></div>
-                <div class="progress-area">
-                    <div class="progress-header">
-                        <span class="progress-text">4 / 6</span>
-                        <span class="progress-subtext">30초 체크 진행 중</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 66.6%;"></div></div>
-                </div>
-            </div>
-            
-            <div class="q-content-wrapper">
-                <div class="q-card">
-                    <div class="q-status">추가요금 가능 조건 확인</div>
-                    <h2 class="q-title">사다리차·엘리베이터·주차 조건을 알고 있나요?</h2>
-                    <p class="q-desc">층수, 엘리베이터, 주차 가능 여부에 따라 추가 비용이 생길 수 있습니다.</p>
-                    <div class="q-options">
-                        <button class="q-btn" onclick="selectOption(4, this, '확인했습니다. 현장 조건은 견적이 달라지기 쉬운 중요한 포인트입니다.', '이제 큰 짐이나 설치 품목을 확인할게요.')">확인해뒀어요</button>
-                        <button class="q-btn" onclick="selectOption(4, this, '확인했습니다. 현장 조건은 견적이 달라지기 쉬운 중요한 포인트입니다.', '이제 큰 짐이나 설치 품목을 확인할게요.')">일부만 알고 있어요</button>
-                        <button class="q-btn" onclick="selectOption(4, this, '확인했습니다. 현장 조건은 견적이 달라지기 쉬운 중요한 포인트입니다.', '이제 큰 짐이나 설치 품목을 확인할게요.')">아직 잘 몰라요</button>
-                    </div>
-                    <div class="feedback-box" id="feedback-4"></div>
-                </div>
-                
-                <div class="bottom-nav">
-                    <button class="btn-prev" onclick="goToScreen(3)">이전</button>
-                    <button class="btn-next btn-disabled" id="btn-next-4" disabled onclick="goToScreen(5)">다음</button>
-                </div>
-                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
-            </div>
-        </div>
-
-        <!-- Question 5 -->
-        <div class="screen" id="screen-5">
-            <div class="blue-header">
-                <div class="header-motif"></div>
-                <div class="progress-area">
-                    <div class="progress-header">
-                        <span class="progress-text">5 / 6</span>
-                        <span class="progress-subtext" style="color:var(--hero-accent);">거의 다 왔어요</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 83.3%;"></div></div>
-                </div>
-            </div>
-            
-            <div class="q-content-wrapper">
-                <div class="q-card">
-                    <div class="q-status">거의 다 왔어요</div>
-                    <h2 class="q-title">큰 짐이나 분해·설치 품목이 있나요?</h2>
-                    <p class="q-desc">침대, 에어컨, 대형가전처럼 별도 작업이 필요한 짐은 견적에 영향을 줄 수 있습니다.</p>
-                    <div class="q-options">
-                        <button class="q-btn" onclick="selectOption(5, this, '좋아요. 큰 짐과 설치 품목은 상담 전에 정리해두면 좋습니다.', '마지막으로 상담 가능한 시간대를 확인할게요.')">정리해둔 편이에요</button>
-                        <button class="q-btn" onclick="selectOption(5, this, '좋아요. 큰 짐과 설치 품목은 상담 전에 정리해두면 좋습니다.', '마지막으로 상담 가능한 시간대를 확인할게요.')">대략만 알고 있어요</button>
-                        <button class="q-btn" onclick="selectOption(5, this, '좋아요. 큰 짐과 설치 품목은 상담 전에 정리해두면 좋습니다.', '마지막으로 상담 가능한 시간대를 확인할게요.')">아직 정리 못 했어요</button>
-                    </div>
-                    <div class="feedback-box" id="feedback-5"></div>
-                </div>
-                
-                <div class="bottom-nav">
-                    <button class="btn-prev" onclick="goToScreen(4)">이전</button>
-                    <button class="btn-next btn-disabled" id="btn-next-5" disabled onclick="goToScreen(6)">다음</button>
-                </div>
-                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
-            </div>
-        </div>
-
-        <!-- Question 6 -->
-        <div class="screen" id="screen-6">
-            <div class="blue-header">
-                <div class="header-motif"></div>
-                <div class="progress-area">
-                    <div class="progress-header">
-                        <span class="progress-text">6 / 6</span>
-                        <span class="progress-subtext" style="color:var(--hero-accent);">마지막 항목입니다</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 100%;"></div></div>
-                </div>
-            </div>
-            
-            <div class="q-content-wrapper">
-                <div class="q-card">
-                    <div class="q-status">마지막 항목입니다</div>
-                    <h2 class="q-title">상담 가능한 시간대가 있나요?</h2>
-                    <p class="q-desc">받을 수 있는 시간대를 정해두면 상담 누락을 줄일 수 있습니다.</p>
-                    <div class="q-options">
-                        <button class="q-btn" onclick="selectOption(6, this, '체크가 완료됐습니다.', '')">바로 가능해요</button>
-                        <button class="q-btn" onclick="selectOption(6, this, '체크가 완료됐습니다.', '')">가능한 시간대가 있어요</button>
-                        <button class="q-btn" onclick="selectOption(6, this, '체크가 완료됐습니다.', '')">아직 정하기 어려워요</button>
-                    </div>
-                    <div class="feedback-box" id="feedback-6"></div>
-                </div>
-                
-                <div class="bottom-nav">
-                    <button class="btn-prev" onclick="goToScreen(5)">이전</button>
-                    <button class="btn-next btn-disabled" id="btn-next-6" disabled onclick="goToScreen(7)">결과 확인하기</button>
-                </div>
-                <p class="privacy-text">이 페이지는 개인정보를 직접 수집하지 않습니다.</p>
-            </div>
-        </div>
-
-        <!-- Screen 7: Result -->
-        <div class="screen" id="screen-7" style="padding:0;">
-            <!-- Blue Header for Result -->
-            <div class="blue-header" style="height: 38vh;">
-                <div class="header-motif"></div>
-                <div class="result-header-content">
-                    <div class="r-badge">✓ 체크 완료</div>
-                    <h1 class="r-title">이제 견적 설문으로<br>이동하면 됩니다</h1>
-                    <p class="r-sub">상담 전에 확인할 항목이 정리됐습니다.</p>
-                </div>
-            </div>
-            
-            <!-- Result Content Wrapper -->
-            <div class="q-content-wrapper" style="margin-top: 15vh;">
-                <div class="result-card">
-                    <div class="result-card-title">견적 상담 전 준비하면 좋은 항목</div>
-                    <div class="check-item">이사 예정일</div>
-                    <div class="check-item">출발지·도착지</div>
-                    <div class="check-item">사다리차·엘리베이터·주차 조건</div>
-                    <div class="check-item">큰 짐·분해설치 품목</div>
-                    <div class="check-item">상담 가능한 시간대</div>
-                    <div class="result-desc">
-                        이 정보가 정리되어 있으면 상담 시간이 줄고, 견적이 달라질 가능성도 줄일 수 있습니다.
-                    </div>
-                </div>
-                
-                <div>
-                    <button class="btn btn-primary btn-result-main" onclick="goToAppu('result')">견적 설문으로 이동하기</button>
-                    <button class="btn btn-secondary" onclick="goToScreen(0)">다시 체크하기</button>
-                </div>
-                
-                <!-- Accordions -->
-                <div class="accordion-wrapper">
-                    <details>
-                        <summary>
-                            <div>상담 전에 자세히 체크하면 좋은 항목<br><span style="font-size:12px; color:var(--text-sub); font-weight:500; display:block; margin-top:4px;">아래 항목을 미리 정리해두면 상담 중 다시 확인하는 시간을 줄일 수 있습니다.</span></div>
-                        </summary>
-                        <div class="details-content">
-                            <div class="detail-checklist">
-                                <div class="dc-item">
-                                    <div class="dc-title">1. 이사 예정일</div>
-                                    <ul class="dc-ul">
-                                        <li>이사 희망일이 정해졌는지</li>
-                                        <li>55일 이내 이사인지</li>
-                                        <li>평일/주말/손 없는 날 여부</li>
-                                        <li>오전/오후 중 원하는 시간대가 있는지</li>
-                                        <li>날짜 변경 가능성이 있는지</li>
-                                    </ul>
-                                    <div class="dc-desc">날짜 조건에 따라 상담 가능 일정과 견적이 달라질 수 있습니다.</div>
-                                </div>
-                                
-                                <div class="dc-item">
-                                    <div class="dc-title">2. 출발지 / 도착지</div>
-                                    <ul class="dc-ul">
-                                        <li>출발지 주소가 정해졌는지</li>
-                                        <li>도착지 주소가 정해졌는지</li>
-                                        <li>동/호수까지 확인 가능한지</li>
-                                        <li>차량 진입이 가능한지</li>
-                                        <li>주차 공간이 있는지</li>
-                                    </ul>
-                                    <div class="dc-desc">출발지와 도착지가 정해져야 이동 거리와 현장 조건을 더 정확히 확인할 수 있습니다.</div>
-                                </div>
-
-                                <div class="dc-item">
-                                    <div class="dc-title">3. 건물 / 현장 조건</div>
-                                    <ul class="dc-ul">
-                                        <li>출발지 층수</li>
-                                        <li>도착지 층수</li>
-                                        <li>엘리베이터 사용 가능 여부</li>
-                                        <li>사다리차 필요 여부</li>
-                                        <li>차량 진입 가능 여부</li>
-                                        <li>아파트/빌라/오피스텔/단독주택 등 건물 유형</li>
-                                        <li>관리실 사전 예약이 필요한지</li>
-                                    </ul>
-                                    <div class="dc-desc">층수, 엘리베이터, 주차 조건은 추가요금 발생 여부와 작업 방식에 영향을 줄 수 있습니다.</div>
-                                </div>
-
-                                <div class="dc-item">
-                                    <div class="dc-title">4. 큰 짐 / 특수 품목</div>
-                                    <ul class="dc-ul">
-                                        <li>침대 / 매트리스</li>
-                                        <li>냉장고 / 세탁기 / 건조기 / 에어컨 / TV</li>
-                                        <li>장롱/붙박이장</li>
-                                        <li>피아노/안마의자 등 무거운 품목</li>
-                                        <li>분해·조립이 필요한 가구</li>
-                                    </ul>
-                                    <div class="dc-desc">큰 짐이나 분해·설치 품목은 작업 인원, 차량, 추가 작업 여부에 영향을 줄 수 있습니다.</div>
-                                </div>
-
-                                <div class="dc-item">
-                                    <div class="dc-title">5. 짐 양 / 박스 수량</div>
-                                    <ul class="dc-ul">
-                                        <li>원룸/투룸/아파트 등 대략적인 집 크기</li>
-                                        <li>옷, 주방용품, 책 등 잔짐이 많은지</li>
-                                        <li>박스 포장이 필요한지</li>
-                                        <li>직접 포장할지, 포장 이사를 원할지</li>
-                                        <li>버릴 짐이 있는지</li>
-                                    </ul>
-                                    <div class="dc-desc">짐 양이 많거나 잔짐이 많은 경우 상담 시 확인할 내용이 늘어날 수 있습니다.</div>
-                                </div>
-
-                                <div class="dc-item">
-                                    <div class="dc-title">6. 상담 가능 시간</div>
-                                    <ul class="dc-ul">
-                                        <li>바로 전화 상담이 가능한지</li>
-                                        <li>통화 가능한 시간대가 있는지</li>
-                                        <li>부재중일 경우 다시 받을 수 있는지</li>
-                                        <li>문자/카톡 안내를 선호하는지</li>
-                                        <li>상담 연락을 받을 사람을 정했는지</li>
-                                    </ul>
-                                    <div class="dc-desc">상담 가능한 시간대를 정해두면 연락 누락을 줄이고 진행이 빨라질 수 있습니다.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>설문 전에 확인하면 좋은 6가지</summary>
-                        <div class="details-content">
-                            <ol>
-                                <li>이사 예정일</li>
-                                <li>출발지와 도착지</li>
-                                <li>사다리차·엘리베이터·주차 조건</li>
-                                <li>큰 짐 수량</li>
-                                <li>분해·설치 품목</li>
-                                <li>상담 가능한 시간대</li>
-                            </ol>
-                        </div>
-                    </details>
-                    
-                    <details>
-                        <summary>견적이 달라지는 3가지 이유</summary>
-                        <div class="details-content">
-                            <p><strong>1. 날짜 조건</strong>주말, 손 없는 날, 성수기 여부에 따라 견적이 달라질 수 있습니다.</p>
-                            <p><strong>2. 현장 조건</strong>층수, 엘리베이터, 사다리차, 주차 가능 여부가 비용에 영향을 줄 수 있습니다.</p>
-                            <p><strong>3. 짐 조건</strong>대형가전, 침대, 에어컨, 분해·설치 품목에 따라 작업 방식이 달라질 수 있습니다.</p>
-                        </div>
-                    </details>
-                </div>
-                <p class="privacy-text" style="margin-bottom: 24px;">이 페이지는 개인정보를 직접 수집하지 않습니다.<br>신청은 제휴 견적 설문 페이지에서 진행됩니다.</p>
-            </div>
-        </div>
-
+  <form class="quote-form" id="quoteForm">
+    <div class="form-row">
+      <div class="form-field">
+        <label for="moveType">이사 유형</label>
+        <select id="moveType">
+          <option value="포장이사">포장이사</option>
+          <option value="반포장이사">반포장이사</option>
+          <option value="일반이사">일반이사 (용달)</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="moveDate">이사 예정일</label>
+        <input type="date" id="moveDate">
+      </div>
     </div>
+    <div class="form-row">
+      <div class="form-field">
+        <label for="fromAddr">출발지</label>
+        <input type="text" id="fromAddr" placeholder="예) 서울 강남구 역삼동">
+      </div>
+      <div class="form-field">
+        <label for="toAddr">도착지</label>
+        <input type="text" id="toAddr" placeholder="예) 경기 성남시 분당구">
+      </div>
+    </div>
+    <button type="submit" class="form-submit">무료 견적 비교 시작 →</button>
+    <p class="form-note">다음 페이지(다이사)에서 연락처만 추가하면 상담이 시작됩니다</p>
+  </form>
+</section>
 
-    <script>
-        function goToScreen(stepIndex) {
-            const screens = document.querySelectorAll('.screen');
-            screens.forEach(screen => screen.classList.remove('active'));
-            
-            const target = document.getElementById('screen-' + stepIndex);
-            if(target) {
-                target.classList.add('active');
-                window.scrollTo(0,0);
-            }
-        }
+<!-- COST COMPARISON -->
+<section class="cost-section">
+  <h2>비교 안 하면 얼마나 더 낼까?</h2>
+  <table class="cost-table">
+    <thead>
+      <tr><th>이사 유형</th><th>최저가</th><th>최고가</th><th>평균 차이</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>원룸 포장이사</td><td>35만원</td><td>80만원</td>
+        <td class="highlight">45만원<span class="diff">같은 구간, 같은 짐</span></td>
+      </tr>
+      <tr>
+        <td>투룸 포장이사</td><td>70만원</td><td>150만원</td>
+        <td class="highlight">80만원<span class="diff">견적 2곳만 받아도 줄어듦</span></td>
+      </tr>
+      <tr>
+        <td>30평 이상 포장이사</td><td>120만원</td><td>280만원</td>
+        <td class="highlight">120만원 이상<span class="diff">업체별 기준 자체가 다름</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
-        function selectOption(step, btn, feedbackText, nextDescText) {
-            const parent = btn.parentElement;
-            const siblings = parent.querySelectorAll('.q-btn');
-            siblings.forEach(s => s.classList.remove('active'));
-            
-            btn.classList.add('active');
-            
-            const feedbackBox = document.getElementById('feedback-' + step);
-            const nextDescHtml = nextDescText ? `<br><span style="color:var(--text-sub); font-weight:500; margin-top:4px; display:inline-block;">${nextDescText}</span>` : '';
-            feedbackBox.innerHTML = `
-                <div class="feedback-content">
-                    <span class="f-icon">💡</span>
-                    <p><strong>${feedbackText}</strong>${nextDescHtml}</p>
-                </div>
-            `;
-            feedbackBox.classList.add('show');
-            
-            const nextBtn = document.getElementById('btn-next-' + step);
-            nextBtn.disabled = false;
-            nextBtn.classList.remove('btn-disabled');
-            nextBtn.classList.add('btn-primary');
+<!-- STEPS -->
+<section class="steps-section">
+  <div class="steps-inner">
+    <h2>어떻게 진행되나요</h2>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3>조건 입력 — 30초</h3>
+        <p>이사 유형, 날짜, 출발지·도착지만 넣으세요. 이 페이지에서 시작합니다.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3>연락처 입력 — 다이사 페이지</h3>
+        <p>다음 페이지에서 이름과 전화번호만 추가하면 접수 완료.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3>견적 비교 — 당일 연락</h3>
+        <p>최대 5곳 이사업체에서 견적을 받아 비교합니다. 마음에 드는 곳만 진행하세요.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-            trackSelectorChoice(step, btn.textContent.trim());
+<!-- FAQ -->
+<section class="faq-section">
+  <h2>자주 묻는 질문</h2>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">비용이 드나요?</div>
+    <div class="faq-a">견적 비교는 무료입니다. 업체를 선택하기 전까지 비용이 발생하지 않습니다.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">개인정보는 안전한가요?</div>
+    <div class="faq-a">연락처는 견적 상담 목적으로만 사용됩니다. 다이사 개인정보처리방침에 따라 관리됩니다.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">손 없는 날에도 견적 비교가 되나요?</div>
+    <div class="faq-a">네. 다만 수요가 몰리는 날은 견적이 높게 나올 수 있으니 평일과 함께 비교하면 유리합니다.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">견적만 받고 안 해도 되나요?</div>
+    <div class="faq-a">물론입니다. 견적을 받은 뒤 진행 여부는 자유입니다. 강제 계약은 없습니다.</div>
+  </div>
+</section>
 
-            setTimeout(() => {
-                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            }, 150);
-        }
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <p>비교하는 데 30초, 아끼는 건 수십만원.</p>
+  <button class="form-submit" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">
+    견적 비교 시작 →
+  </button>
+</section>
 
-        const AFFILIATE_PLATFORM = 'adlix';
-        const AFFILIATE_ID = '21452460';
-        const ADLIX_CAMPAIGN_ID = '6936747';
-        const AFFILIATE_URL = 'https://appu.kr/?i=12518178';
-        const SESSION_KEY = 'moving_quote_call_burden_session';
+<!-- OTHER SERVICES -->
+<section class="services-aside">
+  <h2>이사할 때 같이 하면 편한 것들</h2>
+  <div class="service-pills">
+    <a href="/services/cleaning" class="service-pill">입주·이사청소</a>
+    <a href="/services/internet" class="service-pill">인터넷 가입</a>
+    <a href="/services/curtain" class="service-pill">커튼·블라인드</a>
+    <a href="/services/living" class="service-pill">생활용품·가전</a>
+  </div>
+</section>
 
-        function sessionId() {
-            const existing = sessionStorage.getItem(SESSION_KEY);
-            if (existing) return existing;
-            const generated = crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + '-' + Math.random().toString(36).slice(2);
-            sessionStorage.setItem(SESSION_KEY, generated);
-            return generated;
-        }
+<footer>
+  <span>이사준비 한 번에 · 정보 안내 목적</span>
+  <span>
+    <a href="/privacy">개인정보처리방침</a> · 
+    <a href="/terms">이용약관</a> · 
+    <a href="/partnership">제휴 안내</a>
+  </span>
+</footer>
 
-        function currentUtm() {
-            const params = new URLSearchParams(location.search);
-            return {
-                utm_source: params.get('utm_source') || 'direct',
-                utm_medium: params.get('utm_medium') || 'none',
-                utm_campaign: params.get('utm_campaign') || 'moving_quote_call_burden',
-                utm_content: params.get('utm_content') || 'none',
-                utm_term: params.get('utm_term') || 'none'
-            };
-        }
+<script>
+document.getElementById('quoteForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const type = document.getElementById('moveType').value;
+  const date = document.getElementById('moveDate').value;
+  const from = document.getElementById('fromAddr').value;
+  const to = document.getElementById('toAddr').value;
+  
+  // Track pre-qualification data (for your analytics)
+  const preQualData = { type, date, from, to, ts: Date.now() };
+  
+  try {
+    // Store locally for attribution
+    localStorage.setItem('mq_prequal', JSON.stringify(preQualData));
+    
+    // Send to your analytics endpoint if available
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon('/api/prequal', JSON.stringify(preQualData));
+    }
+  } catch(e) {}
+  
+  // Redirect to ADLIX CPA link
+  window.location.href = '/go/moving';
+});
 
-        function affiliateClickPayload(source) {
-            return {
-                href: AFFILIATE_URL,
-                cta_position: source,
-                affiliate_platform: AFFILIATE_PLATFORM,
-                affiliate_id: AFFILIATE_ID,
-                adlix_campaign_id: ADLIX_CAMPAIGN_ID,
-                outbound_host: 'appu.kr',
-                trigger: 'goToAppu'
-            };
-        }
-
-        function affiliateClickEvent(source) {
-            return {
-                event: 'outbound_cta_clicked',
-                campaign: 'moving_quote_call_burden',
-                session_id: sessionId(),
-                path: location.pathname,
-                utm: currentUtm(),
-                payload: affiliateClickPayload(source),
-                ts: new Date().toISOString()
-            };
-        }
-
-        const STEP_GROUPS = {
-            1: 'moving_date',
-            2: 'phone_availability',
-            3: 'address_confirmed',
-            4: 'site_conditions',
-            5: 'large_items',
-            6: 'consult_time'
-        };
-
-        function selectorChoicePayload(step, item) {
-            return {
-                group: STEP_GROUPS[step] || ('step_' + step),
-                item: item,
-                value: String(step)
-            };
-        }
-
-        function selectorChoiceEvent(step, item) {
-            return {
-                event: 'selector_choice',
-                campaign: 'moving_quote_call_burden',
-                session_id: sessionId(),
-                path: location.pathname,
-                utm: currentUtm(),
-                payload: selectorChoicePayload(step, item),
-                ts: new Date().toISOString()
-            };
-        }
-
-        function trackSelectorChoice(step, item) {
-            try {
-                fetch('/api/track', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(selectorChoiceEvent(step, item)),
-                    keepalive: true
-                }).catch(e => {});
-            } catch(e) {}
-        }
-
-        function goToAppu(source) {
-            try {
-                fetch('/api/track', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(affiliateClickEvent(source)),
-                    keepalive: true
-                }).catch(e => {});
-            } catch(e) {}
-            
-            window.location.href = AFFILIATE_URL;
-        }
-    </script>
+// Set default date to 2 weeks from now
+const dateInput = document.getElementById('moveDate');
+const twoWeeks = new Date();
+twoWeeks.setDate(twoWeeks.getDate() + 14);
+dateInput.value = twoWeeks.toISOString().split('T')[0];
+dateInput.min = new Date().toISOString().split('T')[0];
+const maxDate = new Date();
+maxDate.setDate(maxDate.getDate() + 55); // 다이사 55일 제한
+dateInput.max = maxDate.toISOString().split('T')[0];
+</script>
 </body>
 </html>
-
