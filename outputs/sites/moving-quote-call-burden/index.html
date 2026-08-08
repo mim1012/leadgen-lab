@@ -574,6 +574,83 @@ footer a {
   transition: width 0.3s ease;
   z-index: 100;
 }
+
+/* Related Services */
+.related-services {
+  padding: 40px 0;
+}
+
+.services-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.service-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.service-card:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.service-card-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--bg-page);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.service-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.service-card-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.service-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.service-card-cta .arrow {
+  font-size: 14px;
+  transition: transform 0.15s ease;
+}
+
+.service-card:hover .service-card-cta .arrow {
+  transform: translateX(3px);
+}
 </style>
 </head>
 <body>
@@ -755,6 +832,49 @@ footer a {
   </div>
 </section>
 
+
+<!-- RELATED SERVICES -->
+<section class="related-services">
+  <div class="container">
+    <p class="section-label">More Services</p>
+    <h2 class="section-title">이사할 때 함께 필요한 서비스</h2>
+    <p class="section-desc">이사 견적 외에도 입주 전후 필요한 서비스를 한눈에 비교하세요.</p>
+    <div class="services-grid">
+      <a class="service-card" href="#" onclick="goToService('https://appu.kr/?i=12537149','이사스토리_이사가격비교','related_moving'); return false;">
+        <div class="service-card-header">
+          <div class="service-card-icon">🚛</div>
+          <span class="service-card-title">다른 이사 견적도 비교하기</span>
+        </div>
+        <p class="service-card-desc">이사스토리에서 최대 3개 업체 방문견적을 한번에 받아보세요. 가정이사, 소형이사, 사무실이사 모두 가능합니다.</p>
+        <span class="service-card-cta">무료 견적 비교 <span class="arrow">→</span></span>
+      </a>
+      <a class="service-card" href="#" onclick="goToService('https://appu.kr/?i=12519245','모두클린_입주청소','related_cleaning'); return false;">
+        <div class="service-card-header">
+          <div class="service-card-icon">🧹</div>
+          <span class="service-card-title">입주청소 견적 보기</span>
+        </div>
+        <p class="service-card-desc">새 집 입주 전 전문 청소 업체 비교. 이사 전후 깨끗한 시작을 위한 무료 상담 신청.</p>
+        <span class="service-card-cta">무료 상담 신청 <span class="arrow">→</span></span>
+      </a>
+      <a class="service-card" href="#" onclick="goToService('https://appu.kr/?i=12519247','이사스토리_커튼블라인드','related_curtain'); return false;">
+        <div class="service-card-header">
+          <div class="service-card-icon">🪟</div>
+          <span class="service-card-title">커튼/블라인드 방문견적 보기</span>
+        </div>
+        <p class="service-card-desc">맞춤제작 커튼, 블라인드 무료 실측부터 시공까지. 새 집 분위기를 바꿔보세요.</p>
+        <span class="service-card-cta">무료 방문견적 <span class="arrow">→</span></span>
+      </a>
+      <a class="service-card" href="#" onclick="goToService('https://appu.kr/?i=12519246','다온인터넷_가입','related_internet'); return false;">
+        <div class="service-card-header">
+          <div class="service-card-icon">📶</div>
+          <span class="service-card-title">인터넷 설치 혜택 보기</span>
+        </div>
+        <p class="service-card-desc">이사하면 인터넷도 새로. 현금 사은품과 함께 인터넷 가입 상담을 받아보세요.</p>
+        <span class="service-card-cta">사은품 확인하기 <span class="arrow">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
 <!-- BOTTOM CTA -->
 <section class="bottom-cta">
   <div class="container">
@@ -888,6 +1008,19 @@ function goToAffiliate(source) {
   setTimeout(() => {
     window.location.href = AFFILIATE_URL;
   }, 150);
+}
+
+
+function goToService(url, campaignName, source) {
+  track('outbound_cta_clicked', {
+    href: url,
+    cta_position: source,
+    affiliate_platform: AFFILIATE_PLATFORM,
+    campaign_name: campaignName,
+    selected_type: state.type,
+    selected_time: state.time
+  });
+  setTimeout(() => { window.location.href = url; }, 150);
 }
 
 // === FAQ Toggle ===
